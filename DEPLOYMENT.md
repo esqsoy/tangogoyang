@@ -1,3 +1,13 @@
+# like ① 고양이 대사(I Really Like You) 배포 · 2026-11-02
+
+- 커밋 [b7d6650](https://github.com/esqsoy/vocagoyang/commit/b7d6650)를 origin/main에 fast-forward로 푸시했다. [Pages 41386718957](https://github.com/esqsoy/vocagoyang/actions/runs/41386718957) 성공(2026-11-02 04:08:34 UTC 완료 확인).
+- 그 앞의 두 배포: [0dcf3d3](https://github.com/esqsoy/vocagoyang/commit/0dcf3d3)(like ① 해설 비움, Claude가 요청을 잘못 읽음, [Pages 41385809142](https://github.com/esqsoy/vocagoyang/actions/runs/41385809142) 성공)는 [e563c90](https://github.com/esqsoy/vocagoyang/commit/e563c90)으로 되돌렸다([Pages 41386204615](https://github.com/esqsoy/vocagoyang/actions/runs/41386204615) 성공, FABLE이 e710c63으로 돌아옴). 0dcf3d3 판은 약 6분 공개됐다.
+- 확인 방법: GitHub API로 main의 네 HTML blob SHA가 로컬 검증본과 같은 것을 확인했다(FABLE 72e9b31, 수능 1f15fae, EBS 7a0eb08, index 6c557dd). github.io는 이 세션에서 열지 않았다.
+- 포함: 1세트 like ① 고양이 대사 "‘I Really Like You’… 츄르한테 부르는 노래라고양. 착각 말라고양.", 해설을 읽기량 12초 안으로 줄임(원장 like-song-20261102).
+- 배포 전 검사(b7d6650와 같은 내용에서 새로 실행): 검사 45개 통과, deepcheck A6 16·A8 1(전부터), 원장 되감기 해시 일치. Chromium 360·390px에서 대사 말풍선 두 줄, 페이지 오류 0.
+
+---
+
 # iPhone 힌트 칸 화면 튐 수정 배포 · 2026-10-27
 
 - 커밋 [9d41f37](https://github.com/esqsoy/vocagoyang/commit/9d41f37)를 origin/main에 fast-forward로 푸시했다(35bf16f 다음, 그 사이 04b7905·35bf16f는 기록 문서만). [Pages 40521055847](https://github.com/esqsoy/vocagoyang/actions/runs/40521055847) 성공(2026-10-27 14:26:59 UTC 완료 확인).
