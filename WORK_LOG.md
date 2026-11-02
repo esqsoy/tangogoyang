@@ -1940,3 +1940,4 @@
 - 요청(영신): "i really like you 라는 노래 알아? 그거 들어보니 like 설명을 없애는게 좋겠다는 생각이 들었어"
 - 반영: 1세트 like ①("I ____ him, but I don't love him." / "난 걔를 좋아하긴 하지만, 사랑하진 않아.")의 해설 "like 뒤에는 -ing와 to부정사 모두 가능하다. would like 뒤에 동사가 오면 to부정사를 쓴다."를 비웠다. 빈칸 뒤가 him이라 그 문법과 상관없고, like와 love의 결은 예문·해석이 이미 보여 준다(PRINCIPLES 4 "없으면 무엇을 못 하나"). would like는 5세트 Would you like ~? 카드들이 맡는다. like ②(~처럼, as와의 구별) 해설은 그대로. 원장 `like-note-20261102`(restore 맨 앞 층).
 - 검증(새로 실행): 검사 45개 통과, deepcheck A6 16·A8 1(전부터), 원장 되감기 해시 일치.
+- 되돌림(같은 날): 영신 "엥 그 설명이 뭐였지? 난 love와 비교한 설명을 말한거였어". Claude가 요청을 잘못 읽고 다른 해설(문법)을 지웠다. 커밋 0dcf3d3을 되돌려 해설·원장·restore 층을 원래대로 했다(FABLE HTML blob이 3c638fe 때와 같은 e710c63). love와의 비교는 해설이 아니라 예문 "I ____ him, but I don't love him."과 해석 자체에 있다. like와 love는 둘 다 4글자라 이 대비가 빈칸 중의성(PRINCIPLES 3)을 막고 있어서, 예문을 바꿀지는 대안과 함께 영신에게 물었다.
