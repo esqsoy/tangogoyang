@@ -1934,3 +1934,9 @@
 - 고침(세 교재): ① 값을 넣으면 커서가 이미 끝에 있으므로, 끝이 아닐 때만 `setSelectionRange`를 부른다. ② 힌트 버튼은 누르기 전 스크롤 자리를 기억해 두고, 한 프레임·120ms·360ms 뒤에 화면이 4px 넘게 움직였으면 되돌린다. 그사이 학생이 직접 스크롤(touchmove·wheel)하면 건드리지 않는다.
 - 검증(새로 실행): 처음 고친 판에서 FABLE `giveHint`의 변수 이름이 겹쳐(`end`) 스크립트가 멈춘 것을 Chromium에서 잡아 `caret`으로 고쳤다. Chromium 390×560 터치 모드에서 페이지를 늘리고 입력칸 focus·커서 이동 때마다 맨 아래로 끌려가게 흉내 내 보니, 전 판(HEAD)은 세 교재 모두 y 40 → 940에서 멈췄고 고친 판은 40으로 돌아오며 첫 글자 힌트도 열렸다. 검사 45개 통과. 실제 iPhone 확인은 영신 대기.
 - 배포: 9d41f37 main fast-forward, Pages 40521055847 성공, 네 HTML blob SHA 일치([DEPLOYMENT](DEPLOYMENT.md)).
+
+## 2026-11-02 · like ① 해설 비움
+
+- 요청(영신): "i really like you 라는 노래 알아? 그거 들어보니 like 설명을 없애는게 좋겠다는 생각이 들었어"
+- 반영: 1세트 like ①("I ____ him, but I don't love him." / "난 걔를 좋아하긴 하지만, 사랑하진 않아.")의 해설 "like 뒤에는 -ing와 to부정사 모두 가능하다. would like 뒤에 동사가 오면 to부정사를 쓴다."를 비웠다. 빈칸 뒤가 him이라 그 문법과 상관없고, like와 love의 결은 예문·해석이 이미 보여 준다(PRINCIPLES 4 "없으면 무엇을 못 하나"). would like는 5세트 Would you like ~? 카드들이 맡는다. like ②(~처럼, as와의 구별) 해설은 그대로. 원장 `like-note-20261102`(restore 맨 앞 층).
+- 검증(새로 실행): 검사 45개 통과, deepcheck A6 16·A8 1(전부터), 원장 되감기 해시 일치.
