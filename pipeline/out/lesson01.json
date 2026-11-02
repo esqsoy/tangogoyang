@@ -13,12 +13,13 @@
           "ko": "① 좋아하다",
           "ex": "I {{BLANK}} him, but I don't love him.",
           "tr": "난 걔를 좋아하긴 하지만, 사랑하진 않아.",
-          "c": "like 뒤에는 -ing와 to부정사 모두 가능하다. would like 뒤에 동사가 오면 to부정사를 쓴다.",
+          "c": "like 뒤엔 -ing·to부정사 둘 다. would like 뒤엔 to부정사.",
           "ipa": "laɪk",
           "pos": "v.",
           "word": "like",
           "si": 1,
-          "sn": 2
+          "sn": 2,
+          "meow": "‘I Really Like You’… 츄르한테 부르는 노래라고양. 착각 말라고양."
         },
         {
           "en": "like",
