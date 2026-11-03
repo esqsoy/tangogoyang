@@ -4,6 +4,7 @@
 
 - 원장: [expressions.json](expressions.json) · 초안 0.3(2026-11-03) · 258항목. 0.1의 141항목에 원문 대조로 0.2에서 85항목(Threshold 1990·Vantage·JF), 0.3에서 32항목(PCIC)을 더했다(`"added"`에 판, 근거는 `ref`).
 - 원문 대조표: [source-check-20261103.json](source-check-20261103.json). 원문 목차 한 줄마다 원장 id와 상태(있음·더함·보강·묻기 꼴·판 고유·뺌)를 적었다.
+- 빨라고양(스페인어판)용으로 남긴 PCIC 자료: [spanish-pcic-sources.md](spanish-pcic-sources.md). 보관본 주소와 쓰는 법. 원문 파일은 공개 저장소라 넣지 않고 영신 Drive에 둔다.
 - 아직 영신 검수 전이다. 항목·문장·수준은 바뀔 수 있다. 직검수 페이지 https://claude.ai/artifact/TDwB3yZf3sAwqooZS38zXA (0.3으로 갱신, 새 항목은 '0.2 추가'·'0.3 추가' 표시).
 - 지금은 탄고고양 저장소에 두었다. 다른 판을 시작할 때 공유 저장소로 옮길지 영신과 정한다.
 
