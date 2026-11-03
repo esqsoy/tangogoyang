@@ -1,0 +1,1982 @@
+{
+ "title": "고양공유 원장 원문 대조 (2026-11-03)",
+ "ledger_version": "0.2",
+ "how": "원문의 목차 번호·제목과 원장 id를 맞췄다. 원문의 보기 문장과 Can-do 문장은 옮기지 않았다(저작권). status: 있음 / 더함(0.2에서 새로 넣음) / 보강(있던 항목에 0.2 항목을 더함) / 묻기 꼴(같은 항목의 물음꼴이라 따로 두지 않음) / 판 고유 / 뺌(note에 까닭).",
+ "sources": {
+  "TL90": {
+   "what": "J. A. van Ek & J. L. M. Trim, Threshold 1990 (Council of Europe/CUP 1991/1998)",
+   "url": "https://ealta.eu/documents/resources/Threshold-Level_CUP.pdf",
+   "read": "2026-11-03",
+   "parts": "5장 Language functions(6갈래), 7장 Specific notions의 14주제, 8장 Verbal exchange patterns, 12장 Compensation strategies"
+  },
+  "VA": {
+   "what": "J. A. van Ek & J. L. M. Trim, Vantage (Council of Europe/CUP 2001)",
+   "url": "https://ealta.eu/documents/resources/Vantage_CUP.pdf",
+   "read": "2026-11-03",
+   "parts": "5장 Language functions. Threshold 1990에 없는 B2 기능만 적었다"
+  },
+  "JF": {
+   "what": "国際交流基金 JF日本語教育スタンダード, JF Can-do一覧 カテゴリーごと (2023-05-29 更新, A1~B2 活動Can-do 604개)",
+   "url": "https://www.jfstandard.jpf.go.jp/pdf/202305_JF_Cando_Category_list.xlsx",
+   "read": "2026-11-03",
+   "parts": "토픽 15, 카테고리 23. A1·A2 Can-do는 문장을 하나씩 읽어 원장에 없는 상황을 찾았다"
+  },
+  "PCIC": {
+   "what": "Instituto Cervantes, Plan curricular (Niveles de referencia para el español), 5. Funciones, 6. Tácticas y estrategias pragmáticas",
+   "url": "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/",
+   "read": null,
+   "status": "미대조. 26.11.03 cvc.cervantes.es가 이 세션 요청에 모든 주소(루트 포함)를 404로 돌려줬다. 브라우저 흉내·보관본 우회는 하지 않았다. 영신이 페이지를 받아 주거나 다른 세션에서 열리면 대조한다."
+  }
+ },
+ "threshold1990_functions": [
+  {
+   "no": "1.1",
+   "heading": "identifying (defining)",
+   "ledger": [
+    "F1-06",
+    "F1-21"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "1.2",
+   "heading": "reporting (describing and narrating)",
+   "ledger": [
+    "F1-01",
+    "F1-02",
+    "F1-03",
+    "F1-04",
+    "F1-05",
+    "F1-18",
+    "F5-02"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.3",
+   "heading": "correcting",
+   "ledger": [
+    "F1-16"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.4",
+   "heading": "asking",
+   "ledger": [
+    "F1-06",
+    "F1-07",
+    "F1-08",
+    "F1-09",
+    "F1-10",
+    "F1-11",
+    "F1-12",
+    "F1-13",
+    "F1-14",
+    "F1-15"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.5",
+   "heading": "answering questions",
+   "ledger": [
+    "F1-22"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.1",
+   "heading": "expressing agreement with a statement",
+   "ledger": [
+    "F2-04"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.2",
+   "heading": "expressing disagreement with a statement",
+   "ledger": [
+    "F2-05"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.3",
+   "heading": "enquiring about agreement and disagreement",
+   "ledger": [
+    "F2-22"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.4",
+   "heading": "denying statements",
+   "ledger": [
+    "F2-21"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.5",
+   "heading": "stating whether one knows or does not know",
+   "ledger": [
+    "F2-07"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.6",
+   "heading": "enquiring whether someone knows or does not know",
+   "ledger": [
+    "F2-23"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.7",
+   "heading": "stating whether one remembers or has forgotten",
+   "ledger": [
+    "F1-20",
+    "F2-24"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "2.8",
+   "heading": "enquiring whether someone remembers or has forgotten",
+   "ledger": [
+    "F1-20"
+   ],
+   "status": "묻기 꼴"
+  },
+  {
+   "no": "2.9",
+   "heading": "expressing degrees of probability",
+   "ledger": [
+    "F2-08"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.10",
+   "heading": "enquiring as to degrees of probability",
+   "ledger": [
+    "T-24"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.11",
+   "heading": "expressing or denying necessity",
+   "ledger": [
+    "F2-26",
+    "F2-06"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "2.12",
+   "heading": "enquiring as to necessity",
+   "ledger": [
+    "F2-19"
+   ],
+   "status": "묻기 꼴"
+  },
+  {
+   "no": "2.13",
+   "heading": "expressing degrees of certainty",
+   "ledger": [
+    "F2-06",
+    "F2-07"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.14",
+   "heading": "enquiring about degrees of certainty",
+   "ledger": [
+    "F2-10"
+   ],
+   "status": "묻기 꼴"
+  },
+  {
+   "no": "2.15",
+   "heading": "expressing obligation",
+   "ledger": [
+    "F2-19"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.16",
+   "heading": "enquiring about obligation",
+   "ledger": [
+    "F2-19"
+   ],
+   "status": "묻기 꼴"
+  },
+  {
+   "no": "2.17",
+   "heading": "expressing ability/inability",
+   "ledger": [
+    "F2-20",
+    "F6-03"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.18",
+   "heading": "enquiring about ability or inability",
+   "ledger": [
+    "F2-20"
+   ],
+   "status": "묻기 꼴"
+  },
+  {
+   "no": "2.19",
+   "heading": "expressing that something is or is not permitted",
+   "ledger": [
+    "F3-05"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.20",
+   "heading": "enquiring whether something is permitted (seeking permission)",
+   "ledger": [
+    "F3-03",
+    "T-13"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.21",
+   "heading": "granting permission",
+   "ledger": [
+    "F3-04"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.22",
+   "heading": "withholding permission",
+   "ledger": [
+    "F3-05"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.23",
+   "heading": "expressing wants/desires",
+   "ledger": [
+    "F2-03"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.24",
+   "heading": "enquiring about wants/desires",
+   "ledger": [
+    "F2-03"
+   ],
+   "status": "묻기 꼴"
+  },
+  {
+   "no": "2.25",
+   "heading": "expressing intentions",
+   "ledger": [
+    "F1-19"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.26",
+   "heading": "enquiring about intentions",
+   "ledger": [
+    "F1-19"
+   ],
+   "status": "묻기 꼴"
+  },
+  {
+   "no": "2.27",
+   "heading": "expressing preference",
+   "ledger": [
+    "F2-14"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.28",
+   "heading": "enquiring about preference",
+   "ledger": [
+    "F2-27"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.29",
+   "heading": "expressing pleasure, happiness",
+   "ledger": [
+    "F2-09"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.30",
+   "heading": "expressing displeasure, unhappiness",
+   "ledger": [
+    "F2-29"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.31",
+   "heading": "enquiring about pleasure/displeasure",
+   "ledger": [
+    "F2-30"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.32",
+   "heading": "expressing liking",
+   "ledger": [
+    "F2-01"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.33",
+   "heading": "expressing dislike",
+   "ledger": [
+    "F2-02"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.34",
+   "heading": "enquiring about likes and dislikes",
+   "ledger": [
+    "F2-01"
+   ],
+   "status": "묻기 꼴"
+  },
+  {
+   "no": "2.35",
+   "heading": "expressing satisfaction",
+   "ledger": [
+    "F2-31"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.36",
+   "heading": "expressing dissatisfaction",
+   "ledger": [
+    "F3-16"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.37",
+   "heading": "enquiring about satisfaction/dissatisfaction",
+   "ledger": [
+    "F2-31"
+   ],
+   "status": "묻기 꼴"
+  },
+  {
+   "no": "2.38",
+   "heading": "expressing interest",
+   "ledger": [
+    "F2-18"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.39",
+   "heading": "expressing lack of interest",
+   "ledger": [
+    "F2-32"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.40",
+   "heading": "enquiring about interest",
+   "ledger": [
+    "F2-18"
+   ],
+   "status": "묻기 꼴"
+  },
+  {
+   "no": "2.41",
+   "heading": "expressing surprise",
+   "ledger": [
+    "F2-10"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.42",
+   "heading": "expressing lack of surprise",
+   "ledger": [
+    "F2-33"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.43",
+   "heading": "enquiring about surprise",
+   "ledger": [
+    "F2-10"
+   ],
+   "status": "묻기 꼴"
+  },
+  {
+   "no": "2.44",
+   "heading": "expressing hope",
+   "ledger": [
+    "F2-34"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.45",
+   "heading": "expressing disappointment",
+   "ledger": [
+    "F2-13"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.46",
+   "heading": "expressing fear",
+   "ledger": [
+    "F2-35"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.47",
+   "heading": "giving reassurance",
+   "ledger": [
+    "F2-36"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.48",
+   "heading": "enquiring about fear/worry",
+   "ledger": [
+    "F2-30",
+    "F2-11"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "2.49",
+   "heading": "expressing gratitude",
+   "ledger": [
+    "F4-04"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.50",
+   "heading": "reacting to an expression of gratitude",
+   "ledger": [
+    "F4-05"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.51",
+   "heading": "offering an apology",
+   "ledger": [
+    "F4-06",
+    "F4-32"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "2.52",
+   "heading": "accepting an apology",
+   "ledger": [
+    "F4-07"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.53",
+   "heading": "expressing moral obligation",
+   "ledger": [
+    "F2-19",
+    "F2-39"
+   ],
+   "status": "보강",
+   "note": "따로 두지 않고 의무(F2-19)·나무라기(F2-39)로 받는다"
+  },
+  {
+   "no": "2.54",
+   "heading": "expressing approval",
+   "ledger": [
+    "F2-16"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.55",
+   "heading": "expressing disapproval",
+   "ledger": [
+    "F2-39"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.56",
+   "heading": "enquiring about approval/disapproval",
+   "ledger": [
+    "F2-15"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.57",
+   "heading": "expressing regret, sympathy",
+   "ledger": [
+    "F2-17",
+    "F4-16"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.1",
+   "heading": "suggesting a course of action",
+   "ledger": [
+    "F3-06"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.2",
+   "heading": "agreeing to a suggestion",
+   "ledger": [
+    "F3-07"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.3",
+   "heading": "requesting someone to do something",
+   "ledger": [
+    "F3-01",
+    "F3-15"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.4",
+   "heading": "advising someone to do something",
+   "ledger": [
+    "F3-12",
+    "F3-13"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.5",
+   "heading": "warning others",
+   "ledger": [
+    "F3-11"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.6",
+   "heading": "encouraging someone to do something",
+   "ledger": [
+    "F3-17"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "3.7",
+   "heading": "instructing or directing",
+   "ledger": [
+    "F3-18",
+    "T-21"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "3.8",
+   "heading": "requesting assistance",
+   "ledger": [
+    "T-25",
+    "F3-15"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.9",
+   "heading": "offering assistance",
+   "ledger": [
+    "F3-10"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.10",
+   "heading": "inviting someone to do something",
+   "ledger": [
+    "F3-09"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.11",
+   "heading": "accepting an offer or invitation",
+   "ledger": [
+    "F3-07"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.12",
+   "heading": "declining an offer or invitation",
+   "ledger": [
+    "F3-08",
+    "F3-20"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "3.13",
+   "heading": "enquiring whether an offer or invitation is accepted",
+   "ledger": [
+    "F3-09"
+   ],
+   "status": "묻기 꼴"
+  },
+  {
+   "no": "3.14",
+   "heading": "asking someone for something",
+   "ledger": [
+    "F3-02",
+    "F1-12"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.1",
+   "heading": "attracting attention",
+   "ledger": [
+    "F4-08",
+    "F4-34"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "4.2",
+   "heading": "greeting people",
+   "ledger": [
+    "F4-01"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.3",
+   "heading": "when meeting a friend or acquaintance",
+   "ledger": [
+    "F4-09"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.4",
+   "heading": "replying to a greeting",
+   "ledger": [
+    "F4-22"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "4.5",
+   "heading": "addressing a friend or acquaintance",
+   "ledger": [],
+   "status": "판 고유",
+   "note": "부르는 말(이름·존칭)은 언어마다 짜임이 달라 문장 항목으로 두지 않는다"
+  },
+  {
+   "no": "4.6",
+   "heading": "addressing a stranger",
+   "ledger": [],
+   "status": "판 고유",
+   "note": "4.5와 같음. 모르는 사람 부르기 문장은 F4-08"
+  },
+  {
+   "no": "4.7",
+   "heading": "addressing a customer or the general public",
+   "ledger": [],
+   "status": "판 고유",
+   "note": "4.5와 같음"
+  },
+  {
+   "no": "4.8",
+   "heading": "introducing someone",
+   "ledger": [
+    "F4-10"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.9",
+   "heading": "when being introduced",
+   "ledger": [
+    "F4-02",
+    "F4-23"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "4.10",
+   "heading": "congratulating",
+   "ledger": [
+    "F4-11"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.11",
+   "heading": "proposing a toast",
+   "ledger": [
+    "F4-15"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.12",
+   "heading": "taking leave",
+   "ledger": [
+    "F4-03",
+    "F4-19"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.1",
+   "heading": "opening",
+   "ledger": [
+    "F5-01"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.2",
+   "heading": "hesitating",
+   "ledger": [
+    "F6-08"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.3",
+   "heading": "correcting oneself",
+   "ledger": [
+    "F6-09"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.4",
+   "heading": "introducing a theme",
+   "ledger": [
+    "F5-01"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.5",
+   "heading": "expressing an opinion",
+   "ledger": [
+    "F5-09"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.6",
+   "heading": "enumerating",
+   "ledger": [
+    "C-14"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.7",
+   "heading": "exemplifying",
+   "ledger": [
+    "F5-03"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.8",
+   "heading": "emphasising",
+   "ledger": [
+    "C-04"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.9",
+   "heading": "summarising",
+   "ledger": [
+    "F5-06",
+    "C-13"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.10",
+   "heading": "changing the theme",
+   "ledger": [
+    "C-05"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.11",
+   "heading": "asking someone to change the theme",
+   "ledger": [
+    "C-05"
+   ],
+   "status": "뺌",
+   "note": "드물고 C-05(화제 바꾸기)로 충분하다"
+  },
+  {
+   "no": "5.12",
+   "heading": "asking someone's opinion",
+   "ledger": [
+    "F2-15"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.13",
+   "heading": "showing that one is following a person's discourse",
+   "ledger": [
+    "F5-10",
+    "C-15"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "5.14",
+   "heading": "interrupting",
+   "ledger": [
+    "C-06"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.15",
+   "heading": "asking someone to be silent",
+   "ledger": [
+    "F5-16"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.16",
+   "heading": "giving over the floor",
+   "ledger": [
+    "F5-12"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.17",
+   "heading": "indicating a wish to continue",
+   "ledger": [
+    "F5-13"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.18",
+   "heading": "encouraging someone to continue",
+   "ledger": [
+    "F5-11"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.19",
+   "heading": "indicating that one is coming to an end",
+   "ledger": [
+    "F5-14"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.20",
+   "heading": "closing",
+   "ledger": [
+    "F5-15"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.21",
+   "heading": "telephone: opening",
+   "ledger": [
+    "T-40"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.22",
+   "heading": "telephone: asking for someone",
+   "ledger": [
+    "T-41"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.23",
+   "heading": "asking someone to wait",
+   "ledger": [
+    "T-42"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.24",
+   "heading": "asking whether you are heard and understood",
+   "ledger": [
+    "T-43"
+   ],
+   "status": "더함",
+   "note": "들리는지 묻기 대신 잘 안 들린다고 말하는 쪽으로 넣었다"
+  },
+  {
+   "no": "5.25",
+   "heading": "giving signals that you are hearing and understanding",
+   "ledger": [
+    "F5-10"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.26",
+   "heading": "announcing new call",
+   "ledger": [
+    "T-44"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.27",
+   "heading": "opening (letters)",
+   "ledger": [
+    "T-45"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.28",
+   "heading": "closing (letters)",
+   "ledger": [
+    "T-46"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "6.1",
+   "heading": "signalling non-understanding",
+   "ledger": [
+    "F6-11"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "6.2",
+   "heading": "asking for repetition of sentence",
+   "ledger": [
+    "F6-01"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.3",
+   "heading": "asking for repetition of a word or phrase",
+   "ledger": [
+    "F6-01"
+   ],
+   "status": "묻기 꼴"
+  },
+  {
+   "no": "6.4",
+   "heading": "asking for confirmation of text",
+   "ledger": [
+    "F6-10"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.5",
+   "heading": "asking for confirmation or understanding",
+   "ledger": [
+    "F6-10"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.6",
+   "heading": "asking for clarification",
+   "ledger": [
+    "F6-04"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.7",
+   "heading": "asking someone to spell something",
+   "ledger": [
+    "F6-12"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "6.8",
+   "heading": "asking for something to be written down",
+   "ledger": [
+    "F6-06"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.9",
+   "heading": "expressing ignorance of a word or expression",
+   "ledger": [
+    "F6-05",
+    "F6-08"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.10",
+   "heading": "appealing for assistance",
+   "ledger": [
+    "F6-05",
+    "F6-15"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "6.11",
+   "heading": "asking someone to speak more slowly",
+   "ledger": [
+    "F6-02"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.12",
+   "heading": "paraphrasing",
+   "ledger": [
+    "F6-13"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "6.13",
+   "heading": "repeating what one has said",
+   "ledger": [
+    "F6-09"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.14",
+   "heading": "asking if you have been understood",
+   "ledger": [
+    "F6-07"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.15",
+   "heading": "spelling out a word or expression",
+   "ledger": [],
+   "status": "판 고유",
+   "note": "글자 이름·철자 읽는 법은 언어마다 다르다. 쓰는 법 묻기는 F6-12"
+  },
+  {
+   "no": "6.16",
+   "heading": "supplying a word or expression",
+   "ledger": [
+    "F6-14"
+   ],
+   "status": "더함"
+  }
+ ],
+ "threshold1990_themes": [
+  {
+   "no": "1",
+   "heading": "personal identification",
+   "ledger": [
+    "F1-01",
+    "F1-02",
+    "F1-03",
+    "F1-04",
+    "F1-05",
+    "T-01",
+    "F1-24"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "2",
+   "heading": "house and home, environment",
+   "ledger": [
+    "T-02"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3",
+   "heading": "daily life",
+   "ledger": [
+    "T-03",
+    "T-39"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "4",
+   "heading": "free time, entertainment",
+   "ledger": [
+    "T-04",
+    "F2-18"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5",
+   "heading": "travel",
+   "ledger": [
+    "T-05",
+    "T-06",
+    "T-07",
+    "T-18",
+    "T-29",
+    "T-30",
+    "T-31"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "6",
+   "heading": "relations with other people",
+   "ledger": [
+    "F4-10",
+    "F3-09",
+    "T-45",
+    "T-46",
+    "T-49"
+   ],
+   "status": "보강",
+   "note": "6.3 correspondence → 편지·메일(T-45·46), 6.5 political and social views → T-49"
+  },
+  {
+   "no": "7",
+   "heading": "health and body care",
+   "ledger": [
+    "T-09",
+    "T-10",
+    "T-36"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "8",
+   "heading": "education",
+   "ledger": [
+    "T-11"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "9",
+   "heading": "shopping",
+   "ledger": [
+    "T-12",
+    "T-13",
+    "T-14",
+    "T-34",
+    "T-35"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "10",
+   "heading": "food and drink",
+   "ledger": [
+    "T-15",
+    "T-16",
+    "T-17",
+    "T-32",
+    "T-33",
+    "F4-12",
+    "F4-13"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "11",
+   "heading": "services",
+   "ledger": [
+    "T-19",
+    "T-37",
+    "T-38",
+    "T-40"
+   ],
+   "status": "보강",
+   "note": "11.1 post → T-37, 11.2 telephone → 전화(T-40~44), 11.4 bank → T-38"
+  },
+  {
+   "no": "12",
+   "heading": "places",
+   "ledger": [
+    "T-20",
+    "T-21",
+    "T-28"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "13",
+   "heading": "language",
+   "ledger": [
+    "T-22",
+    "F6-03",
+    "F6-05"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "14",
+   "heading": "weather",
+   "ledger": [
+    "T-23",
+    "T-24",
+    "T-47"
+   ],
+   "status": "보강"
+  }
+ ],
+ "threshold1990_exchange_patterns": [
+  {
+   "no": "1",
+   "heading": "making purchases",
+   "ledger": [
+    "T-12",
+    "T-13",
+    "T-14",
+    "T-34"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "2",
+   "heading": "ordering food and drink",
+   "ledger": [
+    "T-15",
+    "T-16",
+    "T-17",
+    "T-32",
+    "F3-02"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "3",
+   "heading": "making enquiries",
+   "ledger": [
+    "F1-06",
+    "F1-08",
+    "F1-10"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4",
+   "heading": "meeting people",
+   "ledger": [
+    "F4-01",
+    "F4-02",
+    "F4-10",
+    "F4-23"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "5",
+   "heading": "asking and showing the way",
+   "ledger": [
+    "T-06",
+    "T-21"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6",
+   "heading": "asking and telling the time",
+   "ledger": [
+    "F1-11"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "7",
+   "heading": "inviting and reacting to invitation",
+   "ledger": [
+    "F3-09",
+    "F3-07",
+    "F3-08",
+    "F3-22"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "8",
+   "heading": "arranging accommodation",
+   "ledger": [
+    "T-18"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "9",
+   "heading": "proposing a course of action and reacting",
+   "ledger": [
+    "F3-06",
+    "F3-07",
+    "F3-23"
+   ],
+   "status": "보강"
+  }
+ ],
+ "vantage_additions": [
+  {
+   "no": "1.4.9",
+   "heading": "expressing curiosity",
+   "ledger": [
+    "F2-18"
+   ],
+   "status": "있음",
+   "note": "관심(F2-18)으로 받는다"
+  },
+  {
+   "no": "2.2.6",
+   "heading": "reminding someone",
+   "ledger": [
+    "F2-25"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.3.7",
+   "heading": "denying obligation",
+   "ledger": [
+    "F2-26"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.5.4",
+   "heading": "enquiring about the cause of (unhappiness)",
+   "ledger": [
+    "F2-30"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.5.5",
+   "heading": "exhorting someone not to be (worried)",
+   "ledger": [
+    "F2-36"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.5.12",
+   "heading": "expressing pain, anguish",
+   "ledger": [
+    "T-09"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.5.15",
+   "heading": "expressing relief",
+   "ledger": [
+    "F2-37"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.5.24",
+   "heading": "complaining",
+   "ledger": [
+    "F3-16"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.5.25",
+   "heading": "expressing bad temper",
+   "ledger": [
+    "F2-38"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.5.27",
+   "heading": "apologising for bad temper",
+   "ledger": [
+    "F4-06"
+   ],
+   "status": "뺌",
+   "note": "드물다. 사과(F4-06)로 받는다"
+  },
+  {
+   "no": "2.5.33",
+   "heading": "expressing indifference",
+   "ledger": [
+    "F2-28"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.6.5",
+   "heading": "attaching/accepting blame",
+   "ledger": [
+    "F2-40"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.6.6",
+   "heading": "denying blame",
+   "ledger": [
+    "F2-41"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.6.8",
+   "heading": "apologising for disturbing",
+   "ledger": [
+    "F4-34",
+    "C-06"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "3.3.6",
+   "heading": "dropping hints",
+   "ledger": [
+    "C-20"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "3.3.7",
+   "heading": "pleading",
+   "ledger": [
+    "F3-24"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "3.4.3",
+   "heading": "agreeing with reluctance",
+   "ledger": [
+    "C-21"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "3.4.4",
+   "heading": "demurring",
+   "ledger": [
+    "C-07",
+    "C-08"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.4.6",
+   "heading": "expressing defiance",
+   "ledger": [],
+   "status": "뺌",
+   "note": "공통 예문으로 돌려 쓰기에 공격적이다. 필요하면 판 고유 원장에서"
+  },
+  {
+   "no": "3.13",
+   "heading": "offering to do something for someone",
+   "ledger": [
+    "F3-21"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "3.14",
+   "heading": "offering somebody something",
+   "ledger": [
+    "F3-19"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "4.6",
+   "heading": "making someone welcome",
+   "ledger": [
+    "F4-24"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "4.7",
+   "heading": "at a meal",
+   "ledger": [
+    "F4-12",
+    "F4-25"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "4.10",
+   "heading": "good wishes",
+   "ledger": [
+    "F4-29",
+    "F4-18",
+    "F4-20"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "4.10.4",
+   "heading": "when someone is going out",
+   "ledger": [
+    "F4-26"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.7",
+   "heading": "defining",
+   "ledger": [
+    "C-22"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.14",
+   "heading": "objecting/protesting",
+   "ledger": [
+    "C-02"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.12",
+   "heading": "what to do if the interlocutor does not understand",
+   "ledger": [
+    "F6-09",
+    "F6-13"
+   ],
+   "status": "보강"
+  }
+ ],
+ "jf_topics": [
+  {
+   "no": "自分と家族",
+   "heading": "self and family",
+   "ledger": [
+    "F1-01",
+    "F1-02",
+    "F1-03",
+    "F1-04",
+    "F1-05",
+    "T-08"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "住まいと住環境",
+   "heading": "home and living environment",
+   "ledger": [
+    "T-02"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "自由時間と娯楽",
+   "heading": "free time and entertainment",
+   "ledger": [
+    "T-04",
+    "F3-22"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "生活と人生",
+   "heading": "daily life and life",
+   "ledger": [
+    "T-03",
+    "F1-19"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "仕事と職業",
+   "heading": "work and occupation",
+   "ledger": [
+    "F1-04",
+    "T-39"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "食生活",
+   "heading": "food",
+   "ledger": [
+    "T-15",
+    "T-16",
+    "T-17",
+    "T-32",
+    "T-33",
+    "F3-19"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "旅行と交通",
+   "heading": "travel and transport",
+   "ledger": [
+    "T-05",
+    "T-06",
+    "T-07",
+    "T-18",
+    "T-29",
+    "T-30",
+    "T-31"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "健康",
+   "heading": "health",
+   "ledger": [
+    "T-09",
+    "T-10",
+    "T-36",
+    "F2-30"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "買い物",
+   "heading": "shopping",
+   "ledger": [
+    "T-12",
+    "T-13",
+    "T-14",
+    "T-34",
+    "T-35"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "自然と環境",
+   "heading": "nature and environment",
+   "ledger": [
+    "T-23",
+    "T-47",
+    "T-48"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "人との関係",
+   "heading": "relationships",
+   "ledger": [
+    "F4-24",
+    "F4-30",
+    "F4-31",
+    "F4-33"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "学校と教育",
+   "heading": "school and education",
+   "ledger": [
+    "T-11"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "言語と文化",
+   "heading": "language and culture",
+   "ledger": [
+    "T-22",
+    "F6-15"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "社会",
+   "heading": "society",
+   "ledger": [
+    "T-49"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "科学技術",
+   "heading": "science and technology",
+   "ledger": [
+    "T-50"
+   ],
+   "status": "더함"
+  }
+ ],
+ "jf_categories": [
+  {
+   "no": "社交的なやりとりをする",
+   "heading": "social interaction",
+   "ledger": [
+    "F4-01",
+    "F4-24",
+    "F4-30",
+    "F3-19",
+    "F3-17"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "店や公共機関でやりとりをする",
+   "heading": "transactions in shops and public places",
+   "ledger": [
+    "T-15",
+    "T-29",
+    "T-30",
+    "T-32",
+    "T-34",
+    "T-36",
+    "F6-15"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "情報交換する",
+   "heading": "exchanging information",
+   "ledger": [
+    "F1-24",
+    "F3-22",
+    "F3-23",
+    "T-28"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "共同作業中にやりとりをする",
+   "heading": "interaction while working together",
+   "ledger": [
+    "F3-18",
+    "F3-21",
+    "F3-15"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "ｲﾝﾌｫｰﾏﾙな場面でやりとりをする",
+   "heading": "informal discussion",
+   "ledger": [
+    "F5-09",
+    "F2-22",
+    "F2-27"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "ﾌｫｰﾏﾙな場面で議論する",
+   "heading": "formal discussion",
+   "ledger": [
+    "C-01",
+    "C-02",
+    "C-17"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "ｲﾝﾀﾋﾞｭｰする／受ける",
+   "heading": "interviewing and being interviewed",
+   "ledger": [
+    "T-31",
+    "F1-18"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "手紙やﾒｰﾙのやりとりをする",
+   "heading": "letters and e-mail",
+   "ledger": [
+    "T-45",
+    "T-46"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "申請書類や伝言を書く",
+   "heading": "forms and messages",
+   "ledger": [],
+   "status": "뺌",
+   "note": "서식 쓰기는 문장 표현이 아니라 쓰기 활동이다"
+  },
+  {
+   "no": "経験や物語を語る",
+   "heading": "telling experiences and stories",
+   "ledger": [
+    "F1-18",
+    "F5-01",
+    "F5-02"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "講演やﾌﾟﾚｾﾞﾝﾃｰｼｮﾝをする",
+   "heading": "giving talks and presentations",
+   "ledger": [
+    "C-16",
+    "F4-15",
+    "F4-33"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "公共ｱﾅｳﾝｽをする",
+   "heading": "public announcements",
+   "ledger": [],
+   "status": "뺌",
+   "note": "안내 방송은 학습자가 할 일이 드물다"
+  },
+  {
+   "no": "論述する",
+   "heading": "sustained argument",
+   "ledger": [
+    "C-14",
+    "C-03"
+   ],
+   "status": "있음",
+   "note": "화용 전략 C 갈래로 받는다"
+  },
+  {
+   "no": "作文を書く",
+   "heading": "creative writing",
+   "ledger": [],
+   "status": "뺌",
+   "note": "쓰기 갈래는 이 원장(말로 하는 일) 밖. 각 판의 예문·해설이 맡는다"
+  },
+  {
+   "no": "ﾚﾎﾟｰﾄや記事を書く",
+   "heading": "reports and articles",
+   "ledger": [],
+   "status": "뺌",
+   "note": "作文を書く와 같음"
+  },
+  {
+   "no": "必要な情報を探し出す",
+   "heading": "finding information",
+   "ledger": [],
+   "status": "뺌",
+   "note": "읽기·듣기(受容)는 표현이 아니라 이해 활동이라 이 원장 밖이다"
+  },
+  {
+   "no": "情報や要点を読み取る",
+   "heading": "reading for gist",
+   "ledger": [],
+   "status": "뺌",
+   "note": "읽기·듣기(受容)는 표현이 아니라 이해 활동이라 이 원장 밖이다"
+  },
+  {
+   "no": "手紙やﾒｰﾙを読む",
+   "heading": "reading letters and e-mail",
+   "ledger": [],
+   "status": "뺌",
+   "note": "읽기·듣기(受容)는 표현이 아니라 이해 활동이라 이 원장 밖이다"
+  },
+  {
+   "no": "指示やｱﾅｳﾝｽを聞く",
+   "heading": "listening to instructions and announcements",
+   "ledger": [],
+   "status": "뺌",
+   "note": "읽기·듣기(受容)는 표현이 아니라 이해 활동이라 이 원장 밖이다"
+  },
+  {
+   "no": "説明を読む",
+   "heading": "reading instructions",
+   "ledger": [],
+   "status": "뺌",
+   "note": "읽기·듣기(受容)는 표현이 아니라 이해 활동이라 이 원장 밖이다"
+  },
+  {
+   "no": "講演やﾌﾟﾚｾﾞﾝﾃｰｼｮﾝを聞く",
+   "heading": "listening to talks",
+   "ledger": [],
+   "status": "뺌",
+   "note": "읽기·듣기(受容)는 표현이 아니라 이해 활동이라 이 원장 밖이다"
+  },
+  {
+   "no": "音声ﾒﾃﾞｨｱを聞く",
+   "heading": "listening to audio media",
+   "ledger": [],
+   "status": "뺌",
+   "note": "읽기·듣기(受容)는 표현이 아니라 이해 활동이라 이 원장 밖이다"
+  },
+  {
+   "no": "ﾃﾚﾋﾞや映画を見る",
+   "heading": "watching TV and film",
+   "ledger": [],
+   "status": "뺌",
+   "note": "읽기·듣기(受容)는 표현이 아니라 이해 활동이라 이 원장 밖이다"
+  }
+ ],
+ "not_from_headings": [
+  {
+   "no": "-",
+   "heading": "이유 말하기",
+   "ledger": [
+    "F1-23"
+   ],
+   "status": "더함",
+   "note": "Threshold는 원인을 6장 일반 개념(문법)으로 둔다. 이유를 대는 문장은 회화에 꼭 필요해 넣었다. JF 483(A2, 늦은 이유를 대며 사과)"
+  },
+  {
+   "no": "-",
+   "heading": "집에 돌아와서 / 돌아온 사람에게",
+   "ledger": [
+    "F4-27",
+    "F4-28"
+   ],
+   "status": "더함",
+   "note": "원문 목차에 없다. F4-14(나갈 때)와 짝을 맞추려고 Claude가 넣었다. 한국어·일본어처럼 정해진 말이 있는 언어가 있어 hint"
+  }
+ ]
+}
