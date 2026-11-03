@@ -1,7 +1,7 @@
 {
  "title": "고양공유 원장 원문 대조 (2026-11-03)",
- "ledger_version": "0.2",
- "how": "원문의 목차 번호·제목과 원장 id를 맞췄다. 원문의 보기 문장과 Can-do 문장은 옮기지 않았다(저작권). status: 있음 / 더함(0.2에서 새로 넣음) / 보강(있던 항목에 0.2 항목을 더함) / 묻기 꼴(같은 항목의 물음꼴이라 따로 두지 않음) / 판 고유 / 뺌(note에 까닭).",
+ "ledger_version": "0.3",
+ "how": "원문의 목차 번호·제목과 원장 id를 맞췄다. 원문의 보기 문장과 Can-do 문장은 옮기지 않았다(저작권). status: 있음 / 더함(그 원문 대조로 새로 넣음) / 보강(있던 항목에 새 항목을 더함) / 묻기 꼴(같은 항목의 물음꼴이라 따로 두지 않음) / 판 고유 / 뺌(note에 까닭). / 단어·문법(문장 항목이 아니라 각 판의 단어 풀·문법 지도가 맡음) / 제목 대기(받은 쪽에 제목이 없어 아직 못 맞춤).",
  "sources": {
   "TL90": {
    "what": "J. A. van Ek & J. L. M. Trim, Threshold 1990 (Council of Europe/CUP 1991/1998)",
@@ -22,10 +22,11 @@
    "parts": "토픽 15, 카테고리 23. A1·A2 Can-do는 문장을 하나씩 읽어 원장에 없는 상황을 찾았다"
   },
   "PCIC": {
-   "what": "Instituto Cervantes, Plan curricular (Niveles de referencia para el español), 5. Funciones, 6. Tácticas y estrategias pragmáticas",
-   "url": "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/",
-   "read": null,
-   "status": "미대조. 26.11.03 cvc.cervantes.es가 이 세션 요청에 모든 주소(루트 포함)를 404로 돌려줬다. 브라우저 흉내·보관본 우회는 하지 않았다. 영신이 페이지를 받아 주거나 다른 세션에서 열리면 대조한다."
+   "what": "Instituto Cervantes, Plan curricular. Niveles de referencia para el español, 5. Funciones / 6. Tácticas y estrategias pragmáticas",
+   "url": "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/ (26.11.03 현재 서버가 모든 주소에 404)",
+   "read": "2026-11-03",
+   "via": "영신이 Internet Archive 보관본(2026-06~10 저장)에서 내려받아 올린 6쪽: 5장·6장 각 A1-A2, B1-B2, C1-C2",
+   "status": "대조 완료. 세 수준 쪽을 합쳐 목차 번호마다 처음 나온 제목을 썼다"
   }
  },
  "threshold1990_functions": [
@@ -1977,6 +1978,1787 @@
    ],
    "status": "더함",
    "note": "원문 목차에 없다. F4-14(나갈 때)와 짝을 맞추려고 Claude가 넣었다. 한국어·일본어처럼 정해진 말이 있는 언어가 있어 hint"
+  }
+ ],
+ "pcic_functions": [
+  {
+   "no": "1.1",
+   "heading": "Identificar",
+   "ledger": [
+    "F1-06",
+    "F1-21"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.2",
+   "heading": "Pedir información",
+   "ledger": [
+    "F1-06",
+    "F1-07",
+    "F1-08",
+    "F1-09",
+    "F1-10",
+    "F1-11",
+    "F1-12",
+    "F1-13",
+    "F1-14"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.2.1",
+   "heading": "Proponiendo alternativas",
+   "ledger": [
+    "F2-27"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.2.2",
+   "heading": "Expresando curiosidad",
+   "ledger": [
+    "F2-18"
+   ],
+   "status": "있음",
+   "note": "관심(F2-18)으로 받는다"
+  },
+  {
+   "no": "1.2.3",
+   "heading": "Solicitando una explicación",
+   "ledger": [
+    "F1-13"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.2.4",
+   "heading": "Con prudencia",
+   "ledger": [
+    "F1-25"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "1.3",
+   "heading": "Dar información",
+   "ledger": [
+    "F1-01",
+    "F1-02",
+    "F1-03",
+    "F1-04",
+    "F1-05"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.3.1",
+   "heading": "Corrigiendo otra información previa",
+   "ledger": [
+    "F1-16"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.3.2",
+   "heading": "Señalando que el enunciado previo es improcedente",
+   "ledger": [
+    "C-25"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "1.4",
+   "heading": "Pedir confirmación",
+   "ledger": [
+    "F1-15",
+    "F6-10"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.4.1",
+   "heading": "Cuestionando la información",
+   "ledger": [
+    "F2-45"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "1.5",
+   "heading": "Confirmar la información previa",
+   "ledger": [
+    "F1-22"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.6",
+   "heading": "Describir",
+   "ledger": [
+    "T-02",
+    "F1-18"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.7",
+   "heading": "Narrar",
+   "ledger": [
+    "F1-18",
+    "F5-01"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.1",
+   "heading": "Pedir opinión",
+   "ledger": [
+    "F2-15"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.2",
+   "heading": "Dar una opinión",
+   "ledger": [
+    "F5-09"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.3",
+   "heading": "Pedir valoración",
+   "ledger": [
+    "F2-42"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.4",
+   "heading": "Valorar",
+   "ledger": [
+    "F2-43"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.5",
+   "heading": "Expresar aprobación y desaprobación",
+   "ledger": [
+    "F2-16",
+    "F2-39"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.6",
+   "heading": "Posicionarse a favor o en contra",
+   "ledger": [
+    "F2-44",
+    "C-17"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "2.7",
+   "heading": "Preguntar si se está de acuerdo",
+   "ledger": [
+    "F2-22"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.8",
+   "heading": "Invitar al acuerdo",
+   "ledger": [
+    "F2-22"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.9",
+   "heading": "Expresar acuerdo",
+   "ledger": [
+    "F2-04"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.10",
+   "heading": "Expresar desacuerdo",
+   "ledger": [
+    "F2-05"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.11",
+   "heading": "Mostrar escepticismo",
+   "ledger": [
+    "F2-45"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.12",
+   "heading": "Presentar un contraargumento",
+   "ledger": [
+    "C-02",
+    "C-03"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.13",
+   "heading": "Expresar certeza y evidencia",
+   "ledger": [
+    "F2-06"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.14",
+   "heading": "Expresar falta de certeza y evidencia",
+   "ledger": [
+    "F2-07",
+    "F2-08"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.15",
+   "heading": "Invitar a formular una hipótesis",
+   "ledger": [
+    "F2-53"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.16",
+   "heading": "Expresar posibilidad",
+   "ledger": [
+    "F2-08"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.17",
+   "heading": "Expresar obligación y necesidad",
+   "ledger": [
+    "F2-19"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.18",
+   "heading": "Expresar falta de obligación o de necesidad",
+   "ledger": [
+    "F2-26"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.19",
+   "heading": "Preguntar por el conocimiento de algo",
+   "ledger": [
+    "F2-23"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.20",
+   "heading": "Expresar conocimiento",
+   "ledger": [
+    "F2-23"
+   ],
+   "status": "묻기 꼴",
+   "note": "아는지 묻기의 대답 꼴"
+  },
+  {
+   "no": "2.21",
+   "heading": "Expresar desconocimiento",
+   "ledger": [
+    "F2-07"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.22",
+   "heading": "Preguntar por la habilidad para hacer algo",
+   "ledger": [
+    "F2-20"
+   ],
+   "status": "묻기 꼴"
+  },
+  {
+   "no": "2.23",
+   "heading": "Expresar habilidad para hacer algo",
+   "ledger": [
+    "F2-20"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.24",
+   "heading": "Preguntar si se recuerda o se ha olvidado",
+   "ledger": [
+    "F1-20"
+   ],
+   "status": "묻기 꼴"
+  },
+  {
+   "no": "2.25",
+   "heading": "Expresar que se recuerda",
+   "ledger": [
+    "F1-20"
+   ],
+   "status": "묻기 꼴",
+   "note": "기억난다는 대답 꼴"
+  },
+  {
+   "no": "2.26",
+   "heading": "Expresar que no se recuerda",
+   "ledger": [
+    "F1-20",
+    "F2-24"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.1",
+   "heading": "Preguntar por gustos e intereses",
+   "ledger": [
+    "F2-01"
+   ],
+   "status": "묻기 꼴"
+  },
+  {
+   "no": "3.2",
+   "heading": "Expresar gustos e intereses",
+   "ledger": [
+    "F2-01",
+    "F2-18"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.3",
+   "heading": "Expresar aversión",
+   "ledger": [
+    "F2-02"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.4",
+   "heading": "Preguntar por preferencias",
+   "ledger": [
+    "F2-27"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.5",
+   "heading": "Expresar preferencia",
+   "ledger": [
+    "F2-14"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.6",
+   "heading": "Expresar indiferencia o ausencia de preferencia",
+   "ledger": [
+    "F2-28"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.7",
+   "heading": "Preguntar por deseos",
+   "ledger": [
+    "F2-03"
+   ],
+   "status": "묻기 꼴"
+  },
+  {
+   "no": "3.8",
+   "heading": "Expresar deseos",
+   "ledger": [
+    "F2-03",
+    "F2-34"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.9",
+   "heading": "Preguntar por planes e intenciones",
+   "ledger": [
+    "F1-19"
+   ],
+   "status": "묻기 꼴"
+  },
+  {
+   "no": "3.10",
+   "heading": "Expresar planes e intenciones",
+   "ledger": [
+    "F1-19"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.10.1",
+   "heading": "Expresar planes e intenciones frustrados",
+   "ledger": [
+    "F1-26"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "3.11",
+   "heading": "Preguntar por el estado de ánimo",
+   "ledger": [
+    "F2-30"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.12",
+   "heading": "Expresar alegría y satisfacción",
+   "ledger": [
+    "F2-09",
+    "F2-31"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.13",
+   "heading": "Expresar tristeza y aflicción",
+   "ledger": [
+    "F2-29"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.14",
+   "heading": "Expresar placer y diversión",
+   "ledger": [
+    "F2-47"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "3.15",
+   "heading": "Expresar aburrimiento",
+   "ledger": [
+    "F2-48"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "3.16",
+   "heading": "Expresar hartazgo",
+   "ledger": [
+    "F2-38",
+    "F2-48"
+   ],
+   "status": "보강",
+   "note": "진저리(지겨움)는 짜증·지루함으로 받는다"
+  },
+  {
+   "no": "3.17",
+   "heading": "Expresar enfado e indignación",
+   "ledger": [
+    "F2-49",
+    "F2-38"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "3.18",
+   "heading": "Expresar miedo, ansiedad y preocupación",
+   "ledger": [
+    "F2-35",
+    "F2-11"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.19",
+   "heading": "Expresar nerviosismo",
+   "ledger": [
+    "F2-50"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "3.20",
+   "heading": "Expresar empatía",
+   "ledger": [
+    "F4-16"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.21",
+   "heading": "Expresar alivio",
+   "ledger": [
+    "F2-37"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.22",
+   "heading": "Expresar esperanza",
+   "ledger": [
+    "F2-34"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.23",
+   "heading": "Expresar decepción",
+   "ledger": [
+    "F2-13"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.24",
+   "heading": "Expresar resignación",
+   "ledger": [
+    "F2-54"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "3.25",
+   "heading": "Expresar arrepentimiento",
+   "ledger": [
+    "F2-17"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.26",
+   "heading": "Expresar vergüenza",
+   "ledger": [
+    "F2-55"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "3.27",
+   "heading": "Expresar sorpresa y extrañeza",
+   "ledger": [
+    "F2-10"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.28",
+   "heading": "Expresar admiración y orgullo",
+   "ledger": [
+    "F2-16",
+    "F2-51"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "3.29",
+   "heading": "Expresar afecto",
+   "ledger": [
+    "F2-52"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "3.30",
+   "heading": "Expresar sensaciones físicas",
+   "ledger": [
+    "F2-12",
+    "T-09"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.1",
+   "heading": "Dar una orden o instrucción",
+   "ledger": [
+    "F3-18"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.2",
+   "heading": "Pedir un favor",
+   "ledger": [
+    "F3-01",
+    "F3-15"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.3",
+   "heading": "Pedir objetos",
+   "ledger": [
+    "F3-02"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.4",
+   "heading": "Pedir ayuda",
+   "ledger": [
+    "T-25"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.5",
+   "heading": "Rogar",
+   "ledger": [
+    "F3-24"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.6",
+   "heading": "Repetir una orden previa o presupuesta",
+   "ledger": [],
+   "status": "뺌",
+   "note": "했던 지시를 다그치는 말. 나무라기(F2-39)·원망하기(F2-56)로 받는다"
+  },
+  {
+   "no": "4.7",
+   "heading": "Responder a una orden, petición o ruego",
+   "ledger": [
+    "F3-25",
+    "C-07",
+    "F3-08"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "4.7.1",
+   "heading": "Accediendo a su cumplimiento",
+   "ledger": [
+    "F3-25"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "4.7.2",
+   "heading": "Eludiendo el compromiso",
+   "ledger": [
+    "C-07"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.7.3",
+   "heading": "Negándose a su cumplimiento",
+   "ledger": [
+    "F3-08"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.8",
+   "heading": "Pedir permiso",
+   "ledger": [
+    "F3-03"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.9",
+   "heading": "Dar permiso",
+   "ledger": [
+    "F3-04"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.10",
+   "heading": "Denegar permiso",
+   "ledger": [
+    "F3-05"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.11",
+   "heading": "Prohibir",
+   "ledger": [
+    "F3-05"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.12",
+   "heading": "Rechazar una prohibición",
+   "ledger": [
+    "F1-13"
+   ],
+   "status": "있음",
+   "note": "금지에 맞서는 말은 이유 묻기(F1-13)로 받는다"
+  },
+  {
+   "no": "4.13",
+   "heading": "Proponer y sugerir",
+   "ledger": [
+    "F3-06"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.14",
+   "heading": "Ofrecer e invitar",
+   "ledger": [
+    "F3-09",
+    "F3-19"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.15",
+   "heading": "Solicitar confirmación de una propuesta previa",
+   "ledger": [
+    "F6-10"
+   ],
+   "status": "있음",
+   "note": "되물어 확인하기(F6-10)로 받는다"
+  },
+  {
+   "no": "4.16",
+   "heading": "Aceptar una propuesta, ofrecimiento o invitación",
+   "ledger": [
+    "F3-07"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.17",
+   "heading": "Rechazar una propuesta, ofrecimiento o invitación",
+   "ledger": [
+    "F3-08",
+    "F3-20"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.18",
+   "heading": "Aconsejar",
+   "ledger": [
+    "F3-12"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.19",
+   "heading": "Advertir",
+   "ledger": [
+    "F3-11"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.20",
+   "heading": "Amenazar",
+   "ledger": [],
+   "status": "뺌",
+   "note": "위협은 공통 예문으로 돌려 쓰기에 알맞지 않다"
+  },
+  {
+   "no": "4.21",
+   "heading": "Reprochar",
+   "ledger": [
+    "F2-56",
+    "F2-39"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "4.22",
+   "heading": "Prometer y comprometerse",
+   "ledger": [
+    "F3-14"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.23",
+   "heading": "Ofrecerse para hacer algo",
+   "ledger": [
+    "F3-21"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.24",
+   "heading": "Tranquilizar y consolar",
+   "ledger": [
+    "F2-36",
+    "F4-16"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "4.25",
+   "heading": "Animar",
+   "ledger": [
+    "F3-17"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.1",
+   "heading": "Saludar",
+   "ledger": [
+    "F4-01"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.2",
+   "heading": "Responder a un saludo",
+   "ledger": [
+    "F4-22"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.3",
+   "heading": "Dirigirse a alguien",
+   "ledger": [
+    "F4-08"
+   ],
+   "status": "판 고유",
+   "note": "부르는 말의 짜임은 언어마다 다르다. 모르는 사람 부르기만 F4-08"
+  },
+  {
+   "no": "5.4",
+   "heading": "Presentar a alguien",
+   "ledger": [
+    "F4-10"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.5",
+   "heading": "Responder a una presentación",
+   "ledger": [
+    "F4-02",
+    "F4-23"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.6",
+   "heading": "Preguntar por la necesidad de una presentación",
+   "ledger": [
+    "F4-39"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.7",
+   "heading": "Solicitar ser presentado",
+   "ledger": [
+    "F4-40"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.8",
+   "heading": "Dar la bienvenida a alguien",
+   "ledger": [
+    "F4-24"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.9",
+   "heading": "Responder a una bienvenida",
+   "ledger": [
+    "F4-35"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.10",
+   "heading": "Disculparse",
+   "ledger": [
+    "F4-06",
+    "F4-32"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.11",
+   "heading": "Responder a una disculpa",
+   "ledger": [
+    "F4-07"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.12",
+   "heading": "Agradecer",
+   "ledger": [
+    "F4-04"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.13",
+   "heading": "Responder a un agradecimiento",
+   "ledger": [
+    "F4-05"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.14",
+   "heading": "Dar el pésame",
+   "ledger": [
+    "F4-36"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.15",
+   "heading": "Proponer un brindis",
+   "ledger": [
+    "F4-15"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.16",
+   "heading": "Felicitar",
+   "ledger": [
+    "F4-11"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.17",
+   "heading": "Formular buenos deseos",
+   "ledger": [
+    "F4-29",
+    "F4-18",
+    "F4-20"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "5.18",
+   "heading": "Responder a felicitaciones y buenos deseos",
+   "ledger": [
+    "F4-37"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.19",
+   "heading": "Enviar y transmitir saludos, recuerdos",
+   "ledger": [
+    "F4-41"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "5.20",
+   "heading": "Responder al envío de saludos, recuerdos",
+   "ledger": [
+    "F4-04"
+   ],
+   "status": "있음",
+   "note": "안부를 전해 받으면 고맙다는 말(F4-04)로 답한다"
+  },
+  {
+   "no": "5.21",
+   "heading": "Despedirse",
+   "ledger": [
+    "F4-03",
+    "F4-19"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.1",
+   "heading": "Establecer la comunicación y reaccionar",
+   "ledger": [
+    "F4-08",
+    "T-40"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.1.1",
+   "heading": "Establecer la comunicación",
+   "ledger": [
+    "F4-08",
+    "T-40"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.1.2",
+   "heading": "Reaccionar",
+   "ledger": [
+    "T-40"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.2",
+   "heading": "Saludar y responder a un saludo",
+   "ledger": [
+    "T-40"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.2.1",
+   "heading": "Saludar",
+   "ledger": [
+    "T-40"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.2.2",
+   "heading": "Responder a un saludo",
+   "ledger": [
+    "T-40"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.3",
+   "heading": "Preguntar por una persona y responder",
+   "ledger": [
+    "T-41"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.3.1",
+   "heading": "Preguntar por una persona",
+   "ledger": [
+    "T-41"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.3.2",
+   "heading": "Responder",
+   "ledger": [
+    "T-42"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.4",
+   "heading": "Pedir una extensión o habitación y responder",
+   "ledger": [
+    "T-41"
+   ],
+   "status": "있음",
+   "note": "내선·객실 연결도 바꿔 달라고 하기(T-41)로 받는다"
+  },
+  {
+   "no": "6.4.1",
+   "heading": "Pedir una extensión o habitación",
+   "ledger": [
+    "T-41"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.4.2",
+   "heading": "Responder",
+   "ledger": [
+    "T-42"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.5",
+   "heading": "Preguntar si se puede dejar un recado",
+   "ledger": [
+    "T-51"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "6.6",
+   "heading": "Preguntar por el estado general de las cosas y responder",
+   "ledger": [
+    "F4-09",
+    "F4-22"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.6.1",
+   "heading": "Preguntar por el estado general de las cosas",
+   "ledger": [
+    "F4-09"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.6.2",
+   "heading": "Responder",
+   "ledger": [
+    "F4-22"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.7",
+   "heading": "Solicitar que comience un relato y reaccionar",
+   "ledger": [
+    "F5-11"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.7.1",
+   "heading": "Solicitar al interlocutor que comience",
+   "ledger": [
+    "F5-11"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.7.2",
+   "heading": "Reaccionar",
+   "ledger": [
+    "F5-10"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.8",
+   "heading": "Introducir el tema del relato y reaccionar",
+   "ledger": [
+    "F5-01"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.8.1",
+   "heading": "Introducir el tema",
+   "ledger": [
+    "F5-01"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.8.2",
+   "heading": "Reaccionar",
+   "ledger": [
+    "F5-10"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.9",
+   "heading": "Indicar que se sigue el relato con interés",
+   "ledger": [
+    "F5-10"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.10",
+   "heading": "Controlar la atención del interlocutor",
+   "ledger": [
+    "F6-07",
+    "F5-10"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.11",
+   "heading": "Introducir un hecho",
+   "ledger": [
+    "F5-01"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.12",
+   "heading": "Organizar la información",
+   "ledger": [
+    "F5-02",
+    "C-14"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.13",
+   "heading": "Conectar elementos",
+   "ledger": [
+    "F5-04",
+    "F5-05"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.14",
+   "heading": "Reformular lo dicho",
+   "ledger": [
+    "C-13"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.15",
+   "heading": "Destacar un elemento",
+   "ledger": [
+    "C-04"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.16",
+   "heading": "Introducir palabras de otros",
+   "ledger": [
+    "F1-17",
+    "C-12"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.17",
+   "heading": "Citar",
+   "ledger": [
+    "F1-17"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.18",
+   "heading": "Abrir una digresión",
+   "ledger": [
+    "C-26"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "6.19",
+   "heading": "Cerrar una digresión",
+   "ledger": [
+    "F5-08"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.20",
+   "heading": "Rechazar un tema o aspecto del tema",
+   "ledger": [
+    "F5-17"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "6.21",
+   "heading": "Interrumpir",
+   "ledger": [
+    "C-06"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.22",
+   "heading": "Indicar que se puede reanudar el discurso",
+   "ledger": [
+    "F5-11"
+   ],
+   "status": "있음",
+   "note": "다시 이어 가라고 하기는 계속하라고 하기(F5-11)로 받는다"
+  },
+  {
+   "no": "6.23",
+   "heading": "Pedir a alguien que guarde silencio",
+   "ledger": [
+    "F5-16"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.24",
+   "heading": "Conceder la palabra",
+   "ledger": [
+    "F5-12"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.25",
+   "heading": "Indicar que se desea continuar el discurso",
+   "ledger": [
+    "F5-13"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.26",
+   "heading": "Concluir el relato",
+   "ledger": [
+    "F5-07",
+    "F5-14"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.27",
+   "heading": "Introducir un nuevo tema",
+   "ledger": [
+    "C-05"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.28",
+   "heading": "Proponer el cierre",
+   "ledger": [
+    "F4-38"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "6.29",
+   "heading": "Aceptar el cierre",
+   "ledger": [
+    "F4-03",
+    "F4-19"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "6.30",
+   "heading": "Rechazar el cierre introduciendo un nuevo tema",
+   "ledger": [
+    "C-27"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "6.31",
+   "heading": "Despedirse y responder a las despedidas",
+   "ledger": [
+    "F4-03",
+    "F4-19"
+   ],
+   "status": "있음"
+  }
+ ],
+ "pcic_tactics": [
+  {
+   "no": "1",
+   "heading": "Construcción e interpretación del discurso",
+   "ledger": [],
+   "status": "단어·문법",
+   "note": "담화 짜기(지시어·접속어·인용·부정·은유)는 각 판의 문법 지도가 맡는다. 문장으로 꼭 필요한 것만 아래 하위 항목에 단다"
+  },
+  {
+   "no": "1.1",
+   "heading": "Mantenimiento del referente y del hilo discursivo",
+   "ledger": [],
+   "status": "단어·문법"
+  },
+  {
+   "no": "1.1.1",
+   "heading": "Recursos gramaticales",
+   "ledger": [],
+   "status": "단어·문법"
+  },
+  {
+   "no": "1.1.2",
+   "heading": "Recursos léxico-semánticos",
+   "ledger": [],
+   "status": "단어·문법"
+  },
+  {
+   "no": "1.2",
+   "heading": "Marcadores del discurso",
+   "ledger": [
+    "F5-03",
+    "F5-04",
+    "F5-05",
+    "F5-06",
+    "C-13"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.2.1",
+   "heading": "Conectores",
+   "ledger": [
+    "F5-04",
+    "F5-05"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.2.2",
+   "heading": "Estructuradores de la información",
+   "ledger": [
+    "F5-02",
+    "C-14"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.2.3",
+   "heading": "Reformuladores",
+   "ledger": [
+    "C-13",
+    "F6-09"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.2.4",
+   "heading": "Operadores discursivos",
+   "ledger": [],
+   "status": "단어·문법"
+  },
+  {
+   "no": "1.2.5",
+   "heading": "Controladores del contacto",
+   "ledger": [
+    "F5-01",
+    "F5-10"
+   ],
+   "status": "있음",
+   "note": "말 거는·확인하는 말(있잖아요·그렇죠)"
+  },
+  {
+   "no": "1.3",
+   "heading": "La deixis",
+   "ledger": [],
+   "status": "단어·문법"
+  },
+  {
+   "no": "1.3.1",
+   "heading": "Espacial",
+   "ledger": [],
+   "status": "단어·문법"
+  },
+  {
+   "no": "1.3.2",
+   "heading": "Temporal",
+   "ledger": [],
+   "status": "단어·문법"
+  },
+  {
+   "no": "1.3.3",
+   "heading": "Personal",
+   "ledger": [],
+   "status": "단어·문법"
+  },
+  {
+   "no": "1.3.4",
+   "heading": "Textual",
+   "ledger": [],
+   "status": "단어·문법"
+  },
+  {
+   "no": "1.4",
+   "heading": "Desplazamiento en el orden de los elementos oracionales",
+   "ledger": [],
+   "status": "단어·문법"
+  },
+  {
+   "no": "1.4.1",
+   "heading": "Rematización",
+   "ledger": [],
+   "status": "단어·문법"
+  },
+  {
+   "no": "1.4.2",
+   "heading": "Tematización",
+   "ledger": [],
+   "status": "단어·문법"
+  },
+  {
+   "no": "1.5",
+   "heading": "Procedimientos de cita",
+   "ledger": [
+    "F1-17",
+    "C-12"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.5.1",
+   "heading": "Estilo directo",
+   "ledger": [
+    "F1-17"
+   ],
+   "status": "단어·문법"
+  },
+  {
+   "no": "1.5.2",
+   "heading": "Estilo indirecto",
+   "ledger": [
+    "F1-17"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.5.3",
+   "heading": "Citas encubiertas",
+   "ledger": [
+    "C-12"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.6",
+   "heading": "Valores ilocutivos de los enunciados interrogativos",
+   "ledger": [
+    "F2-22",
+    "C-20"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.6.1",
+   "heading": "Interrogativos neutros",
+   "ledger": [],
+   "status": "단어·문법"
+  },
+  {
+   "no": "1.6.2",
+   "heading": "Interrogativos orientados",
+   "ledger": [
+    "F2-22",
+    "C-20"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.7",
+   "heading": "La expresión de la negación",
+   "ledger": [
+    "F2-21",
+    "F2-46"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "1.7.1",
+   "heading": "Tipos de negación",
+   "ledger": [],
+   "status": "단어·문법"
+  },
+  {
+   "no": "1.7.2",
+   "heading": "La negación con refuerzo",
+   "ledger": [
+    "F2-46"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "1.8",
+   "heading": "Significados interpretados",
+   "ledger": [
+    "C-19"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "1.8.1",
+   "heading": "Metáforas",
+   "ledger": [],
+   "status": "단어·문법",
+   "note": "은유는 각 판 고유 관용 표현으로"
+  },
+  {
+   "no": "1.8.2",
+   "heading": "Indicadores de ironía",
+   "ledger": [
+    "C-19"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2",
+   "heading": "Modalización",
+   "ledger": [
+    "C-01",
+    "C-04"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.1",
+   "heading": "Intensificación o refuerzo",
+   "ledger": [
+    "C-04"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.1.1",
+   "heading": "Intensificación de los elementos del discurso",
+   "ledger": [
+    "C-04"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.1.2",
+   "heading": "Intensificación del acuerdo o desacuerdo con el interlocutor",
+   "ledger": [
+    "C-15",
+    "F2-46"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "2.2",
+   "heading": "Atenuación o minimización",
+   "ledger": [
+    "C-01",
+    "C-09"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.3",
+   "heading": "Focalización",
+   "ledger": [
+    "C-04"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "2.4",
+   "heading": "Los valores modales de la entonación y de otros elementos suprasegmentales",
+   "ledger": [],
+   "status": "판 고유",
+   "note": "억양·말소리의 양태는 언어마다 다르다"
+  },
+  {
+   "no": "2.5",
+   "heading": "Desplazamiento de la perspectiva temporal",
+   "ledger": [
+    "C-23"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "2.5.1",
+   "heading": "Ampliación del dominio del presente al pasado o al futuro",
+   "ledger": [],
+   "status": "단어·문법"
+  },
+  {
+   "no": "2.5.2",
+   "heading": "Ampliación del dominio del futuro al presente o al pasado",
+   "ledger": [],
+   "status": "단어·문법"
+  },
+  {
+   "no": "2.5.3",
+   "heading": "Ampliación del dominio del pasado al presente o al futuro",
+   "ledger": [],
+   "status": "단어·문법"
+  },
+  {
+   "no": "2.5.4",
+   "heading": "Desplazamiento temporal en el pasado",
+   "ledger": [
+    "C-23"
+   ],
+   "status": "더함"
+  },
+  {
+   "no": "3",
+   "heading": "Conducta interaccional",
+   "ledger": [
+    "C-01",
+    "C-08",
+    "C-23",
+    "C-24"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "3.1",
+   "heading": "Cortesía verbal atenuadora",
+   "ledger": [
+    "C-01",
+    "C-08",
+    "C-23"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "3.1.1",
+   "heading": "Atenuación del papel del hablante o del oyente",
+   "ledger": [
+    "C-01"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.1.2",
+   "heading": "Atenuación del acto amenazador",
+   "ledger": [
+    "F3-15",
+    "C-08",
+    "C-20",
+    "C-23"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "3.1.3",
+   "heading": "Atenuación dialógica",
+   "ledger": [
+    "C-02",
+    "C-03"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.2",
+   "heading": "Cortesía verbal valorizante",
+   "ledger": [
+    "F2-16",
+    "C-24"
+   ],
+   "status": "보강"
+  },
+  {
+   "no": "3.2.1",
+   "heading": "Halagos, cumplidos y piropos",
+   "ledger": [
+    "F2-16",
+    "F4-21"
+   ],
+   "status": "있음"
+  },
+  {
+   "no": "3.2.2",
+   "heading": "La intensificación cortés",
+   "ledger": [
+    "C-24"
+   ],
+   "status": "더함"
   }
  ]
 }

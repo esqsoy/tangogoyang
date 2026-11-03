@@ -2,6 +2,15 @@
 
 의미 있는 작업과 사용자 결정을 날짜별로 추가한다. 현재 상태는 [HANDOFF.md](HANDOFF.md), 표시 원칙은 [UI_STANDARD.md](UI_STANDARD.md), 교육적 합의는 [WORK_PLAN.md](WORK_PLAN.md)에 유지한다. 과거 보고서 전문을 이 문서에 복사하지 않는다.
 
+## 2026-11-03 · 고양공유 원장 PCIC 대조(0.3)
+
+- **경위:** cvc.cervantes.es는 루트까지 404였다. 영신이 2011년 세르반테스 보도자료의 링크도 죽은 것을 확인하고, Internet Archive 보관본 주소를 찾아 줬다. 이 세션은 web.archive.org에 못 들어가(curl은 10초 만에 터널 끊김, WebFetch는 archive.org 차단) 영신이 5장·6장의 A1-A2·B1-B2·C1-C2 여섯 쪽을 내려받아 올렸다.
+- **한 일:** 여섯 쪽에서 목차 번호·제목만 뽑아 원장 id와 맞춤(대조표 `pcic_functions` 165줄, `pcic_tactics` 51줄). 빠진 32항목을 더해 0.3(258항목). 새 항목은 `added: "0.3"`, `ref`에 `PCIC 5-번호`/`PCIC 6-번호`. 검수 페이지 머리말이 판별 추가 수를 보여 주게 고침.
+- **결과:** 5장 165개 중 있음 123·더함 26·보강 6·물음꼴 7·뺌 2·판 고유 1. 6장 51개 중 단어·문법 20·있음 20·보강 6·더함 4·판 고유 1. 더한 것 갈래별: F1 2·F2 15·F3 1·F4 7·F5 1·T 1·C 5.
+- **변경 파일:** goyang-common/expressions.json(0.3), goyang-common/source-check-20261103.json(PCIC 절), goyang-common/review-page.py, goyang-common/README.md, HANDOFF.md, WORK_LOG.md. 앱 코드·데이터 변경 없음.
+- **검증:** 258항목 id·문장 중복 없음, 대조표 id가 모두 원장에 있고 더한 항목이 모두 대조표에 나옴(스크립트). 제목 대기 0.
+- **남은 일:** 영신 검수(0.3 전체).
+
 ## 2026-11-03 · 고양공유 원장 원문 대조(0.2)
 
 - **요청:** 영신 "HANDOFF 읽고, goyang-common 원장을 Threshold 1990(ealta.eu)·PCIC(cvc.cervantes.es)·JF스탠더드(jpf.go.jp) 원문과 대조해서 빠진 기능 채워 줘". 처음엔 세 곳 다 네트워크 정책에 막혀, 영신이 접근 단계를 넓힌 뒤 진행.
