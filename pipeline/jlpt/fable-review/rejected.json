@@ -1,0 +1,22 @@
+[
+{
+"id": "aac375dbab",
+"kind": "해설",
+"problem": "清む→澄む로 고치면서 d56c12fa19(澄む)와 중복됐다. c '보통 澄む로 쓴다'도 뜻이 없다",
+"fix": {
+"drop": true
+},
+"confidence": "medium",
+"reason": "medium drop은 받지 않음"
+},
+{
+"id": "02783d9713",
+"kind": "뜻",
+"problem": "丁々(とうとう) '칼 부딪는 소리'는 극히 드문 말. N1 목록 오류로 보임(到頭 혼동)",
+"fix": {
+"drop": true
+},
+"confidence": "medium",
+"reason": "medium drop은 받지 않음"
+}
+]

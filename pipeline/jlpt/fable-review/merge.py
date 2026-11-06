@@ -13,10 +13,17 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 KANA = re.compile(r'^[぀-ヿー]+$')
+# 검수 쪽이 카드 번호를 잘못 적은 6건(뜻 고침이 다른 카드를 가리킴). Claude가 26.11.06 대조해 원래 카드로 옮긴다.
+REMAP = {'9923ca40cb': '30cf0aaae2',  # 支える → 指す
+         '568b987a90': '952c7983d6',  # 有能 → 豊か
+         '20410e72ff': '3067b8986a',  # ぼんやり → 本物
+         '441e70ebe8': '832440ef33',  # 噴水 → 付近
+         '4cfeb38640': '2b7ed7f48e',  # インフレ → 値
+         '1819ab5ac3': 'a299ed22cd'}  # 配列 → 名高い
 acc, rej = {}, []
 for f in sorted(HERE.glob('out-*.json')):
     for x in json.loads(f.read_text()):
-        fx, conf, i = x.get('fix') or {}, x.get('confidence'), x['id']
+        fx, conf, i = x.get('fix') or {}, x.get('confidence'), REMAP.get(x['id'], x['id'])
         take = {}
         for k in ('ko', 'c', 'shown'):
             if k in fx and isinstance(fx[k], str):
