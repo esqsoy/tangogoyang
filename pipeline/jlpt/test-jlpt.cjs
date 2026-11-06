@@ -35,7 +35,14 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   await p.evaluate(({li,ei})=>{startExercise(ei);},pos);await p.waitForTimeout(3000);
   await p.focus('#ainput');await p.keyboard.type('zzz');await p.keyboard.press('Enter');await p.waitForTimeout(400);
   ok(await p.evaluate(()=>state.session.copyMode),'오답이면 따라쓰기');
-  // 한글로 친 소리
+  // 최종 검수(26.11.06)에서 찾은 것: 한 자씩 칠 때 nn, tch, 한글 장음, は 변형, 히라가나 장음
+  const step=await p.evaluate(()=>{const typeOne=(romaji,ans)=>{let v='';for(const ch of romaji){v=jpScriptLike(jpRomaToKana(v+ch,false,ans),ans);}return jpScriptLike(jpRomaToKana(v,true,ans),ans);};
+    return [['minna','みんな'],['konnichiha','こんにちは'],['onna','おんな'],['konnya','こんや'],['kinnen','きんねん'],['shinnyuu','しんにゅう'],['matchi','マッチ'],['kotchi','こっち']].map(([r,a])=>[r,a,typeOne(r,a)]);});
+  for(const [r,a,got] of step)ok(got===a,`한 자씩 ${r} → ${got}`);
+  ok(await p.evaluate(()=>jpTentative('카-도','カード')==='カード'),'한글 카-도 → カード');
+  ok(await p.evaluate(()=>!isSpellingVariant('わ','は')&&!isSpellingVariant('とくわ','とくは')&&isSpellingVariant('こんばんわ','こんばんは')),'は→わ 변형은 인사말만');
+  ok(await p.evaluate(()=>!isCorrect('おーきい','おおきい')&&isCorrect('こおひい','コーヒー')),'히라가나 말에 ー는 틀림, 가타카나 장음은 앞 모음');
+
   const hg=await p.evaluate(()=>[['타베루','たべる'],['갓코우','がっこう'],['가방','かばん'],['신분','しんぶん'],['쿄우','きょう'],['코-히-','コーヒー'],['츠쿠에','つくえ'],['파-티-','パーティー'],['깃푸','きっぷ']].map(([h,a])=>[h,a,jpScriptLike(jpRomaToKana(jpHangulToKana(h,a),true),a)]));
   for(const [h,a,r] of hg)ok(r===a,`한글 ${h} → ${r}`);
   const hpos=await p.evaluate(()=>{for(let li=0;li<state.lessons.length;li++){const L=state.lessons[li];for(let ei=0;ei<L.exercises.length;ei++){const i=L.exercises[ei].words.findIndex(w=>w.term==='おとな');if(i===0)return {li,ei};}}return null;});

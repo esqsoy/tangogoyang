@@ -2179,7 +2179,7 @@ function variantKey(s){return normalize(s).replace(/\s/g,"");}
 // 단어 경계를 먼저 본다. 공백부터 지우면 in size까지 insize → insise로 잘못 바뀐다.
 function zKey(s){return normalize(s).replace(/[a-z]+/g,w=>w.replace(/^([a-z]{3,}[iy])z(e|es|ed|er|ers|ing|ation|ations|ational|able)$/,"$1s$2")).replace(/\s/g,"");}
 /* こんにちは·こんばんは의 끝 は를 소리대로 わ로 친 것: 맞다고 하되 쓰는 법을 알려 준다. */
-function isSpellingVariant(typed,term){return /は$/.test(term)&&normalize(typed)===normalize(term.replace(/は$/,"わ"));}
+function isSpellingVariant(typed,term){return /^(こんにちは|こんばんは)$/.test(term)&&normalize(typed)===normalize(term.replace(/は$/,"わ"));}
 const SYNLINES=[
   "‘{w}’만 맨날 쓸 거냐고양! 새로운 걸 배우라고양!",
   "‘{w}’가 아는 표현의 전부가 아니라고양! 이번엔 이 단어라고양.",
@@ -2525,6 +2525,7 @@ function normalize(v){
 }
 function isCorrect(inp,ans){
   const g=normalize(inp);if(!g)return false;
+  if(/ー/.test(inp)&&!/[ー\u30a1-\u30f6]/.test(ans)&&!jpCardFor(ans)?.alt?.some(a=>/[ー\u30a1-\u30f6]/.test(a)))return false; // 히라가나 말에 장음 기호는 틀린 철자
   if(g===normalize(ans))return true;
   const wc=jpCardFor(ans);
   if(wc&&(wc.ar||[]).some(r=>normalize(r)===g))return true; // 같은 표기·같은 뜻의 다른 표준 읽기(明日 あす 등)
@@ -2545,17 +2546,24 @@ const JP_ROMA=(()=>{const t={a:"あ",i:"い",u:"う",e:"え",o:"お",
  for(const c in yo){t[c+"ya"]=yo[c]+"ゃ";t[c+"yu"]=yo[c]+"ゅ";t[c+"yo"]=yo[c]+"ょ";t[c+"ye"]=yo[c]+"ぇ";}
  Object.assign(t,{sha:"しゃ",shu:"しゅ",sho:"しょ",cha:"ちゃ",chu:"ちゅ",cho:"ちょ",ja:"じゃ",ju:"じゅ",jo:"じょ"});delete t.ti_;return t;})();
 /* 로마자 → 히라가나. done=false면 끝의 덜 친 글자(k, sh, n 등)를 남긴다. */
-function jpRomaToKana(src,done=false){
-  let out="",i=0;const s=src.toLowerCase();
+/* answer(카드 정답)를 주면 nn+모음이 「ん+な行」인지 「ん+모음」인지 정답 쪽으로 가른다(minna=みんな, konnya=こんや). 최종 검수 26.11.06. */
+function jpRomaToKana(src,done=false,answer=""){
+  const ans=jpHira(answer||"");let out="",i=0;const s=src.toLowerCase();
   while(i<s.length){
     const c=s[i];
     if(!/[a-z'\-]/.test(c)){out+=src[i];i++;continue;}
     if(c==="n"){const nx=s[i+1];
       if(nx===undefined){if(done){out+="ん";i++;continue;}out+=src.slice(i);break;}
       if(nx==="'"){out+="ん";i+=2;continue;}
-      if(nx==="n"){out+="ん";i+=/[aiueoy]/.test(s[i+2]||"")?1:2;continue;} // konnichiha → こんにちは, onna → おんな
+      if(nx==="n"){const af=s[i+2];
+        if(af===undefined){if(done){out+="ん";i+=2;continue;}out+=src.slice(i);break;} // 끝의 nn은 다음 글자를 기다린다(한 자씩 칠 때 minn+a)
+        if(/[aiueoy]/.test(af)){const j=jpHira(out).length;
+          if(!ans||(ans[j]==="ん"&&/[なにぬねの]/.test(ans[j+1]||""))){out+="ん";i+=1;continue;} // ん+な行: konnichiha, onna
+          out+="ん";i+=2;continue;} // ん+모음: konnya(こんや)
+        out+="ん";i+=2;continue;}
       if(!/[aiueoy]/.test(nx)){out+="ん";i++;continue;}}
     if(/[bcdfghjklmpqrstvwxyz]/.test(c)&&s[i+1]===c&&c!=="n"){out+="っ";i++;continue;}
+    if(c==="t"&&s[i+1]==="c"&&s[i+2]==="h"){out+="っ";i++;continue;} // 헵번식 matchi = マッチ
     let hit="";for(let L=4;L>=1;L--){const k=s.slice(i,i+L);if(JP_ROMA[k]!==undefined){hit=k;break;}}
     if(hit){out+=JP_ROMA[hit];i+=hit.length;continue;}
     const rest=s.slice(i);
@@ -2606,6 +2614,7 @@ function jpHangulToKana(v,answer){
       if(T){const t=JP_HG_SOKU.has(T)&&!JP_HG_N.has(T)?"っ":JP_HG_N.has(T)?"ん":"";out+=t;j+=t.length;}
       continue;
     }
+    if(ch==="-"){out+="ー";j++;continue;} // 장음도 정답 자리를 센다(카-도 = カード)
     if(/[ㅅㄷㄱㅂㅆ]/.test(ch)){out+="っ";j++;continue;}
     if(/[ㄴㅁㅇ]/.test(ch)){out+="ん";j++;continue;}
     out+=ch;if(/[\u3040-\u30ffー]/.test(ch))j++;
@@ -2617,12 +2626,18 @@ function jpConvertInput(done=false){
   const v=el.value;if(!/[A-Za-z'\-\uac00-\ud7a3\u3131-\u314e]/.test(v))return;
   const s=state.session,w=s&&s.currentId!==null?s.words[s.currentId]:null;
   const target=w?(s.copyMode?s.copyAns:w.term):"";
-  let next=/[\uac00-\ud7a3\u3131-\u314e]/.test(v)?jpHangulToKana(v,target):v;
-  next=jpRomaToKana(next,done);
+  // 한글은 마지막 글자를 아직 바꾸지 않는다: 조합 이벤트 없이 자모를 넣는 자판에서 '타'+'ㅂ'이 'た'+'っ'이 되지 않게(탑 → 타베).
+  let keep="";if(!done&&/[\uac00-\ud7a3\u3131-\u314e]$/.test(v)){keep=v.slice(-1);}
+  const body=keep?v.slice(0,-1):v;
+  let next=/[\uac00-\ud7a3\u3131-\u314e]/.test(body)?jpHangulToKana(body,target):body;
+  next=jpRomaToKana(next,done,target);
   if(w)next=jpScriptLike(next,target);
-  if(next!==v){el.value=next;try{const n=next.length;el.setSelectionRange(n,n);}catch(e){}}
+  next+=keep;
+  if(next!==v){const fromEnd=Math.max(0,v.length-(el.selectionEnd??v.length));el.value=next;try{const n=Math.max(0,next.length-fromEnd);el.setSelectionRange(n,n);}catch(e){}}
 }
-function jpPending(v){return /[A-Za-z']/.test(v||"");}
+function jpPending(v){return /[A-Za-z'\uac00-\ud7a3\u3131-\u314e]/.test(v||"");}
+/* 한글이 끝에 남아 있어도 바꿔 보면 정답이면 바로 받는다(틀린 경우는 Enter까지 기다린다). */
+function jpTentative(raw,term){return jpScriptLike(jpRomaToKana(jpHangulToKana(raw,term),true,term),term);}
 /* 漢字読み 과정의 고양고양이 대사: 프리저 말투의 일본어 + 한국어 번역(pipeline/jlpt/lines-yomi.json, build.py가 넣는다). 26.11.06 영신. */
 const LINES_YOMI=/*__LINES_YOMI__*/null;
 if(JP_MODE==="yomi"&&LINES_YOMI){
@@ -2788,13 +2803,14 @@ function answerInputActive(){const s=state.session;return !!(s&&s.currentId!==nu
 function hasHangul(v){return /[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]/.test(v);}
 function composingKey(e){return state.composing||e.isComposing||e.keyCode===229;}
 function focusAnswerInput(){if(!answerInputActive())return;$("#ainput").focus({preventScroll:true});}
-function handleCopyInput(){const s=state.session;if(!s||!s.copyMode)return;jpConvertInput();const v=$("#ainput").value;renderCopyBlank(v);if(!state.composing&&isCorrect(v,s.copyAns)){$("#ainput").oninput=null;submitCopy();}}
+function handleCopyInput(){const s=state.session;if(!s||!s.copyMode)return;jpConvertInput();{const el=$("#ainput");if(hasHangul(el.value)){const t=jpTentative(el.value,s.copyAns);if(isCorrect(t,s.copyAns))el.value=t;}}const v=$("#ainput").value;renderCopyBlank(v);if(!state.composing&&isCorrect(v,s.copyAns)){$("#ainput").oninput=null;submitCopy();}}
 function mirrorTyped(options={}){
   const s=state.session;if(!s||s.answered||s.copyMode||s.currentId===null)return;
   jpConvertInput();
   const wrap=$("#hoeCtx .blanks");if(!wrap)return;const w=s.words[s.currentId],raw=$("#ainput").value;
   wrap.innerHTML=blankSlots(w.term,raw);
-  if(state.composing||hasHangul(raw))return;
+  if(state.composing)return;
+  if(hasHangul(raw)){const t=jpTentative(raw,w.term);if(isCorrect(t,w.term)&&!options.fromHint){$("#ainput").value=t;wrap.innerHTML=blankSlots(w.term,t);submit();}return;}
   // '=' and accented letters remain significant in the original MT grader.
   // Check the normalized length as well so punctuation cannot trigger an early miss.
   const entered=normalize(raw).replace(/\s/g,""),target=normalize(w.term).replace(/\s/g,"");
@@ -2895,7 +2911,7 @@ function giveHint(){
   const s=state.session;if(!s||s.currentId===null||s.answered||s.copyMode||s.hintLevel>=1||state.composing||$("#hintBtn").disabled)return;
   const answer=s.words[s.currentId].term,input=$("#ainput"),typed=input.value;
   const letter=/[A-Za-z\u00c0-\u024f0-9\u3040-\u30ff]/,first=[...answer].findIndex(c=>letter.test(c));if(first<0)return;
-  let tail=0;while(tail<typed.length&&!/[A-Za-z\u00c0-\u024f0-9\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]/.test(typed[tail]))tail++;
+  let tail=0;while(tail<typed.length&&!/[A-Za-z\u00c0-\u024f0-9\u1100-\u11ff\u3130-\u318f\uac00-\ud7af\u3040-\u30ffー]/.test(typed[tail]))tail++;
   if(tail<typed.length)tail++;
   input.value=answer.slice(0,first+1)+typed.slice(tail);
   const caret=input.value.length;if(input.selectionStart!==caret||input.selectionEnd!==caret)input.setSelectionRange(caret,caret); // 끝이 아닐 때만 옮긴다(iOS는 옮길 때마다 화면을 끈다)
@@ -4235,7 +4251,7 @@ function speakReviewWord(w){
   const entry=pronunciationEntry(w.term,w.meaning,w.originalMeaning);
   const native=()=>{if(!valid()||!pronunciationSupported())return;try{
     const u=new window.SpeechSynthesisUtterance(entry.speech||w.term),voice=pickPronunciationVoice();
-    if(voice)u.voice=voice;u.lang=voice?.lang||"en-US";u.rate=.88;window.speechSynthesis.speak(u);
+    if(voice)u.voice=voice;u.lang=voice?.lang||"ja-JP";u.rate=.9;window.speechSynthesis.speak(u);
   }catch(e){}};
   if(!exceptionAudioPlay(pronunciationAudioInfo(w.term,w.meaning,w.originalMeaning),null,valid,native))native();
 }

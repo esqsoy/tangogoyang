@@ -10,6 +10,8 @@ JLPT N5→N1 단어를 **예문 없는 마더텅 방식**으로 담은 과정이
 | `ko/batch-01~10.json` | 한국어 뜻(ko)·주제·uk(보통 가나로 씀)·해설(c). 규격은 [KO_SPEC.md](KO_SPEC.md) | 원본 |
 | `review-decisions.json` | 원본 목록의 이상 항목 336개 판정: keep / drop(뺌) / fix(표기·읽기 바로잡음) | 원본(덮어쓰기) |
 | `ko-fixes.json` | 뜻 줄이 똑같은 카드를 갈라 쓴 것 | 원본(덮어쓰기) |
+| `fable-review/accepted.json` | Fable 독립 검수에서 받아들인 고침(merge.py가 만든다) | 원본(덮어쓰기) |
+| `fixes.json` | **마지막 고침**: 최종 검수와 학생 리포트. 다른 모든 고침 뒤에 덮는다 | 원본(덮어쓰기) |
 | `template.html` | 화면. 보카고양 마더텅 화면에서 [derive-template.py](derive-template.py)로 한 번 뽑은 뒤 손으로 고친다 | 원본 |
 | `../../tangogoyangjlpt.html` | 조립 결과 | **생성물. 직접 고치지 않는다** |
 
