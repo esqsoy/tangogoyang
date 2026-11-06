@@ -987,6 +987,14 @@ UTF-8 텍스트의 줄바꿈을 LF로 통일한 공개 파일 SHA-256:
 
 실제 공개 상태는 GitHub Pages 배포 결과와 공개 URL에서 확인해야 한다.
 
+
+## 2026-11-06 · 탄고고양 첫 공개 (日本語能力試験 1단계)
+
+- 영신이 저장소 Settings → Pages에서 main을 켬. Pages 빌드 `42221181627`(main `a42eb37`)가 끝난 뒤 공개됨.
+- 공개 주소: https://esqsoy.github.io/tangogoyang/ (교재 선택), https://esqsoy.github.io/tangogoyang/tangogoyangjlpt.html (日本語能力試験 N5–N1, 7,743카드).
+- 확인(새로 실행): 공개 `index.html`·`tangogoyangjlpt.html`의 SHA-1이 로컬 조립 결과와 같다(`8e00a1c…`·`eb0cf1a…`). 공개 페이지에 `pipeline/jlpt/test-jlpt.cjs`와 같은 검사를 돌려 모두 통과(Chromium). 지운 영어판 주소(vocagoyangfable·ksat2027)는 404.
+- 미확인: iPhone Safari·Android 실기기, 일본어 음성 실제 소리.
+
 ## Fable beach 예문 구분 · 2026-09-25
 
 - beach 예문을 `We played {{BLANK}} volleyball on the sand.`로 교체했다. 번역은 '우리는 모래 위에서 비치발리볼을 했어.'다.

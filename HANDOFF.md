@@ -6,7 +6,7 @@
 - **만든 것:** `tangogoyangjlpt.html`(생성물) ← [pipeline/jlpt/](pipeline/jlpt/README.md)(원본·조립·검사). 20강·699연습·7,743카드(N5 674·N4 630·N3 1,657·N2 1,775·N1 3,007). 한국어 뜻·주제·해설은 Claude가 새로 씀(규격 [KO_SPEC](pipeline/jlpt/KO_SPEC.md)). `index.html`을 탄고고양 교재 선택으로 바꿈(OpenJLPT CC BY-SA 출처 줄).
 - **입력:** 로마자 → 가나 자동 변환, 일본어 자판 가나·한자도 정답, 판정은 히라가나 기준·장음 ー=앞 모음, 발음 ja-JP. 저장 키 `tangogoyang-`. 세부는 [pipeline/jlpt/README](pipeline/jlpt/README.md).
 - **영신 확인 대기:** ① 원본 오류로 뺀 68개·바로잡은 14개([review-decisions.json](pipeline/jlpt/review-decisions.json)) (②~④는 26.11.06 정함: 2단계는 N5부터 순서대로, 예문은 영신이 기출을 올리면 분석·변형해 새로 씀, 엔딩 문구 바꾼 것 영신 "좋습니다")
-- **공개 준비(26.11.06 영신 "네가 정리해줄 수 있으면 해줘"):** 같은 esqsoy.github.io의 진짜 보카고양 기록과 섞이지 않게 영어판 게임 HTML 세 개(vocagoyangfable·ksat2027·ebs2027), backups의 옛 화면 HTML 세 개, 영어 발음 음원(assets/pronunciation)을 지웠다. 원본은 esqsoy/vocagoyang과 이 저장소 기록(398c448)에 있다. 아래 '보카고양 기록'과 영어 pipeline 스크립트가 가리키는 그 파일들은 이제 이 저장소에 없다. **Pages는 영신이 켜야 한다**(Settings → Pages → main).
+- **공개 준비(26.11.06 영신 "네가 정리해줄 수 있으면 해줘"):** 같은 esqsoy.github.io의 진짜 보카고양 기록과 섞이지 않게 영어판 게임 HTML 세 개(vocagoyangfable·ksat2027·ebs2027), backups의 옛 화면 HTML 세 개, 영어 발음 음원(assets/pronunciation)을 지웠다. 원본은 esqsoy/vocagoyang과 이 저장소 기록(398c448)에 있다. 아래 '보카고양 기록'과 영어 pipeline 스크립트가 가리키는 그 파일들은 이제 이 저장소에 없다. **공개 완료(26.11.06):** 영신이 Pages를 켬, https://esqsoy.github.io/tangogoyang/ . 공개본과 로컬 조립 결과 해시 일치, 공개 페이지 검사 통과(Chromium). Safari·폰 실기기는 영신 확인 대기([DEPLOYMENT](DEPLOYMENT.md)).
 - **한계:** 일본어 사람 검수 없음(영신은 일본어 검수가 어렵다). 뜻 조각이 일부 겹치는 카드(같은 글자 수 1,600여 쌍, 대부분 뜻 줄 전체는 다름)는 2단계에서 본다. 실제 iPhone·Android 일본어 음성은 미확인.
 
 ## 2026-11-03 · 니혼고양 시작
