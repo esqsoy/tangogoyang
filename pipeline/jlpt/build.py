@@ -140,6 +140,8 @@ def write(out, data, mode):
     if mode == 'yomi':
         # 漢字読み: 따로 진도를 쌓는다(저장 키 tangogoyang-yomi-). 제목도 바꾼다.
         html = html.replace(mode_marker, 'const JP_MODE="yomi";')
+        # 고양이 이름표도 한자로: 高陽猫(고양네코). 26.11.06 영신 "고양고양이는 한자로 고양네코로 하자"
+        html = html.replace('<span class="nm">고양고양이</span>', '<span class="nm" lang="ja">高陽猫</span>').replace('alt="고양고양이"', 'alt="高陽猫"')
         lines = json.loads((HERE / 'lines-yomi.json').read_text())
         lm = 'const LINES_YOMI=/*__LINES_YOMI__*/null;'
         assert html.count(lm) == 1

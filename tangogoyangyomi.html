@@ -1502,7 +1502,7 @@ body.playing .appbar{display:flex;padding:0 5px;}
     <!-- HOME -->
     <section class="screen active" id="homeScreen">
       <div class="catrow">
-        <div class="catimg"><img id="homeCat" alt="고양고양이"></div>
+        <div class="catimg"><img id="homeCat" alt="高陽猫"></div>
         <div class="bubble" id="homeBubble"></div>
       </div>
       <div class="panel">
@@ -1549,7 +1549,7 @@ body.playing .appbar{display:flex;padding:0 5px;}
             <p class="cat-speech" id="catSpeech" role="status" aria-live="polite" aria-atomic="true" hidden></p>
           </div>
           <button class="catbtn" id="catSubmit" type="button" aria-label="이 카드 담기" aria-pressed="false">
-            <img id="quizCat" alt="고양고양이">
+            <img id="quizCat" alt="高陽猫">
           </button>
         </div>
         <p class="meaning" id="meaning">-</p>
@@ -1613,13 +1613,13 @@ body.playing .appbar{display:flex;padding:0 5px;}
 <div class="roar" id="roar" aria-hidden="true">
   <div class="rays"></div>
   <div class="roar-inner">
-    <div class="roar-cat"><img id="roarCat" alt="고양고양이"></div>
+    <div class="roar-cat"><img id="roarCat" alt="高陽猫"></div>
     <div class="roar-txt"><b>PERFECT</b><span>냐아아아옹—!!</span></div>
   </div>
 </div>
 <div class="ending" id="ending" aria-hidden="true">
   <div class="ending-card">
-    <div class="ec"><img id="endCat" alt="고양고양이"></div>
+    <div class="ec"><img id="endCat" alt="高陽猫"></div>
     <h2 id="endTitle">BIG MOUNTAIN 등정 성공이고양! 🌳</h2>
     <p>단어를 전부 외웠다고양… 진심으로 인정한다고양.<br>이루고 싶은 걸 적어보라고양!</p>
     <form id="endForm" class="ending-form">
@@ -2457,7 +2457,7 @@ function renderHome(){
   $("#homeMeta").textContent=`${state.lessons.length}강 · ${total.toLocaleString()}카드 · 클리어 ${clearedExercises()}/${totalExercises()} 연습`;
   const _wl=(JP_MODE==="yomi"&&LINES.welcomeFirst&&!state.welcomed)?pick(LINES.welcomeFirst).replace(/\{n\}/g,state.lessons.reduce((a,L)=>a+L.exercises.reduce((b,e)=>b+e.words.length,0),0).toLocaleString()):pick(LINES.welcome);
   state.welcomed=true; // 단어장을 고른 뒤 첫 화면에만 첫 대사(53만 패러디)를 띄운다
-  $("#homeBubble").innerHTML=`<span><span class="nm">고양고양이</span> ${jpLineHtml(_wl)}</span>`;
+  $("#homeBubble").innerHTML=`<span><span class="nm" lang="ja">高陽猫</span> ${jpLineHtml(_wl)}</span>`;
   setCat('homeCat','normal');
   const rt=resumeTarget(),rb=$("#resumeBtn");
   if(rt&&clearedExercises()>0){rb.hidden=false;$("#resumeSub").textContent=`${rt.L.id} · ${rt.e.title}`;rb.onclick=()=>{state.li=rt.li;openLesson(rt.li);startExercise(rt.ei);};}
@@ -2948,7 +2948,7 @@ function finishExercise(){
   $("#sumWrong").innerHTML=wrong.length?`<div class="wh">틀린 단어 ${wrong.length}개</div>`+wrong.map(w=>`<button type="button" class="wrow" data-id="${w.id}"><b>${esc(w.term)}</b><span>${esc(w.meaning)}</span><i>${w.errors}회</i></button>`).join(""):`<div class="wh ok">틀린 단어 없음 ✦</div>`;
   if(allCleared)setTimeout(()=>{if(state.session===s&&screens.sum.classList.contains("active"))showEnding();},750);
   setCat('sumCat',expr);
-  $("#sumBubble").innerHTML=`<span><span class="nm">고양고양이</span> ${JP_MODE==="yomi"?jpLineHtml(line):line}</span>`;
+  $("#sumBubble").innerHTML=`<span><span class="nm" lang="ja">高陽猫</span> ${JP_MODE==="yomi"?jpLineHtml(line):line}</span>`;
   const L=activeLesson();const ev=visEx(L);
   const lastInLesson=state.ei>=ev.length-1;const _ni=nextLessonIndex(state.li);
   $("#nextEx").disabled=lastInLesson&&_ni<0;
@@ -4188,7 +4188,7 @@ function esc(v){return String(v).replace(/&/g,"&amp;").replace(/</g,"&lt;").repl
 function catSay(msg){
   const on=id=>$("#"+id)?.classList.contains("active");
   if(on("gameScreen")&&state.session){quizSay(msg);return;}
-  $(on("sumScreen")?"#sumBubble":"#homeBubble").innerHTML=`<span><span class="nm">고양고양이</span> ${jpLineHtml(msg)}</span>`;
+  $(on("sumScreen")?"#sumBubble":"#homeBubble").innerHTML=`<span><span class="nm" lang="ja">高陽猫</span> ${jpLineHtml(msg)}</span>`;
 }
 /* 문제 화면: 카드 머리줄 고양이 말풍선(시간 막대 자리)에 잠깐 띄우고, 그 카드가 그대로면 원래 말풍선으로 되돌린다. */
 function quizSay(msg){
@@ -4773,8 +4773,8 @@ function msShow(info){
   const inner=mk('div','ms-inner',ov);
   const numBox=mk('div','ms-num',inner),num=mk('b','',numBox);num.textContent=still?label:'0';
   mk('div','ms-title',inner,'단어 돌파!');
-  mk('div','ms-cat',inner,'<img id="msCat" alt="고양고양이">');
-  mk('div','ms-line',inner,'<span class="nm">고양고양이</span> '+jpLineHtml(msLine(m,info.retro))).setAttribute('aria-live','polite');
+  mk('div','ms-cat',inner,'<img id="msCat" alt="高陽猫">');
+  mk('div','ms-line',inner,'<span class="nm" lang="ja">高陽猫</span> '+jpLineHtml(msLine(m,info.retro))).setAttribute('aria-live','polite');
   const missed=new Set(info.missed||[]),goldN=info.words.slice(0,m).filter(k=>missed.has(k)).length;
   mk('div','ms-sub',inner,JP_MODE==="yomi"?('<span lang="ja">'+(info.preview?'プレビュー':'同じ単語は一度だけ数えましたよ · 今 '+info.total.toLocaleString('en-US')+'語')+(goldN?'<br><span class="gold">金色の'+goldN.toLocaleString('en-US')+'語は、一度間違えてから覚えた単語です</span>':'')+'</span>'):(info.preview?'미리 보기':'겹치는 단어는 한 번만 셌다고양 · 지금 '+info.total.toLocaleString('en-US')+'단어')+(goldN?'<br><span class="gold">금빛 '+goldN.toLocaleString('en-US')+'개는 한 번 틀렸다가 끝내 익힌 단어라고양</span>':''));
   const btn=mk('button','ms-close',inner,'계속하기 ▶');btn.type='button';
@@ -5145,7 +5145,7 @@ function paceShow(info,ms){
   if($("#sumTitle").textContent!=="연습 클리어 ✦")return;   // 세트 정복·엔딩 대사는 그대로 둔다
   const meta=paceMeta(),kind=paceKind(recs,f,t,meta,now),plays=Number.isFinite(meta.total)?meta.total:recs.filter(r=>r.k!=='w').length;
   if(kind){
-    $("#sumBubble").innerHTML=`<span><span class="nm">고양고양이</span> ${esc(paceLine(kind,f,t,recs,now))}</span>`;
+    $("#sumBubble").innerHTML=`<span><span class="nm" lang="ja">高陽猫</span> ${esc(paceLine(kind,f,t,recs,now))}</span>`;
     meta.n=plays;meta.intro=true;
     if(kind==='low')meta.lowDay=paceDay(now);
     if(kind==='slow')meta.slowAt=plays;
