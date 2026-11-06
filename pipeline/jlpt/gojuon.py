@@ -5,8 +5,11 @@
 방식(Claude 안, 영신 이견 없음): 글자를 보고 소리를 친다(か → ka / 카). 로마자·한글로 친 소리를 가나로 바꿔 화면 글자와 같으면 정답.
 카드: en=정답 가나, w=화면 글자, rm=로마자(헵번식), hg=한글 소리, ko=뜻(단어 카드만), c=헷갈리는 글자 해설.
 """
-import json, re
+import json, re, sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from gojuon_sound import sound, explain, MORA, hira  # 발음기호·발음 설명(26.11.06 영신)
 
 HERE = Path(__file__).resolve().parent
 
@@ -83,8 +86,13 @@ def kata(s):
     return re.sub(r'[ぁ-ゖ]', lambda m: chr(ord(m.group()) + 0x60), s)
 
 
-def card(kana, rm, hg, ko='', script='h'):
-    c = {'id': f'kana-{script}-{kana}', 'en': kana, 'w': kana, 'ko': ko, 'rm': rm, 'hg': hg, 'lv': 'かな'}
+def card(kana, rm, hg, ko='', script='h', word=False):
+    if word:  # 낱말: 로마자·한글·IPA를 한 규칙으로 만든다
+        ipa, rm, hg = sound(kana)
+    else:
+        ipa = MORA[hira(kana)][0]
+    c = {'id': f'kana-{script}-{kana}', 'en': kana, 'w': kana, 'ko': ko, 'rm': rm, 'hg': hg, 'ipa': ipa,
+         'pn': explain(kana, ipa, word), 'lv': 'かな'}
     note = CONFUSE.get(kana)
     if note:
         c['c'] = note
@@ -93,7 +101,7 @@ def card(kana, rm, hg, ko='', script='h'):
 
 def ex(title, cards):
     # 전체 복습·단어 읽기는 문제를 손글씨 모양으로 낸다(26.11.06 영신: 외국인은 손글씨가 판이해서 못 알아본다). 치는 건 그대로.
-    if '전체 복습' in title or '단어 읽기' in title:
+    if '전체 복습' in title or '단어 읽기' in title:  # '손글씨 전체 복습' 포함
         cards = [{**c, 'hw': 1} for c in cards]
     return {'scope': '2026', 'title': title, 'words': cards}
 
@@ -119,12 +127,18 @@ def lessons(script):
     yoon = [card(conv(k), r, h, script=script) for k, r, h in YOON]
     out.append({'id': f'{pfx} ③', 'name': '작은 ' + '·'.join(conv(x) for x in 'ゃゅょ'), 'exercises': [ex('합친 소리 ' + str(i + 1), g) for i, g in enumerate(chunks(yoon, 11))]})
     if script == 'h':
-        words = [card(k, r, h, ko=m, script='h') for k, r, h, m in SOKU_H]
+        words = [card(k, r, h, ko=m, script='h', word=True) for k, r, h, m in SOKU_H]
         out.append({'id': f'{pfx} ④', 'name': '작은 っ·장음', 'exercises': [ex('っ·장음 단어 ' + str(i + 1), g) for i, g in enumerate(chunks(words, 8))]})
     else:
         gai = [card(k, r, h, script='k') for k, r, h in GAIRAI]
-        words = [card(k, r, h, ko=m, script='k') for k, r, h, m in SOKU_K]
+        words = [card(k, r, h, ko=m, script='k', word=True) for k, r, h, m in SOKU_K]
         out.append({'id': f'{pfx} ④', 'name': '외래어 소리·ー·ッ', 'exercises': [ex('외래어 소리', gai), ex('ー·ッ 단어', words)]})
+    # 손글씨로 다시: ②③④도 끝에 손글씨 문제(26.11.06 영신: "해설로만 손글씨가 나오는게 아니라 주어지면 그걸 쓰는식으로도")
+    for L in out[1:]:
+        pool = [c for e in L['exercises'] for c in e['words']]
+        pool = list({c['id']: c for c in pool}.values())
+        step = max(1, len(pool) // 12)
+        L['exercises'].append(ex('손글씨 전체 복습', pool[::step][:12]))
     return out
 
 
@@ -139,7 +153,8 @@ def kana_words(script):
             for w in e['words']:
                 if w['lv'] in ('N5', 'N4') and re.match(pat, w['w']) and w['en'] == w['w'] and 2 <= len(w['en']) <= 6 and w['en'] not in seen:
                     seen.add(w['en'])
-                    out.append({'id': f'kana-w-{w["id"]}', 'en': w['en'], 'w': w['w'], 'ko': w['ko'], 'rm': '', 'hg': '', 'lv': 'かな'})
+                    c = card(w['en'], '', '', ko=w['ko'], word=True)
+                    out.append({**c, 'id': f'kana-w-{w["id"]}'})
     return out[:48]
 
 

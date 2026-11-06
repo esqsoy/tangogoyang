@@ -472,6 +472,11 @@ body.roaring{animation:roarshake .5s .15s;}
 .jp-snd{font-family:inherit;font-size:1.35rem;}
 /*KANA_FONT_FACE*/
 .jp-hand{font-family:"KanaHand","Klee One",serif;font-weight:600;}
+.jp-ipa{font-family:"Doulos SIL","Charis SIL","Gentium Plus","Noto Sans","Segoe UI",sans-serif;font-size:1.25rem;margin:2px 0 4px;letter-spacing:.02em;}
+.jp-pn{text-align:left;margin:4px auto 2px;padding-left:1.1em;max-width:34em;font-size:.86rem;line-height:1.45;}
+.jp-pn li{margin:2px 0;}
+.jp-kana-long{font-size:1.75em;white-space:nowrap;}
+.kana-forms.long .kana-form>b{font-size:1.5rem;}
 .kana-cap{display:block;font-size:.7rem;opacity:.6;font-weight:400;letter-spacing:.05em;}
 .kana-forms{display:flex;gap:16px;justify-content:center;align-items:flex-end;flex-wrap:wrap;margin:4px 0 2px;}
 .kana-form{display:flex;flex-direction:column;align-items:center;gap:2px;}
@@ -2216,7 +2221,8 @@ const MT_CONTEXTS={};
 /* Passage excerpts preserve original headword grading and exercise IDs. */
 function mtAttachContexts(lessons){for(const l of lessons)for(const e of l.exercises)e.words.forEach((w,index)=>{const c=MT_CONTEXTS[[l.lesson,e.scope,e.ex,index].join('/')];w.originalMeaning=w.meaning;if(c){w.context=c;if(c.contextMeaning)w.meaning=c.contextMeaning;}});}
 function mtCurrentWord(){const s=state.session;return s&&s.currentId!==null?s.words[s.currentId]:null;}
-function mtRevealDelay(w){const c=w?.context;if(!c){const n=(w?.note||'').length;return n?Math.min(state.session?.round>=2?5000:20000,2000+n*110):1500;}const chars=(c.translation||'').length+(c.note||'').length;return Math.min(state.session?.round>=2?3500:6500,Math.max(1500,500+chars*45));}
+function mtRevealDelay(w){if(JP_MODE==="kana"&&w){const n=(w.note||'').length+(w.pn||[]).join('').length+(w.meaning||'').length;return Math.min(state.session?.round>=2?7000:16000,3000+n*60);} // 五十音: 소리·기호 설명 읽을 시간(26.11.06 영신 "너무 빠르게 넘어가"). 카드를 누르거나 Enter면 바로 넘어간다
+ const c=w?.context;if(!c){const n=(w?.note||'').length;return n?Math.min(state.session?.round>=2?5000:20000,2000+n*110):1500;}const chars=(c.translation||'').length+(c.note||'').length;return Math.min(state.session?.round>=2?3500:6500,Math.max(1500,500+chars*45));}
 function mtEscapeRegex(v){return String(v).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
 function mtRanges(context,term=''){
  const text=context.example,ranges=[];
@@ -2287,8 +2293,9 @@ function mtRevealHtml(term,meaning){
  const w=mtCurrentWord();if(!w)return '';
  if(JP_MODE==="kana"){const snd=[w.rm,w.hg].filter(Boolean).join(' · ');
    const ch=[...w.jw],st=w.hw&&ch.length<=3?ch.map(kanaStrokeSvg).join(''):''; // 배우는 연습은 문제 칸에 이미 보인다
-   const forms='<div class="kana-forms"><span class="kana-form"><b lang="ja">'+esc(w.jw)+'</b><small>인쇄체</small></span><span class="kana-form"><b class="jp-hand" lang="ja">'+esc(w.jw)+'</b><small>손글씨</small></span>'+(st?'<span class="kana-form"><span class="kana-strokes" title="누르면 다시">'+st+'</span><small>쓰는 순서</small></span>':'')+'</div>';
-   return forms+(snd?'<div class="jp-head jp-snd">'+esc(snd)+'</div>':'')+(w.meaning?'<div class="ov-tr">'+esc(w.meaning)+'</div>':'')+(w.note?'<div class="ov-tr jp-note">'+esc(w.note)+'</div>':'');}
+   const forms='<div class="kana-forms'+(ch.length>3?' long':'')+'"><span class="kana-form"><b lang="ja">'+esc(w.jw)+'</b><small>인쇄체</small></span><span class="kana-form"><b class="jp-hand" lang="ja">'+esc(w.jw)+'</b><small>손글씨</small></span>'+(st?'<span class="kana-form"><span class="kana-strokes" title="누르면 다시">'+st+'</span><small>쓰는 순서</small></span>':'')+'</div>';
+   const ipa=w.ipa?'<div class="jp-ipa">['+esc(w.ipa)+']</div>':'',pn=w.pn&&w.pn.length?'<ul class="jp-pn">'+w.pn.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>':'';
+   return forms+(snd?'<div class="jp-head jp-snd">'+esc(snd)+'</div>':'')+ipa+pn+(w.meaning?'<div class="ov-tr">'+esc(w.meaning)+'</div>':'')+(w.note?'<div class="ov-tr jp-note">'+esc(w.note)+'</div>':'');}
  const head=JP_MODE==="yomi"?'<div class="jp-head" lang="ja">'+jpRuby(w.jw,w.term)+'</div>':w.jw&&w.jw!==w.term?'<div class="jp-head" lang="ja">'+jpRuby(w.jw,w.term)+'</div>':'';
  const note=w.note?'<div class="ov-tr jp-note">'+esc(w.note)+'</div>':'';
  return head+note;
@@ -2323,7 +2330,7 @@ function buildLessons(){
     exercises:L.exercises.map(ex=>({
       title:ex.title||((ex.scope==='prev'?"이전기출 ":"Exercise ")+ex.ex),
       ex:ex.ex, scope:ex.scope||'2026',
-      words:ex.words.map(w=>({term:w.en,meaning:w.ko,jw:w.w||w.en,alt:w.alt||[],ar:w.ar||[],rm:w.rm||"",hg:w.hg||"",hw:w.hw||0,note:w.c||"",lv:w.lv||"",savedId:w.id}))
+      words:ex.words.map(w=>({term:w.en,meaning:w.ko,jw:w.w||w.en,alt:w.alt||[],ar:w.ar||[],rm:w.rm||"",hg:w.hg||"",hw:w.hw||0,ipa:w.ipa||"",pn:w.pn||[],note:w.c||"",lv:w.lv||"",savedId:w.id}))
     }))
   }));
 }
@@ -2781,7 +2788,8 @@ function nextCard(){
     const card=$("#quizCard");clearTimeout(card._growT);card.style.height="";card.style.transition="";card.className="panel quiz";
     if(JP_MODE==="yomi")$("#meaning").innerHTML='<span class="jp-q" lang="ja">'+esc(w.jw)+'</span><span class="jp-qko">'+esc(w.meaning)+'</span>';
     else if(JP_MODE==="kana"){const st=!w.hw&&[...w.jw].length<=3?[...w.jw].map(kanaStrokeSvg).join(''):'';
-      $("#meaning").innerHTML=w.hw?'<span class="jp-q jp-kana jp-hand" lang="ja"><span class="kana-cap">손글씨</span>'+esc(w.jw)+'</span>':'<span class="jp-q jp-kana" lang="ja">'+esc(w.jw)+'</span>'+(st?'<span class="kana-strokes kana-q" title="누르면 다시">'+st+'</span>':'');} // 五十音: 글자만 보이고 소리를 친다. 배우는 연습은 쓰는 순서를 함께(소리는 드러나지 않는다), 복습·단어 읽기는 손글씨 모양으로 // 五十音: 글자만 보이고 소리를 친다
+      const lg=[...w.jw].length>3?' jp-kana-long':'';
+      $("#meaning").innerHTML=w.hw?'<span class="jp-q jp-kana jp-hand'+lg+'" lang="ja"><span class="kana-cap">손글씨</span>'+esc(w.jw)+'</span>':'<span class="jp-q jp-kana'+lg+'" lang="ja">'+esc(w.jw)+'</span>'+(st?'<span class="kana-strokes kana-q" title="누르면 다시">'+st+'</span>':'');} // 五十音: 글자만 보이고 소리를 친다. 배우는 연습은 쓰는 순서를 함께(소리는 드러나지 않는다), 복습·단어 읽기는 손글씨 모양으로 // 五十音: 글자만 보이고 소리를 친다
     else $("#meaning").textContent=w.meaning;
     $("#hoeCtx").innerHTML=mtQuestionHtml(w);
     const rv=$("#reveal");rv.className="rv";rv.innerHTML="";
@@ -4281,7 +4289,7 @@ function quizOpenEnd(s){
 /* events */
 
 function advanceRevealed(){const s=state.session;if(s&&s.answered&&!s.copyMode&&Date.now()-(s.revealedAt||0)>=280){cancelPendingAdvance();nextCard();}}
-$("#quizCard").addEventListener("click",e=>{if(!e.target.closest("button,input,a"))advanceRevealed();});
+$("#quizCard").addEventListener("click",e=>{if(!e.target.closest("button,input,a,.kana-strokes"))advanceRevealed();});
 $("#sumWrong").addEventListener("click",e=>{
   const b=e.target.closest(".wrow"),s=state.session;if(!b||!s||b.classList.contains("gone")||!screens.sum.classList.contains("active"))return;
   const w=s.words[Number(b.dataset.id)];if(!w)return;
