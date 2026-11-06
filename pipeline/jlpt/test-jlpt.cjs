@@ -91,5 +91,8 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   ok(await p3.evaluate(()=>!!document.querySelector('#meaning .jp-hand')&&!document.querySelector('#meaning .kana-strokes')),'五十音: 전체 복습은 손글씨 모양으로');
   await p3.focus('#ainput');await p3.keyboard.type('zz');await p3.keyboard.press('Enter');await p3.waitForTimeout(1500);
   ok(await p3.evaluate(()=>!!document.querySelector('#reveal .kana-strokes')&&!!document.querySelector('#reveal .kana-form b:not(.jp-hand)')),'五十音: 손글씨 문제를 틀리면 인쇄체·쓰는 순서 공개');
+  // 기록 옮기기(index)
+  const p4=await b.newPage();p4.on('pageerror',e=>errs.push(e.message));await p4.goto('file://'+path.resolve(__dirname,'../../index.html'));
+  ok(await p4.evaluate(()=>{const m=rtMerge({'tangogoyang-kana-seoul-v1':'{"a":{"x":{"completed":true}}}'},{'tangogoyang-kana-seoul-v1':'{"a":{"y":{"completed":true}}}','goyang-seoul-v1':'{}'});return !!document.getElementById('rtOpen')&&RT_PREFIX==='tangogoyang-'&&m.summary.exercises===1&&!('goyang-seoul-v1' in m.writes);}),'기록 옮기기: 탄고고양 키만, 합치기');
   await b.close();console.log(fail?`실패 ${fail}`:'모두 통과');process.exit(fail?1:0);
 })();
