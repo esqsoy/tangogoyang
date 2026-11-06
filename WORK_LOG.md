@@ -46,7 +46,8 @@
 - **작업:** OpenJLPT 7,811어를 10묶음으로 나눠 한국어 뜻·주제·uk·해설을 씀(KO_SPEC). 원본 오류 후보 336개를 따로 판정해 68개 뺌·14개 표기/읽기 바로잡음(뺀 것 중 흔한 읽기가 풀에 없는 6개는 흔한 읽기로 고쳐 살림). 뜻 줄이 똑같은 195묶음은 ko-fixes로 245카드를 갈라 씀(남은 같은 뜻 줄·다른 읽기 3쌍은 칸 수가 달라 둠, 예: ゆっくり·ゆっくりと). 마더텅 화면에서 template.html을 뽑아 일본어 입력(로마자→가나)·판정·ja-JP 발음·후리가나 공개·저장 키 접두어로 고침. 2026/전체 버튼과 수능 문구를 뺌.
 - **변경 파일:** pipeline/jlpt/(source·batches·ko·review-*·ko-fixes·KO_SPEC·README·template·derive-template·build·test-jlpt), tangogoyangjlpt.html(생성), index.html, PRINCIPLES.md(0-1 7번), HANDOFF.md, UI_STANDARD.md, WORK_LOG.md.
 - **검증(새로 실행):** `node pipeline/jlpt/test-jlpt.cjs` 통과(로마자 16경우, 장음, こんにちわ, 저장 키, 로마자·한자 정답, 후리가나, 오답 따라쓰기, 페이지 오류 없음). Chromium 390px 화면 확인. 실제 폰·음성은 미확인.
-- **남은 일·배포:** 영신 확인 대기 4건(HANDOFF). Pages 미공개. 공개 전에 영어판 HTML 처리 결정.
+- **이어서(영신 답):** 2단계는 순서대로, 엔딩 문구 "좋습니다", 영어판 HTML 정리는 Claude에게 맡김 → 영어판 게임 HTML 3·backups 옛 화면 3·영어 발음 음원 삭제.
+- **남은 일·배포:** 뺀 68개 영신 확인 대기. Pages 미공개(영신이 켬).
 
 ## 2026-11-03 · 니혼고양 계획 결정
 

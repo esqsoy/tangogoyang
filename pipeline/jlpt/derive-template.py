@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """보카고양 마더텅 화면(vocagoyangksat2027.html)에서 日本語能力試験 화면 틀(template.html)을 한 번 뽑는다.
 
+26.11.06 이 저장소에서 영어판 HTML을 지웠다(같은 주소의 보카고양 기록과 섞이지 않게). 다시 돌리려면
+esqsoy/vocagoyang main 398c448의 vocagoyangksat2027.html을 이 저장소 맨 위에 잠시 두고 돌린다.
+
 26.11.06 영신 결정(JLPT 과정 먼저, 1단계는 예문 없는 마더텅 방식)으로 만든 일회용 기록이다.
 뽑은 뒤에는 template.html이 원본이다. 이 스크립트를 다시 돌리면 template.html의 손 수정이 사라진다.
 사용: python3 pipeline/jlpt/derive-template.py --force
