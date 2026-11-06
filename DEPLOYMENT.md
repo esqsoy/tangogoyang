@@ -1,3 +1,10 @@
+# 漢字読み 추가·Fable 검수 반영 공개 · 2026-11-06
+
+- main `cd5a65e`(+ HANDOFF 정리 커밋) 공개. 한글 입력(`cb0a9b0`), 漢字読み 과정(`f689e75`), Fable 독립 검수 455카드 반영이 들어 있다.
+- 공개 주소: https://esqsoy.github.io/tangogoyang/ (교재 선택: 日本語能力試験 7,741단어 · 漢字読み 6,483단어), …/tangogoyangjlpt.html, …/tangogoyangyomi.html.
+- 확인(새로 실행): 공개 두 게임 파일 SHA-1이 로컬 조립 결과와 같다(`78b044e…`·`6f20aec…`). 공개 페이지에 test-jlpt.cjs와 같은 검사 42개를 돌려 모두 통과(Chromium). 교재 선택 화면의 단어 수가 새 값으로 보인다.
+- 미확인: iPhone Safari·Android 실기기, 일본어 음성, 한국어 자판 조합 중 한글 변환.
+
 # 탄고고양 첫 공개 (日本語能力試験 1단계) · 2026-11-06
 
 - 영신이 저장소 Settings → Pages에서 main을 켬. Pages 빌드 `42221181627`(main `a42eb37`)가 끝난 뒤 공개됨.
