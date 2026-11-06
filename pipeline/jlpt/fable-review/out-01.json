@@ -1,0 +1,400 @@
+[
+ {
+  "id": "1b89f0f993",
+  "kind": "표기",
+  "problem": "おじいさん은 보통 가나로 쓴다 (おばあさん 카드와도 불일치)",
+  "fix": {
+   "shown": "おじいさん"
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "03d7b15720",
+  "kind": "표기",
+  "problem": "'아주머니'·N5에서는 가나 おばさん으로 쓴다. 伯母는 부모의 언니만",
+  "fix": {
+   "shown": "おばさん"
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "a2694d259e",
+  "kind": "표기",
+  "problem": "보통 ご飯으로 쓴다. 御飯은 거의 안 쓰는 표기",
+  "fix": {
+   "shown": "ご飯"
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "246b5ae84d",
+  "kind": "표기",
+  "problem": "보통 晩ご飯으로 쓴다 (夕飯 해설과도 불일치)",
+  "fix": {
+   "shown": "晩ご飯"
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "0b492c3209",
+  "kind": "표기",
+  "problem": "보통 昼ご飯으로 쓴다",
+  "fix": {
+   "shown": "昼ご飯"
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "8bd7bc72e8",
+  "kind": "표기",
+  "problem": "보통 ご主人으로 쓴다",
+  "fix": {
+   "shown": "ご主人"
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "ae3e0a705f",
+  "kind": "표기",
+  "problem": "표준 오쿠리가나는 曲がる",
+  "fix": {
+   "shown": "曲がる"
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "d7960dc78d",
+  "kind": "표기",
+  "problem": "표준 오쿠리가나는 終わる",
+  "fix": {
+   "shown": "終わる"
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "a5aceb6426",
+  "kind": "표기",
+  "problem": "보통 한자 浴びる로 쓴다 (해설에도 浴びる)",
+  "fix": {
+   "shown": "浴びる"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "849baaf2c3",
+  "kind": "표기",
+  "problem": "보통 한자 本当으로 쓴다",
+  "fix": {
+   "shown": "本当"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "cb96f363df",
+  "kind": "표기",
+  "problem": "보통 한자 一番으로 쓴다",
+  "fix": {
+   "shown": "一番"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "e04372c490",
+  "kind": "표기",
+  "problem": "보통 한자 大変으로 쓴다 (해설에도 大変な)",
+  "fix": {
+   "shown": "大変"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "a45af4ed89",
+  "kind": "표기",
+  "problem": "보통 한자 立派로 쓴다",
+  "fix": {
+   "shown": "立派"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "c17f97fafc",
+  "kind": "표기",
+  "problem": "賑는 상용한자 밖. 교재는 にぎやか로 쓴다",
+  "fix": {
+   "shown": "にぎやか"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "2a6a55be8d",
+  "kind": "표기",
+  "problem": "보통 赤ちゃん으로 쓴다. 赤ん坊(같은 5칸)와 '아기'가 겹치는데 해설이 없다",
+  "fix": {
+   "shown": "赤ちゃん",
+   "c": "赤ん坊보다 부드럽고 흔한 말"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "9661cbac61",
+  "kind": "해설",
+  "problem": "くれる는 '남이 나에게 주다'. '내가 받을 때'는 もらう이므로 설명이 틀림",
+  "fix": {
+   "ko": "주다, (위로) 올리다",
+   "c": "내가 남에게 줄 때. 남이 나에게 주는 것은 くれる"
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "b75778f0ce",
+  "kind": "읽기중의성",
+  "problem": "같은 표기를 いっさくねん으로도 읽는다. 해설도 자기 표기를 '바꿔 쓸 수 있다'고 해 어색",
+  "fix": {
+   "c": "おととし. 'いっさくねん'으로도 읽는다",
+   "readings": [
+    "いっさくねん"
+   ]
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "115ec83476",
+  "kind": "읽기중의성",
+  "problem": "明日는 あす로도 읽는다 (해설에도 있음)",
+  "fix": {
+   "readings": [
+    "あす"
+   ]
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "f0f3826045",
+  "kind": "읽기중의성",
+  "problem": "一昨日는 いっさくじつ로도 읽는다",
+  "fix": {
+   "readings": [
+    "いっさくじつ"
+   ]
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "a94a4be08f",
+  "kind": "읽기중의성",
+  "problem": "昨日는 さくじつ로도 읽는다",
+  "fix": {
+   "readings": [
+    "さくじつ"
+   ]
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "771fbe6b4d",
+  "kind": "읽기중의성",
+  "problem": "毎月는 まいつき로도 읽는다 (해설에도 있음)",
+  "fix": {
+   "readings": [
+    "まいつき"
+   ]
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "83700909d4",
+  "kind": "읽기중의성",
+  "problem": "毎年는 まいとし로도 읽는다 (해설에도 있음)",
+  "fix": {
+   "readings": [
+    "まいとし"
+   ]
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "39fff8fc4b",
+  "kind": "읽기중의성",
+  "problem": "昨夜는 さくや로도 읽는다 (해설에도 있음)",
+  "fix": {
+   "readings": [
+    "さくや"
+   ]
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "8f81565ad7",
+  "kind": "읽기중의성",
+  "problem": "九는 く로도 읽는다 (해설에도 있음)",
+  "fix": {
+   "readings": [
+    "く"
+   ]
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "da4b805e0b",
+  "kind": "읽기중의성",
+  "problem": "四는 よん으로도 읽는다 (해설에도 있음)",
+  "fix": {
+   "readings": [
+    "よん"
+   ]
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "988db98632",
+  "kind": "읽기중의성",
+  "problem": "七는 なな로도 읽는다 (해설에도 있음)",
+  "fix": {
+   "readings": [
+    "なな"
+   ]
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "558866ef86",
+  "kind": "읽기중의성",
+  "problem": "何는 なに로도 읽는다 (해설에도 있음)",
+  "fix": {
+   "readings": [
+    "なに"
+   ]
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "9f074820b1",
+  "kind": "읽기중의성",
+  "problem": "家는 같은 뜻 '집'으로 うち라고도 읽는다",
+  "fix": {
+   "readings": [
+    "うち"
+   ],
+   "c": "いえ. 'うち'로도 읽는다"
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "d5c2e69813",
+  "kind": "읽기중의성",
+  "problem": "私는 보통 わたし로 읽는다. 한자 모드에서 わたし를 틀리다고 할 수 없다",
+  "fix": {
+   "readings": [
+    "わたし"
+   ]
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "c65a346458",
+  "kind": "읽기중의성",
+  "problem": "二十歳는 にじゅっさい로도 읽는다",
+  "fix": {
+   "readings": [
+    "にじゅっさい"
+   ]
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "eb7247f404",
+  "kind": "읽기중의성",
+  "problem": "皆는 みんな로도 흔히 읽는다",
+  "fix": {
+   "readings": [
+    "みんな"
+   ]
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "613c41bd1d",
+  "kind": "중의성",
+  "problem": "'컵, 잔'만 보면 같은 3칸의 コップ(컵)도 맞다. 해설 없음",
+  "fix": {
+   "ko": "컵 (손잡이 있는), 찻잔",
+   "c": "손잡이 없는 유리컵은 コップ"
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "2da7034c1e",
+  "kind": "중의성",
+  "problem": "같은 3칸의 カップ와 '컵'이 겹친다. 해설 없음",
+  "fix": {
+   "c": "손잡이 있는 찻잔은 カップ"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "4cb7c969c4",
+  "kind": "중의성",
+  "problem": "'옆'이 첫 뜻이면 같은 2칸의 そば(옆, 곁)도 맞다. 해설 없음",
+  "fix": {
+   "ko": "가로, 옆 (방향)",
+   "c": "가까운 곁은 そば, 나란히 붙은 옆은 隣"
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "38c854e97f",
+  "kind": "중의성",
+  "problem": "같은 2칸의 横(옆)과 겹치는데 해설이 横을 안 적음",
+  "fix": {
+   "c": "옆 방향은 横. 소리가 같은 そば(蕎麦)는 메밀국수"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "5b92758003",
+  "kind": "중의성",
+  "problem": "'문'만 보면 같은 2칸의 ドア도 맞다. 해설 없음",
+  "fix": {
+   "ko": "대문, 문 (건물 바깥)",
+   "c": "방·건물의 문은 ドア, 미닫이는 戸"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "d33540fe8e",
+  "kind": "중의성",
+  "problem": "'그럼'만 보면 같은 2칸의 じゃ도 맞다. 해설 없음",
+  "fix": {
+   "c": "편하게는 じゃ"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "47487b1e85",
+  "kind": "중의성",
+  "problem": "'운동'만 보면 같은 4칸의 スポーツ도 맞다. 해설 없음",
+  "fix": {
+   "ko": "운동 (몸을 움직이는)",
+   "c": "경기로서의 스포츠는 スポーツ"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "442c4aa1ca",
+  "kind": "뜻",
+  "problem": "'기운'(명사)이 형용사 쪽에, '/' 뒤에 '건강'만 있어 품사 구분이 뒤섞임",
+  "fix": {
+   "ko": "건강하다, 활기차다 / 기운, 건강"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "cb1c02a574",
+  "kind": "뜻",
+  "problem": "その는 듣는 사람 쪽에 있는 것. '가까이 있는 것'은 この 설명과 같아 오해",
+  "fix": {
+   "ko": "그 (상대 쪽에 있는)"
+  },
+  "confidence": "medium"
+ }
+]
