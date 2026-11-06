@@ -77,6 +77,8 @@ if lf.exists():
             ko[i] = {**ko[i], **{k: f[k] for k in ('ko', 'c', 'readings') if k in f}}
             if 'shown' in f:
                 ko[i]['shown'] = f['shown']
+            if 'alt' in f:
+                ko[i]['alt_extra'] = f['alt']
         if f.get('reading'):
             FIXWORD.setdefault(i, {})['reading'] = f['reading']
 src = [w for w in src if w['id'] not in DROP]
@@ -92,7 +94,7 @@ def card(w):
     word, reading = w['word'], w['reading']
     uk = bool(k.get('uk'))
     shown = k.get('shown') or (reading if uk else word)
-    alt = sorted({word, reading} - {shown, reading})
+    alt = sorted(({word, reading} | set(k.get('alt_extra', []))) - {shown, reading})
     c = {'id': w['id'], 'en': reading, 'ko': k['ko'].strip(), 'w': shown, 'lv': w['level']}
     if alt:
         c['alt'] = alt

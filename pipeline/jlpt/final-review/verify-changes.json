@@ -1,0 +1,62 @@
+[
+  {
+    "id": "b286c3e278",
+    "problem": "明き→空き로 바꾸면 기존 空き(あき, 03e5958da6)와 표기·읽기·뜻이 겹치는 중복 카드가 된다",
+    "fix": {"drop": true},
+    "confidence": "high"
+  },
+  {
+    "id": "3b9ec31cf4",
+    "problem": "含嗽→うがい로 바꾸면 기존 うがい(b73c4e0e07, N3)와 완전 중복. N1 쪽을 빼야 한다",
+    "fix": {"drop": true},
+    "confidence": "high"
+  },
+  {
+    "id": "b240d751be",
+    "problem": "仕舞→しまい로 바꾸면 しまい(5e5a5dfee9, N3)와 표기·읽기·뜻(끝, 마지막 (입말)) 완전 중복",
+    "fix": {"drop": true},
+    "confidence": "high"
+  },
+  {
+    "id": "1151601f8e",
+    "problem": "濠→堀로 바꾸면 기존 堀(ほり, 1a3e85188c, N2 '해자, 수로')와 중복 카드가 된다",
+    "fix": {"drop": true},
+    "confidence": "high"
+  },
+  {
+    "id": "e9f0941d9e",
+    "problem": "止まる(とどまる)→留まる로 바꾸면 留まる(257afc27f7, N2)와 표기·읽기·뜻 완전 중복",
+    "fix": {"drop": true},
+    "confidence": "high"
+  },
+  {
+    "id": "6d746d9525",
+    "problem": "レクリェーション→レクリエーション으로 바꾸면 기존 レクリエーション(669651e81b, N1)과 중복",
+    "fix": {"drop": true, "note": "669651e81b에 also_accepted_spellings レクリェーション 추가"},
+    "confidence": "high"
+  },
+  {
+    "id": "c461dcc42b",
+    "problem": "粗→あら로 바꾸면 감탄사 あら(64eb41fae7)와 표기·읽기가 같은 카드가 둘이 된다. 한자 표기 유지",
+    "fix": {"shown": "粗", "readings": [], "c": "", "note": "also_accepted_spellings에 あら"},
+    "confidence": "medium"
+  },
+  {
+    "id": "56319c8bb4",
+    "problem": "月日 つきひ에 '월일'·がっぴ를 넣으면 별도 카드 月日 がっぴ(날짜)와 섞인다. がっぴ는 세월이 아니다",
+    "fix": {"ko": "세월, 지나온 달과 날", "readings": []},
+    "confidence": "medium"
+  },
+  {
+    "id": "15d4ea5f82",
+    "problem": "否 いや(아니) 삭제 근거가 '가나로 씀'뿐. uk=true였고 흔한 N3 말이라 가나 표기로 살려야 한다",
+    "fix": {"restore": true, "shown": "いや", "note": "also_accepted_spellings 否"},
+    "confidence": "medium"
+  },
+  {
+    "id": "fc4763325c",
+    "problem": "然も さも(자못, ~인 듯이) 삭제 근거가 '보통 가나'뿐. 흔한 N1 부사라 가나 표기로 살리는 편이 낫다",
+    "fix": {"restore": true, "shown": "さも", "c": "", "note": "also_accepted_spellings 然も"},
+    "confidence": "medium"
+  }
+]
