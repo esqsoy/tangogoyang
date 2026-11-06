@@ -40,6 +40,9 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
     return [['minna','みんな'],['konnichiha','こんにちは'],['onna','おんな'],['konnya','こんや'],['kinnen','きんねん'],['shinnyuu','しんにゅう'],['matchi','マッチ'],['kotchi','こっち']].map(([r,a])=>[r,a,typeOne(r,a)]);});
   for(const [r,a,got] of step)ok(got===a,`한 자씩 ${r} → ${got}`);
   ok(await p.evaluate(()=>jpTentative('카-도','カード')==='カード'),'한글 카-도 → カード');
+  ok(await p.evaluate(()=>jpTentative('츠즈쿠','つづく')==='つづく'&&jpTentative('스즈시이','すずしい')==='すずしい'),'한글 즈 → づ/ず 정답 쪽');
+  ok(await p.evaluate(()=>jpRuby('差し上げる','さしあげる')==='<ruby>差<rt>さ</rt></ruby>し<ruby>上<rt>あ</rt></ruby>げる'),'후리가나는 한자마다');
+  ok(await p.evaluate(()=>state.lessons.every(L=>L.exercises.every(e=>e.words.length>=5))),'1~4장짜리 연습이 없다');
   ok(await p.evaluate(()=>!isSpellingVariant('わ','は')&&!isSpellingVariant('とくわ','とくは')&&isSpellingVariant('こんばんわ','こんばんは')),'は→わ 변형은 인사말만');
   ok(await p.evaluate(()=>!isCorrect('おーきい','おおきい')&&isCorrect('こおひい','コーヒー')),'히라가나 말에 ー는 틀림, 가타카나 장음은 앞 모음');
 
@@ -57,7 +60,7 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   ok((await p2.innerText('#homeBubble')).includes('戦闘力'),'漢字読み: 첫 대사는 53만 패러디');
   ok(!/[가-힣]/.test(await p2.innerText('#homeBubble')),'漢字読み: 고양이는 일본어로만 말한다');
   ok(await p2.evaluate(()=>{const r=document.querySelector('#homeBubble .nm ruby');return !!r&&r.textContent.startsWith('高陽猫')&&r.querySelector('rt').textContent==='こねねこ';}),'漢字読み: 이름표 高陽猫(こねねこ)');
-  ok(await p2.evaluate(()=>!/[가-힣]/.test(msLine(1000)+msLine(2500)+paceFill(PACE_LINES.regular.daily[0],{R:paceRange(3,5),T:'N4'}))),'漢字読み: 돌파·진도 대사도 일본어');
+  ok(await p2.evaluate(()=>!/[가-힣]/.test(msLine(1000)+msLine(2500)+paceFill(PACE_LINES.regular.daily[0],{R:paceRange(3,5,true),T:'N4'}))),'漢字読み: 돌파·진도 대사도 일본어');
   ok(await p2.evaluate(()=>{const b=document.querySelector('#homeBubble');return b.scrollWidth<=b.clientWidth+1;}),'漢字読み: 말풍선이 넘치지 않는다');
   ok(await p2.evaluate(()=>state.lessons.every(L=>L.exercises.every(e=>e.words.every(w=>/[\u3400-\u9fff々]/.test(w.jw))))),'漢字読み: 모든 카드에 한자');
   await p2.evaluate(()=>{openLesson(0);startExercise(0);});await p2.waitForTimeout(3000);
@@ -67,6 +70,7 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   ok(await p2.evaluate(()=>state.session.copyMode),'漢字読み: 한자를 그대로 치면 오답');
   await p2.keyboard.type(y.term);await p2.waitForTimeout(400);
   ok(await p2.evaluate(()=>!state.session.copyMode),'漢字読み: 따라쓰기는 가나로');
+  await p2.evaluate(()=>showRoar(1));ok(!/[가-힣]/.test(await p2.innerText('#roar')),'漢字読み: 포효도 일본어');
   ok(errs.length===0,'페이지 오류 없음(漢字読み) '+errs.join(' | '));
   await b.close();console.log(fail?`실패 ${fail}`:'모두 통과');process.exit(fail?1:0);
 })();

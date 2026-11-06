@@ -105,7 +105,11 @@ def card(w):
     return c, k['topic']
 
 
+MIN_EX = 6  # 이보다 작은 주제는 다음 주제와 한 연습으로 묶는다(최종 검수 26.11.06: 1~3장짜리 연습이 있었다)
+
+
 def make_data(keep):
+    """급수 → 주제 순서로 연습(약 12장)을 만들고, 그 연습들을 카드 수가 고르게 강으로 나눈다."""
     data, lesson_no, stats = [], 0, {}
     for lv in LEVELS:
         by_topic = {t: [] for t in TOPICS}
@@ -116,34 +120,51 @@ def make_data(keep):
                     by_topic[t].append(c)
         total = sum(len(v) for v in by_topic.values())
         stats[lv] = total
-        n_lessons = max(1, round(total / LESSON_SIZE))
-        target = total / n_lessons
-        groups, cur, cur_n = [], [], 0
+        # 1) 작은 주제는 다음 주제와 합친다
+        blocks, carry_t, carry_w = [], [], []
         for t in TOPICS:
             if not by_topic[t]:
                 continue
-            if cur and cur_n + len(by_topic[t]) / 2 > target * (len(groups) + 1) - sum(sum(len(by_topic[x]) for x in g) for g in groups) and len(groups) < n_lessons - 1:
+            carry_t.append(t); carry_w += by_topic[t]
+            if len(carry_w) >= MIN_EX:
+                blocks.append((carry_t, carry_w)); carry_t, carry_w = [], []
+        if carry_w:
+            if blocks:
+                bt, bw = blocks.pop()
+                blocks.append((bt + carry_t, bw + carry_w))
+            else:
+                blocks.append((carry_t, carry_w))
+        # 2) 묶음마다 약 12장씩 연습으로
+        exercises, seen = [], {}
+        for ts, words in blocks:
+            label = ' · '.join(ts)
+            k = max(1, round(len(words) / EX_SIZE))
+            for j in range(k):
+                part = words[j * len(words) // k:(j + 1) * len(words) // k]  # 고르게 나눈다(끝에 1장만 남지 않게)
+                if not part:
+                    continue
+                seen[label] = seen.get(label, 0) + 1
+                title = label if k == 1 else f'{label} {seen[label]}'
+                exercises.append({'scope': '2026', 'title': title, 'words': part, '_t': ts})
+        # 3) 연습들을 카드 수가 고르게 강으로 나눈다
+        n_lessons = max(1, round(total / LESSON_SIZE))
+        groups, cur, done = [], [], 0
+        for x in exercises:
+            cur.append(x); done += len(x['words'])
+            if len(groups) < n_lessons - 1 and done >= total * (len(groups) + 1) / n_lessons:
                 groups.append(cur); cur = []
-            cur.append(t); cur_n += len(by_topic[t])
         if cur:
             groups.append(cur)
         for gi, g in enumerate(groups):
             lesson_no += 1
-            exercises, seen = [], {}
-            for t in g:
-                words = by_topic[t]
-                k = max(1, math.ceil(len(words) / EX_SIZE))
-                size = math.ceil(len(words) / k)
-                for j in range(k):
-                    part = words[j * size:(j + 1) * size]
-                    if not part:
-                        continue
-                    seen[t] = seen.get(t, 0) + 1
-                    title = t if k == 1 else f'{t} {seen[t]}'
-                    exercises.append({'ex': len(exercises) + 1, 'scope': '2026', 'title': title, 'words': part})
-            name = g[0] if len(g) == 1 else f'{g[0]} ~ {g[-1]}'
+            for n, x in enumerate(g):
+                x['ex'] = n + 1
+            first, last = g[0]['_t'][0], g[-1]['_t'][-1]
+            for x in g:
+                x.pop('_t')
+            name = first if first == last else f'{first} ~ {last}'
             lid = lv + (f' {CIRCLED[gi]}' if len(groups) > 1 else '')
-            data.append({'lesson': lesson_no, 'id': lid, 'name': name, 'exercises': exercises})
+            data.append({'lesson': lesson_no, 'id': lid, 'name': name, 'exercises': g})
     return data, stats
 
 

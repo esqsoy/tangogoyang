@@ -2592,13 +2592,14 @@ function jpHangulCands(L,V){
   for(let on of JP_HG_L[L].split("|")){
     let v=vo;
     if(V===18){ // ㅡ: 스·즈·츠·쓰
-      out.push(on==="ch"?"tsu":on+"u");continue;}
+      out.push(on==="ch"?"tsu":on+"u");if(L===12&&on==="z")out.push("du");continue;} // 즈 → づ도(정답이 づ일 때)
     if(V===20&&(on==="t"||on==="d")){out.push(on+"hi",on==="t"?"chi":"ji");continue;} // 티=てぃ, 디=でぃ(ち·じ는 치·지)
     if(V===13&&(on==="t"||on==="d")){out.push(on+"wu",on==="t"?"tsu":"zu");continue;} // 투=とぅ
     if(on&&/^y/.test(v)&&/^(ch|j)$/.test(on))v=v.slice(1);
     if(on&&v.startsWith("w")&&on!=="")v=v.replace(/^w/,"").replace(/^e$/,"e");
     out.push(on+v);
     if(L===11&&V===8)out.push("wo"); // 오 → を
+    if(L===12&&V===20)out.push("di"); // 지 → ぢ도(정답이 ぢ일 때)
   }
   return [...new Set(out)];
 }
@@ -2654,6 +2655,15 @@ function jpY(path,fallback){if(JP_MODE!=="yomi"||!LINES_YOMI)return fallback;let
 function jpRuby(word,reading){
   word=String(word||"");reading=String(reading||"");
   if(!/[㐀-鿿々〆]/.test(word))return esc(word);
+  // 한자 덩어리와 가나 덩어리로 나눠, 가나 덩어리를 읽기에 맞춰 한자마다 후리가나를 단다(差し上げる = 差:さ し 上:あ げる).
+  const runs=word.match(/[㐀-鿿々〆ヶ]+|[^㐀-鿿々〆ヶ]+/g)||[word];
+  const reEsc=x=>x.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+  try{
+    const re=new RegExp("^"+runs.map(r=>/[㐀-鿿々〆ヶ]/.test(r)?"(.+?)":"("+reEsc(jpHira(r))+")").join("")+"$");
+    const m=jpHira(reading).match(re);
+    if(m){let out="",pos=0;runs.forEach((r,k)=>{const len=m[k+1].length,part=reading.slice(pos,pos+len);pos+=len;
+      out+=/[㐀-鿿々〆ヶ]/.test(r)?'<ruby>'+esc(r)+'<rt>'+esc(part)+'</rt></ruby>':esc(r);});return out;}
+  }catch(e){}
   let a=0;while(a<word.length&&a<reading.length&&word[a]===reading[a]&&/[぀-ヿ]/.test(word[a]))a++;
   let b=0;while(b<word.length-a&&b<reading.length-a&&word[word.length-1-b]===reading[reading.length-1-b]&&/[぀-ヿ]/.test(word[word.length-1-b]))b++;
   const mid=word.slice(a,word.length-b),rmid=reading.slice(a,reading.length-b);
@@ -2961,7 +2971,7 @@ function finishExercise(){
   else $("#sumTitle").textContent="연습 클리어 ✦";
   const perfectRun=completePerfectRun(s,first);if(!allCleared&&perfectRun>0)showRoar(perfectRun);
   const wrong=s.words.filter(w=>w.wrongEver);
-  $("#sumWrong").innerHTML=wrong.length?`<div class="wh">틀린 단어 ${wrong.length}개</div>`+wrong.map(w=>`<button type="button" class="wrow" data-id="${w.id}"><b>${esc(w.term)}</b><span>${esc(w.meaning)}</span><i>${w.errors}회</i></button>`).join(""):`<div class="wh ok">틀린 단어 없음 ✦</div>`;
+  $("#sumWrong").innerHTML=wrong.length?`<div class="wh">틀린 단어 ${wrong.length}개</div>`+wrong.map(w=>`<button type="button" class="wrow" data-id="${w.id}"><b lang="ja">${w.jw&&w.jw!==w.term?esc(w.jw)+' <small>'+esc(w.term)+'</small>':esc(w.term)}</b><span>${esc(w.meaning)}</span><i>${w.errors}회</i></button>`).join(""):`<div class="wh ok">틀린 단어 없음 ✦</div>`;
   if(allCleared)setTimeout(()=>{if(state.session===s&&screens.sum.classList.contains("active"))showEnding();},750);
   setCat('sumCat',expr);
   $("#sumBubble").innerHTML=`<span><span class="nm">고양고양이</span> ${JP_MODE==="yomi"?jpLineHtml(line):line}</span>`;
@@ -4356,7 +4366,7 @@ function showRoar(count=1){
   const streak=Math.max(1,Math.floor(count));
   const colors=['255,211,77','255,126,196','118,214,255','195,153,255','130,232,184'];
   const color=colors[(streak-1)%colors.length];
-  const chant='냐'+'아'.repeat(streak+2)+'옹—!!';
+  const chant=JP_MODE==="yomi"?'ホーッ'+'ホッ'.repeat(streak+1)+'ホー!!':'냐'+'아'.repeat(streak+2)+'옹—!!'; // 漢字読み는 일본어로만(최종 검수 26.11.06)
   ov.style.setProperty('--roar-rgb',color);
   ov.style.setProperty('--roar-halo',streak===1?'var(--pink)':'rgb('+color+')');
   ov.style.setProperty('--roar-letters',chant.length);
@@ -4472,10 +4482,10 @@ function savedRenderHome(){
 }
 function savedCardDetails(item,originalMeaning=false){
   const details=document.createElement('details'),summary=document.createElement('summary'),word=item.word;
-  summary.textContent=word.term+' · '+word.meaning;details.appendChild(summary);
+  summary.textContent=(word.jw&&word.jw!==word.term?word.jw+'（'+word.term+'）':word.term)+' · '+word.meaning;details.appendChild(summary);
   const source=document.createElement('p');source.className='saved-source';source.textContent=item.source;details.appendChild(source);
   const original=originalMeaning&&word.originalMeaning&&word.originalMeaning!==word.meaning?'원래 뜻: '+word.originalMeaning:'';
-  for(const text of [original,word.context?.example||(word.ex||'').split('{{BLANK}}').join(word.term),word.context?.translation||word.tr,word.context?.note||word.c]){
+  for(const text of [original,word.context?.example||(word.ex||'').split('{{BLANK}}').join(word.term),word.context?.translation||word.tr,word.context?.note||word.c||word.note]){
     if(!text)continue;const p=document.createElement('p');p.textContent=text;details.appendChild(p);
   }
   return details;
@@ -4486,7 +4496,7 @@ function savedSearchFind(value){
   // Index the already loaded course lazily. Examples and notes are deliberately
   // excluded: a word merely mentioned in an explanation is not its headword.
   if(!savedSearchIndex)savedSearchIndex=Array.from(savedCatalog.values(),(item,order)=>{
-    const heads=[...new Set([item.word.word,item.word.term].filter(Boolean).map(savedSearchKey))];
+    const heads=[...new Set([item.word.word,item.word.term,item.word.jw,...(item.word.alt||[])].filter(Boolean).map(savedSearchKey))];
     return {item,order,heads,compact:heads.map(s=>s.replace(/[\s'-]/g,'')),meanings:[item.word.meaning,item.word.originalMeaning].filter(Boolean).map(savedSearchKey)};
   });
   const compact=query.replace(/[\s'-]/g,''),matches=[];
@@ -5118,7 +5128,7 @@ var PACE_LINES={
   low:['하루 {m}분? 매일 하라고양! 1시간씩이면 {R}이라고양.','하루 {m}분? 꿈 깨라고양. 1시간씩이면 {R}이라고양.']
 };
 if(JP_MODE==="yomi"&&LINES_YOMI&&LINES_YOMI.pace){const mapJa=v=>Array.isArray(v)?v.map(jpJa):Object.fromEntries(Object.entries(v).map(([k,x])=>[k,mapJa(x)]));PACE_LINES=mapJa(LINES_YOMI.pace);}
-function paceRange(a,b){const d=JP_MODE==="yomi"?'日':'일';return a===b?a+d:a+'~'+b+d;}
+function paceRange(a,b,ja=false){const d=ja?'日':'일';return a===b?a+d:a+'~'+b+d;} // 고양이 대사는 일본어(日), 화면 안내 줄은 한국어(일)
 function paceFill(t,v){return t.replace(/\{(\w+)\}/g,(m,k)=>v[k]??m);}
 function paceNote(f,t){
   const ex=f.exMin.map(x=>Math.max(1,Math.round(x))),exT=ex[0]===ex[1]?ex[0]+'분':ex[0]+'~'+ex[1]+'분';
@@ -5142,7 +5152,7 @@ function paceKind(recs,f,t,meta,now){
 function paceLine(kind,f,t,recs,now){
   const mode=f.mode==='daily'?'daily':'hour',pool=Array.isArray(PACE_LINES[kind])?PACE_LINES[kind]:PACE_LINES[kind][mode];
   const before=recs[recs.length-2],last=recs[recs.length-1];
-  const v={T:t.label,N:t.next||'',P:t.passed||'',R:paceRange(f.days[0],f.days[1]),RB:f.days[1]+(JP_MODE==="yomi"?'日':'일'),m:Math.round(f.daily||0),p:Math.round(Math.abs(f.trend)*100),
+  const v={T:t.label,N:t.next||'',P:t.passed||'',R:paceRange(f.days[0],f.days[1],JP_MODE==="yomi"),RB:f.days[1]+(JP_MODE==="yomi"?'日':'일'),m:Math.round(f.daily||0),p:Math.round(Math.abs(f.trend)*100),
     g:before?Math.floor((paceDayStart(last.at)-paceDayStart(before.at))/864e5):0};
   return paceFill(pool[Math.floor(Math.random()*pool.length)],v);
 }
