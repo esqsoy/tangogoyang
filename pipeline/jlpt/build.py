@@ -62,6 +62,23 @@ if ff.exists():
                 ko[i]['shown'] = f['shown']
         if f.get('reading'):
             FIXWORD.setdefault(i, {})['reading'] = f['reading']
+# 마지막 고침(fixes.json): 최종 검수·학생 리포트. 다른 모든 고침 뒤에 덮으므로 여기 적은 것이 이긴다.
+# {id: {ko, c, shown, reading, readings, drop}}. 26.11.06.
+LATE = {}
+lf = HERE / 'fixes.json'
+if lf.exists():
+    LATE = {k: v for k, v in json.loads(lf.read_text()).items() if not k.startswith('_')}
+    for i, f in LATE.items():
+        if f.get('drop'):
+            DROP.add(i)
+        elif f.get('restore'):
+            DROP.discard(i)
+        if i in ko:
+            ko[i] = {**ko[i], **{k: f[k] for k in ('ko', 'c', 'readings') if k in f}}
+            if 'shown' in f:
+                ko[i]['shown'] = f['shown']
+        if f.get('reading'):
+            FIXWORD.setdefault(i, {})['reading'] = f['reading']
 src = [w for w in src if w['id'] not in DROP]
 for w in src:
     if w['id'] in FIXWORD:
