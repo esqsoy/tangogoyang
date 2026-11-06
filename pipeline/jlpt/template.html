@@ -2328,7 +2328,7 @@ function mtRevealHtml(term,meaning){
    // 문제 칸에 이미 보인 모양은 다시 안 보인다(26.11.06 영신). 배우는 연습(인쇄체 획순+손글씨)은 없음, 손글씨 문제는 인쇄체 획순+손글씨 획순, 긴 단어는 안 보인 쪽 모양만.
    const forms=!w.hw&&short?'':w.hw&&short?'<div class="kana-forms">'+kanaPairHtml(w.jw,'kp-rv')+'</div>':'<div class="kana-forms long"><span class="kana-form"><b'+(w.hw?'':' class="jp-hand"')+' lang="ja">'+esc(w.jw)+'</b><small>'+(w.hw?'인쇄체':'손글씨')+'</small></span></div>';
    if(forms.includes('kana-pair'))setTimeout(()=>kanaPairStart(document.getElementById('reveal')),0);
-   const ipa=w.ipa?'<div class="jp-ipa">['+esc(w.ipa)+']</div>':'',pn=w.pn&&w.pn.length?'<ul class="jp-pn">'+w.pn.map(x=>{const i=x.indexOf(' — ');return '<li>'+(i>0?'<b>'+esc(x.slice(0,i))+'</b><br>'+esc(x.slice(i+3)).replace(' · 주의: ','<br><i>주의</i> '):esc(x))+'</li>';}).join('')+'</ul>':'';
+   const ipa=w.ipa?'<div class="jp-ipa">['+esc(w.ipa)+']</div>':'',pn=w.pn&&w.pn.length?'<ul class="jp-pn">'+w.pn.map(x=>{const i=x.indexOf(' — ');return '<li>'+(i>0?'<b>'+esc(x.slice(0,i))+'</b><br>'+esc(x.slice(i+3)).replace(' · 주의: ','<br><i>주의</i> ').replace(' · 차이: ','<br><i>차이</i> ').replace(/^차이: /,'<i>차이</i> ').replace(/^주의: /,'<i>주의</i> '):esc(x))+'</li>';}).join('')+'</ul>':'';
    return forms+(snd?'<div class="jp-head jp-snd">'+esc(snd)+'</div>':'')+ipa+pn+(w.meaning?'<div class="ov-tr">'+esc(w.meaning)+'</div>':'')+(w.note?'<div class="ov-tr jp-note">'+esc(w.note)+'</div>':'');}
  const head=JP_MODE==="yomi"?'<div class="jp-head" lang="ja">'+jpRuby(w.jw,w.term)+'</div>':w.jw&&w.jw!==w.term?'<div class="jp-head" lang="ja">'+jpRuby(w.jw,w.term)+'</div>':'';
  const note=w.note?'<div class="ov-tr jp-note">'+esc(w.note)+'</div>':'';
