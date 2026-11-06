@@ -194,18 +194,35 @@ def write(out, data, mode):
                          ("'日本語能力試験 완주'", "'漢字読み完走'")]:
             assert html.count(old) == 1, old
             html = html.replace(old, new)
+    if mode == 'kana':
+        # 五十音: 따로 진도(tangogoyang-kana-), 고양이는 한국어 고양체(일본어 대사는 漢字読み에만).
+        html = html.replace(mode_marker, 'const JP_MODE="kana";')
+        html = re.sub(r'(["\'`])tangogoyang-', r'\1tangogoyang-kana-', html)
+        for old, new in [('<title>日本語能力試験 · 単語高陽</title>', '<title>五十音 · 単語高陽</title>'),
+                         ('<h2>日本語能力試験 N5–N1</h2>', '<h2>五十音 ひらがな・カタカナ</h2>'),
+                         ('<h1 lang="ja"><b>単語高陽</b> · 日本語能力試験</h1>', '<h1 lang="ja"><b>単語高陽</b> · 五十音</h1>'),
+                         ('const SAVED_COURSE="日本語能力試験";', 'const SAVED_COURSE="五十音";'),
+                         ("'日本語能力試験 완주'", "'五十音 완주'")]:
+            assert html.count(old) == 1, old
+            html = html.replace(old, new)
     out.write_text(html)
     return sum(len(e['words']) for L in data for e in L['exercises'])
 
 
+# --only jlpt,yomi,gojuon: 고른 파일만 다시 만든다(완성된 두 게임을 건드리지 않고 五十音만 만들 때, 26.11.06).
+ONLY = set(sys.argv[sys.argv.index('--only') + 1].split(',')) if '--only' in sys.argv else {'jlpt', 'yomi', 'gojuon'}
 data, stats = make_data(lambda c: True)
-n_all = write(OUT, data, 'meaning')
 ydata, ystats = make_data(lambda c: bool(KANJI.search(c['w'])))
-n_yomi = write(ROOT / 'tangogoyangyomi.html', ydata, 'yomi')
+n_all = write(OUT, data, 'meaning') if 'jlpt' in ONLY else sum(len(e['words']) for L in data for e in L['exercises'])
+n_yomi = write(ROOT / 'tangogoyangyomi.html', ydata, 'yomi') if 'yomi' in ONLY else sum(len(e['words']) for L in ydata for e in L['exercises'])
+gdata = json.loads((HERE / 'gojuon-data.json').read_text())
+n_kana = write(ROOT / 'tangogoyanggojuon.html', gdata, 'kana') if 'gojuon' in ONLY else 0
 idx = ROOT / 'index.html'
 it = idx.read_text()
 it = re.sub(r'<!-- VOCAB_STATS:jlpt:START -->.*?<!-- VOCAB_STATS:jlpt:END -->', lambda m: f'<!-- VOCAB_STATS:jlpt:START --><b>{n_all:,}단어</b> · 한국어 뜻을 보고 가나로<!-- VOCAB_STATS:jlpt:END -->', it, flags=re.S)
 it = re.sub(r'<!-- VOCAB_STATS:yomi:START -->.*?<!-- VOCAB_STATS:yomi:END -->', lambda m: f'<!-- VOCAB_STATS:yomi:START --><b>{n_yomi:,}단어</b> · 한자를 보고 읽기를 가나로<!-- VOCAB_STATS:yomi:END -->', it, flags=re.S)
+it = re.sub(r'<!-- VOCAB_STATS:gojuon:START -->.*?<!-- VOCAB_STATS:gojuon:END -->', lambda m: f'<!-- VOCAB_STATS:gojuon:START --><b>히라가나·가타카나</b> · 글자를 보고 소리를 친다<!-- VOCAB_STATS:gojuon:END -->', it, flags=re.S)
 idx.write_text(it)
 print(OUT.name, f'{len(data)}강 · {sum(len(L["exercises"]) for L in data)}연습 · {n_all}카드', stats, f'뜻 없음 {len(missing)}', f'뺀 카드 {len(DROP)}', f'표기 고침 {len(FIXWORD)}')
+print('tangogoyanggojuon.html', f'{len(gdata)}강 · {sum(len(L["exercises"]) for L in gdata)}연습 · {n_kana}카드' if 'gojuon' in ONLY else '(안 만듦)')
 print('tangogoyangyomi.html', f'{len(ydata)}강 · {sum(len(L["exercises"]) for L in ydata)}연습 · {n_yomi}카드', ystats)

@@ -20,7 +20,10 @@ python3 pipeline/jlpt/build.py      # tangogoyangjlpt.html, index.html 단어 �
 node pipeline/jlpt/test-jlpt.cjs    # 로마자→가나·판정·화면 흐름 검사
 ```
 
-## 두 과정
+## 세 과정
+
+- `tangogoyanggojuon.html` 五十音: 가나를 보고 소리를 로마자·한글로 친다. 원본 [gojuon.py](gojuon.py) → `gojuon-data.json`. 10강·42연습·447카드(복습 포함). 진도·저장 키 `tangogoyang-kana-`. 고양이는 한국어. 만들 때 `python3 pipeline/jlpt/gojuon.py && python3 pipeline/jlpt/build.py --only gojuon`(완성된 두 게임은 다시 만들지 않는다).
+
 
 - `tangogoyangjlpt.html` 日本語能力試験: 한국어 뜻을 보고 읽기를 친다. 7,743카드.
 - `tangogoyangyomi.html` 漢字読み: 한자 표기와 뜻을 보고 읽기를 친다(JLPT 문자·어휘의 漢字読み 대비, 26.11.06 영신). 한자가 든 카드만, 같은 묶는 법. 한자를 그대로 치면 답이 아니다. 진도·저장 키는 따로(`tangogoyang-yomi-`). 같은 표기·같은 뜻의 다른 표준 읽기는 카드의 `ar`로 받는다.

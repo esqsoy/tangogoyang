@@ -72,5 +72,18 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   ok(await p2.evaluate(()=>!state.session.copyMode),'漢字読み: 따라쓰기는 가나로');
   await p2.evaluate(()=>showRoar(1));ok(!/[가-힣]/.test(await p2.innerText('#roar')),'漢字読み: 포효도 일본어');
   ok(errs.length===0,'페이지 오류 없음(漢字読み) '+errs.join(' | '));
+  // 五十音
+  const p3=await b.newPage({viewport:{width:390,height:844}});p3.on('pageerror',e=>errs.push(e.message));
+  await p3.goto('file://'+path.resolve(__dirname,'../../tangogoyanggojuon.html'));await p3.waitForTimeout(600);
+  ok(await p3.evaluate(()=>JP_MODE==='kana'&&STORAGE.startsWith('tangogoyang-kana-')),'五十音: 저장 키 따로');
+  const kg=await p3.evaluate(()=>[['ti','ティ'],['ji','ぢ'],['zu','づ'],['o','を'],['ka','カ']].map(([r,a])=>{let v='';for(const ch of r)v=jpScriptLike(jpRomaToKana(v+ch,false,a),a);return jpScriptLike(jpRomaToKana(v,true,a),a)===a;}));
+  ok(kg.every(Boolean),'五十音: ti=ティ, ji=ぢ, zu=づ, o=を, ka=カ');
+  ok(await p3.evaluate(()=>jpTentative('ㄴ','ん')==='ん'&&jpTentative('파','ファ')==='ファ'&&jpTentative('오','を')==='を'),'五十音: 한글 ㄴ=ん, 파=ファ, 오=を');
+  await p3.evaluate(()=>{openLesson(0);startExercise(0);});await p3.waitForTimeout(3000);
+  const kw=await p3.evaluate(()=>state.session.words[state.session.currentId]);
+  ok((await p3.innerText('#meaning')).trim()===kw.jw,'五十音: 문제에 글자만');
+  await p3.focus('#ainput');await p3.keyboard.type(kw.rm);await p3.waitForTimeout(400);
+  ok(await p3.evaluate(()=>document.querySelector('#ainput').classList.contains('ok')),`五十音: ${kw.rm} 로 ${kw.jw} 정답`);
+  ok((await p3.innerText('#reveal')).includes(kw.hg),'五十音: 공개에 한글 소리');
   await b.close();console.log(fail?`실패 ${fail}`:'모두 통과');process.exit(fail?1:0);
 })();
