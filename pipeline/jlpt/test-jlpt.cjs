@@ -43,5 +43,18 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
     await p.focus('#ainput');await p.keyboard.insertText('오토나');await p.waitForTimeout(400);
     ok(await p.evaluate(()=>document.querySelector('#ainput').classList.contains('ok')),'한글 오토나 로 おとな 정답');}
   ok(errs.length===0,'페이지 오류 없음 '+errs.join(' | '));
+  // 漢字読み
+  const p2=await b.newPage({viewport:{width:390,height:844}});p2.on('pageerror',e=>errs.push(e.message));
+  await p2.goto('file://'+path.resolve(__dirname,'../../tangogoyangyomi.html'));await p2.waitForTimeout(600);
+  ok(await p2.evaluate(()=>JP_MODE==='yomi'&&STORAGE.startsWith('tangogoyang-yomi-')),'漢字読み: 저장 키 따로');
+  ok(await p2.evaluate(()=>state.lessons.every(L=>L.exercises.every(e=>e.words.every(w=>/[\u3400-\u9fff々]/.test(w.jw))))),'漢字読み: 모든 카드에 한자');
+  await p2.evaluate(()=>{openLesson(0);startExercise(0);});await p2.waitForTimeout(3000);
+  const y=await p2.evaluate(()=>{const s=state.session;return s.words[s.currentId]});
+  ok((await p2.innerText('#meaning')).includes(y.jw),'漢字読み: 문제에 한자');
+  await p2.focus('#ainput');await p2.keyboard.type(y.jw);await p2.keyboard.press('Enter');await p2.waitForTimeout(400);
+  ok(await p2.evaluate(()=>state.session.copyMode),'漢字読み: 한자를 그대로 치면 오답');
+  await p2.keyboard.type(y.term);await p2.waitForTimeout(400);
+  ok(await p2.evaluate(()=>!state.session.copyMode),'漢字読み: 따라쓰기는 가나로');
+  ok(errs.length===0,'페이지 오류 없음(漢字読み) '+errs.join(' | '));
   await b.close();console.log(fail?`실패 ${fail}`:'모두 통과');process.exit(fail?1:0);
 })();

@@ -18,6 +18,12 @@ python3 pipeline/jlpt/build.py      # tangogoyangjlpt.html, index.html 단어 �
 node pipeline/jlpt/test-jlpt.cjs    # 로마자→가나·판정·화면 흐름 검사
 ```
 
+## 두 과정
+
+- `tangogoyangjlpt.html` 日本語能力試験: 한국어 뜻을 보고 읽기를 친다. 7,743카드.
+- `tangogoyangyomi.html` 漢字読み: 한자 표기와 뜻을 보고 읽기를 친다(JLPT 문자·어휘의 漢字読み 대비, 26.11.06 영신). 한자가 든 카드만, 같은 묶는 법. 한자를 그대로 치면 답이 아니다. 진도·저장 키는 따로(`tangogoyang-yomi-`). 같은 표기·같은 뜻의 다른 표준 읽기는 카드의 `ar`로 받는다.
+- 두 파일은 같은 template.html에서 `JP_MODE`만 바꿔 조립한다. 교재 선택 화면에서 고른다.
+
 ## 묶는 법
 
 급수(N5→N1) → 주제 23갈래(`build.py`의 `TOPICS` 순서) → 연습(약 12카드). 한 급수를 약 400카드씩 강으로 나눈다(N5 ①②…). 진도는 강 이름+연습 제목으로, 모아둔 카드는 OpenJLPT id로 저장한다. 그래서 묶음을 바꾸면 진도 기록은 이어지지 않는다.

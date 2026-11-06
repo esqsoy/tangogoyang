@@ -48,6 +48,20 @@ if fix_f.exists():
     for i, f in json.loads(fix_f.read_text()).items():
         if i in ko:
             ko[i] = {**ko[i], **{k: v for k, v in f.items() if k in ('ko', 'c')}}
+# Fable 독립 검수(26.11.06)에서 Claude가 받아들인 고침: {id: {ko, c, shown, reading, drop}}
+FABLE = {}
+ff = HERE / 'fable-review' / 'accepted.json'
+if ff.exists():
+    FABLE = json.loads(ff.read_text())
+    for i, f in FABLE.items():
+        if f.get('drop'):
+            DROP.add(i)
+        if i in ko:
+            ko[i] = {**ko[i], **{k: f[k] for k in ('ko', 'c', 'readings') if k in f}}
+            if 'shown' in f:
+                ko[i]['shown'] = f['shown']
+        if f.get('reading'):
+            FIXWORD.setdefault(i, {})['reading'] = f['reading']
 src = [w for w in src if w['id'] not in DROP]
 for w in src:
     if w['id'] in FIXWORD:
@@ -60,62 +74,92 @@ def card(w):
     k = ko[w['id']]
     word, reading = w['word'], w['reading']
     uk = bool(k.get('uk'))
-    shown = reading if uk else word
+    shown = k.get('shown') or (reading if uk else word)
     alt = sorted({word, reading} - {shown, reading})
     c = {'id': w['id'], 'en': reading, 'ko': k['ko'].strip(), 'w': shown, 'lv': w['level']}
     if alt:
         c['alt'] = alt
     if k.get('c'):
         c['c'] = k['c'].strip()
+    if k.get('readings'):
+        c['ar'] = k['readings']
     return c, k['topic']
 
 
-data, lesson_no, stats = [], 0, {}
-for lv in LEVELS:
-    by_topic = {t: [] for t in TOPICS}
-    for w in src:
-        if w['level'] == lv and w['id'] in ko:
-            c, t = card(w)
-            by_topic[t].append(c)
-    total = sum(len(v) for v in by_topic.values())
-    stats[lv] = total
-    n_lessons = max(1, round(total / LESSON_SIZE))
-    target = total / n_lessons
-    groups, cur, cur_n = [], [], 0
-    for t in TOPICS:
-        if not by_topic[t]:
-            continue
-        if cur and cur_n + len(by_topic[t]) / 2 > target * (len(groups) + 1) - sum(sum(len(by_topic[x]) for x in g) for g in groups) and len(groups) < n_lessons - 1:
-            groups.append(cur); cur = []
-        cur.append(t); cur_n += len(by_topic[t])
-    if cur:
-        groups.append(cur)
-    for gi, g in enumerate(groups):
-        lesson_no += 1
-        exercises, seen = [], {}
-        for t in g:
-            words = by_topic[t]
-            k = max(1, math.ceil(len(words) / EX_SIZE))
-            size = math.ceil(len(words) / k)
-            for j in range(k):
-                part = words[j * size:(j + 1) * size]
-                if not part:
-                    continue
-                seen[t] = seen.get(t, 0) + 1
-                title = t if k == 1 else f'{t} {seen[t]}'
-                exercises.append({'ex': len(exercises) + 1, 'scope': '2026', 'title': title, 'words': part})
-        name = g[0] if len(g) == 1 else f'{g[0]} ~ {g[-1]}'
-        lid = lv + (f' {CIRCLED[gi]}' if len(groups) > 1 else '')
-        data.append({'lesson': lesson_no, 'id': lid, 'name': name, 'exercises': exercises})
+def make_data(keep):
+    data, lesson_no, stats = [], 0, {}
+    for lv in LEVELS:
+        by_topic = {t: [] for t in TOPICS}
+        for w in src:
+            if w['level'] == lv and w['id'] in ko:
+                c, t = card(w)
+                if keep(c):
+                    by_topic[t].append(c)
+        total = sum(len(v) for v in by_topic.values())
+        stats[lv] = total
+        n_lessons = max(1, round(total / LESSON_SIZE))
+        target = total / n_lessons
+        groups, cur, cur_n = [], [], 0
+        for t in TOPICS:
+            if not by_topic[t]:
+                continue
+            if cur and cur_n + len(by_topic[t]) / 2 > target * (len(groups) + 1) - sum(sum(len(by_topic[x]) for x in g) for g in groups) and len(groups) < n_lessons - 1:
+                groups.append(cur); cur = []
+            cur.append(t); cur_n += len(by_topic[t])
+        if cur:
+            groups.append(cur)
+        for gi, g in enumerate(groups):
+            lesson_no += 1
+            exercises, seen = [], {}
+            for t in g:
+                words = by_topic[t]
+                k = max(1, math.ceil(len(words) / EX_SIZE))
+                size = math.ceil(len(words) / k)
+                for j in range(k):
+                    part = words[j * size:(j + 1) * size]
+                    if not part:
+                        continue
+                    seen[t] = seen.get(t, 0) + 1
+                    title = t if k == 1 else f'{t} {seen[t]}'
+                    exercises.append({'ex': len(exercises) + 1, 'scope': '2026', 'title': title, 'words': part})
+            name = g[0] if len(g) == 1 else f'{g[0]} ~ {g[-1]}'
+            lid = lv + (f' {CIRCLED[gi]}' if len(groups) > 1 else '')
+            data.append({'lesson': lesson_no, 'id': lid, 'name': name, 'exercises': exercises})
+    return data, stats
 
+
+KANJI = re.compile(r'[\u3400-\u9fff々〆]')
 tpl = (HERE / 'template.html').read_text()
 marker = 'const DATA = /*__DATA__*/[];'
-assert tpl.count(marker) == 1
-html = tpl.replace(marker, 'const DATA = ' + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + ';')
-OUT.write_text(html)
+mode_marker = 'const JP_MODE=/*__MODE__*/"meaning";'
+assert tpl.count(marker) == 1 and tpl.count(mode_marker) == 1
+
+
+def write(out, data, mode):
+    html = tpl.replace(marker, 'const DATA = ' + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + ';')
+    if mode == 'yomi':
+        # 漢字読み: 따로 진도를 쌓는다(저장 키 tangogoyang-yomi-). 제목도 바꾼다.
+        html = html.replace(mode_marker, 'const JP_MODE="yomi";')
+        html = re.sub(r'(["\'`])tangogoyang-', r'\1tangogoyang-yomi-', html)
+        for old, new in [('<title>日本語能力試験 · 単語高陽</title>', '<title>漢字読み · 単語高陽</title>'),
+                         ('<h2>日本語能力試験 N5–N1</h2>', '<h2>日本語能力試験 漢字読み N5–N1</h2>'),
+                         ('<h1 lang="ja"><b>単語高陽</b> · 日本語能力試験</h1>', '<h1 lang="ja"><b>単語高陽</b> · 漢字読み</h1>'),
+                         ('const SAVED_COURSE="日本語能力試験";', 'const SAVED_COURSE="漢字読み";'),
+                         ("'日本語能力試験 완주'", "'漢字読み 완주'")]:
+            assert html.count(old) == 1, old
+            html = html.replace(old, new)
+    out.write_text(html)
+    return sum(len(e['words']) for L in data for e in L['exercises'])
+
+
+data, stats = make_data(lambda c: True)
+n_all = write(OUT, data, 'meaning')
+ydata, ystats = make_data(lambda c: bool(KANJI.search(c['w'])))
+n_yomi = write(ROOT / 'tangogoyangyomi.html', ydata, 'yomi')
 idx = ROOT / 'index.html'
 it = idx.read_text()
-it = re.sub(r'<!-- VOCAB_STATS:jlpt:START -->.*?<!-- VOCAB_STATS:jlpt:END -->', lambda m: f'<!-- VOCAB_STATS:jlpt:START --><b>{sum(len(e["words"]) for L in data for e in L["exercises"]):,}단어</b> · 한국어 뜻을 보고 가나로<!-- VOCAB_STATS:jlpt:END -->', it, flags=re.S)
+it = re.sub(r'<!-- VOCAB_STATS:jlpt:START -->.*?<!-- VOCAB_STATS:jlpt:END -->', lambda m: f'<!-- VOCAB_STATS:jlpt:START --><b>{n_all:,}단어</b> · 한국어 뜻을 보고 가나로<!-- VOCAB_STATS:jlpt:END -->', it, flags=re.S)
+it = re.sub(r'<!-- VOCAB_STATS:yomi:START -->.*?<!-- VOCAB_STATS:yomi:END -->', lambda m: f'<!-- VOCAB_STATS:yomi:START --><b>{n_yomi:,}단어</b> · 한자를 보고 읽기를 가나로<!-- VOCAB_STATS:yomi:END -->', it, flags=re.S)
 idx.write_text(it)
-cards = sum(len(e['words']) for L in data for e in L['exercises'])
-print(OUT.name, f'{len(data)}강 · {sum(len(L["exercises"]) for L in data)}연습 · {cards}카드', stats, f'뜻 없음 {len(missing)}', f'뺀 카드 {len(DROP)}', f'표기 고침 {len(FIXWORD)}')
+print(OUT.name, f'{len(data)}강 · {sum(len(L["exercises"]) for L in data)}연습 · {n_all}카드', stats, f'뜻 없음 {len(missing)}', f'뺀 카드 {len(DROP)}', f'표기 고침 {len(FIXWORD)}')
+print('tangogoyangyomi.html', f'{len(ydata)}강 · {sum(len(L["exercises"]) for L in ydata)}연습 · {n_yomi}카드', ystats)
