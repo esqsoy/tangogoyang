@@ -87,8 +87,9 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   await p3.focus('#ainput');await p3.keyboard.type(kw.rm);await p3.waitForTimeout(400);
   ok(await p3.evaluate(()=>document.querySelector('#ainput').classList.contains('ok')),`五十音: ${kw.rm} 로 ${kw.jw} 정답`);
   ok((await p3.innerText('#reveal')).includes(kw.hg),'五十音: 공개에 한글 소리');
-  await p3.evaluate(()=>{openLesson(0);startExercise(5);});await p3.waitForTimeout(3000);
-  ok(await p3.evaluate(()=>!!document.querySelector('#meaning .jp-hand')&&!document.querySelector('#meaning .kana-strokes')),'五十音: 전체 복습은 손글씨 모양으로');
+  ok(await p3.evaluate(()=>{const orders=[];for(let k=0;k<4;k++){openLesson(0);startExercise(5);orders.push(state.session.roundTargets.join(','));}const seq=state.session.words.map(w=>w.id).join(',');openLesson(0);startExercise(0);const inOrder=state.session.roundTargets.join(',')===state.session.words.map(w=>w.id).join(',');return state.lessons[0].exercises[5].words.length===46&&orders.some(o=>o!==seq)&&inOrder;}),'五十音: 행별은 순서대로, 46자 무작위는 1회독부터 섞임');
+  await p3.evaluate(()=>{openLesson(0);startExercise(6);});await p3.waitForTimeout(3000);
+  ok(await p3.evaluate(()=>!!document.querySelector('#meaning .jp-hand')&&!document.querySelector('#meaning .kana-strokes')),'五十音: 46자 무작위 · 손글씨는 손글씨 모양으로');
   await p3.focus('#ainput');await p3.keyboard.type('zz');await p3.keyboard.press('Enter');await p3.waitForTimeout(1500);
   ok(await p3.evaluate(()=>!!document.querySelector('#reveal .kp-print svg .live')&&!!document.querySelector('#reveal svg.hand[data-fit] .hlive')),'五十音: 손글씨 문제를 틀리면 인쇄체 획순·손글씨 공개');
   ok(await p3.evaluate(()=>{const w=state.session.words[state.session.currentId],ul=document.querySelector('#reveal .jp-pn');return Object.keys(KANA_HAND).length>=150&&(w.pn.length?!!ul&&ul.querySelectorAll('li').length===w.pn.length:!ul);}),'五十音: 손글씨 경로·발음 설명(한국어와 같은 소리는 없음)');

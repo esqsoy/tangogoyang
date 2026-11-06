@@ -99,11 +99,20 @@ def card(kana, rm, hg, ko='', script='h', word=False):
     return c
 
 
-def ex(title, cards):
-    # 전체 복습·단어 읽기는 문제를 손글씨 모양으로 낸다(26.11.06 영신: 외국인은 손글씨가 판이해서 못 알아본다). 치는 건 그대로.
-    if '전체 복습' in title or '단어 읽기' in title:  # '손글씨 전체 복습' 포함
+def ex(title, cards, rnd=False, hw=False):
+    # hw: 문제를 손글씨 모양으로(26.11.06 영신: 외국인은 손글씨가 판이해서 못 알아본다). 치는 건 그대로.
+    # rnd: 1회독부터 섞는다(26.11.06 영신: "순서대로 내면 그냥 아이우에오로 무지성으로 칠 수 있어").
+    if hw:
         cards = [{**c, 'hw': 1} for c in cards]
-    return {'scope': '2026', 'title': title, 'words': cards}
+    e = {'scope': '2026', 'title': title, 'words': cards}
+    if rnd:
+        e['rnd'] = 1
+    return e
+
+
+def mixed(name, cards):
+    """강 끝: 강 전체 글자를 한 판에 섞어 인쇄체로 한 번, 손글씨로 한 번(영신: "무작위로는 그냥 히라가나 전체를 한판으로 해서 완전히 섞이게", "같은걸 인쇄판, 필기판따로")."""
+    return [ex(name + ' 무작위 · 인쇄체', cards, rnd=True), ex(name + ' 무작위 · 손글씨', cards, rnd=True, hw=True)]
 
 
 def chunks(cards, size):
@@ -119,26 +128,20 @@ def lessons(script):
     # ① 기본: 두 행씩
     groups = [basic[0:10], basic[10:20], basic[20:30], basic[30:38], basic[38:46]]
     names = [f'{conv("あ")}·{conv("か")}행', f'{conv("さ")}·{conv("た")}행', f'{conv("な")}·{conv("は")}행', f'{conv("ま")}·{conv("や")}행', f'{conv("ら")}·{conv("わ")}행·{conv("ん")}']
-    exs = [ex(n, g) for n, g in zip(names, groups)] + [ex('기본 전체 복습 ' + str(i + 1), g) for i, g in enumerate(chunks(basic, 12))]
+    exs = [ex(n, g) for n, g in zip(names, groups)] + mixed('46자', basic)
     out.append({'id': f'{pfx} ①', 'name': '기본 글자', 'exercises': exs})
     daku = [card(conv(k), r, h, script=script) for k, r, h in DAKU]
     d = daku  # 10장 안팎으로: が·ざ / だ·ば / ぱ + 앞 행 첫 글자 복습
-    out.append({'id': f'{pfx} ②', 'name': '탁음·반탁음', 'exercises': [ex(f'{conv("が")}·{conv("ざ")}행', d[0:10]), ex(f'{conv("だ")}·{conv("ば")}행', d[10:20]), ex(f'{conv("ぱ")}행 + 복습', d[20:25] + d[0:20:5])]})
+    out.append({'id': f'{pfx} ②', 'name': '탁음·반탁음', 'exercises': [ex(f'{conv("が")}·{conv("ざ")}행', d[0:10]), ex(f'{conv("だ")}·{conv("ば")}행', d[10:20]), ex(f'{conv("ぱ")}행 + 복습', d[20:25] + d[0:20:5])] + mixed('25자', daku)})
     yoon = [card(conv(k), r, h, script=script) for k, r, h in YOON]
-    out.append({'id': f'{pfx} ③', 'name': '작은 ' + '·'.join(conv(x) for x in 'ゃゅょ'), 'exercises': [ex('합친 소리 ' + str(i + 1), g) for i, g in enumerate(chunks(yoon, 11))]})
+    out.append({'id': f'{pfx} ③', 'name': '작은 ' + '·'.join(conv(x) for x in 'ゃゅょ'), 'exercises': [ex('합친 소리 ' + str(i + 1), g) for i, g in enumerate(chunks(yoon, 11))] + mixed('33자', yoon)})
     if script == 'h':
         words = [card(k, r, h, ko=m, script='h', word=True) for k, r, h, m in SOKU_H]
-        out.append({'id': f'{pfx} ④', 'name': '작은 っ·장음', 'exercises': [ex('っ·장음 단어 ' + str(i + 1), g) for i, g in enumerate(chunks(words, 8))]})
+        out.append({'id': f'{pfx} ④', 'name': '작은 っ·장음', 'exercises': [ex('っ·장음 단어 ' + str(i + 1), g) for i, g in enumerate(chunks(words, 8))] + mixed('단어 ' + str(len(words)) + '개', words)})
     else:
         gai = [card(k, r, h, script='k') for k, r, h in GAIRAI]
         words = [card(k, r, h, ko=m, script='k', word=True) for k, r, h, m in SOKU_K]
-        out.append({'id': f'{pfx} ④', 'name': '외래어 소리·ー·ッ', 'exercises': [ex('외래어 소리', gai), ex('ー·ッ 단어', words)]})
-    # 손글씨로 다시: ②③④도 끝에 손글씨 문제(26.11.06 영신: "해설로만 손글씨가 나오는게 아니라 주어지면 그걸 쓰는식으로도")
-    for L in out[1:]:
-        pool = [c for e in L['exercises'] for c in e['words']]
-        pool = list({c['id']: c for c in pool}.values())
-        step = max(1, len(pool) // 12)
-        L['exercises'].append(ex('손글씨 전체 복습', pool[::step][:12]))
+        out.append({'id': f'{pfx} ④', 'name': '외래어 소리·ー·ッ', 'exercises': [ex('외래어 소리', gai), ex('ー·ッ 단어', words)] + mixed(str(len(gai) + len(words)) + '개', gai + words)})
     return out
 
 
@@ -165,7 +168,10 @@ for script in ('h', 'k'):
         data.append(L)
     words = kana_words(script)
     pfx = 'ひらがな' if script == 'h' else 'カタカナ'
-    data.append({'id': f'{pfx} ⑤', 'name': '단어 읽기', 'exercises': [ex('단어 읽기 ' + str(i + 1), g) for i, g in enumerate(chunks(words, 12))]})
+    exs = []
+    for i, g in enumerate(chunks(words, 12)):
+        exs += [ex(f'단어 읽기 {i + 1} · 인쇄체', g, rnd=True), ex(f'단어 읽기 {i + 1} · 손글씨', g, rnd=True, hw=True)]
+    data.append({'id': f'{pfx} ⑤', 'name': '단어 읽기', 'exercises': exs})
 for i, L in enumerate(data):
     L['lesson'] = i + 1
     for j, e in enumerate(L['exercises']):

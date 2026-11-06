@@ -2363,7 +2363,7 @@ function buildLessons(){
     name:L.name||"",
     exercises:L.exercises.map(ex=>({
       title:ex.title||((ex.scope==='prev'?"이전기출 ":"Exercise ")+ex.ex),
-      ex:ex.ex, scope:ex.scope||'2026',
+      ex:ex.ex, scope:ex.scope||'2026', rnd:!!ex.rnd,
       words:ex.words.map(w=>({term:w.en,meaning:w.ko,jw:w.w||w.en,alt:w.alt||[],ar:w.ar||[],rm:w.rm||"",hg:w.hg||"",hw:w.hw||0,ipa:w.ipa||"",pn:w.pn||[],note:w.c||"",lv:w.lv||"",savedId:w.id}))
     }))
   }));
@@ -2793,6 +2793,7 @@ function startRound(n){
     s.words.forEach(w=>{w.roundStreak=0;w.passed=false;w.needed=1;});
     s.roundName="1회독";
     s.roundTargets=s.words.map(w=>w.id);
+    if(s.exercise&&s.exercise.rnd)s.roundTargets=shuffle(s.roundTargets); // 무작위 연습은 1회독부터 섞는다(26.11.06 영신: 순서대로면 あいうえお로 외워 친다)
     s.queue=[...s.roundTargets];
   } else {
     // 2회독 이후: "틀린 적 있고(wrongEver) 아직 통과 못 한" 단어만 대상.
