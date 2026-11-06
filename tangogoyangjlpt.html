@@ -2630,8 +2630,11 @@ if(JP_MODE==="yomi"&&LINES_YOMI){
   if(LINES_YOMI.syn)SYNLINES.splice(0,SYNLINES.length,...LINES_YOMI.syn);
 }
 /* '일본어\n한국어' 대사를 일본어는 크게, 번역은 작게 그린다. 그 밖의 대사는 그대로. */
-function jpLineHtml(line){line=String(line??"");if(JP_MODE!=="yomi"||!line.includes("\n"))return esc(line);const i=line.indexOf("\n");return '<span lang="ja">'+esc(line.slice(0,i))+'</span><small class="jp-ko">'+esc(line.slice(i+1))+'</small>';}
-function jpSay(el,line){if(!el)return;if(JP_MODE==="yomi"&&String(line||"").includes("\n"))el.innerHTML=jpLineHtml(line);else el.textContent=line||"";}
+/* 漢字読み에서는 고양이가 일본어로만 말한다(26.11.06 영신 "아예 고양이가 일어만"). 파일의 한국어 번역(줄바꿈 뒤)은 화면에 내지 않는다. */
+function jpJa(line){line=String(line??"");return JP_MODE==="yomi"&&line.includes("\n")?line.slice(0,line.indexOf("\n")):line;}
+function jpLineHtml(line){return JP_MODE==="yomi"?'<span lang="ja">'+esc(jpJa(line))+'</span>':esc(String(line??""));}
+function jpSay(el,line){if(!el)return;if(JP_MODE==="yomi"){el.innerHTML=jpLineHtml(line);el.setAttribute("lang","ja");}else el.textContent=line||"";}
+function jpY(path,fallback){if(JP_MODE!=="yomi"||!LINES_YOMI)return fallback;let v=LINES_YOMI;for(const k of path.split("."))v=v&&v[k];return v==null?fallback:v;}
 /* 한자 위 후리가나: 앞뒤로 같은 가나(送り仮名)는 빼고 가운데만 ruby로 단다. */
 function jpRuby(word,reading){
   word=String(word||"");reading=String(reading||"");
@@ -4185,7 +4188,7 @@ function esc(v){return String(v).replace(/&/g,"&amp;").replace(/</g,"&lt;").repl
 function catSay(msg){
   const on=id=>$("#"+id)?.classList.contains("active");
   if(on("gameScreen")&&state.session){quizSay(msg);return;}
-  $(on("sumScreen")?"#sumBubble":"#homeBubble").innerHTML=`<span><span class="nm">고양고양이</span> ${esc(msg)}</span>`;
+  $(on("sumScreen")?"#sumBubble":"#homeBubble").innerHTML=`<span><span class="nm">고양고양이</span> ${jpLineHtml(msg)}</span>`;
 }
 /* 문제 화면: 카드 머리줄 고양이 말풍선(시간 막대 자리)에 잠깐 띄우고, 그 카드가 그대로면 원래 말풍선으로 되돌린다. */
 function quizSay(msg){
@@ -4193,7 +4196,7 @@ function quizSay(msg){
   if(s.opening)quizOpenEnd(s);
   if(!state.quizSayT)state.quizSayBack={text:sp.textContent,hidden:sp.hidden,card:s.currentId,answered:s.answered};
   clearTimeout(state.quizSayT);
-  sp.textContent=msg;sp.hidden=false;$("#timeWrap").style.visibility="hidden";
+  jpSay(sp,msg);sp.hidden=false;$("#timeWrap").style.visibility="hidden";
   state.quizSayT=setTimeout(()=>{state.quizSayT=null;const b=state.quizSayBack;
     if(state.session!==s||s.currentId!==b.card||s.answered!==b.answered)return; // 그사이 카드가 바뀌거나 공개됐으면 그쪽이 말풍선을 정한다
     sp.textContent=b.text;sp.hidden=b.hidden;if(!s.answered)$("#timeWrap").style.visibility="";},1600);
@@ -4354,6 +4357,9 @@ function showRoar(count=1){
 }
 function showEnding(){
   setCat('endCat','win');
+  if(JP_MODE==="yomi"&&LINES_YOMI&&LINES_YOMI.ending){const E=LINES_YOMI.ending,c=document.querySelector('#ending .ending-card');c.setAttribute('lang','ja');
+    $("#endTitle").textContent=jpJa(E.title);const pEl=c.querySelector('p');if(pEl)pEl.textContent=jpJa(E.prompt);
+    $("#endInput").placeholder=E.placeholder;const btn=c.querySelector('#endForm button');if(btn)btn.textContent=E.button;}
   let saved="";try{saved=localStorage.getItem(UNIKEY)||"";}catch(e){}
   const f=$("#endForm"),r=$("#endResult");
   f.style.display="flex";$("#endInput").value=saved;
@@ -4367,6 +4373,9 @@ function revealEnding(uni){
   $("#endForm").style.display="none";
   const r=$("#endResult");r.style.display="block";
   const u=`<span class="nm">${esc(uni)}</span>`;
+  if(JP_MODE==="yomi"&&LINES_YOMI&&LINES_YOMI.ending){const E=LINES_YOMI.ending;
+    r.innerHTML='<div lang="ja">'+esc(jpJa(pick(E.lines))).replace(/\{u\}/g,`<span class="nm">${esc(uni)}</span>`)+'<div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:1rem;font-weight:700;color:var(--muted);line-height:1.65;">'+esc(jpJa(E.story))+'</div></div>';
+    $("#endTitle").textContent=jpJa(E.result);beep("ok");return;}
   r.innerHTML=pick([
     `${u} 쌉가능이고양! 🎓<br>넌 무조건 잘 될 고양.<br>일산에서 만난 거 잊지 말라고양 ✦`,
     `축하한다고양… ${u} 쌉가능이고양.<br>나도 인간일 때는 대학 갔었다고양… 03학번… Youngs…<br>…아니, 왜 갑자기 혀가… 흠흠! 축하한다고양.. ✦`,
@@ -4412,7 +4421,7 @@ function savedSet(id,on){
   const records=savedRead().filter(r=>r.id!==id);
   if(on)records.push({id,addedAt:Date.now()});
   try{localStorage.setItem(savedStoreKey,JSON.stringify(records));}
-  catch{catSay('카드를 못 담았다고양. 브라우저 저장 공간을 확인하라고양.');return false;}
+  catch{catSay(jpY('saved.fail','카드를 못 담았다고양. 브라우저 저장 공간을 확인하라고양.'));return false;}
   savedRecords=records;savedSyncCat();return true;
 }
 function savedCurrentWord(){const s=state.session;return s&&s.currentId!==null?s.words[s.currentId]:null;}
@@ -4426,7 +4435,7 @@ function savedSyncCat(){
 function savedToggleCurrent(){
   const w=savedCurrentWord();if(!w?.savedCardId)return false;
   const on=!savedHas(w.savedCardId);if(!savedSet(w.savedCardId,on))return false;
-  catSay(on?'모아뒀다고양!':'모아둔 카드에서 뺐다고양.');
+  catSay(on?jpY('saved.on','모아뒀다고양!'):jpY('saved.off','모아둔 카드에서 뺐다고양.'));
   const s=state.session;
   // Give the save action its own feedback time; a tap must not also advance.
   if(s.answered&&!s.copyMode){
@@ -4667,6 +4676,7 @@ function msQueue(info){
 function msShuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function msLine(m,retro){
   const n=m.toLocaleString('en-US');
+  if(JP_MODE==="yomi"&&LINES_YOMI&&LINES_YOMI.ms){const Y=LINES_YOMI.ms;return jpJa(retro?pick(Y.retro):(Y[m]||Y.other)).replace(/\{n\}/g,n);}
   if(retro)return pick([`어느새 ${n}단어를 넘었다고양! 말도 없이 넘다니 괘씸하다고양 ✦`,`${n}단어, 몰래 넘었더라고양. 축하는 지금 몰아서 한다고양!`]);
   return {1000:'천 단어 돌파라고양! 천은 기념해야 마땅하다고양! 아주 의미 있는 숫자라고양! …치가 떨린다고양! 어쩔 수 없다고양! ✦',   // 26.10.17 영신: "1000은 기념해야 마땅하다고양! 아주 의미있는 숫자라고양! 치가 떨린다고양! 어쩔수 없다고양! 이런식도 좋음" (숨은 저주의 천 명, PRINCIPLES 1)
     2000:'2,000단어라고양! BIG MOUNTAIN 냄새가 나기 시작한다고양.',
@@ -4764,9 +4774,9 @@ function msShow(info){
   const numBox=mk('div','ms-num',inner),num=mk('b','',numBox);num.textContent=still?label:'0';
   mk('div','ms-title',inner,'단어 돌파!');
   mk('div','ms-cat',inner,'<img id="msCat" alt="고양고양이">');
-  mk('div','ms-line',inner,'<span class="nm">고양고양이</span> '+esc(msLine(m,info.retro))).setAttribute('aria-live','polite');
+  mk('div','ms-line',inner,'<span class="nm">고양고양이</span> '+jpLineHtml(msLine(m,info.retro))).setAttribute('aria-live','polite');
   const missed=new Set(info.missed||[]),goldN=info.words.slice(0,m).filter(k=>missed.has(k)).length;
-  mk('div','ms-sub',inner,(info.preview?'미리 보기':'세 교재를 합쳐 겹치는 단어는 한 번만 셌다고양 · 지금 '+info.total.toLocaleString('en-US')+'단어')+(goldN?'<br><span class="gold">금빛 '+goldN.toLocaleString('en-US')+'개는 한 번 틀렸다가 끝내 익힌 단어라고양</span>':''));
+  mk('div','ms-sub',inner,JP_MODE==="yomi"?('<span lang="ja">'+(info.preview?'プレビュー':'同じ単語は一度だけ数えましたよ · 今 '+info.total.toLocaleString('en-US')+'語')+(goldN?'<br><span class="gold">金色の'+goldN.toLocaleString('en-US')+'語は、一度間違えてから覚えた単語です</span>':'')+'</span>'):(info.preview?'미리 보기':'겹치는 단어는 한 번만 셌다고양 · 지금 '+info.total.toLocaleString('en-US')+'단어')+(goldN?'<br><span class="gold">금빛 '+goldN.toLocaleString('en-US')+'개는 한 번 틀렸다가 끝내 익힌 단어라고양</span>':''));
   const btn=mk('button','ms-close',inner,'계속하기 ▶');btn.type='button';
   document.body.appendChild(ov);msNode=ov;msOpenedAt=Date.now();
   if(typeof setCat==='function')setCat('msCat','win');
@@ -5032,7 +5042,7 @@ function paceUnits(words){return (words||[]).reduce((a,w)=>a+paceUnit(w),0);}
    B1까지만 보는 학생은 25세트까지만. 마더텅·EBS는 지금 범위 전부. */
 function paceTargets(){
   const lessons=state.lessons.filter(L=>L.kind!=='saved'&&(typeof inScope!=='function'||inScope(L)));
-  const label=n=>{const L=state.lessons.find(x=>x.lesson===n),m=L&&String(L.name||'').match(/(\d+)\s*~\s*(\d+)/);return m?Number(m[2]).toLocaleString('en-US')+'단어':(L?L.id+'까지':'');};
+  const label=n=>{const L=state.lessons.find(x=>x.lesson===n),m=L&&String(L.name||'').match(/(\d+)\s*~\s*(\d+)/);return m?Number(m[2]).toLocaleString('en-US')+'단어':(L?L.id+(JP_MODE==="yomi"?'':'까지'):'');};
   const ends=PACE_COURSE==='fable'?[25,45,Infinity].filter(n=>n===25||!state.levelB1):[Infinity];
   const name=n=>n===Infinity?(PACE_COURSE==='fable'?'FABLE 완주':PACE_COURSE==='ksat'?'日本語能力試験 완주':'EBS 완주'):label(n);
   const out=ends.map(n=>{let u=0,ex=0;lessons.filter(L=>L.lesson<=n).forEach(L=>visEx(L).forEach(e=>{if(!getRec(L.id,e.title)?.completed){u+=paceUnits(e.words);ex++;}}));return {end:n,label:name(n),u,ex};});
@@ -5091,7 +5101,8 @@ var PACE_LINES={
   absent:['{g}일 만이라고양? 단어들이 짐 싸서 도망갔다고양.','{g}일이나 놀았냐고양? {T}가 멀어진다고양.'],
   low:['하루 {m}분? 매일 하라고양! 1시간씩이면 {R}이라고양.','하루 {m}분? 꿈 깨라고양. 1시간씩이면 {R}이라고양.']
 };
-function paceRange(a,b){return a===b?a+'일':a+'~'+b+'일';}
+if(JP_MODE==="yomi"&&LINES_YOMI&&LINES_YOMI.pace){const mapJa=v=>Array.isArray(v)?v.map(jpJa):Object.fromEntries(Object.entries(v).map(([k,x])=>[k,mapJa(x)]));PACE_LINES=mapJa(LINES_YOMI.pace);}
+function paceRange(a,b){const d=JP_MODE==="yomi"?'日':'일';return a===b?a+d:a+'~'+b+d;}
 function paceFill(t,v){return t.replace(/\{(\w+)\}/g,(m,k)=>v[k]??m);}
 function paceNote(f,t){
   const ex=f.exMin.map(x=>Math.max(1,Math.round(x))),exT=ex[0]===ex[1]?ex[0]+'분':ex[0]+'~'+ex[1]+'분';
@@ -5115,7 +5126,7 @@ function paceKind(recs,f,t,meta,now){
 function paceLine(kind,f,t,recs,now){
   const mode=f.mode==='daily'?'daily':'hour',pool=Array.isArray(PACE_LINES[kind])?PACE_LINES[kind]:PACE_LINES[kind][mode];
   const before=recs[recs.length-2],last=recs[recs.length-1];
-  const v={T:t.label,N:t.next||'',P:t.passed||'',R:paceRange(f.days[0],f.days[1]),RB:f.days[1]+'일',m:Math.round(f.daily||0),p:Math.round(Math.abs(f.trend)*100),
+  const v={T:t.label,N:t.next||'',P:t.passed||'',R:paceRange(f.days[0],f.days[1]),RB:f.days[1]+(JP_MODE==="yomi"?'日':'일'),m:Math.round(f.daily||0),p:Math.round(Math.abs(f.trend)*100),
     g:before?Math.floor((paceDayStart(last.at)-paceDayStart(before.at))/864e5):0};
   return paceFill(pool[Math.floor(Math.random()*pool.length)],v);
 }

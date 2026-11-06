@@ -149,7 +149,7 @@ def write(out, data, mode):
                          ('<h2>日本語能力試験 N5–N1</h2>', '<h2>日本語能力試験 漢字読み N5–N1</h2>'),
                          ('<h1 lang="ja"><b>単語高陽</b> · 日本語能力試験</h1>', '<h1 lang="ja"><b>単語高陽</b> · 漢字読み</h1>'),
                          ('const SAVED_COURSE="日本語能力試験";', 'const SAVED_COURSE="漢字読み";'),
-                         ("'日本語能力試験 완주'", "'漢字読み 완주'")]:
+                         ("'日本語能力試験 완주'", "'漢字読み完走'")]:
             assert html.count(old) == 1, old
             html = html.replace(old, new)
     out.write_text(html)
