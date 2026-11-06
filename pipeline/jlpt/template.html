@@ -473,7 +473,8 @@ body.roaring{animation:roarshake .5s .15s;}
 /*KANA_FONT_FACE*/
 .jp-hand{font-family:"KanaHand","Klee One",serif;font-weight:600;}
 .jp-ipa{font-family:"Doulos SIL","Charis SIL","Gentium Plus","Noto Sans","Segoe UI",sans-serif;font-size:1.25rem;margin:2px 0 4px;letter-spacing:.02em;}
-.jp-pn{text-align:left;margin:6px auto 4px;padding-left:1.2em;max-width:34em;font-size:1.02rem;line-height:1.55;}
+.jp-pn{text-align:left;margin:8px auto 4px;padding-left:1.2em;max-width:34em;font-size:1.16rem;line-height:1.6;}
+.jp-pn b{font-weight:800;color:var(--gold2,#ffd76a);}.jp-pn i{font-style:normal;font-weight:800;color:var(--pink2,#ff7ab8);}
 .jp-pn li{margin:4px 0;} /* 26.11.06 영신 "발음설명 글자가 너무 작아" */
 .jp-kana-long{font-size:1.75em;white-space:nowrap;}
 .kana-forms.long .kana-form>b{font-size:1.5rem;}
@@ -2232,7 +2233,7 @@ const MT_CONTEXTS={};
 /* Passage excerpts preserve original headword grading and exercise IDs. */
 function mtAttachContexts(lessons){for(const l of lessons)for(const e of l.exercises)e.words.forEach((w,index)=>{const c=MT_CONTEXTS[[l.lesson,e.scope,e.ex,index].join('/')];w.originalMeaning=w.meaning;if(c){w.context=c;if(c.contextMeaning)w.meaning=c.contextMeaning;}});}
 function mtCurrentWord(){const s=state.session;return s&&s.currentId!==null?s.words[s.currentId]:null;}
-function mtRevealDelay(w){if(JP_MODE==="kana"&&w){const n=(w.note||'').length+(w.pn||[]).join('').length+(w.meaning||'').length;return Math.min(state.session?.round>=2?7000:16000,3000+n*60);} // 五十音: 소리·기호 설명 읽을 시간(26.11.06 영신 "너무 빠르게 넘어가"). 카드를 누르거나 Enter면 바로 넘어간다
+function mtRevealDelay(w){if(JP_MODE==="kana"&&w){const n=(w.note||'').length+(w.pn||[]).join('').length+(w.meaning||'').length;return Math.min(state.session?.round>=2?10000:25000,3000+n*85);} // 五十音: 소리·기호 설명 읽을 시간(26.11.06 영신 "너무 빠르게 넘어가", "설명이 길다면 읽을 수 있는 시간에 가중치": 글자당 0.085초). 카드를 누르거나 Enter면 바로 넘어간다
  const c=w?.context;if(!c){const n=(w?.note||'').length;return n?Math.min(state.session?.round>=2?5000:20000,2000+n*110):1500;}const chars=(c.translation||'').length+(c.note||'').length;return Math.min(state.session?.round>=2?3500:6500,Math.max(1500,500+chars*45));}
 function mtEscapeRegex(v){return String(v).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
 function mtRanges(context,term=''){
@@ -2327,7 +2328,7 @@ function mtRevealHtml(term,meaning){
    // 문제 칸에 이미 보인 모양은 다시 안 보인다(26.11.06 영신). 배우는 연습(인쇄체 획순+손글씨)은 없음, 손글씨 문제는 인쇄체 획순+손글씨 획순, 긴 단어는 안 보인 쪽 모양만.
    const forms=!w.hw&&short?'':w.hw&&short?'<div class="kana-forms">'+kanaPairHtml(w.jw,'kp-rv')+'</div>':'<div class="kana-forms long"><span class="kana-form"><b'+(w.hw?'':' class="jp-hand"')+' lang="ja">'+esc(w.jw)+'</b><small>'+(w.hw?'인쇄체':'손글씨')+'</small></span></div>';
    if(forms.includes('kana-pair'))setTimeout(()=>kanaPairStart(document.getElementById('reveal')),0);
-   const ipa=w.ipa?'<div class="jp-ipa">['+esc(w.ipa)+']</div>':'',pn=w.pn&&w.pn.length?'<ul class="jp-pn">'+w.pn.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>':'';
+   const ipa=w.ipa?'<div class="jp-ipa">['+esc(w.ipa)+']</div>':'',pn=w.pn&&w.pn.length?'<ul class="jp-pn">'+w.pn.map(x=>{const i=x.indexOf(' — ');return '<li>'+(i>0?'<b>'+esc(x.slice(0,i))+'</b><br>'+esc(x.slice(i+3)).replace(' · 주의: ','<br><i>주의</i> '):esc(x))+'</li>';}).join('')+'</ul>':'';
    return forms+(snd?'<div class="jp-head jp-snd">'+esc(snd)+'</div>':'')+ipa+pn+(w.meaning?'<div class="ov-tr">'+esc(w.meaning)+'</div>':'')+(w.note?'<div class="ov-tr jp-note">'+esc(w.note)+'</div>':'');}
  const head=JP_MODE==="yomi"?'<div class="jp-head" lang="ja">'+jpRuby(w.jw,w.term)+'</div>':w.jw&&w.jw!==w.term?'<div class="jp-head" lang="ja">'+jpRuby(w.jw,w.term)+'</div>':'';
  const note=w.note?'<div class="ov-tr jp-note">'+esc(w.note)+'</div>':'';
