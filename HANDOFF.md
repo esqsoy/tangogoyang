@@ -5,6 +5,7 @@
 - **결정(영신 26.11.06):** 학생 JLPT가 급해 시험 과정을 먼저, N5→N1 전부, 보카고양 형식으로 만든다. 1단계는 예문 없는 마더텅 방식, 예문은 2단계. 이유와 0절 원칙과의 관계는 [PRINCIPLES 0-1 7번](PRINCIPLES.md#0-1-니혼고양-기본-설계-2026-11-03). 物語·공통 원장 적용·문자 학습 단계는 잠시 멈춤.
 - **만든 것:** `tangogoyangjlpt.html`(생성물) ← [pipeline/jlpt/](pipeline/jlpt/README.md)(원본·조립·검사). 20강·699연습·7,743카드(N5 674·N4 630·N3 1,657·N2 1,775·N1 3,007). 한국어 뜻·주제·해설은 Claude가 새로 씀(규격 [KO_SPEC](pipeline/jlpt/KO_SPEC.md)). `index.html`을 탄고고양 교재 선택으로 바꿈(OpenJLPT CC BY-SA 출처 줄).
 - **입력:** 로마자 → 가나 자동 변환, 일본어 자판 가나·한자도 정답, 판정은 히라가나 기준·장음 ー=앞 모음, 발음 ja-JP. 저장 키 `tangogoyang-`. 세부는 [pipeline/jlpt/README](pipeline/jlpt/README.md).
+- **漢字読み 고양고양이(26.11.06 영신):** 프리저 말투 일본어 + 한국어 번역, 밈 패러디(53만은 첫 대사), 골든 프리저 제외. [PRINCIPLES 1](PRINCIPLES.md#1-고양고양이-이-게임의-소금). 엔딩·도장·돌파 축하 대사는 아직 한국어(다음 단계).
 - **漢字読み(26.11.06 영신):** `tangogoyangyomi.html` 6,483카드(한자가 든 카드). 한자+뜻을 보고 읽기를 친다. 교재 선택에서 日本語能力試験과 나란히 고른다. 진도 따로.
 - **Fable 독립 검수 반영(26.11.06):** 지적 457건 중 455카드 반영(`pipeline/jlpt/fable-review/`, 기준은 merge.py 머리말). 검수 쪽이 카드 번호를 잘못 적은 6건은 원래 카드로 옮김. **다음 오류 창구는 플레이하는 학생 리포트**(영신 경유) → 리포트로 고칠 뜻·해설은 `pipeline/jlpt/ko-fixes.json`에, 표기·읽기·빼기는 `review-decisions.json`에 더하고 build.py로 다시 조립한다.
 - **직검수(26.11.06):** 영신 "지금 완성된걸로 봐도 좋단말이지. 직검수만 한번 돌려줘" → 영신은 일본어를 못하니 Fable로 독립 검수(`pipeline/jlpt/fable-review/`, 漢字読み 읽기 중의성 포함), 플레이할 학생(일본 초등학교 졸업)이 오류를 리포트하기로 함. 전 카드 직검수 페이지 https://claude.ai/artifact/FsYkKyKU3r2EqnheZwiw2X (댓글, `python3 pipeline/jlpt/review-page.py`로 다시 뽑음). 맨 위에 뺀·고친 82개.

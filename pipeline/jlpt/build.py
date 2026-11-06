@@ -140,6 +140,10 @@ def write(out, data, mode):
     if mode == 'yomi':
         # 漢字読み: 따로 진도를 쌓는다(저장 키 tangogoyang-yomi-). 제목도 바꾼다.
         html = html.replace(mode_marker, 'const JP_MODE="yomi";')
+        lines = json.loads((HERE / 'lines-yomi.json').read_text())
+        lm = 'const LINES_YOMI=/*__LINES_YOMI__*/null;'
+        assert html.count(lm) == 1
+        html = html.replace(lm, 'const LINES_YOMI=' + json.dumps(lines, ensure_ascii=False) + ';')
         html = re.sub(r'(["\'`])tangogoyang-', r'\1tangogoyang-yomi-', html)
         for old, new in [('<title>日本語能力試験 · 単語高陽</title>', '<title>漢字読み · 単語高陽</title>'),
                          ('<h2>日本語能力試験 N5–N1</h2>', '<h2>日本語能力試験 漢字読み N5–N1</h2>'),

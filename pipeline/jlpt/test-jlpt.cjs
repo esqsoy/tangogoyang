@@ -47,6 +47,8 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   const p2=await b.newPage({viewport:{width:390,height:844}});p2.on('pageerror',e=>errs.push(e.message));
   await p2.goto('file://'+path.resolve(__dirname,'../../tangogoyangyomi.html'));await p2.waitForTimeout(600);
   ok(await p2.evaluate(()=>JP_MODE==='yomi'&&STORAGE.startsWith('tangogoyang-yomi-')),'漢字読み: 저장 키 따로');
+  ok((await p2.innerText('#homeBubble')).includes('戦闘力'),'漢字読み: 첫 대사는 53만 패러디');
+  ok(await p2.evaluate(()=>{const b=document.querySelector('#homeBubble');return b.scrollWidth<=b.clientWidth+1;}),'漢字読み: 말풍선이 넘치지 않는다');
   ok(await p2.evaluate(()=>state.lessons.every(L=>L.exercises.every(e=>e.words.every(w=>/[\u3400-\u9fff々]/.test(w.jw))))),'漢字読み: 모든 카드에 한자');
   await p2.evaluate(()=>{openLesson(0);startExercise(0);});await p2.waitForTimeout(3000);
   const y=await p2.evaluate(()=>{const s=state.session;return s.words[s.currentId]});
