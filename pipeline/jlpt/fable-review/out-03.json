@@ -1,0 +1,450 @@
+[
+ {
+  "id": "63d9f749c6",
+  "kind": "중의성",
+  "problem": "'물건' 2칸은 物(もの)도 맞다. c에 없다",
+  "fix": {
+   "ko": "물품, 상품"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "9fbf209387",
+  "kind": "읽기중의성",
+  "problem": "漢字読み에서 綿 '솜'은 わた로도 읽는다. 받아야 한다",
+  "fix": {
+   "readings": [
+    "わた"
+   ]
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "6b76d20f62",
+  "kind": "한국어",
+  "problem": "명사(する명사)인데 '늘다' 동사형. 명사로 쓴다",
+  "fix": {
+   "ko": "(실력) 향상, 숙달"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "5b445da9d8",
+  "kind": "읽기중의성",
+  "problem": "博士 '박사'는 はくし도 표준 읽기. 받아야 한다",
+  "fix": {
+   "readings": [
+    "はくし"
+   ]
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "9adc22cc25",
+  "kind": "읽기중의성",
+  "problem": "漢字読み에서 工場 '공장'은 こうじょう가 더 흔하다. 받아야 한다",
+  "fix": {
+   "readings": [
+    "こうじょう"
+   ]
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "0696f63fdf",
+  "kind": "뜻",
+  "problem": "札(さつ)는 입말이 아니라 표준어(千円札). '(입말)'은 틀림",
+  "fix": {
+   "ko": "지폐",
+   "c": "보통 お札. 'ふだ'로 읽으면 패·표찰"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "20b5089feb",
+  "kind": "표기",
+  "problem": "値(ね) '값'은 보통 한자로 쓴다. 가나 표기는 어색",
+  "fix": {
+   "shown": "値"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "2c62d0aba0",
+  "kind": "읽기중의성",
+  "problem": "行き는 ゆき로도 흔히 읽는다(c도 그렇게 말함). 받아야 한다",
+  "fix": {
+   "readings": [
+    "ゆき"
+   ]
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "0cbc5fcb97",
+  "kind": "표기",
+  "problem": "市(いち) '장'은 한자로 쓴다. c도 '한자로 市'라고 함",
+  "fix": {
+   "shown": "市"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "bc21114bf3",
+  "kind": "중의성",
+  "problem": "'고향' 4칸은 ふるさと도 맞다. 故郷 자체도 ふるさと로 읽는다",
+  "fix": {
+   "readings": [
+    "ふるさと"
+   ],
+   "c": "ふるさと(故郷·古里)라고도 한다"
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "7624d1daae",
+  "kind": "중의성",
+  "problem": "'성' 2칸은 性·姓(せい)도 맞다",
+  "fix": {
+   "ko": "성 (건물)"
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "fb8c3bd96c",
+  "kind": "중의성",
+  "problem": "'바닥' 2칸은 床(ゆか)도 맞다",
+  "fix": {
+   "ko": "밑바닥, 밑"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "831bd5addd",
+  "kind": "읽기중의성",
+  "problem": "日本 '일본'은 にほん이 더 흔한 읽기. 받아야 한다",
+  "fix": {
+   "readings": [
+    "にほん"
+   ]
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "59d7b934c6",
+  "kind": "중의성",
+  "problem": "'주위' 3칸은 周囲(しゅうい)도 맞다. c에 없다",
+  "fix": {
+   "c": "周囲(しゅうい)와 뜻이 같다. 周り로도 쓴다"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "c4956951f6",
+  "kind": "중의성",
+  "problem": "'수도' 3칸은 首都(しゅと)도 맞다",
+  "fix": {
+   "ko": "도읍, 옛 수도"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "107846b167",
+  "kind": "중의성",
+  "problem": "'생물' 4칸은 生物(せいぶつ)도 맞다",
+  "fix": {
+   "ko": "생명체, 살아 있는 것"
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "87333c0d40",
+  "kind": "중의성",
+  "problem": "'생물' 4칸은 生き物(いきもの)도 맞다. c에 없다",
+  "fix": {
+   "c": "生き物보다 학술적인 말. 'なまもの'로 읽으면 날것"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "526a0047ad",
+  "kind": "읽기중의성",
+  "problem": "梅雨 '장마'는 ばいう로도 읽는다(梅雨前線). 받아야 한다",
+  "fix": {
+   "readings": [
+    "ばいう"
+   ]
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "c3a05b3d90",
+  "kind": "중의성",
+  "problem": "'경치' 3칸은 景色(けしき)도 맞다",
+  "fix": {
+   "ko": "전망, (바라본) 경치"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "ad70550f9b",
+  "kind": "뜻",
+  "problem": "実(み)에 '씨' 뜻은 없다. 씨는 種(たね)",
+  "fix": {
+   "ko": "열매, 알맹이"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "ec2ddaa910",
+  "kind": "읽기중의성",
+  "problem": "一時 '한때, 잠시'는 ひととき로도 읽는다. 받아야 한다",
+  "fix": {
+   "readings": [
+    "ひととき"
+   ]
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "7fa019fe1b",
+  "kind": "중의성",
+  "problem": "'때' 2칸은 時(とき)도 맞다",
+  "fix": {
+   "ko": "무렵, ~쯤"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "9ff6bba172",
+  "kind": "중의성",
+  "problem": "'때' 2칸은 時(とき)도 맞다. c에 없다",
+  "fix": {
+   "ko": "즈음, ~할 때 (글말)"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "40b4a7cb92",
+  "kind": "읽기중의성",
+  "problem": "最中 '한창'은 さなか로도 읽는다. 받아야 한다",
+  "fix": {
+   "readings": [
+    "さなか"
+   ]
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "54e840405e",
+  "kind": "읽기중의성",
+  "problem": "年月 '세월'은 ねんげつ도 표준 읽기. 받아야 한다",
+  "fix": {
+   "readings": [
+    "ねんげつ"
+   ]
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "aeff3c4d96",
+  "kind": "읽기중의성",
+  "problem": "後 '뒤, 나중'은 あと가 기본 읽기. '뒤'만 보면 うしろ도 친다",
+  "fix": {
+   "readings": [
+    "あと"
+   ],
+   "ko": "나중, 뒤(시간), 후"
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "38272461d1",
+  "kind": "중의성",
+  "problem": "'보통' 3칸은 普通(ふつう)도 맞다",
+  "fix": {
+   "ko": "평소, 평상시"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "8421f715e7",
+  "kind": "읽기중의성",
+  "problem": "'사이'가 앞이면 漢字読み에서 間을 あいだ로 치고 틀린다",
+  "fix": {
+   "ko": "틈, 짬, 겨를 / 방",
+   "c": "'あいだ'로 읽으면 '사이'"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "1938fb6bcb",
+  "kind": "읽기중의성",
+  "problem": "明後日 '모레'는 あさって가 기본 읽기. 받아야 한다",
+  "fix": {
+   "readings": [
+    "あさって"
+   ]
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "1dbd5b263b",
+  "kind": "중의성",
+  "problem": "'모두, 전부' 3칸은 全部(ぜんぶ)도 맞다",
+  "fix": {
+   "ko": "모두, 모든 것",
+   "c": "全部보다 격식 있는 말"
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "7018224dfa",
+  "kind": "중의성",
+  "problem": "'차례, 순번' 2칸은 順(じゅん)도 맞다",
+  "fix": {
+   "ko": "(내) 차례, ~번"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "3c5ff54bea",
+  "kind": "읽기중의성",
+  "problem": "'~분'만 보면 漢字読み에서 ふん(시간)을 친다",
+  "fix": {
+   "ko": "몫, 분량, ~분(몫)",
+   "c": "'ふん'으로 읽으면 시간의 '분'"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "c3b1f16454",
+  "kind": "중의성",
+  "problem": "'사랑' 2칸은 恋(こい)도 맞다. c에 없다",
+  "fix": {
+   "c": "恋(こい)는 이성 간의 사랑. 愛는 더 넓다"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "97600f5aa8",
+  "kind": "읽기중의성",
+  "problem": "'안다'가 있으면 漢字読み에서 だく를 치고 틀린다",
+  "fix": {
+   "ko": "(마음에) 품다"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "bef84d4151",
+  "kind": "해설",
+  "problem": "悲しむ는 1인칭에도 쓴다. '남이 보기에'는 사실과 다름",
+  "fix": {
+   "c": ""
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "457b919489",
+  "kind": "중의성",
+  "problem": "'기분' 3칸은 気分(きぶん)도 맞다. c에 없다",
+  "fix": {
+   "ko": "기분(좋고 나쁨), 비위",
+   "c": "気分보다 남의 심기·비위에 쓴다. ご機嫌은 높임말"
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "40a60f6e48",
+  "kind": "중의성",
+  "problem": "'행복' 4칸은 幸せ(しあわせ)도 맞다",
+  "fix": {
+   "c": "幸せ보다 딱딱한 한자어"
+  },
+  "confidence": "high"
+ },
+ {
+  "id": "7e7306e3ec",
+  "kind": "중의성",
+  "problem": "'행복' 4칸은 幸福(こうふく)도 맞다",
+  "fix": {
+   "c": "幸福보다 일상에서 쓰는 말"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "7846a5b95f",
+  "kind": "중의성",
+  "problem": "'바라다' 3칸은 望む(のぞむ)도 맞다. c에 없다",
+  "fix": {
+   "c": "望む보다 간절히 빌고 부탁할 때"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "8d2c6575c2",
+  "kind": "중의성",
+  "problem": "'희망' 3칸은 希望(きぼう)도 맞다. 願い(3칸)와도 겹침",
+  "fix": {
+   "ko": "소망, 가망",
+   "c": "希望과 거의 같다. 願い는 간청·부탁 쪽"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "1ce18444af",
+  "kind": "중의성",
+  "problem": "'희망' 3칸은 望み(のぞみ)도 맞다",
+  "fix": {
+   "c": "望み(のぞみ)의 한자어"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "a6c8fd99d7",
+  "kind": "중의성",
+  "problem": "'열중함' 4칸은 熱中(ねっちゅう)도 맞다",
+  "fix": {
+   "ko": "(정신없이) 빠짐, 몰두"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "5f249ce2ae",
+  "kind": "중의성",
+  "problem": "'귀찮음' 4칸은 面倒(めんどう)도 맞다. c에 없다",
+  "fix": {
+   "c": "面倒(めんどう)와 비슷. 厄介になる는 '신세를 지다'"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "6693cfdf82",
+  "kind": "중의성",
+  "problem": "'주의' 4칸은 注意(ちゅうい)도 맞다",
+  "fix": {
+   "ko": "조심, 경계"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "a0ea038f9b",
+  "kind": "중의성",
+  "problem": "'근처' 3칸은 近く(ちかく)도 맞다",
+  "fix": {
+   "ko": "주변, 일대 / ~쯤"
+  },
+  "confidence": "medium"
+ },
+ {
+  "id": "df6f68109a",
+  "kind": "읽기중의성",
+  "problem": "一言 '한마디'는 いちごん으로도 읽는다. 받아야 한다",
+  "fix": {
+   "readings": [
+    "いちごん"
+   ]
+  },
+  "confidence": "medium"
+ }
+]
