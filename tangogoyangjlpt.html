@@ -2559,12 +2559,54 @@ function jpScriptLike(kana,answer){
     if(/[぀-ヿ]/.test(c))j++;}
   return out;
 }
+/* ===== 한글로 친 소리 → 가나 (26.11.06 영신 "한글로 쳐도 되게 해 줄 수 있어?") =====
+   한글은 か/が, た/だ, ぱ/ば, ざ/じゃ/ちゃ를 가르지 못한다(가방=かばん). 그래서 한 음절이 여러 가나가 될 수 있으면
+   그 카드 정답의 같은 자리 가나를 고른다. 받침 ㅅ·ㄷ·ㄱ·ㅂ = っ, ㄴ·ㅁ·ㅇ = ん. 장음은 '우'나 '-'로 친다. */
+const JP_HG_L=["k|g","k","n","t|d","t","r","m","b|p","p","s","s|ts","","z|j|ch","ch|ts","ch","k","t","p","h|f"];
+const JP_HG_V=["a","e","ya","e","o","e","yo","e","o","wa","we","we","yo","u","wo","we","wi","yu","u","i","i"];
+const JP_HG_SOKU=new Set([1,2,3,7,17,18,19,20,21,22,23,24,25,26,27]); // ㄱㄲㄳㄷ…ㅅㅆ 등 → っ
+const JP_HG_N=new Set([4,5,6,16,21]); // ㄴㄵㄶㅁㅇ → ん
+function jpHangulCands(L,V){
+  const vo=JP_HG_V[V];let out=[];
+  for(let on of JP_HG_L[L].split("|")){
+    let v=vo;
+    if(V===18){ // ㅡ: 스·즈·츠·쓰
+      out.push(on==="ch"?"tsu":on+"u");continue;}
+    if(V===20&&(on==="t"||on==="d")){out.push(on+"hi",on==="t"?"chi":"ji");continue;} // 티=てぃ, 디=でぃ(ち·じ는 치·지)
+    if(V===13&&(on==="t"||on==="d")){out.push(on+"wu",on==="t"?"tsu":"zu");continue;} // 투=とぅ
+    if(on&&/^y/.test(v)&&/^(ch|j)$/.test(on))v=v.slice(1);
+    if(on&&v.startsWith("w")&&on!=="")v=v.replace(/^w/,"").replace(/^e$/,"e");
+    out.push(on+v);
+    if(L===11&&V===8)out.push("wo"); // 오 → を
+  }
+  return [...new Set(out)];
+}
+function jpHangulToKana(v,answer){
+  const ans=jpHira(answer||"");let out="",j=0;
+  for(const ch of v){
+    const c=ch.charCodeAt(0);
+    if(c>=0xac00&&c<=0xd7a3){
+      const n=c-0xac00,L=Math.floor(n/588),V=Math.floor(n%588/28),T=n%28;
+      const cands=jpHangulCands(L,V).map(r=>jpRomaToKana(r,true));
+      const pick=cands.find(k=>ans.slice(j,j+k.length)===k)||cands[0];
+      out+=pick;j+=pick.length;
+      if(T){const t=JP_HG_SOKU.has(T)&&!JP_HG_N.has(T)?"っ":JP_HG_N.has(T)?"ん":"";out+=t;j+=t.length;}
+      continue;
+    }
+    if(/[ㅅㄷㄱㅂㅆ]/.test(ch)){out+="っ";j++;continue;}
+    if(/[ㄴㅁㅇ]/.test(ch)){out+="ん";j++;continue;}
+    out+=ch;if(/[\u3040-\u30ffー]/.test(ch))j++;
+  }
+  return out;
+}
 function jpConvertInput(done=false){
   const el=document.getElementById("ainput");if(!el||state.composing)return;
-  const v=el.value;if(!/[A-Za-z'\-]/.test(v))return;
+  const v=el.value;if(!/[A-Za-z'\-\uac00-\ud7a3\u3131-\u314e]/.test(v))return;
   const s=state.session,w=s&&s.currentId!==null?s.words[s.currentId]:null;
-  let next=jpRomaToKana(v,done);
-  if(w)next=jpScriptLike(next,s.copyMode?s.copyAns:w.term);
+  const target=w?(s.copyMode?s.copyAns:w.term):"";
+  let next=/[\uac00-\ud7a3\u3131-\u314e]/.test(v)?jpHangulToKana(v,target):v;
+  next=jpRomaToKana(next,done);
+  if(w)next=jpScriptLike(next,target);
   if(next!==v){el.value=next;try{const n=next.length;el.setSelectionRange(n,n);}catch(e){}}
 }
 function jpPending(v){return /[A-Za-z']/.test(v||"");}

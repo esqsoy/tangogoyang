@@ -35,6 +35,13 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   await p.evaluate(({li,ei})=>{startExercise(ei);},pos);await p.waitForTimeout(3000);
   await p.focus('#ainput');await p.keyboard.type('zzz');await p.keyboard.press('Enter');await p.waitForTimeout(400);
   ok(await p.evaluate(()=>state.session.copyMode),'오답이면 따라쓰기');
+  // 한글로 친 소리
+  const hg=await p.evaluate(()=>[['타베루','たべる'],['갓코우','がっこう'],['가방','かばん'],['신분','しんぶん'],['쿄우','きょう'],['코-히-','コーヒー'],['츠쿠에','つくえ'],['파-티-','パーティー'],['깃푸','きっぷ']].map(([h,a])=>[h,a,jpScriptLike(jpRomaToKana(jpHangulToKana(h,a),true),a)]));
+  for(const [h,a,r] of hg)ok(r===a,`한글 ${h} → ${r}`);
+  const hpos=await p.evaluate(()=>{for(let li=0;li<state.lessons.length;li++){const L=state.lessons[li];for(let ei=0;ei<L.exercises.length;ei++){const i=L.exercises[ei].words.findIndex(w=>w.term==='おとな');if(i===0)return {li,ei};}}return null;});
+  if(hpos){await p.evaluate(({li,ei})=>{openLesson(li);startExercise(ei);},hpos);await p.waitForTimeout(3000);
+    await p.focus('#ainput');await p.keyboard.insertText('오토나');await p.waitForTimeout(400);
+    ok(await p.evaluate(()=>document.querySelector('#ainput').classList.contains('ok')),'한글 오토나 로 おとな 정답');}
   ok(errs.length===0,'페이지 오류 없음 '+errs.join(' | '));
   await b.close();console.log(fail?`실패 ${fail}`:'모두 통과');process.exit(fail?1:0);
 })();
