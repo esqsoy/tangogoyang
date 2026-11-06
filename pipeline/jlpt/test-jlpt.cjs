@@ -82,7 +82,7 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   await p3.evaluate(()=>{openLesson(0);startExercise(0);});await p3.waitForTimeout(3000);
   const kw=await p3.evaluate(()=>state.session.words[state.session.currentId]);
   ok(await p3.evaluate(jw=>{const q=document.querySelector('#meaning .jp-q');return q&&(q.dataset.jw||q.innerText.trim())===jw&&!document.querySelector('#meaning .jp-kana');},kw.jw),'五十音: 문제는 쓰는 순서 그림 글자 하나');
-  ok(await p3.evaluate(()=>document.querySelectorAll('#meaning .kp-print svg .live').length>0&&document.querySelectorAll('#meaning svg.hand .mlive').length>0),'五十音: 배우는 연습은 인쇄체 획순 옆에 손글씨 획순');
+  ok(await p3.evaluate(()=>document.querySelectorAll('#meaning .kp-print svg .live').length>0&&!!document.querySelector('#meaning svg.hand[data-fit] .hlive')&&!document.querySelector('#meaning svg.hand [mask]')),'五十音: 배우는 연습은 인쇄체 획순 옆에 손글씨(따라쓰기 없음)');
   ok(await p3.evaluate(async()=>Object.keys(KANA_STROKES).length>=150&&(await document.fonts.load('600 20px KanaHand','あ')).length>0),'五十音: 획 자료·손글씨 글꼴 실림');
   await p3.focus('#ainput');await p3.keyboard.type(kw.rm);await p3.waitForTimeout(400);
   ok(await p3.evaluate(()=>document.querySelector('#ainput').classList.contains('ok')),`五十音: ${kw.rm} 로 ${kw.jw} 정답`);
@@ -90,7 +90,7 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   await p3.evaluate(()=>{openLesson(0);startExercise(5);});await p3.waitForTimeout(3000);
   ok(await p3.evaluate(()=>!!document.querySelector('#meaning .jp-hand')&&!document.querySelector('#meaning .kana-strokes')),'五十音: 전체 복습은 손글씨 모양으로');
   await p3.focus('#ainput');await p3.keyboard.type('zz');await p3.keyboard.press('Enter');await p3.waitForTimeout(1500);
-  ok(await p3.evaluate(()=>!!document.querySelector('#reveal .kp-print svg .live')&&!!document.querySelector('#reveal svg.hand[data-fit] .hlive')),'五十音: 손글씨 문제를 틀리면 인쇄체 획순·손글씨 획순 공개');
+  ok(await p3.evaluate(()=>!!document.querySelector('#reveal .kp-print svg .live')&&!!document.querySelector('#reveal svg.hand[data-fit] .hlive')),'五十音: 손글씨 문제를 틀리면 인쇄체 획순·손글씨 공개');
   ok(await p3.evaluate(()=>{const w=state.session.words[state.session.currentId],ul=document.querySelector('#reveal .jp-pn');return Object.keys(KANA_HAND).length>=150&&(w.pn.length?!!ul&&ul.querySelectorAll('li').length===w.pn.length:!ul);}),'五十音: 손글씨 경로·발음 설명(한국어와 같은 소리는 없음)');
   ok(await p3.evaluate(()=>{const all=DATA.flatMap(L=>L.exercises.flatMap(e=>e.words));const f=c=>all.find(w=>w.w===c);return f('あ').pn.length===0&&f('つ').pn.some(x=>/한국어에 없다.*voiceless alveolar affricate/.test(x))&&f('が').pn.some(x=>/식으로 하면 안 된다.*voiced velar plosive.*주의/.test(x))&&f('を').pn.some(x=>/‘오’식으로 해도 된다.*차이/.test(x))&&!DATA.some(L=>L.exercises.some(e=>e.words.some(w=>w.pn.some(x=>/%/.test(x)))));}),'五十音: 같은 소리 생략·한국어식 허용과 차이·꼭 구별·영어 용어');
   // 기록 옮기기(index)

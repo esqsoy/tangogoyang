@@ -495,7 +495,7 @@ body.roaring{animation:roarshake .5s .15s;}
 .kp-hand{border-left:1px dashed rgba(255,255,255,.18);padding-left:12px;}
 svg.hand .hghost,svg.hand .hlive{fill:currentColor;stroke:none;}
 svg.hand .hghost{opacity:.18;}
-svg.hand .mlive{fill:none;stroke:#fff;stroke-width:17;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;stroke-opacity:0;animation:kanaStroke .5s ease forwards,kanaShow 0s forwards;animation-delay:calc(var(--i)*.6s + .2s);} /* 둥근 끝이 아직 안 쓴 획 자리에 점으로 남지 않게 차례가 올 때까지 숨긴다 */
+svg.hand .mlive{fill:none;stroke:none;} /* 둥근 끝이 아직 안 쓴 획 자리에 점으로 남지 않게 차례가 올 때까지 숨긴다 */
 @media (prefers-reduced-motion:reduce){svg.hand .mlive{animation:none;stroke-dashoffset:0;stroke-opacity:1;}}.kana-strokes svg.sm{width:46px;height:46px;align-self:flex-end;}.kana-main svg.sm{width:80px;height:80px;}.kana-main .kp-print path{stroke-width:5;}.kana-main .ghost{opacity:.24;}.kana-main .kp-print text{font-size:8px;}
 .kana-strokes path{fill:none;stroke:currentColor;stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round;}
 .kana-strokes .ghost{opacity:.13;}
@@ -2306,11 +2306,11 @@ function kanaStrokeSvg(c,off){const d=KANA_STROKES[c];if(!d)return '';off=off||0
 const KANA_HAND=/*KANA_HAND*/{}; // 손글씨 글꼴 글자 모양 경로(fonts/hand_paths.py)
 let kanaMaskN=0;
 function kanaHandSvg(c,off){const d=KANA_STROKES[c],h=KANA_HAND[c];if(!d||!h)return '';const id='km'+(++kanaMaskN);
- return '<svg class="hand'+(kanaSmall(c)?' sm':'')+'" viewBox="0 0 109 109" role="img" aria-label="'+c+' 손글씨"><defs><mask id="'+id+'" maskUnits="userSpaceOnUse" x="-20" y="-20" width="149" height="149">'+d.p.map((p,i)=>'<path class="mlive" pathLength="1" style="--i:'+(i+off)+'" d="'+p+'"/>').join('')+'</mask></defs><path class="hghost" d="'+h+'"/><g mask="url(#'+id+')"><path class="hlive" d="'+h+'"/></g></svg>';}
+ return '<svg class="hand'+(kanaSmall(c)?' sm':'')+'" viewBox="0 0 109 109" role="img" aria-label="'+c+' 손글씨"><defs><mask id="'+id+'" maskUnits="userSpaceOnUse" x="-20" y="-20" width="149" height="149">'+d.p.map((p,i)=>'<path class="mlive" pathLength="1" style="--i:'+(i+off)+'" d="'+p+'"/>').join('')+'</mask></defs><path class="hlive" d="'+h+'"/></svg>';} // 26.11.06 영신 "손글씨는 따라쓰기를 빼고 그냥 나란히 놓기만": 가림막은 위치 맞춤용으로만 남기고 바로 보인다
 function kanaNStrokes(s){return [...s].reduce((a,c)=>a+((KANA_STROKES[c]||{p:[]}).p.length),0);}
 /* 인쇄체 획순 → 이어서 손글씨 획순. 반환: HTML */
 function kanaPairHtml(jw,cls){const ch=[...jw];let off=0;const pr=ch.map(c=>{const s=kanaStrokeSvg(c,off);off+=(KANA_STROKES[c]||{p:[]}).p.length;return s;}).join('');
- const hd=ch.map(c=>{const s=kanaHandSvg(c,off);off+=(KANA_STROKES[c]||{p:[]}).p.length;return s;}).join('');
+ const hd=ch.map(c=>kanaHandSvg(c,0)).join('');
  return '<span class="kana-pair '+(cls||'')+(ch.length>1?' multi':'')+'" data-jw="'+esc(jw)+'" data-n="'+off+'" title="누르면 다시"><span class="kana-strokes kp-print">'+pr+'</span><span class="kana-strokes kp-hand">'+hd+'</span></span>';}
 function kanaHandFit(root){(root||document).querySelectorAll('svg.hand:not([data-fit])').forEach(svg=>{try{
   const ps=[...svg.querySelectorAll('.mlive')].map(p=>p.getBBox());if(!ps.length)return;
