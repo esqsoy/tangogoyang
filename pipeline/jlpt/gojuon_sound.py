@@ -122,7 +122,7 @@ SYM = {
     'm': '[m] ‘ㅁ’', 'j': '[j] ‘야·유·요’의 ㅣ 부분(경구개 접근음). 영어 j가 아니다',
     'ɾ': '[ɾ] 혀끝으로 윗잇몸을 한 번 튕기는 ‘ㄹ’(치경 탄음). 한국어 모음 사이 ‘ㄹ’과 같다. 영어 r·l이 아니다',
     'ɰ': '[ɰ] 입술을 둥글게 내밀지 않는 반모음 ‘우’(연구개 접근음). ‘와’보다 입술을 덜 내민다',
-    'w': '[w] 입술을 둥글게 내미는 반모음 ‘우’(‘워·위’의 ㅜ)',
+    'w': '[w] 입술을 둥글게 내미는 반모음 ‘우’(양순 연구개 접근음). ‘워·위’의 ㅜ',
     'v': '[v] 윗니를 아랫입술에 대고 목을 울린다(유성 순치 마찰음). 일본 사람은 대개 ブ[bɯ]처럼 읽는다',
     'ɴ': '[ɴ] 혀 뒤를 목젖 쪽에 대는 콧소리(구개수 비음). ん은 혼자 한 박자이고, 뒤 소리에 따라 [m]·[n]·[ŋ]·[ɴ]로 바뀐다',
     'ŋ': '[ŋ] ‘ㅇ’ 받침(연구개 비음)',
@@ -130,6 +130,21 @@ SYM = {
     'ː': '[ː] 앞 모음을 한 박자 더 길게. 짧게 하면 다른 말이 된다',
     'Q': '겹친 자음([kk]·[tt]·[pp]·[ss]…)은 작은 っ: 그 자리에서 한 박자 멈췄다가 다음 소리를 낸다',
 }
+# 조음 용어에는 영어를 함께 적는다(26.11.06 영신: "ipa 용어를 적는경우에는 영어도 병기해줘")
+EN = {'무성 연구개 파열음': 'voiceless velar plosive', '유성 연구개 파열음': 'voiced velar plosive',
+      '무성 치경 마찰음': 'voiceless alveolar fricative', '무성 치경구개 마찰음': 'voiceless alveolo-palatal fricative',
+      '유성 치경 마찰음': 'voiced alveolar fricative', '유성 치경구개 파찰음': 'voiced alveolo-palatal affricate',
+      '무성 치경 파열음': 'voiceless alveolar plosive', '유성 치경 파열음': 'voiced alveolar plosive',
+      '무성 치경구개 파찰음': 'voiceless alveolo-palatal affricate', '무성 치경 파찰음': 'voiceless alveolar affricate',
+      '경구개 비음': 'palatal nasal', '무성 경구개 마찰음': 'voiceless palatal fricative', '무성 양순 마찰음': 'voiceless bilabial fricative',
+      '유성 양순 파열음': 'voiced bilabial plosive', '무성 양순 파열음': 'voiceless bilabial plosive', '경구개 접근음': 'palatal approximant',
+      '치경 탄음': 'alveolar tap', '연구개 접근음': 'velar approximant', '양순 연구개 접근음': 'labial-velar approximant',
+      '유성 순치 마찰음': 'voiced labiodental fricative', '구개수 비음': 'uvular nasal', '연구개 비음': 'velar nasal', '구개음화': 'palatalization'}
+for _k, _v in SYM.items():
+    SYM[_k] = re.sub(r'\(([^()]+)\)', lambda m: '(' + m.group(1) + ', ' + EN[m.group(1)] + ')' if m.group(1) in EN else m.group(0), _v)
+_left = [t for v in SYM.values() for t in re.findall(r'\(([^(),]*(?:음|화))\)', v)]
+assert not _left, _left  # 용어인데 영어가 빠진 것
+
 SAME = {'a', 'i', 'e', 'o', 's', 'n', 'h', 'm', 'ŋ'}  # 한국어와 같은 소리(낱말 카드에서는 설명을 생략)
 ORDER = ['tɕ', 'dʑ', 'ts', 'ɕ', 'ɲ', 'ç', 'ɸ', 'ɾ', 'ɰ', 'ɴ', 'ŋ', 'ɡ', 'ɯ', 'ʲ', 'ː'] + list('kgsztdnhbpmjwvaieo')
 

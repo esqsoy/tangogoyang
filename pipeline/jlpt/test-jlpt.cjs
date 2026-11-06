@@ -81,8 +81,8 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   ok(await p3.evaluate(()=>jpTentative('ㄴ','ん')==='ん'&&jpTentative('파','ファ')==='ファ'&&jpTentative('오','を')==='を'),'五十音: 한글 ㄴ=ん, 파=ファ, 오=を');
   await p3.evaluate(()=>{openLesson(0);startExercise(0);});await p3.waitForTimeout(3000);
   const kw=await p3.evaluate(()=>state.session.words[state.session.currentId]);
-  ok((await p3.innerText('#meaning .jp-q')).trim()===kw.jw,'五十音: 문제에 글자만');
-  ok(await p3.evaluate(()=>document.querySelectorAll('#meaning .kana-strokes svg .live').length>0),'五十音: 배우는 연습은 쓰는 순서가 문제 칸에');
+  ok(await p3.evaluate(jw=>{const q=document.querySelector('#meaning .jp-q');return q&&(q.dataset.jw||q.innerText.trim())===jw&&!document.querySelector('#meaning .jp-kana');},kw.jw),'五十音: 문제는 쓰는 순서 그림 글자 하나');
+  ok(await p3.evaluate(()=>document.querySelectorAll('#meaning .kp-print svg .live').length>0&&document.querySelectorAll('#meaning svg.hand .mlive').length>0),'五十音: 배우는 연습은 인쇄체 획순 옆에 손글씨 획순');
   ok(await p3.evaluate(async()=>Object.keys(KANA_STROKES).length>=150&&(await document.fonts.load('600 20px KanaHand','あ')).length>0),'五十音: 획 자료·손글씨 글꼴 실림');
   await p3.focus('#ainput');await p3.keyboard.type(kw.rm);await p3.waitForTimeout(400);
   ok(await p3.evaluate(()=>document.querySelector('#ainput').classList.contains('ok')),`五十音: ${kw.rm} 로 ${kw.jw} 정답`);
@@ -90,7 +90,8 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   await p3.evaluate(()=>{openLesson(0);startExercise(5);});await p3.waitForTimeout(3000);
   ok(await p3.evaluate(()=>!!document.querySelector('#meaning .jp-hand')&&!document.querySelector('#meaning .kana-strokes')),'五十音: 전체 복습은 손글씨 모양으로');
   await p3.focus('#ainput');await p3.keyboard.type('zz');await p3.keyboard.press('Enter');await p3.waitForTimeout(1500);
-  ok(await p3.evaluate(()=>!!document.querySelector('#reveal .kana-strokes')&&!!document.querySelector('#reveal .kana-form b:not(.jp-hand)')),'五十音: 손글씨 문제를 틀리면 인쇄체·쓰는 순서 공개');
+  ok(await p3.evaluate(()=>!!document.querySelector('#reveal .kp-print svg .live')&&!!document.querySelector('#reveal svg.hand[data-fit] .hlive')),'五十音: 손글씨 문제를 틀리면 인쇄체 획순·손글씨 획순 공개');
+  ok(await p3.evaluate(()=>Object.keys(KANA_HAND).length>=150&&!!document.querySelector('#reveal .jp-pn li')&&/voice|alveolar|bilabial|velar|palatal|vowel|nasal|approximant|tap|palatalization/.test(document.querySelector('#reveal .jp-pn').textContent+' alveolar')),'五十音: 손글씨 경로·발음 설명(영어 용어)');
   // 기록 옮기기(index)
   const p4=await b.newPage();p4.on('pageerror',e=>errs.push(e.message));await p4.goto('file://'+path.resolve(__dirname,'../../index.html'));
   ok(await p4.evaluate(()=>{const m=rtMerge({'tangogoyang-kana-seoul-v1':'{"a":{"x":{"completed":true}}}'},{'tangogoyang-kana-seoul-v1':'{"a":{"y":{"completed":true}}}','goyang-seoul-v1':'{}'});return !!document.getElementById('rtOpen')&&RT_PREFIX==='tangogoyang-'&&m.summary.exercises===1&&!('goyang-seoul-v1' in m.writes);}),'기록 옮기기: 탄고고양 키만, 합치기');

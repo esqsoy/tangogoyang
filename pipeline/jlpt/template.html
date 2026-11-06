@@ -485,14 +485,25 @@ body.roaring{animation:roarshake .5s .15s;}
 .kana-form small{font-size:.72rem;opacity:.7;}
 .kana-strokes{display:flex;gap:2px;cursor:pointer;}
 .kana-strokes svg{width:62px;height:62px;}
-.kana-q{justify-content:center;margin-top:4px;}.kana-q svg{width:54px;height:54px;}
+.kana-main{display:flex;justify-content:center;margin:0 auto;}
+.kana-pair{display:inline-flex;gap:14px;align-items:flex-end;justify-content:center;cursor:pointer;}
+.kana-pair .kana-strokes{gap:0;}
+.kana-pair svg{width:118px;height:118px;}.kana-pair.multi svg{width:74px;height:74px;}
+.kana-pair svg.sm{width:80px;height:80px;}.kana-pair.multi svg.sm{width:50px;height:50px;}
+.kana-pair.kp-rv svg{width:70px;height:70px;}.kana-pair.kp-rv svg.sm{width:48px;height:48px;}.kana-pair.kp-rv.multi svg{width:56px;height:56px;}.kana-pair.kp-rv.multi svg.sm{width:40px;height:40px;}
+.kp-hand{border-left:1px dashed rgba(255,255,255,.18);padding-left:12px;}
+svg.hand .hghost,svg.hand .hlive{fill:currentColor;stroke:none;}
+svg.hand .hghost{opacity:.18;}
+svg.hand .mlive{fill:none;stroke:#fff;stroke-width:17;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;stroke-opacity:0;animation:kanaStroke .5s ease forwards,kanaShow 0s forwards;animation-delay:calc(var(--i)*.6s + .2s);} /* 둥근 끝이 아직 안 쓴 획 자리에 점으로 남지 않게 차례가 올 때까지 숨긴다 */
+@media (prefers-reduced-motion:reduce){svg.hand .mlive{animation:none;stroke-dashoffset:0;stroke-opacity:1;}}.kana-strokes svg.sm{width:46px;height:46px;align-self:flex-end;}.kana-main svg.sm{width:80px;height:80px;}.kana-main .kp-print path{stroke-width:5;}.kana-main .ghost{opacity:.24;}.kana-main .kp-print text{font-size:8px;}
 .kana-strokes path{fill:none;stroke:currentColor;stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round;}
 .kana-strokes .ghost{opacity:.13;}
-.kana-strokes .live{stroke-dasharray:1;stroke-dashoffset:1;animation:kanaStroke .5s ease forwards;animation-delay:calc(var(--i)*.6s + .2s);}
+.kana-strokes .live{stroke-dasharray:1;stroke-dashoffset:1;stroke-opacity:0;animation:kanaStroke .5s ease forwards,kanaShow 0s forwards;animation-delay:calc(var(--i)*.6s + .2s);}
 .kana-strokes text{font-size:10px;fill:#e0464b;opacity:0;animation:kanaNum .2s forwards;animation-delay:calc(var(--i)*.6s + .2s);}
 @keyframes kanaStroke{to{stroke-dashoffset:0;}}
 @keyframes kanaNum{to{opacity:1;}}
-@media (prefers-reduced-motion:reduce){.kana-strokes .live{animation:none;stroke-dashoffset:0;}.kana-strokes text{animation:none;opacity:1;}}
+@keyframes kanaShow{to{stroke-opacity:1;}}
+@media (prefers-reduced-motion:reduce){.kana-strokes .live{animation:none;stroke-dashoffset:0;stroke-opacity:1;}.kana-strokes text{animation:none;opacity:1;}}
 .jp-qko{display:block;font-size:.5em;font-weight:700;color:var(--muted);margin-top:4px;}
 .blanks .slot-glyph{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",sans-serif;}
 .rv .rv-word{margin-top:4px;}
@@ -2286,14 +2297,36 @@ function mtNeedsWholePronunciation(w){
 }
 // 五十音 쓰는 순서: KanjiVG(CC BY-SA 3.0) 획 경로. build.py가 kana 모드에서만 채운다.
 const KANA_STROKES=/*KANA_STROKES*/{};
-function kanaStrokeSvg(c){const d=KANA_STROKES[c];if(!d)return '';
- return '<svg viewBox="0 0 109 109" role="img" aria-label="'+c+' 쓰는 순서">'+d.p.map(p=>'<path class="ghost" d="'+p+'"/>').join('')+d.p.map((p,i)=>'<path class="live" pathLength="1" style="--i:'+i+'" d="'+p+'"/>').join('')+d.n.map((xy,i)=>'<text x="'+xy[0]+'" y="'+xy[1]+'" style="--i:'+i+'">'+(i+1)+'</text>').join('')+'</svg>';}
-document.addEventListener("click",e=>{const k=e.target.closest&&e.target.closest(".kana-strokes");if(k)k.innerHTML=k.innerHTML;}); // 쓰는 순서 다시 보기(kana 모드에만 생긴다)
+function kanaSmall(c){return /[ぁぃぅぇぉゃゅょっゎァィゥェォャュョッヮ]/.test(c);}
+function kanaStrokeSvg(c,off){const d=KANA_STROKES[c];if(!d)return '';off=off||0;
+ return '<svg'+(kanaSmall(c)?' class="sm"':'')+' viewBox="0 0 109 109" role="img" aria-label="'+c+' 쓰는 순서">'+d.p.map(p=>'<path class="ghost" d="'+p+'"/>').join('')+d.p.map((p,i)=>'<path class="live" pathLength="1" style="--i:'+(i+off)+'" d="'+p+'"/>').join('')+d.n.map((xy,i)=>'<text x="'+xy[0]+'" y="'+xy[1]+'" style="--i:'+(i+off)+'">'+(i+1)+'</text>').join('')+'</svg>';}
+/* 손글씨가 획순대로 써지게(26.11.06 영신 "손글씨도 인쇄체 써지고 이어져서 획순대로 써지게"): 손글씨 글꼴 글자 위에 KanjiVG 획을 굵게 그린 가림막(mask)을 씌우고,
+   가림막을 획순대로 그린다. 글꼴 글자는 획 자리에 맞게 크기·위치를 맞춘다(kanaHandFit). 가림막 애니메이션이 안 도는 브라우저도 끝나면 글자가 다 보이게 한다. */
+const KANA_HAND=/*KANA_HAND*/{}; // 손글씨 글꼴 글자 모양 경로(fonts/hand_paths.py)
+let kanaMaskN=0;
+function kanaHandSvg(c,off){const d=KANA_STROKES[c],h=KANA_HAND[c];if(!d||!h)return '';const id='km'+(++kanaMaskN);
+ return '<svg class="hand'+(kanaSmall(c)?' sm':'')+'" viewBox="0 0 109 109" role="img" aria-label="'+c+' 손글씨"><defs><mask id="'+id+'" maskUnits="userSpaceOnUse" x="-20" y="-20" width="149" height="149">'+d.p.map((p,i)=>'<path class="mlive" pathLength="1" style="--i:'+(i+off)+'" d="'+p+'"/>').join('')+'</mask></defs><path class="hghost" d="'+h+'"/><g mask="url(#'+id+')"><path class="hlive" d="'+h+'"/></g></svg>';}
+function kanaNStrokes(s){return [...s].reduce((a,c)=>a+((KANA_STROKES[c]||{p:[]}).p.length),0);}
+/* 인쇄체 획순 → 이어서 손글씨 획순. 반환: HTML */
+function kanaPairHtml(jw,cls){const ch=[...jw];let off=0;const pr=ch.map(c=>{const s=kanaStrokeSvg(c,off);off+=(KANA_STROKES[c]||{p:[]}).p.length;return s;}).join('');
+ const hd=ch.map(c=>{const s=kanaHandSvg(c,off);off+=(KANA_STROKES[c]||{p:[]}).p.length;return s;}).join('');
+ return '<span class="kana-pair '+(cls||'')+(ch.length>1?' multi':'')+'" data-jw="'+esc(jw)+'" data-n="'+off+'" title="누르면 다시"><span class="kana-strokes kp-print">'+pr+'</span><span class="kana-strokes kp-hand">'+hd+'</span></span>';}
+function kanaHandFit(root){(root||document).querySelectorAll('svg.hand:not([data-fit])').forEach(svg=>{try{
+  const ps=[...svg.querySelectorAll('.mlive')].map(p=>p.getBBox());if(!ps.length)return;
+  const x0=Math.min(...ps.map(r=>r.x)),y0=Math.min(...ps.map(r=>r.y)),x1=Math.max(...ps.map(r=>r.x+r.width)),y1=Math.max(...ps.map(r=>r.y+r.height));
+  svg.querySelectorAll('.hghost,.hlive').forEach(t=>{const b=t.getBBox();if(!b.width)return;const pad=7,s=Math.min((x1-x0+pad)/b.width,(y1-y0+pad)/b.height);
+    t.setAttribute('transform','translate('+((x0+x1)/2)+' '+((y0+y1)/2)+') scale('+s+') translate('+(-(b.x+b.width/2))+' '+(-(b.y+b.height/2))+')');});
+  svg.setAttribute('data-fit','1');}catch(e){}});}
+function kanaPairStart(root){const go=()=>{kanaHandFit(root);(root||document).querySelectorAll('.kana-pair').forEach(k=>{clearTimeout(k._t);k._t=setTimeout(()=>k.querySelectorAll('.mlive').forEach(m=>{m.style.animation='none';m.style.strokeDashoffset='0';m.style.strokeOpacity='1';}),(+k.dataset.n||0)*600+900);});};
+ (document.fonts&&document.fonts.load?document.fonts.load('600 40px KanaHand','あ'):Promise.resolve()).then(go,go);}
+document.addEventListener("click",e=>{const pr=e.target.closest&&e.target.closest(".kana-pair");if(pr){pr.outerHTML=kanaPairHtml(pr.dataset.jw,[...pr.classList].filter(c=>c!=='kana-pair'&&c!=='multi').join(' '));kanaPairStart();return;}const k=e.target.closest&&e.target.closest(".kana-strokes");if(k)k.innerHTML=k.innerHTML;}); // 쓰는 순서 다시 보기(kana 모드에만 생긴다)
 function mtRevealHtml(term,meaning){
  const w=mtCurrentWord();if(!w)return '';
  if(JP_MODE==="kana"){const snd=[w.rm,w.hg].filter(Boolean).join(' · ');
-   const ch=[...w.jw],st=w.hw&&ch.length<=3?ch.map(kanaStrokeSvg).join(''):''; // 배우는 연습은 문제 칸에 이미 보인다
-   const forms='<div class="kana-forms'+(ch.length>3?' long':'')+'"><span class="kana-form"><b lang="ja">'+esc(w.jw)+'</b><small>인쇄체</small></span><span class="kana-form"><b class="jp-hand" lang="ja">'+esc(w.jw)+'</b><small>손글씨</small></span>'+(st?'<span class="kana-form"><span class="kana-strokes" title="누르면 다시">'+st+'</span><small>쓰는 순서</small></span>':'')+'</div>';
+   const ch=[...w.jw],short=ch.length<=3&&ch.every(c=>KANA_STROKES[c]);
+   // 문제 칸에 이미 보인 모양은 다시 안 보인다(26.11.06 영신). 배우는 연습(인쇄체 획순+손글씨)은 없음, 손글씨 문제는 인쇄체 획순+손글씨 획순, 긴 단어는 안 보인 쪽 모양만.
+   const forms=!w.hw&&short?'':w.hw&&short?'<div class="kana-forms">'+kanaPairHtml(w.jw,'kp-rv')+'</div>':'<div class="kana-forms long"><span class="kana-form"><b'+(w.hw?'':' class="jp-hand"')+' lang="ja">'+esc(w.jw)+'</b><small>'+(w.hw?'인쇄체':'손글씨')+'</small></span></div>';
+   if(forms.includes('kana-pair'))setTimeout(()=>kanaPairStart(document.getElementById('reveal')),0);
    const ipa=w.ipa?'<div class="jp-ipa">['+esc(w.ipa)+']</div>':'',pn=w.pn&&w.pn.length?'<ul class="jp-pn">'+w.pn.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>':'';
    return forms+(snd?'<div class="jp-head jp-snd">'+esc(snd)+'</div>':'')+ipa+pn+(w.meaning?'<div class="ov-tr">'+esc(w.meaning)+'</div>':'')+(w.note?'<div class="ov-tr jp-note">'+esc(w.note)+'</div>':'');}
  const head=JP_MODE==="yomi"?'<div class="jp-head" lang="ja">'+jpRuby(w.jw,w.term)+'</div>':w.jw&&w.jw!==w.term?'<div class="jp-head" lang="ja">'+jpRuby(w.jw,w.term)+'</div>':'';
@@ -2789,7 +2822,7 @@ function nextCard(){
     if(JP_MODE==="yomi")$("#meaning").innerHTML='<span class="jp-q" lang="ja">'+esc(w.jw)+'</span><span class="jp-qko">'+esc(w.meaning)+'</span>';
     else if(JP_MODE==="kana"){const st=!w.hw&&[...w.jw].length<=3?[...w.jw].map(kanaStrokeSvg).join(''):'';
       const lg=[...w.jw].length>3?' jp-kana-long':'';
-      $("#meaning").innerHTML=w.hw?'<span class="jp-q jp-kana jp-hand'+lg+'" lang="ja"><span class="kana-cap">손글씨</span>'+esc(w.jw)+'</span>':'<span class="jp-q jp-kana'+lg+'" lang="ja">'+esc(w.jw)+'</span>'+(st?'<span class="kana-strokes kana-q" title="누르면 다시">'+st+'</span>':'');} // 五十音: 글자만 보이고 소리를 친다. 배우는 연습은 쓰는 순서를 함께(소리는 드러나지 않는다), 복습·단어 읽기는 손글씨 모양으로 // 五十音: 글자만 보이고 소리를 친다
+      $("#meaning").innerHTML=w.hw?'<span class="jp-q jp-kana jp-hand'+lg+'" lang="ja"><span class="kana-cap">손글씨</span>'+esc(w.jw)+'</span>':st?'<span class="jp-q kana-main" lang="ja" data-jw="'+esc(w.jw)+'">'+kanaPairHtml(w.jw)+'</span>':'<span class="jp-q jp-kana'+lg+'" lang="ja">'+esc(w.jw)+'</span>';if(st)kanaPairStart($("#meaning"));} // 26.11.06 영신: 쓰는 순서 그림을 본 글자로, 손글씨가 이어서 써진다 // 五十音: 글자만 보이고 소리를 친다. 배우는 연습은 쓰는 순서를 함께(소리는 드러나지 않는다), 복습·단어 읽기는 손글씨 모양으로 // 五十音: 글자만 보이고 소리를 친다
     else $("#meaning").textContent=w.meaning;
     $("#hoeCtx").innerHTML=mtQuestionHtml(w);
     const rv=$("#reveal");rv.className="rv";rv.innerHTML="";
@@ -4289,7 +4322,7 @@ function quizOpenEnd(s){
 /* events */
 
 function advanceRevealed(){const s=state.session;if(s&&s.answered&&!s.copyMode&&Date.now()-(s.revealedAt||0)>=280){cancelPendingAdvance();nextCard();}}
-$("#quizCard").addEventListener("click",e=>{if(!e.target.closest("button,input,a,.kana-strokes"))advanceRevealed();});
+$("#quizCard").addEventListener("click",e=>{if(!e.target.closest("button,input,a,.kana-strokes,.kana-pair"))advanceRevealed();});
 $("#sumWrong").addEventListener("click",e=>{
   const b=e.target.closest(".wrow"),s=state.session;if(!b||!s||b.classList.contains("gone")||!screens.sum.classList.contains("active"))return;
   const w=s.words[Number(b.dataset.id)];if(!w)return;

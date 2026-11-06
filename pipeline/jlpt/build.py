@@ -201,7 +201,8 @@ def write(out, data, mode):
         import base64
         strokes = (HERE / 'kanjivg' / 'kana-strokes.json').read_text()
         font = base64.b64encode((HERE / 'fonts' / 'klee-kana.woff2').read_bytes()).decode()
-        for old, new in [('/*KANA_STROKES*/{}', strokes),
+        hand = (HERE / 'fonts' / 'klee-kana-paths.json').read_text()
+        for old, new in [('/*KANA_STROKES*/{}', strokes), ('/*KANA_HAND*/{}', hand),
                          ('/*KANA_FONT_FACE*/', '@font-face{font-family:"KanaHand";src:url(data:font/woff2;base64,' + font + ') format("woff2");font-display:swap;}'),
                          ('<!--KANA_CREDIT-->', ' · 쓰는 순서: <a href="https://kanjivg.tagaini.net" target="_blank" rel="noopener">KanjiVG</a>(Ulrich Apel, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>) · 손글씨: <a href="https://github.com/fontworks-fonts/Klee" target="_blank" rel="noopener">Klee One</a>(Fontworks, OFL)')]:
             assert html.count(old) == 1, old
