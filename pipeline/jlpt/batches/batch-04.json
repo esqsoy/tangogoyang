@@ -1,0 +1,11056 @@
+[
+{
+"id": "bcbf5309e2",
+"level": "N3",
+"word": "長期",
+"reading": "ちょうき",
+"meanings": [
+"long time period"
+],
+"pos": [
+"adj-no",
+"n"
+]
+},
+{
+"id": "4dc252fa39",
+"level": "N3",
+"word": "調査",
+"reading": "ちょうさ",
+"meanings": [
+"investigation",
+"examination",
+"inquiry",
+"survey"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "94696ff83d",
+"level": "N3",
+"word": "調子",
+"reading": "ちょうし",
+"meanings": [
+"tune",
+"tone",
+"key"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "d19e1e7cb4",
+"level": "N3",
+"word": "頂上",
+"reading": "ちょうじょう",
+"meanings": [
+"top",
+"summit",
+"peak"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "3ce84453e7",
+"level": "N3",
+"word": "ちょうだい",
+"reading": "ちょうだい",
+"meanings": [
+"please do for me (preceded by -te)",
+"reception",
+"being given",
+"get"
+],
+"pos": [
+"exp"
+]
+},
+{
+"id": "2e1e017ee0",
+"level": "N3",
+"word": "貯金",
+"reading": "ちょきん",
+"meanings": [
+"(bank) savings"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "d6e26a0b9f",
+"level": "N3",
+"word": "直接",
+"reading": "ちょくせつ",
+"meanings": [
+"direct",
+"immediate",
+"personal",
+"firsthand"
+],
+"pos": [
+"adj-na",
+"n",
+"adj-no",
+"adv"
+]
+},
+{
+"id": "5441f9df9d",
+"level": "N3",
+"word": "著者",
+"reading": "ちょしゃ",
+"meanings": [
+"author",
+"writer"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "6e524d6fdc",
+"level": "N3",
+"word": "塵",
+"reading": "ちり",
+"meanings": [
+"dust",
+"dirt"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "2e1b2d5c37",
+"level": "N3",
+"word": "遂に",
+"reading": "ついに",
+"meanings": [
+"finally",
+"at last"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "a1d4ed495c",
+"level": "N3",
+"word": "通過",
+"reading": "つうか",
+"meanings": [
+"passage through",
+"passing"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "6082d893b1",
+"level": "N3",
+"word": "通学",
+"reading": "つうがく",
+"meanings": [
+"commuting to school"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "048a8dade7",
+"level": "N3",
+"word": "通行",
+"reading": "つうこう",
+"meanings": [
+"passage",
+"passing"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "855d156059",
+"level": "N3",
+"word": "通じる",
+"reading": "つうじる",
+"meanings": [
+"to run to",
+"to lead to",
+"to communicate",
+"to understand"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "f144cdb49c",
+"level": "N3",
+"word": "通信",
+"reading": "つうしん",
+"meanings": [
+"correspondence",
+"communication",
+"news",
+"signal"
+],
+"pos": [
+"n",
+"vs",
+"vt",
+"vi"
+]
+},
+{
+"id": "2ddd05a675",
+"level": "N3",
+"word": "捕まる",
+"reading": "つかまる",
+"meanings": [
+"to be caught",
+"to be arrested"
+],
+"pos": [
+"v5r",
+"vi"
+]
+},
+{
+"id": "331fc42604",
+"level": "N3",
+"word": "掴む",
+"reading": "つかむ",
+"meanings": [
+"to seize",
+"to catch",
+"to grasp"
+],
+"pos": [
+"v5m",
+"vt"
+]
+},
+{
+"id": "e6e567643f",
+"level": "N3",
+"word": "疲れ",
+"reading": "つかれ",
+"meanings": [
+"tiredness",
+"fatigue"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "7044f13335",
+"level": "N3",
+"word": "付き合い",
+"reading": "つきあい",
+"meanings": [
+"association",
+"socializing",
+"fellowship"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "9edfc06f0c",
+"level": "N3",
+"word": "次々",
+"reading": "つぎつぎ",
+"meanings": [
+"in succession",
+"one by one"
+],
+"pos": [
+"adv",
+"adv-to",
+"n"
+]
+},
+{
+"id": "d5a89e32c4",
+"level": "N3",
+"word": "就く",
+"reading": "つく",
+"meanings": [
+"to settle in (place)",
+"to take (seat, position)",
+"to study (under teacher)"
+],
+"pos": [
+"v5k",
+"vi"
+]
+},
+{
+"id": "af699ddbb2",
+"level": "N3",
+"word": "付ける",
+"reading": "つける",
+"meanings": [
+"to attach",
+"to join",
+"to add",
+"to append"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "8d3ff79d95",
+"level": "N3",
+"word": "土",
+"reading": "つち",
+"meanings": [
+"earth",
+"soil"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "a6ec708ec6",
+"level": "N3",
+"word": "続き",
+"reading": "つづき",
+"meanings": [
+"sequel",
+"continuation"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "c327a33164",
+"level": "N3",
+"word": "包み",
+"reading": "つつみ",
+"meanings": [
+"bundle",
+"package",
+"parcel",
+"bale"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b30b244443",
+"level": "N3",
+"word": "勤め",
+"reading": "つとめ",
+"meanings": [
+"service",
+"duty",
+"business",
+"responsibility",
+"task",
+"Buddhist religious services"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b30544a54e",
+"level": "N3",
+"word": "務め",
+"reading": "つとめ",
+"meanings": [
+"service",
+"duty",
+"Buddhist religious services"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "e629f70aca",
+"level": "N3",
+"word": "繋ぐ",
+"reading": "つなぐ",
+"meanings": [
+"to tie",
+"to fasten",
+"to connect",
+"to transfer (phone call)"
+],
+"pos": [
+"v5g",
+"vt"
+]
+},
+{
+"id": "43f9074428",
+"level": "N3",
+"word": "常に",
+"reading": "つねに",
+"meanings": [
+"always",
+"constantly"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "778765a79e",
+"level": "N3",
+"word": "角",
+"reading": "つの",
+"meanings": [
+"horn"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "526a0047ad",
+"level": "N3",
+"word": "翼",
+"reading": "つばさ",
+"meanings": [
+"wings"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "9a7106c569",
+"level": "N3",
+"word": "つまり",
+"reading": "つまり",
+"meanings": [
+"in short",
+"in brief",
+"in other words"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "fc43373a26",
+"level": "N3",
+"word": "罪",
+"reading": "つみ",
+"meanings": [
+"crime",
+"fault",
+"indiscretion"
+],
+"pos": [
+"n",
+"adj-na",
+"adj-no"
+]
+},
+{
+"id": "236e0b11a0",
+"level": "N3",
+"word": "詰める",
+"reading": "つめる",
+"meanings": [
+"to pack",
+"to shorten",
+"to work out (details)"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "d870dff504",
+"level": "N3",
+"word": "積もる",
+"reading": "つもる",
+"meanings": [
+"to pile up"
+],
+"pos": [
+"v5r",
+"vi"
+]
+},
+{
+"id": "33f0992c39",
+"level": "N3",
+"word": "梅雨",
+"reading": "つゆ",
+"meanings": [
+"rainy season",
+"rain during the rainy season"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "1213823fa2",
+"level": "N3",
+"word": "辛い",
+"reading": "つらい",
+"meanings": [
+"painful",
+"heart-breaking"
+],
+"pos": [
+"adj-i"
+]
+},
+{
+"id": "8d0f952e4c",
+"level": "N3",
+"word": "釣",
+"reading": "つり",
+"meanings": [
+"fishing",
+"angling"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "7433983c57",
+"level": "N3",
+"word": "連れ",
+"reading": "つれ",
+"meanings": [
+"companion",
+"company"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "c2946190ea",
+"level": "N3",
+"word": "で",
+"reading": "で",
+"meanings": [
+"outflow",
+"coming (going) out",
+"graduate (of)"
+],
+"pos": [
+"n",
+"n-suf"
+]
+},
+{
+"id": "56092bf6de",
+"level": "N3",
+"word": "出会い",
+"reading": "であい",
+"meanings": [
+"meeting",
+"rendezvous",
+"encounter"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "efa915fbef",
+"level": "N3",
+"word": "出会う",
+"reading": "であう",
+"meanings": [
+"to meet by chance",
+"to come across",
+"to happen to encounter"
+],
+"pos": [
+"v5u",
+"vi"
+]
+},
+{
+"id": "b8c0205de7",
+"level": "N3",
+"word": "提案",
+"reading": "ていあん",
+"meanings": [
+"proposal",
+"proposition",
+"suggestion"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "dad6329f85",
+"level": "N3",
+"word": "定期",
+"reading": "ていき",
+"meanings": [
+"fixed term"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "964f36527f",
+"level": "N3",
+"word": "抵抗",
+"reading": "ていこう",
+"meanings": [
+"electrical resistance",
+"resistance",
+"opposition"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "46cd2cf7a5",
+"level": "N3",
+"word": "提出",
+"reading": "ていしゅつ",
+"meanings": [
+"presentation",
+"submission",
+"filing"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "dfb2d21193",
+"level": "N3",
+"word": "程度",
+"reading": "ていど",
+"meanings": [
+"degree",
+"amount",
+"grade",
+"standard",
+"of the order of (following a number)"
+],
+"pos": [
+"n",
+"adv",
+"n-suf"
+]
+},
+{
+"id": "bad69dcdd2",
+"level": "N3",
+"word": "停留所",
+"reading": "ていりゅうじょ",
+"meanings": [
+"bus or tram stop"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "9a64047c66",
+"level": "N3",
+"word": "デート",
+"reading": "デート",
+"meanings": [
+"date",
+"go on a date"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "371f1b3f39",
+"level": "N3",
+"word": "敵",
+"reading": "てき",
+"meanings": [
+"enemy",
+"rival"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "f1250de70c",
+"level": "N3",
+"word": "出来事",
+"reading": "できごと",
+"meanings": [
+"incident",
+"affair",
+"happening",
+"event"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "ca16268bbb",
+"level": "N3",
+"word": "適する",
+"reading": "てきする",
+"meanings": [
+"to fit",
+"to suit"
+],
+"pos": [
+"vs-s",
+"vi"
+]
+},
+{
+"id": "d2dbd78eca",
+"level": "N3",
+"word": "適切",
+"reading": "てきせつ",
+"meanings": [
+"pertinent",
+"appropriate",
+"adequate",
+"relevance"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "752d199c2e",
+"level": "N3",
+"word": "適度",
+"reading": "てきど",
+"meanings": [
+"moderate"
+],
+"pos": [
+"adj-na",
+"adj-no",
+"n"
+]
+},
+{
+"id": "27c52f37c2",
+"level": "N3",
+"word": "適用",
+"reading": "てきよう",
+"meanings": [
+"applying"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "df68a4c0c8",
+"level": "N3",
+"word": "できれば",
+"reading": "できれば",
+"meanings": [
+"if possible"
+],
+"pos": [
+"exp"
+]
+},
+{
+"id": "639bd22c8d",
+"level": "N3",
+"word": "手品",
+"reading": "てじな",
+"meanings": [
+"sleight of hand",
+"conjuring trick",
+"magic",
+"juggling"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "3dbdf1b28b",
+"level": "N3",
+"word": "ですから",
+"reading": "ですから",
+"meanings": [
+"therefore"
+],
+"pos": [
+"conj"
+]
+},
+{
+"id": "61bb6561cb",
+"level": "N3",
+"word": "鉄",
+"reading": "てつ",
+"meanings": [
+"iron"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "d7dd2c0312",
+"level": "N3",
+"word": "哲学",
+"reading": "てつがく",
+"meanings": [
+"philosophy"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "4b1cb88257",
+"level": "N3",
+"word": "手伝い",
+"reading": "てつだい",
+"meanings": [
+"help",
+"helper",
+"assistant"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "9ed2c14da0",
+"level": "N3",
+"word": "徹底",
+"reading": "てってい",
+"meanings": [
+"thoroughness",
+"completeness"
+],
+"pos": [
+"n",
+"vs",
+"vt",
+"vi"
+]
+},
+{
+"id": "7eedda811b",
+"level": "N3",
+"word": "鉄道",
+"reading": "てつどう",
+"meanings": [
+"railroad"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "70e6480c13",
+"level": "N3",
+"word": "徹夜",
+"reading": "てつや",
+"meanings": [
+"all night",
+"all night vigil",
+"sleepless night"
+],
+"pos": [
+"n",
+"vs",
+"vi",
+"adj-no"
+]
+},
+{
+"id": "feff56f582",
+"level": "N3",
+"word": "手間",
+"reading": "てま",
+"meanings": [
+"time",
+"labour"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b18b85729e",
+"level": "N3",
+"word": "デモ",
+"reading": "デモ",
+"meanings": [
+"(abbreviation) demo",
+"demonstration"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "206cb49bde",
+"level": "N3",
+"word": "典型",
+"reading": "てんけい",
+"meanings": [
+"type",
+"pattern",
+"archetypal"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "f0031b987d",
+"level": "N3",
+"word": "天候",
+"reading": "てんこう",
+"meanings": [
+"weather"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "626076af0e",
+"level": "N3",
+"word": "電子",
+"reading": "でんし",
+"meanings": [
+"electron"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "8f4da6b41b",
+"level": "N3",
+"word": "テント",
+"reading": "テント",
+"meanings": [
+"tent"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "29d4d2cb7d",
+"level": "N3",
+"word": "伝統",
+"reading": "でんとう",
+"meanings": [
+"tradition",
+"convention"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "d8f0837321",
+"level": "N3",
+"word": "天然",
+"reading": "てんねん",
+"meanings": [
+"nature",
+"spontaneity"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "e4c028044a",
+"level": "N3",
+"word": "問い",
+"reading": "とい",
+"meanings": [
+"question",
+"query"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "6a86cad697",
+"level": "N3",
+"word": "党",
+"reading": "とう",
+"meanings": [
+"party (political)"
+],
+"pos": [
+"n",
+"n-suf"
+]
+},
+{
+"id": "8e02fa0ef4",
+"level": "N3",
+"word": "塔",
+"reading": "とう",
+"meanings": [
+"tower",
+"pagoda"
+],
+"pos": [
+"n",
+"n-suf"
+]
+},
+{
+"id": "2bf06d30d9",
+"level": "N3",
+"word": "答案",
+"reading": "とうあん",
+"meanings": [
+"examination paper",
+"examination script"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "ab3d3e2bd7",
+"level": "N3",
+"word": "同一",
+"reading": "どういつ",
+"meanings": [
+"identity",
+"sameness",
+"similarity"
+],
+"pos": [
+"adj-no",
+"adj-na"
+]
+},
+{
+"id": "5750d76e14",
+"level": "N3",
+"word": "どうか",
+"reading": "どうか",
+"meanings": [
+"copper coin"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "0197af118e",
+"level": "N3",
+"word": "当時",
+"reading": "とうじ",
+"meanings": [
+"at that time",
+"in those days"
+],
+"pos": [
+"n",
+"adv"
+]
+},
+{
+"id": "271ffb6876",
+"level": "N3",
+"word": "動詞",
+"reading": "どうし",
+"meanings": [
+"verb"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "4e4e228253",
+"level": "N3",
+"word": "同時",
+"reading": "どうじ",
+"meanings": [
+"simultaneous(ly)",
+"concurrent",
+"same time",
+"synchronous"
+],
+"pos": [
+"adj-f"
+]
+},
+{
+"id": "b9f82a4617",
+"level": "N3",
+"word": "どうしても",
+"reading": "どうしても",
+"meanings": [
+"by all means",
+"at any cost",
+"no matter what"
+],
+"pos": [
+"exp",
+"adv"
+]
+},
+{
+"id": "c85827d209",
+"level": "N3",
+"word": "到着",
+"reading": "とうちゃく",
+"meanings": [
+"arrival"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "5c2b71ef11",
+"level": "N3",
+"word": "道徳",
+"reading": "どうとく",
+"meanings": [
+"morals"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "17dc7366d9",
+"level": "N3",
+"word": "投票",
+"reading": "とうひょう",
+"meanings": [
+"voting",
+"poll"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "b9d02a8165",
+"level": "N3",
+"word": "同様",
+"reading": "どうよう",
+"meanings": [
+"identical",
+"equal to",
+"same (kind)",
+"like"
+],
+"pos": [
+"adj-no",
+"adj-na",
+"n",
+"n-suf"
+]
+},
+{
+"id": "d2fd46f58a",
+"level": "N3",
+"word": "同僚",
+"reading": "どうりょう",
+"meanings": [
+"coworker",
+"colleague",
+"associate"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "f6da4441b7",
+"level": "N3",
+"word": "道路",
+"reading": "どうろ",
+"meanings": [
+"road",
+"highway"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "8d8001f8cf",
+"level": "N3",
+"word": "通す",
+"reading": "とおす",
+"meanings": [
+"to let pass",
+"to overlook",
+"to continue"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "6763e0f981",
+"level": "N3",
+"word": "通り",
+"reading": "とおり",
+"meanings": [
+"in accordance with ~",
+"following ~",
+"~ Street",
+"~ Avenue"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "c1ddd6b914",
+"level": "N3",
+"word": "通り過ぎる",
+"reading": "とおりすぎる",
+"meanings": [
+"to pass",
+"to pass through"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "bba3ad9899",
+"level": "N3",
+"word": "都会",
+"reading": "とかい",
+"meanings": [
+"city"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "ff30b33097",
+"level": "N3",
+"word": "時",
+"reading": "とき",
+"meanings": [
+"time",
+"hour",
+"occasion",
+"moment"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "a14ba106bc",
+"level": "N3",
+"word": "解く",
+"reading": "とく",
+"meanings": [
+"to unfasten"
+],
+"pos": [
+"v5k",
+"vt"
+]
+},
+{
+"id": "9ed2e741fa",
+"level": "N3",
+"word": "毒",
+"reading": "どく",
+"meanings": [
+"poison",
+"toxicant"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "f57860a6ca",
+"level": "N3",
+"word": "得意",
+"reading": "とくい",
+"meanings": [
+"pride",
+"triumph",
+"prosperity"
+],
+"pos": [
+"n",
+"adj-na",
+"adj-no"
+]
+},
+{
+"id": "d45a4669a3",
+"level": "N3",
+"word": "読書",
+"reading": "どくしょ",
+"meanings": [
+"reading"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "41766d271a",
+"level": "N3",
+"word": "独身",
+"reading": "どくしん",
+"meanings": [
+"bachelorhood",
+"single",
+"unmarried",
+"celibate"
+],
+"pos": [
+"adj-no",
+"n"
+]
+},
+{
+"id": "9424213f90",
+"level": "N3",
+"word": "特徴",
+"reading": "とくちょう",
+"meanings": [
+"feature",
+"characteristic"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "5bd987a58a",
+"level": "N3",
+"word": "独特",
+"reading": "どくとく",
+"meanings": [
+"peculiarity",
+"uniqueness",
+"characteristic"
+],
+"pos": [
+"n",
+"adj-no",
+"adj-na"
+]
+},
+{
+"id": "0d9e1cfdac",
+"level": "N3",
+"word": "独立",
+"reading": "どくりつ",
+"meanings": [
+"independence (e.g. Ind. Day)",
+"self-support"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "13aa7b864c",
+"level": "N3",
+"word": "解ける",
+"reading": "とける",
+"meanings": [
+"to come untied",
+"to come apart"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "dce7ebe444",
+"level": "N3",
+"word": "どこか",
+"reading": "どこか",
+"meanings": [
+"somewhere",
+"anywhere"
+],
+"pos": [
+"n",
+"adv"
+]
+},
+{
+"id": "4fa73fd5b1",
+"level": "N3",
+"word": "ところが",
+"reading": "ところが",
+"meanings": [
+"however",
+"while",
+"even if"
+],
+"pos": [
+"conj"
+]
+},
+{
+"id": "af617a11ed",
+"level": "N3",
+"word": "ところで",
+"reading": "ところで",
+"meanings": [
+"by the way",
+"even if",
+"no matter what"
+],
+"pos": [
+"prt",
+"conj"
+]
+},
+{
+"id": "adddc0dcc8",
+"level": "N3",
+"word": "登山",
+"reading": "とざん",
+"meanings": [
+"mountain-climbing"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "142b45f619",
+"level": "N3",
+"word": "都市",
+"reading": "とし",
+"meanings": [
+"town",
+"city",
+"municipal",
+"urban"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "54e840405e",
+"level": "N3",
+"word": "年月",
+"reading": "としつき",
+"meanings": [
+"months and years"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "c660f5b541",
+"level": "N3",
+"word": "図書",
+"reading": "としょ",
+"meanings": [
+"books"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "2af3aed135",
+"level": "N3",
+"word": "年寄",
+"reading": "としより",
+"meanings": [
+"old people",
+"the aged"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "e599741fb6",
+"level": "N3",
+"word": "閉じる",
+"reading": "とじる",
+"meanings": [
+"to close (e.g. book, eyes)",
+"to shut"
+],
+"pos": [
+"v1",
+"vt",
+"vi"
+]
+},
+{
+"id": "5b36334b8a",
+"level": "N3",
+"word": "途端",
+"reading": "とたん",
+"meanings": [
+"just (now, at the moment, etc.)"
+],
+"pos": [
+"n",
+"adv"
+]
+},
+{
+"id": "30dc28fcf5",
+"level": "N3",
+"word": "土地",
+"reading": "とち",
+"meanings": [
+"plot of land",
+"lot",
+"soil"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b0fe689407",
+"level": "N3",
+"word": "突然",
+"reading": "とつぜん",
+"meanings": [
+"abruptly",
+"suddenly",
+"unexpectedly",
+"all at once"
+],
+"pos": [
+"adj-no",
+"adj-na",
+"adv"
+]
+},
+{
+"id": "7ea8d83553",
+"level": "N3",
+"word": "トップ",
+"reading": "トップ",
+"meanings": [
+"top"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "37b92c0329",
+"level": "N3",
+"word": "届く",
+"reading": "とどく",
+"meanings": [
+"to reach"
+],
+"pos": [
+"v5k",
+"vi"
+]
+},
+{
+"id": "5f300646e4",
+"level": "N3",
+"word": "とにかく",
+"reading": "とにかく",
+"meanings": [
+"anyhow",
+"at any rate",
+"anyway",
+"somehow or other",
+"generally speaking",
+"in any case"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "d07f542720",
+"level": "N3",
+"word": "飛ばす",
+"reading": "とばす",
+"meanings": [
+"to skip over",
+"to omit"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "b4d7ffd3f9",
+"level": "N3",
+"word": "飛び出す",
+"reading": "とびだす",
+"meanings": [
+"to jump out",
+"to rush out",
+"to fly out"
+],
+"pos": [
+"v5s",
+"vi"
+]
+},
+{
+"id": "4591eb1d00",
+"level": "N3",
+"word": "留める",
+"reading": "とめる",
+"meanings": [
+"to fasten",
+"to turn off",
+"to detain"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "8b4138b415",
+"level": "N3",
+"word": "友",
+"reading": "とも",
+"meanings": [
+"friend",
+"companion",
+"pal"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "89564cdaf0",
+"level": "N3",
+"word": "共に",
+"reading": "ともに",
+"meanings": [
+"sharing with",
+"participate in"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "94cd75297e",
+"level": "N3",
+"word": "土曜",
+"reading": "どよう",
+"meanings": [
+"Saturday"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "7feb0c183f",
+"level": "N3",
+"word": "虎",
+"reading": "とら",
+"meanings": [
+"tiger"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "87d53d42f3",
+"level": "N3",
+"word": "ドライブ",
+"reading": "ドライブ",
+"meanings": [
+"drive",
+"trip by car",
+"driving"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "42d999cbab",
+"level": "N3",
+"word": "トラック",
+"reading": "トラック",
+"meanings": [
+"truck",
+"(running) track"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "bcadb9720d",
+"level": "N3",
+"word": "ドラマ",
+"reading": "ドラマ",
+"meanings": [
+"drama"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "e4e30dab43",
+"level": "N3",
+"word": "トランプ",
+"reading": "トランプ",
+"meanings": [
+"playing cards (lit: trump)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "142fcb9705",
+"level": "N3",
+"word": "取り上げる",
+"reading": "とりあげる",
+"meanings": [
+"to take up",
+"to pick up",
+"to disqualify",
+"to confiscate",
+"to deprive"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "15f5aaa2cc",
+"level": "N3",
+"word": "努力",
+"reading": "どりょく",
+"meanings": [
+"great effort",
+"exertion",
+"endeavour",
+"effort"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "e8e0e10e57",
+"level": "N3",
+"word": "ドレス",
+"reading": "ドレス",
+"meanings": [
+"dress"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "58c5df73fd",
+"level": "N3",
+"word": "取れる",
+"reading": "とれる",
+"meanings": [
+"to come off",
+"to be taken off",
+"to be removed"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "145a15c354",
+"level": "N3",
+"word": "泥",
+"reading": "どろ",
+"meanings": [
+"mud"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "6556dc10d1",
+"level": "N3",
+"word": "トン",
+"reading": "トン",
+"meanings": [
+"ton"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "43bc725de0",
+"level": "N3",
+"word": "とんでもない",
+"reading": "とんでもない",
+"meanings": [
+"unexpected",
+"offensive",
+"What a thing to say!",
+"No way!"
+],
+"pos": [
+"int"
+]
+},
+{
+"id": "2def0fe8be",
+"level": "N3",
+"word": "どんな",
+"reading": "どんな",
+"meanings": [
+"what",
+"what kind of"
+],
+"pos": [
+"adj-pn"
+]
+},
+{
+"id": "954f0401d2",
+"level": "N3",
+"word": "どんなに",
+"reading": "どんなに",
+"meanings": [
+"how",
+"how much"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "a6e18afc55",
+"level": "N3",
+"word": "トンネル",
+"reading": "トンネル",
+"meanings": [
+"tunnel"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "fcdc62db50",
+"level": "N3",
+"word": "名",
+"reading": "な",
+"meanings": [
+"name",
+"reputation"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "15bfdc638d",
+"level": "N3",
+"word": "内容",
+"reading": "ないよう",
+"meanings": [
+"subject",
+"contents",
+"matter",
+"substance",
+"detail",
+"import"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "d811ee3160",
+"level": "N3",
+"word": "なお",
+"reading": "なお",
+"meanings": [
+"still",
+"yet"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "cd33b27e9a",
+"level": "N3",
+"word": "仲",
+"reading": "なか",
+"meanings": [
+"relation",
+"relationship"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "8a2b4c5ed1",
+"level": "N3",
+"word": "流す",
+"reading": "ながす",
+"meanings": [
+"to drain",
+"to float",
+"to shed (blood, tears)",
+"to cruise (e.g. taxi)"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "5564da9929",
+"level": "N3",
+"word": "半ば",
+"reading": "なかば",
+"meanings": [
+"middle",
+"half",
+"semi",
+"halfway",
+"partly"
+],
+"pos": [
+"n",
+"n-suf"
+]
+},
+{
+"id": "124f4d078f",
+"level": "N3",
+"word": "仲間",
+"reading": "なかま",
+"meanings": [
+"company",
+"fellow",
+"colleague",
+"associate"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "c3a05b3d90",
+"level": "N3",
+"word": "眺め",
+"reading": "ながめ",
+"meanings": [
+"scene",
+"view",
+"prospect",
+"outlook"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "402b531dd3",
+"level": "N3",
+"word": "眺める",
+"reading": "ながめる",
+"meanings": [
+"to view",
+"to gaze at"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "a588d2a3e0",
+"level": "N3",
+"word": "流れ",
+"reading": "ながれ",
+"meanings": [
+"stream",
+"current"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b7b23bf678",
+"level": "N3",
+"word": "流れる",
+"reading": "ながれる",
+"meanings": [
+"to stream",
+"to flow",
+"to run (ink)",
+"to be washed away"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "28631b73ea",
+"level": "N3",
+"word": "無し",
+"reading": "なし",
+"meanings": [
+"without"
+],
+"pos": [
+"n",
+"n-suf"
+]
+},
+{
+"id": "de314c95de",
+"level": "N3",
+"word": "なぜなら",
+"reading": "なぜなら",
+"meanings": [
+"because"
+],
+"pos": [
+"conj"
+]
+},
+{
+"id": "10b368ca88",
+"level": "N3",
+"word": "謎",
+"reading": "なぞ",
+"meanings": [
+"riddle",
+"puzzle",
+"enigma"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "8b63615acb",
+"level": "N3",
+"word": "納得",
+"reading": "なっとく",
+"meanings": [
+"consent",
+"assent",
+"understanding"
+],
+"pos": [
+"n",
+"vs",
+"vt",
+"vi"
+]
+},
+{
+"id": "9d47958486",
+"level": "N3",
+"word": "何",
+"reading": "なに",
+"meanings": [
+"what"
+],
+"pos": [
+"pn"
+]
+},
+{
+"id": "08f3d1eb54",
+"level": "N3",
+"word": "何か",
+"reading": "なにか",
+"meanings": [
+"something"
+],
+"pos": [
+"pn"
+]
+},
+{
+"id": "5efa5daa2b",
+"level": "N3",
+"word": "なにも",
+"reading": "なにも",
+"meanings": [
+"nothing"
+],
+"pos": [
+"exp"
+]
+},
+{
+"id": "9ede43e44c",
+"level": "N3",
+"word": "鍋",
+"reading": "なべ",
+"meanings": [
+"saucepan",
+"pot"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "04f80af544",
+"level": "N3",
+"word": "生",
+"reading": "なま",
+"meanings": [
+"draft (beer)",
+"raw",
+"unprocessed"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "6e5fe06358",
+"level": "N3",
+"word": "怠ける",
+"reading": "なまける",
+"meanings": [
+"to be idle",
+"to neglect"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "cae492d243",
+"level": "N3",
+"word": "波",
+"reading": "なみ",
+"meanings": [
+"wave"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "037925a6d6",
+"level": "N3",
+"word": "涙",
+"reading": "なみだ",
+"meanings": [
+"tear"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "7f56822dfc",
+"level": "N3",
+"word": "悩む",
+"reading": "なやむ",
+"meanings": [
+"to be worried",
+"to be troubled"
+],
+"pos": [
+"v5m",
+"vi"
+]
+},
+{
+"id": "0989459c37",
+"level": "N3",
+"word": "縄",
+"reading": "なわ",
+"meanings": [
+"rope",
+"hemp"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "2d389db4db",
+"level": "N3",
+"word": "何で",
+"reading": "なんで",
+"meanings": [
+"Why?",
+"What for?"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "9ebc3edd19",
+"level": "N3",
+"word": "何でも",
+"reading": "なんでも",
+"meanings": [
+"by all means",
+"everything"
+],
+"pos": [
+"exp"
+]
+},
+{
+"id": "39dd361425",
+"level": "N3",
+"word": "何とか",
+"reading": "なんとか",
+"meanings": [
+"somehow",
+"anyhow",
+"one way or another"
+],
+"pos": [
+"adv",
+"vs"
+]
+},
+{
+"id": "395b9a867b",
+"level": "N3",
+"word": "似合う",
+"reading": "にあう",
+"meanings": [
+"to suit",
+"to match",
+"to become",
+"to be like"
+],
+"pos": [
+"v5u",
+"vi"
+]
+},
+{
+"id": "b01e686ddf",
+"level": "N3",
+"word": "苦手",
+"reading": "にがて",
+"meanings": [
+"poor (at)",
+"weak (in)",
+"dislike (of)"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "d0ffc4ad62",
+"level": "N3",
+"word": "握る",
+"reading": "にぎる",
+"meanings": [
+"to grasp",
+"to seize",
+"to mould sushi"
+],
+"pos": [
+"v5r",
+"vt"
+]
+},
+{
+"id": "b115c24eac",
+"level": "N3",
+"word": "日",
+"reading": "にち",
+"meanings": [
+"day (of the month)",
+"counter for days",
+"Sunday (abbreviation)"
+],
+"pos": [
+"suf"
+]
+},
+{
+"id": "8906b928b2",
+"level": "N3",
+"word": "日常",
+"reading": "にちじょう",
+"meanings": [
+"ordinary",
+"regular",
+"everyday",
+"usual"
+],
+"pos": [
+"adj-no",
+"n",
+"adv"
+]
+},
+{
+"id": "183905b21d",
+"level": "N3",
+"word": "日曜",
+"reading": "にちよう",
+"meanings": [
+"Sunday"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "2128a2cade",
+"level": "N3",
+"word": "日光",
+"reading": "にっこう",
+"meanings": [
+"sunlight"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "fca12641c2",
+"level": "N3",
+"word": "にっこり",
+"reading": "にっこり",
+"meanings": [
+"smile sweetly",
+"smile",
+"grin"
+],
+"pos": [
+"adv",
+"adv-to",
+"vs"
+]
+},
+{
+"id": "5ae490b220",
+"level": "N3",
+"word": "日中",
+"reading": "にっちゅう",
+"meanings": [
+"daytime",
+"broad daylight"
+],
+"pos": [
+"n",
+"adv"
+]
+},
+{
+"id": "831bd5addd",
+"level": "N3",
+"word": "日本",
+"reading": "にっぽん",
+"meanings": [
+"Japan"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "9fafb3a7a8",
+"level": "N3",
+"word": "入場",
+"reading": "にゅうじょう",
+"meanings": [
+"entrance",
+"admission",
+"entering"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "81d5a1e831",
+"level": "N3",
+"word": "人気",
+"reading": "にんき",
+"meanings": [
+"popularity",
+"public favor"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "7f4e93c10e",
+"level": "N3",
+"word": "人間",
+"reading": "にんげん",
+"meanings": [
+"human being",
+"man",
+"person"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "d40e2575e0",
+"level": "N3",
+"word": "抜く",
+"reading": "ぬく",
+"meanings": [
+"to extract",
+"to omit",
+"to surpass",
+"to draw out",
+"to unplug"
+],
+"pos": [
+"v5k",
+"vt"
+]
+},
+{
+"id": "8af7987ba6",
+"level": "N3",
+"word": "抜ける",
+"reading": "ぬける",
+"meanings": [
+"to come out",
+"to fall out",
+"to be omitted"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "04380e6c35",
+"level": "N3",
+"word": "布",
+"reading": "ぬの",
+"meanings": [
+"cloth"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "20b5089feb",
+"level": "N3",
+"word": "ね",
+"reading": "ね",
+"meanings": [
+"value",
+"price",
+"cost",
+"worth",
+"merit"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "e7a5df28c0",
+"level": "N3",
+"word": "根",
+"reading": "ね",
+"meanings": [
+"root"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "4d7cbebb57",
+"level": "N3",
+"word": "願い",
+"reading": "ねがい",
+"meanings": [
+"desire",
+"wish",
+"request"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "7846a5b95f",
+"level": "N3",
+"word": "願う",
+"reading": "ねがう",
+"meanings": [
+"to desire",
+"to wish",
+"to request"
+],
+"pos": [
+"v5u",
+"vt"
+]
+},
+{
+"id": "38191588bb",
+"level": "N3",
+"word": "鼠",
+"reading": "ねずみ",
+"meanings": [
+"mouse",
+"rat",
+"dark gray",
+"slate color"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b27ee03550",
+"level": "N3",
+"word": "熱帯",
+"reading": "ねったい",
+"meanings": [
+"tropics"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "c03a75fe96",
+"level": "N3",
+"word": "熱中",
+"reading": "ねっちゅう",
+"meanings": [
+"nuts!",
+"enthusiasm",
+"zeal",
+"mania"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "317aef42d7",
+"level": "N3",
+"word": "年間",
+"reading": "ねんかん",
+"meanings": [
+"year"
+],
+"pos": [
+"n",
+"adv"
+]
+},
+{
+"id": "182db962d0",
+"level": "N3",
+"word": "年中",
+"reading": "ねんじゅう",
+"meanings": [
+"whole year",
+"always",
+"everyday"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "df15c38d0a",
+"level": "N3",
+"word": "年代",
+"reading": "ねんだい",
+"meanings": [
+"age",
+"era",
+"period",
+"date"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "3acd232764",
+"level": "N3",
+"word": "年齢",
+"reading": "ねんれい",
+"meanings": [
+"age",
+"years"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "413bbde60b",
+"level": "N3",
+"word": "野",
+"reading": "の",
+"meanings": [
+"field"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "8ae84a079b",
+"level": "N3",
+"word": "能",
+"reading": "のう",
+"meanings": [
+"being skilled in",
+"nicely",
+"properly"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "1e1423597b",
+"level": "N3",
+"word": "農家",
+"reading": "のうか",
+"meanings": [
+"farmer",
+"farm family"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "e0e16ed29e",
+"level": "N3",
+"word": "農業",
+"reading": "のうぎょう",
+"meanings": [
+"agriculture"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "01d17e5891",
+"level": "N3",
+"word": "農民",
+"reading": "のうみん",
+"meanings": [
+"farmers",
+"peasants"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "2cc68f1162",
+"level": "N3",
+"word": "能力",
+"reading": "のうりょく",
+"meanings": [
+"ability",
+"faculty"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "05717efa73",
+"level": "N3",
+"word": "ノー",
+"reading": "ノー",
+"meanings": [
+"no"
+],
+"pos": [
+"int"
+]
+},
+{
+"id": "34669ba2b8",
+"level": "N3",
+"word": "軒",
+"reading": "のき",
+"meanings": [
+"eaves"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "a5cf314cf9",
+"level": "N3",
+"word": "残す",
+"reading": "のこす",
+"meanings": [
+"to leave (behind, over)",
+"to bequeath",
+"to save",
+"to reserve"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "17409802d5",
+"level": "N3",
+"word": "残り",
+"reading": "のこり",
+"meanings": [
+"remnant",
+"residue",
+"remaining",
+"left-over"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "31f735aed4",
+"level": "N3",
+"word": "乗せる",
+"reading": "のせる",
+"meanings": [
+"to place on (something)",
+"to take on board",
+"to give a ride"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "27fcc1be98",
+"level": "N3",
+"word": "除く",
+"reading": "のぞく",
+"meanings": [
+"to remove",
+"to exclude",
+"to except"
+],
+"pos": [
+"v5k",
+"vt"
+]
+},
+{
+"id": "8d2c6575c2",
+"level": "N3",
+"word": "望み",
+"reading": "のぞみ",
+"meanings": [
+"wish",
+"desire",
+"(a) hope"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "767cb5e2e6",
+"level": "N3",
+"word": "望む",
+"reading": "のぞむ",
+"meanings": [
+"to desire",
+"to wish for",
+"to see",
+"to command (a view of)"
+],
+"pos": [
+"v5m",
+"vt"
+]
+},
+{
+"id": "aeff3c4d96",
+"level": "N3",
+"word": "後",
+"reading": "のち",
+"meanings": [
+"afterwards",
+"since then",
+"in the future"
+],
+"pos": [
+"n",
+"adv",
+"adj-no"
+]
+},
+{
+"id": "4850008747",
+"level": "N3",
+"word": "ノック",
+"reading": "ノック",
+"meanings": [
+"knock",
+"fungo (baseball)"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "ad88f57a3e",
+"level": "N3",
+"word": "伸ばす",
+"reading": "のばす",
+"meanings": [
+"to lengthen",
+"to stretch",
+"to reach out",
+"to grow (beard)"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "d5c6b153f1",
+"level": "N3",
+"word": "伸びる",
+"reading": "のびる",
+"meanings": [
+"to stretch",
+"to extend",
+"to make progress",
+"to grow (beard, body height)"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "703453c2a3",
+"level": "N3",
+"word": "述べる",
+"reading": "のべる",
+"meanings": [
+"to state",
+"to express",
+"to mention"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "9df259e377",
+"level": "N3",
+"word": "昇る",
+"reading": "のぼる",
+"meanings": [
+"to arise",
+"to ascend",
+"to go up"
+],
+"pos": [
+"v5r",
+"vi"
+]
+},
+{
+"id": "2af9a4e3e2",
+"level": "N3",
+"word": "のんびり",
+"reading": "のんびり",
+"meanings": [
+"carefree",
+"at leisure"
+],
+"pos": [
+"adv",
+"adv-to"
+]
+},
+{
+"id": "ca4cbf878d",
+"level": "N3",
+"word": "場",
+"reading": "ば",
+"meanings": [
+"place",
+"field (physics)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "08f58c3770",
+"level": "N3",
+"word": "はあ",
+"reading": "はあ",
+"meanings": [
+"yes",
+"indeed",
+"well"
+],
+"pos": [
+"int"
+]
+},
+{
+"id": "2add5a6bbc",
+"level": "N3",
+"word": "パーセント",
+"reading": "パーセント",
+"meanings": [
+"percent"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "9a9e81c6ea",
+"level": "N3",
+"word": "灰",
+"reading": "はい",
+"meanings": [
+"ash"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "f59cd43bb0",
+"level": "N3",
+"word": "バイオリン",
+"reading": "バイオリン",
+"meanings": [
+"violin"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "34eebaa289",
+"level": "N3",
+"word": "ハイキング",
+"reading": "ハイキング",
+"meanings": [
+"hiking"
+],
+"pos": [
+"n",
+"vs",
+"vt",
+"vi"
+]
+},
+{
+"id": "c4a32b9e77",
+"level": "N3",
+"word": "配達",
+"reading": "はいたつ",
+"meanings": [
+"delivery",
+"distribution"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "f33e48aa94",
+"level": "N3",
+"word": "パイプ",
+"reading": "パイプ",
+"meanings": [
+"pipe",
+"tube",
+"channels",
+"official or otherwise"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "66d7ecadb1",
+"level": "N3",
+"word": "俳優",
+"reading": "はいゆう",
+"meanings": [
+"actor",
+"actress",
+"player",
+"performer"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b937b60491",
+"level": "N3",
+"word": "パイロット",
+"reading": "パイロット",
+"meanings": [
+"pilot"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "2ebc49d99b",
+"level": "N3",
+"word": "墓",
+"reading": "はか",
+"meanings": [
+"grave",
+"tomb"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "9d6bea343d",
+"level": "N3",
+"word": "馬鹿",
+"reading": "ばか",
+"meanings": [
+"fool",
+"idiot",
+"trivial matter",
+"folly"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "5b445da9d8",
+"level": "N3",
+"word": "博士",
+"reading": "はかせ",
+"meanings": [
+"doctorate",
+"PhD"
+],
+"pos": [
+"n",
+"n-suf"
+]
+},
+{
+"id": "6b741662df",
+"level": "N3",
+"word": "計る",
+"reading": "はかる",
+"meanings": [
+"to measure",
+"to weigh",
+"to survey"
+],
+"pos": [
+"v5r",
+"vt"
+]
+},
+{
+"id": "ee21222664",
+"level": "N3",
+"word": "吐く",
+"reading": "はく",
+"meanings": [
+"to breathe",
+"to tell (lies)",
+"to vomit",
+"to disgorge"
+],
+"pos": [
+"v5k",
+"vt"
+]
+},
+{
+"id": "00612a587a",
+"level": "N3",
+"word": "拍手",
+"reading": "はくしゅ",
+"meanings": [
+"clapping hands",
+"applause"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "978071c13d",
+"level": "N3",
+"word": "莫大",
+"reading": "ばくだい",
+"meanings": [
+"enormous",
+"vast"
+],
+"pos": [
+"adj-na"
+]
+},
+{
+"id": "30f0623cca",
+"level": "N3",
+"word": "爆発",
+"reading": "ばくはつ",
+"meanings": [
+"explosion",
+"detonation",
+"eruption"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "24194e1918",
+"level": "N3",
+"word": "博物館",
+"reading": "はくぶつかん",
+"meanings": [
+"museum"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "049907be5e",
+"level": "N3",
+"word": "激しい",
+"reading": "はげしい",
+"meanings": [
+"violent",
+"vehement",
+"intense"
+],
+"pos": [
+"adj-i"
+]
+},
+{
+"id": "c4b4192429",
+"level": "N3",
+"word": "はさみ",
+"reading": "はさみ",
+"meanings": [
+"scissors"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b3726f128a",
+"level": "N3",
+"word": "破産",
+"reading": "はさん",
+"meanings": [
+"(personal) bankruptcy"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "65a7467d0d",
+"level": "N3",
+"word": "端",
+"reading": "はし",
+"meanings": [
+"end (e.g. of street)",
+"edge",
+"tip",
+"margin",
+"point"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "74d028f694",
+"level": "N3",
+"word": "始まり",
+"reading": "はじまり",
+"meanings": [
+"origin",
+"beginning"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "242a0bb0ea",
+"level": "N3",
+"word": "パス",
+"reading": "パス",
+"meanings": [
+"path",
+"pass (in games)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "54c6e05e14",
+"level": "N3",
+"word": "外す",
+"reading": "はずす",
+"meanings": [
+"to unfasten",
+"to remove"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "c795debc35",
+"level": "N3",
+"word": "パスポート",
+"reading": "パスポート",
+"meanings": [
+"passport"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "847b06de33",
+"level": "N3",
+"word": "旗",
+"reading": "はた",
+"meanings": [
+"flag"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "05e4ce3a94",
+"level": "N3",
+"word": "肌",
+"reading": "はだ",
+"meanings": [
+"skin"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "e512ff0725",
+"level": "N3",
+"word": "裸",
+"reading": "はだか",
+"meanings": [
+"naked",
+"nude"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "f4fd9f8f66",
+"level": "N3",
+"word": "畑",
+"reading": "はたけ",
+"meanings": [
+"field"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "5d26933404",
+"level": "N3",
+"word": "働き",
+"reading": "はたらき",
+"meanings": [
+"work",
+"labor"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "7a68fa62f5",
+"level": "N3",
+"word": "バッグ",
+"reading": "バッグ",
+"meanings": [
+"bag",
+"bug"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b9edd7963b",
+"level": "N3",
+"word": "発見",
+"reading": "はっけん",
+"meanings": [
+"discovery",
+"detection",
+"finding"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "7b2ac42cba",
+"level": "N3",
+"word": "発行",
+"reading": "はっこう",
+"meanings": [
+"issue (publications)"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "215a642747",
+"level": "N3",
+"word": "発車",
+"reading": "はっしゃ",
+"meanings": [
+"departure of a vehicle"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "b57a219b43",
+"level": "N3",
+"word": "罰する",
+"reading": "ばっする",
+"meanings": [
+"to punish",
+"to penalize"
+],
+"pos": [
+"vs-s",
+"vt"
+]
+},
+{
+"id": "7bf9f0076e",
+"level": "N3",
+"word": "発達",
+"reading": "はったつ",
+"meanings": [
+"development",
+"growth"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "1038a70c3e",
+"level": "N3",
+"word": "ばったり",
+"reading": "ばったり",
+"meanings": [
+"with a clash (thud)",
+"with a bang",
+"plump",
+"flop"
+],
+"pos": [
+"adv",
+"adv-to"
+]
+},
+{
+"id": "b5b2724a2f",
+"level": "N3",
+"word": "発展",
+"reading": "はってん",
+"meanings": [
+"development",
+"growth"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "738eff46a4",
+"level": "N3",
+"word": "発表",
+"reading": "はっぴょう",
+"meanings": [
+"announcement",
+"publication"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "d9d15cf734",
+"level": "N3",
+"word": "発明",
+"reading": "はつめい",
+"meanings": [
+"invention"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "cc409e931a",
+"level": "N3",
+"word": "話し合う",
+"reading": "はなしあう",
+"meanings": [
+"to discuss",
+"to talk together"
+],
+"pos": [
+"v5u",
+"vt"
+]
+},
+{
+"id": "aa0b4f216c",
+"level": "N3",
+"word": "放す",
+"reading": "はなす",
+"meanings": [
+"to separate",
+"to set free"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "156957f2ed",
+"level": "N3",
+"word": "離す",
+"reading": "はなす",
+"meanings": [
+"to part",
+"divide",
+"separate"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "0024055e8e",
+"level": "N3",
+"word": "離れる",
+"reading": "はなれる",
+"meanings": [
+"to be separated from",
+"to leave",
+"to go away",
+"to be a long way off"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "a101c852f4",
+"level": "N3",
+"word": "羽",
+"reading": "はね",
+"meanings": [
+"feather",
+"plume",
+"down"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "3fe84c43ef",
+"level": "N3",
+"word": "幅",
+"reading": "はば",
+"meanings": [
+"width",
+"breadth"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "0caca661c5",
+"level": "N3",
+"word": "母親",
+"reading": "ははおや",
+"meanings": [
+"mother"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "a38cde5655",
+"level": "N3",
+"word": "省く",
+"reading": "はぶく",
+"meanings": [
+"to omit",
+"to eliminate",
+"to curtail",
+"to economize"
+],
+"pos": [
+"v5k",
+"vt"
+]
+},
+{
+"id": "f7a2ae495f",
+"level": "N3",
+"word": "場面",
+"reading": "ばめん",
+"meanings": [
+"scene",
+"setting (e.g. of novel)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "3d1e878581",
+"level": "N3",
+"word": "原",
+"reading": "はら",
+"meanings": [
+"field",
+"plain",
+"prairie",
+"tundra",
+"moor",
+"wilderness"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "676b358d1e",
+"level": "N3",
+"word": "腹",
+"reading": "はら",
+"meanings": [
+"abdomen",
+"belly",
+"stomach"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "3e3a15d22b",
+"level": "N3",
+"word": "針",
+"reading": "はり",
+"meanings": [
+"needle",
+"hand (e.g. clock)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "c5af695d0b",
+"level": "N3",
+"word": "張る",
+"reading": "はる",
+"meanings": [
+"to stick",
+"to paste"
+],
+"pos": [
+"v5r",
+"vt"
+]
+},
+{
+"id": "cb012edb7f",
+"level": "N3",
+"word": "バン",
+"reading": "バン",
+"meanings": [
+"bun",
+"van (caravan)",
+"VAN (value-added network)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "7018224dfa",
+"level": "N3",
+"word": "番",
+"reading": "ばん",
+"meanings": [
+"number (in a series)"
+],
+"pos": [
+"n",
+"n-suf"
+]
+},
+{
+"id": "01dda94e77",
+"level": "N3",
+"word": "範囲",
+"reading": "はんい",
+"meanings": [
+"extent",
+"scope",
+"sphere",
+"range"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "8bc52096d2",
+"level": "N3",
+"word": "反抗",
+"reading": "はんこう",
+"meanings": [
+"opposition",
+"resistance"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "5c93fedd45",
+"level": "N3",
+"word": "犯罪",
+"reading": "はんざい",
+"meanings": [
+"crime"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "ba9c96795d",
+"level": "N3",
+"word": "ハンサム",
+"reading": "ハンサム",
+"meanings": [
+"handsome"
+],
+"pos": [
+"adj-na"
+]
+},
+{
+"id": "3b88931b34",
+"level": "N3",
+"word": "判断",
+"reading": "はんだん",
+"meanings": [
+"judgement",
+"decision"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "bd0d639908",
+"level": "N3",
+"word": "犯人",
+"reading": "はんにん",
+"meanings": [
+"offender",
+"criminal"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "f568334fa2",
+"level": "N3",
+"word": "販売",
+"reading": "はんばい",
+"meanings": [
+"sale",
+"selling",
+"marketing"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "de6ed799d8",
+"level": "N3",
+"word": "灯",
+"reading": "ひ",
+"meanings": [
+"light"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "240d8ef155",
+"level": "N3",
+"word": "ビール",
+"reading": "ビール",
+"meanings": [
+"beer"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b2dc319b19",
+"level": "N3",
+"word": "被害",
+"reading": "ひがい",
+"meanings": [
+"damage"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "34372f5e76",
+"level": "N3",
+"word": "比較",
+"reading": "ひかく",
+"meanings": [
+"comparison"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "c33ec335f7",
+"level": "N3",
+"word": "轢く",
+"reading": "ひく",
+"meanings": [
+"to run somebody over (with vehicle)",
+"to knock someone down"
+],
+"pos": [
+"v5k",
+"vt"
+]
+},
+{
+"id": "f1f3f6775d",
+"level": "N3",
+"word": "ピクニック",
+"reading": "ピクニック",
+"meanings": [
+"picnic"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "65f02872e4",
+"level": "N3",
+"word": "悲劇",
+"reading": "ひげき",
+"meanings": [
+"tragedy"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "c62c71907b",
+"level": "N3",
+"word": "飛行",
+"reading": "ひこう",
+"meanings": [
+"aviation"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "908a7a4f49",
+"level": "N3",
+"word": "膝",
+"reading": "ひざ",
+"meanings": [
+"knee",
+"lap"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b0073ea226",
+"level": "N3",
+"word": "非常",
+"reading": "ひじょう",
+"meanings": [
+"emergency",
+"extraordinary",
+"unusual"
+],
+"pos": [
+"adj-na"
+]
+},
+{
+"id": "1b93a0f3b9",
+"level": "N3",
+"word": "美人",
+"reading": "びじん",
+"meanings": [
+"beautiful person (woman)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "44862c8e57",
+"level": "N3",
+"word": "びっくり",
+"reading": "びっくり",
+"meanings": [
+"be surprised",
+"be amazed",
+"be frightened",
+"astonishment"
+],
+"pos": [
+"vs",
+"vi",
+"adv"
+]
+},
+{
+"id": "91d73df989",
+"level": "N3",
+"word": "日付",
+"reading": "ひづけ",
+"meanings": [
+"date",
+"dating"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b52e17197f",
+"level": "N3",
+"word": "必死",
+"reading": "ひっし",
+"meanings": [
+"inevitable death",
+"desperation",
+"frantic",
+"inevitable result"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "1bd65d97c5",
+"level": "N3",
+"word": "ぴったり",
+"reading": "ぴったり",
+"meanings": [
+"exactly",
+"neatly",
+"sharp"
+],
+"pos": [
+"adv",
+"adv-to",
+"vs"
+]
+},
+{
+"id": "b94c212dad",
+"level": "N3",
+"word": "引っ張る",
+"reading": "ひっぱる",
+"meanings": [
+"to pull",
+"to draw",
+"to stretch",
+"to drag",
+"to pull the ball (baseball)"
+],
+"pos": [
+"v5r",
+"vt"
+]
+},
+{
+"id": "0422a82e00",
+"level": "N3",
+"word": "否定",
+"reading": "ひてい",
+"meanings": [
+"negation",
+"denial",
+"repudiation"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "16c5e91008",
+"level": "N3",
+"word": "ビデオ",
+"reading": "ビデオ",
+"meanings": [
+"video"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "df6f68109a",
+"level": "N3",
+"word": "一言",
+"reading": "ひとこと",
+"meanings": [
+"single word"
+],
+"pos": [
+"n",
+"vs",
+"vt",
+"vi"
+]
+},
+{
+"id": "5ac7d3cf22",
+"level": "N3",
+"word": "人込み",
+"reading": "ひとごみ",
+"meanings": [
+"crowd of people"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "71f52e4f3e",
+"level": "N3",
+"word": "等しい",
+"reading": "ひとしい",
+"meanings": [
+"equal"
+],
+"pos": [
+"adj-i"
+]
+},
+{
+"id": "5cc54de84b",
+"level": "N3",
+"word": "独り",
+"reading": "ひとり",
+"meanings": [
+"alone",
+"unmarried"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "f675c4ff49",
+"level": "N3",
+"word": "一人一人",
+"reading": "ひとりひとり",
+"meanings": [
+"one by one",
+"each",
+"one at a time"
+],
+"pos": [
+"adv",
+"n"
+]
+},
+{
+"id": "d7032c88c5",
+"level": "N3",
+"word": "批判",
+"reading": "ひはん",
+"meanings": [
+"criticism",
+"judgement",
+"comment"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "6997e916e3",
+"level": "N3",
+"word": "批評",
+"reading": "ひひょう",
+"meanings": [
+"criticism",
+"review",
+"commentary"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "c3d0c7fa43",
+"level": "N3",
+"word": "秘密",
+"reading": "ひみつ",
+"meanings": [
+"secret",
+"secrecy"
+],
+"pos": [
+"n",
+"adj-na",
+"adj-no"
+]
+},
+{
+"id": "233a387b5d",
+"level": "N3",
+"word": "微妙",
+"reading": "びみょう",
+"meanings": [
+"delicate",
+"subtle"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "dee0d769c7",
+"level": "N3",
+"word": "紐",
+"reading": "ひも",
+"meanings": [
+"string",
+"cord",
+"pimp"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "ae29f467bd",
+"level": "N3",
+"word": "表",
+"reading": "ひょう",
+"meanings": [
+"table (e.g. Tab 1)",
+"chart",
+"list"
+],
+"pos": [
+"n",
+"n-suf"
+]
+},
+{
+"id": "d684a35bd1",
+"level": "N3",
+"word": "費用",
+"reading": "ひよう",
+"meanings": [
+"cost",
+"expense"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "38664919d1",
+"level": "N3",
+"word": "秒",
+"reading": "びょう",
+"meanings": [
+"second (60th min)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "e53de06680",
+"level": "N3",
+"word": "評価",
+"reading": "ひょうか",
+"meanings": [
+"valuation",
+"estimation",
+"assessment",
+"evaluation"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "4ad9f1ce23",
+"level": "N3",
+"word": "表現",
+"reading": "ひょうげん",
+"meanings": [
+"expression",
+"presentation",
+"representation (math)"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "58e01c0b72",
+"level": "N3",
+"word": "表情",
+"reading": "ひょうじょう",
+"meanings": [
+"facial expression"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "614bded84d",
+"level": "N3",
+"word": "平等",
+"reading": "びょうどう",
+"meanings": [
+"equality (a)",
+"impartiality",
+"evenness"
+],
+"pos": [
+"n",
+"adj-na",
+"adj-no"
+]
+},
+{
+"id": "32b3f86071",
+"level": "N3",
+"word": "評判",
+"reading": "ひょうばん",
+"meanings": [
+"fame",
+"reputation",
+"popularity",
+"arrant"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "82a95bb809",
+"level": "N3",
+"word": "表面",
+"reading": "ひょうめん",
+"meanings": [
+"surface",
+"outside",
+"face",
+"appearance"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "05550395ae",
+"level": "N3",
+"word": "広がる",
+"reading": "ひろがる",
+"meanings": [
+"to spread (out)",
+"to extend",
+"to stretch",
+"to reach to",
+"to get around"
+],
+"pos": [
+"v5r",
+"vi"
+]
+},
+{
+"id": "1ea7451e69",
+"level": "N3",
+"word": "瓶",
+"reading": "びん",
+"meanings": [
+"bottle"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "526233614e",
+"level": "N3",
+"word": "便",
+"reading": "びん",
+"meanings": [
+"flight (e.g. airline flight)",
+"trip (e.g. train trip)",
+"sailing (e.g. ferry voyage)",
+"service"
+],
+"pos": [
+"n",
+"n-suf"
+]
+},
+{
+"id": "18ce3e646d",
+"level": "N3",
+"word": "ピン",
+"reading": "ピン",
+"meanings": [
+"pin"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "41e221bc4d",
+"level": "N3",
+"word": "不",
+"reading": "ふ",
+"meanings": [
+"un",
+"non",
+"negative prefix"
+],
+"pos": [
+"pref"
+]
+},
+{
+"id": "b806544195",
+"level": "N3",
+"word": "不安",
+"reading": "ふあん",
+"meanings": [
+"anxiety",
+"uneasiness",
+"insecurity",
+"suspense"
+],
+"pos": [
+"n",
+"adj-na"
+]
+},
+{
+"id": "360b70b61d",
+"level": "N3",
+"word": "風景",
+"reading": "ふうけい",
+"meanings": [
+"scenery"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "3146d2f2ac",
+"level": "N3",
+"word": "夫婦",
+"reading": "ふうふ",
+"meanings": [
+"married couple",
+"husband and wife"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "0dbafbe052",
+"level": "N3",
+"word": "笛",
+"reading": "ふえ",
+"meanings": [
+"flute",
+"pipe"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "089623da2c",
+"level": "N3",
+"word": "不可",
+"reading": "ふか",
+"meanings": [
+"wrong",
+"bad",
+"improper",
+"unjustifiable",
+"inadvisable"
+],
+"pos": [
+"adj-no",
+"adj-na",
+"n",
+"n-suf"
+]
+},
+{
+"id": "e4b01b085c",
+"level": "N3",
+"word": "武器",
+"reading": "ぶき",
+"meanings": [
+"weapon",
+"arms",
+"ordinance"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "620d3a74b1",
+"level": "N3",
+"word": "服装",
+"reading": "ふくそう",
+"meanings": [
+"garments"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "3dd04815d8",
+"level": "N3",
+"word": "含む",
+"reading": "ふくむ",
+"meanings": [
+"to hold in the mouth",
+"to bear in mind"
+],
+"pos": [
+"v5m",
+"vt"
+]
+},
+{
+"id": "b0b2986a8e",
+"level": "N3",
+"word": "袋",
+"reading": "ふくろ",
+"meanings": [
+"bag",
+"sack"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "85e259586a",
+"level": "N3",
+"word": "不幸",
+"reading": "ふこう",
+"meanings": [
+"unhappiness",
+"sorrow",
+"misfortune",
+"disaster",
+"accident",
+"death"
+],
+"pos": [
+"n",
+"adj-na"
+]
+},
+{
+"id": "f898b4b8d2",
+"level": "N3",
+"word": "節",
+"reading": "ふし",
+"meanings": [
+"tune",
+"tone",
+"knot",
+"knob",
+"point"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b7bd2b9ad8",
+"level": "N3",
+"word": "無事",
+"reading": "ぶじ",
+"meanings": [
+"safety",
+"peace",
+"quietness"
+],
+"pos": [
+"n",
+"adj-na"
+]
+},
+{
+"id": "692f5c5fae",
+"level": "N3",
+"word": "不思議",
+"reading": "ふしぎ",
+"meanings": [
+"mystery",
+"curiosity"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "6ee6c57219",
+"level": "N3",
+"word": "不自由",
+"reading": "ふじゆう",
+"meanings": [
+"discomfort",
+"disability",
+"inconvenience",
+"destitution"
+],
+"pos": [
+"n",
+"adj-na",
+"vs",
+"vi"
+]
+},
+{
+"id": "05eba33435",
+"level": "N3",
+"word": "夫人",
+"reading": "ふじん",
+"meanings": [
+"wife",
+"Mrs",
+"madam"
+],
+"pos": [
+"n",
+"n-suf"
+]
+},
+{
+"id": "d60c9a1ed3",
+"level": "N3",
+"word": "婦人",
+"reading": "ふじん",
+"meanings": [
+"woman",
+"female"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "a221781150",
+"level": "N3",
+"word": "不正",
+"reading": "ふせい",
+"meanings": [
+"injustice",
+"unfairness"
+],
+"pos": [
+"n",
+"adj-na",
+"adj-no"
+]
+},
+{
+"id": "a2dd9b9c3f",
+"level": "N3",
+"word": "防ぐ",
+"reading": "ふせぐ",
+"meanings": [
+"to defend (against)",
+"to protect",
+"to prevent"
+],
+"pos": [
+"v5g",
+"vt"
+]
+},
+{
+"id": "070cf68b21",
+"level": "N3",
+"word": "不足",
+"reading": "ふそく",
+"meanings": [
+"insufficiency",
+"shortage",
+"deficiency",
+"lack",
+"dearth"
+],
+"pos": [
+"n",
+"vs",
+"vi",
+"adj-na"
+]
+},
+{
+"id": "2e83a59cd5",
+"level": "N3",
+"word": "舞台",
+"reading": "ぶたい",
+"meanings": [
+"stage (theatre)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "3303a98af1",
+"level": "N3",
+"word": "双子",
+"reading": "ふたご",
+"meanings": [
+"twins",
+"a twin"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "02a74abcd0",
+"level": "N3",
+"word": "再び",
+"reading": "ふたたび",
+"meanings": [
+"again",
+"once more",
+"a second time"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "38272461d1",
+"level": "N3",
+"word": "普段",
+"reading": "ふだん",
+"meanings": [
+"usually",
+"habitually",
+"ordinarily",
+"always"
+],
+"pos": [
+"n",
+"adv"
+]
+},
+{
+"id": "7f83598742",
+"level": "N3",
+"word": "縁",
+"reading": "ふち",
+"meanings": [
+"rim",
+"brim",
+"edge",
+"brink"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "08fb4b13c1",
+"level": "N3",
+"word": "打つ",
+"reading": "ぶつ",
+"meanings": [
+"to hit",
+"to strike"
+],
+"pos": [
+"v5t",
+"vt"
+]
+},
+{
+"id": "94b721726e",
+"level": "N3",
+"word": "物価",
+"reading": "ぶっか",
+"meanings": [
+"prices of commodities",
+"prices (in general)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "aee461222c",
+"level": "N3",
+"word": "物質",
+"reading": "ぶっしつ",
+"meanings": [
+"material",
+"substance"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "97ccdb5cad",
+"level": "N3",
+"word": "物理",
+"reading": "ぶつり",
+"meanings": [
+"physics"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "68dbed6140",
+"level": "N3",
+"word": "筆",
+"reading": "ふで",
+"meanings": [
+"writing brush"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "347f2ce155",
+"level": "N3",
+"word": "ふと",
+"reading": "ふと",
+"meanings": [
+"suddenly",
+"casually",
+"accidentally",
+"incidentally",
+"unexpectedly",
+"unintentionally"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "144ace6a3f",
+"level": "N3",
+"word": "船",
+"reading": "ふね",
+"meanings": [
+"ship",
+"boat",
+"watercraft",
+"shipping",
+"vessel",
+"steamship"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "8e9d8bfa84",
+"level": "N3",
+"word": "部分",
+"reading": "ぶぶん",
+"meanings": [
+"portion",
+"section",
+"part"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "8f103ca6a0",
+"level": "N3",
+"word": "不平",
+"reading": "ふへい",
+"meanings": [
+"complaint",
+"discontent",
+"dissatisfaction"
+],
+"pos": [
+"n",
+"adj-no",
+"adj-na"
+]
+},
+{
+"id": "3a612acbee",
+"level": "N3",
+"word": "不満",
+"reading": "ふまん",
+"meanings": [
+"dissatisfaction",
+"displeasure",
+"discontent",
+"complaints",
+"unhappiness"
+],
+"pos": [
+"n",
+"adj-na"
+]
+},
+{
+"id": "3fecda87cd",
+"level": "N3",
+"word": "プラス",
+"reading": "プラス",
+"meanings": [
+"plus"
+],
+"pos": [
+"n",
+"vs",
+"vt",
+"conj",
+"pref",
+"suf"
+]
+},
+{
+"id": "e351a6f3de",
+"level": "N3",
+"word": "プラン",
+"reading": "プラン",
+"meanings": [
+"plan"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "133caaa87a",
+"level": "N3",
+"word": "不利",
+"reading": "ふり",
+"meanings": [
+"disadvantage",
+"handicap",
+"unfavorable",
+"drawback"
+],
+"pos": [
+"n",
+"adj-na"
+]
+},
+{
+"id": "f63274b0b2",
+"level": "N3",
+"word": "振る",
+"reading": "ふる",
+"meanings": [
+"to wave",
+"to shake",
+"to swing",
+"to sprinkle",
+"to cast (actor)",
+"to allocate (work)"
+],
+"pos": [
+"v5r",
+"vt"
+]
+},
+{
+"id": "29031b2ba5",
+"level": "N3",
+"word": "震える",
+"reading": "ふるえる",
+"meanings": [
+"to shiver",
+"to shake",
+"to quake"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "24fa33d1a4",
+"level": "N3",
+"word": "ブレーキ",
+"reading": "ブレーキ",
+"meanings": [
+"a brake"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "42ce4a629d",
+"level": "N3",
+"word": "触れる",
+"reading": "ふれる",
+"meanings": [
+"to touch",
+"to be touched",
+"to touch on a subject",
+"to feel",
+"to violate (law, copyright, etc.)",
+"to perceive"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "9cb4c24f0c",
+"level": "N3",
+"word": "プロ",
+"reading": "プロ",
+"meanings": [
+"professional"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "3c5ff54bea",
+"level": "N3",
+"word": "分",
+"reading": "ぶん",
+"meanings": [
+"dividing",
+"part"
+],
+"pos": [
+"n",
+"n-suf"
+]
+},
+{
+"id": "39b0ac16ca",
+"level": "N3",
+"word": "文",
+"reading": "ぶん",
+"meanings": [
+"sentence"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "a12218e8ea",
+"level": "N3",
+"word": "雰囲気",
+"reading": "ふんいき",
+"meanings": [
+"atmosphere (e.g. musical)",
+"mood",
+"ambience"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b393ad2814",
+"level": "N3",
+"word": "分析",
+"reading": "ぶんせき",
+"meanings": [
+"analysis"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "56e2434245",
+"level": "N3",
+"word": "文明",
+"reading": "ぶんめい",
+"meanings": [
+"civilization",
+"culture"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "e3be9063f5",
+"level": "N3",
+"word": "分野",
+"reading": "ぶんや",
+"meanings": [
+"field",
+"sphere",
+"realm",
+"division",
+"branch"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "5083117601",
+"level": "N3",
+"word": "塀",
+"reading": "へい",
+"meanings": [
+"wall",
+"fence"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "5874850a67",
+"level": "N3",
+"word": "平均",
+"reading": "へいきん",
+"meanings": [
+"equilibrium",
+"balance",
+"average",
+"mean"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "98a4d36edd",
+"level": "N3",
+"word": "平和",
+"reading": "へいわ",
+"meanings": [
+"peace",
+"harmony"
+],
+"pos": [
+"n",
+"adj-na"
+]
+},
+{
+"id": "91695e543a",
+"level": "N3",
+"word": "別に",
+"reading": "べつに",
+"meanings": [
+"(not) particularly",
+"nothing"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "a054bbbb20",
+"level": "N3",
+"word": "減らす",
+"reading": "へらす",
+"meanings": [
+"to abate",
+"to decrease",
+"to diminish",
+"to shorten"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "b459e9db8c",
+"level": "N3",
+"word": "減る",
+"reading": "へる",
+"meanings": [
+"to decrease (in size or number)",
+"to diminish",
+"to abate"
+],
+"pos": [
+"v5r",
+"vi"
+]
+},
+{
+"id": "44edce4345",
+"level": "N3",
+"word": "ベルト",
+"reading": "ベルト",
+"meanings": [
+"Belt for western clothes"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "eac8dadcd3",
+"level": "N3",
+"word": "変化",
+"reading": "へんか",
+"meanings": [
+"change",
+"variation",
+"alteration",
+"mutation"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "525af6640e",
+"level": "N3",
+"word": "ペンキ",
+"reading": "ペンキ",
+"meanings": [
+"paint (nl: pek)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "136adbc360",
+"level": "N3",
+"word": "変更",
+"reading": "へんこう",
+"meanings": [
+"change",
+"modification",
+"alteration"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "b696809e2d",
+"level": "N3",
+"word": "ベンチ",
+"reading": "ベンチ",
+"meanings": [
+"bench"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "0e79e4a9e2",
+"level": "N3",
+"word": "弁当",
+"reading": "べんとう",
+"meanings": [
+"box lunch"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "9dda296d47",
+"level": "N3",
+"word": "方",
+"reading": "ほう",
+"meanings": [
+"side"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "e7344aa7e1",
+"level": "N3",
+"word": "法",
+"reading": "ほう",
+"meanings": [
+"Act (law: the X Act)"
+],
+"pos": [
+"n",
+"n-suf"
+]
+},
+{
+"id": "b780931140",
+"level": "N3",
+"word": "棒",
+"reading": "ぼう",
+"meanings": [
+"pole",
+"rod",
+"stick"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "d6ee5e0b7d",
+"level": "N3",
+"word": "冒険",
+"reading": "ぼうけん",
+"meanings": [
+"risk",
+"venture",
+"adventure"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "fcbac4861d",
+"level": "N3",
+"word": "方向",
+"reading": "ほうこう",
+"meanings": [
+"direction",
+"course",
+"way"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "88fc5e477e",
+"level": "N3",
+"word": "報告",
+"reading": "ほうこく",
+"meanings": [
+"report",
+"information"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "cd34099f98",
+"level": "N3",
+"word": "宝石",
+"reading": "ほうせき",
+"meanings": [
+"gem",
+"jewel"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "f5a2f8eace",
+"level": "N3",
+"word": "豊富",
+"reading": "ほうふ",
+"meanings": [
+"abundance",
+"wealth",
+"plenty",
+"bounty"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "edba4848b0",
+"level": "N3",
+"word": "方法",
+"reading": "ほうほう",
+"meanings": [
+"method",
+"manner",
+"way",
+"means",
+"technique"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "9ae027f872",
+"level": "N3",
+"word": "訪問",
+"reading": "ほうもん",
+"meanings": [
+"call",
+"visit"
+],
+"pos": [
+"n",
+"vs",
+"vt",
+"adj-no"
+]
+},
+{
+"id": "98d2fa2ac3",
+"level": "N3",
+"word": "吠える",
+"reading": "ほえる",
+"meanings": [
+"to bark",
+"to bay",
+"to howl",
+"to bellow",
+"to roar",
+"to cry"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "00b4506e25",
+"level": "N3",
+"word": "ボーイ",
+"reading": "ボーイ",
+"meanings": [
+"boy"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b86c6df29f",
+"level": "N3",
+"word": "ボート",
+"reading": "ボート",
+"meanings": [
+"rowing boat"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "e11ef6d7e3",
+"level": "N3",
+"word": "ホーム",
+"reading": "ホーム",
+"meanings": [
+"platform",
+"home"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "38dd5eb4a0",
+"level": "N3",
+"word": "ボール",
+"reading": "ボール",
+"meanings": [
+"ball",
+"bowl"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "02dfedfddc",
+"level": "N3",
+"word": "誇り",
+"reading": "ほこり",
+"meanings": [
+"pride"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "e8c040a956",
+"level": "N3",
+"word": "埃",
+"reading": "ほこり",
+"meanings": [
+"dust"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "33602d086e",
+"level": "N3",
+"word": "保証",
+"reading": "ほしょう",
+"meanings": [
+"guarantee",
+"security",
+"assurance",
+"pledge",
+"warranty"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "fc2460d6aa",
+"level": "N3",
+"word": "保存",
+"reading": "ほぞん",
+"meanings": [
+"preservation",
+"conservation",
+"storage",
+"maintenance"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "2d670c3944",
+"level": "N3",
+"word": "歩道",
+"reading": "ほどう",
+"meanings": [
+"footpath",
+"walkway",
+"sidewalk"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b1358dbe27",
+"level": "N3",
+"word": "仏",
+"reading": "ほとけ",
+"meanings": [
+"Buddha",
+"merciful person",
+"Buddhist image",
+"the dead"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "bd7dce62ae",
+"level": "N3",
+"word": "骨",
+"reading": "ほね",
+"meanings": [
+"bone"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "2afa66abdb",
+"level": "N3",
+"word": "炎",
+"reading": "ほのお",
+"meanings": [
+"flame"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "867e9165fc",
+"level": "N3",
+"word": "頬",
+"reading": "ほほ",
+"meanings": [
+"cheek (of face)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "fa769c0e9b",
+"level": "N3",
+"word": "ほぼ",
+"reading": "ほぼ",
+"meanings": [
+"almost",
+"roughly",
+"approximately"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "702cecd159",
+"level": "N3",
+"word": "微笑む",
+"reading": "ほほえむ",
+"meanings": [
+"to smile"
+],
+"pos": [
+"v5m",
+"vi"
+]
+},
+{
+"id": "1151601f8e",
+"level": "N3",
+"word": "濠",
+"reading": "ほり",
+"meanings": [
+"moat"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "3f544e7ada",
+"level": "N3",
+"word": "本人",
+"reading": "ほんにん",
+"meanings": [
+"the person himself"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "3067b8986a",
+"level": "N3",
+"word": "本物",
+"reading": "ほんもの",
+"meanings": [
+"genuine article"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "20410e72ff",
+"level": "N3",
+"word": "ぼんやり",
+"reading": "ぼんやり",
+"meanings": [
+"absent-minded",
+"block-head",
+"dim",
+"faint",
+"vague"
+],
+"pos": [
+"adv",
+"adv-to",
+"vs"
+]
+},
+{
+"id": "8421f715e7",
+"level": "N3",
+"word": "間",
+"reading": "ま",
+"meanings": [
+"space",
+"room",
+"time",
+"pause"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "440279fbf1",
+"level": "N3",
+"word": "まあ",
+"reading": "まあ",
+"meanings": [
+"(female) you might say"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "ea7888aea6",
+"level": "N3",
+"word": "マーケット",
+"reading": "マーケット",
+"meanings": [
+"market"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "97ddf0dc45",
+"level": "N3",
+"word": "マイク",
+"reading": "マイク",
+"meanings": [
+"mike"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "6262822f7e",
+"level": "N3",
+"word": "迷子",
+"reading": "まいご",
+"meanings": [
+"lost (stray) child"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "da87fe49d1",
+"level": "N3",
+"word": "任せる",
+"reading": "まかせる",
+"meanings": [
+"to entrust to another",
+"to leave to"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "b08a90a19e",
+"level": "N3",
+"word": "幕",
+"reading": "まく",
+"meanings": [
+"curtain",
+"bunting",
+"act (in play)"
+],
+"pos": [
+"n",
+"ctr"
+]
+},
+{
+"id": "190905e79b",
+"level": "N3",
+"word": "負け",
+"reading": "まけ",
+"meanings": [
+"defeat",
+"loss",
+"losing (a game)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "e008354e7b",
+"level": "N3",
+"word": "孫",
+"reading": "まご",
+"meanings": [
+"grandchild"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "524a699a99",
+"level": "N3",
+"word": "まさか",
+"reading": "まさか",
+"meanings": [
+"by no means"
+],
+"pos": [
+"int"
+]
+},
+{
+"id": "379f6158b5",
+"level": "N3",
+"word": "まさに",
+"reading": "まさに",
+"meanings": [
+"correctly",
+"surely"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "6a1d67f659",
+"level": "N3",
+"word": "増す",
+"reading": "ます",
+"meanings": [
+"to increase",
+"to grow"
+],
+"pos": [
+"v5s",
+"vi",
+"vt"
+]
+},
+{
+"id": "b718c116a2",
+"level": "N3",
+"word": "貧しい",
+"reading": "まずしい",
+"meanings": [
+"poor",
+"needy"
+],
+"pos": [
+"adj-i"
+]
+},
+{
+"id": "363e985c77",
+"level": "N3",
+"word": "マスター",
+"reading": "マスター",
+"meanings": [
+"proprietor",
+"manager",
+"barowner",
+"master (e.g. arts, science)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "f1bbdd1149",
+"level": "N3",
+"word": "ますます",
+"reading": "ますます",
+"meanings": [
+"increasingly",
+"more and more"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "f91eb72b15",
+"level": "N3",
+"word": "街",
+"reading": "まち",
+"meanings": [
+"town",
+"street",
+"road"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "bcc0ebf62f",
+"level": "N3",
+"word": "間違い",
+"reading": "まちがい",
+"meanings": [
+"mistake"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "3f423a01da",
+"level": "N3",
+"word": "松",
+"reading": "まつ",
+"meanings": [
+"pine tree",
+"highest (of a three-tier ranking system)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "ec9831dc0c",
+"level": "N3",
+"word": "真っ赤",
+"reading": "まっか",
+"meanings": [
+"deep red",
+"flushed (of face)"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "2eb5b8f659",
+"level": "N3",
+"word": "全く",
+"reading": "まったく",
+"meanings": [
+"really",
+"truly",
+"entirely",
+"completely"
+],
+"pos": [
+"adv",
+"adj-no"
+]
+},
+{
+"id": "c53570cabd",
+"level": "N3",
+"word": "祭",
+"reading": "まつり",
+"meanings": [
+"festival",
+"feast"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "8208cbb873",
+"level": "N3",
+"word": "学ぶ",
+"reading": "まなぶ",
+"meanings": [
+"to study (in depth)",
+"to learn",
+"to take lessons in"
+],
+"pos": [
+"v5b",
+"vt"
+]
+},
+{
+"id": "59b359ba79",
+"level": "N3",
+"word": "真似",
+"reading": "まね",
+"meanings": [
+"mimicry",
+"imitation",
+"behavior",
+"pretense"
+],
+"pos": [
+"n",
+"vs",
+"vt",
+"vi"
+]
+},
+{
+"id": "19edd800f0",
+"level": "N3",
+"word": "招く",
+"reading": "まねく",
+"meanings": [
+"to invite"
+],
+"pos": [
+"v5k",
+"vt"
+]
+},
+{
+"id": "3efa32e22e",
+"level": "N3",
+"word": "ママ",
+"reading": "ママ",
+"meanings": [
+"Mama"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "4f949d1f9d",
+"level": "N3",
+"word": "豆",
+"reading": "まめ",
+"meanings": [
+"beans",
+"peas"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b517bb8180",
+"level": "N3",
+"word": "守る",
+"reading": "まもる",
+"meanings": [
+"to protect",
+"to obey",
+"to guard",
+"to abide (by the rules)"
+],
+"pos": [
+"v5r",
+"vt"
+]
+},
+{
+"id": "070c3ea238",
+"level": "N3",
+"word": "丸",
+"reading": "まる",
+"meanings": [
+"circle",
+"full (month)",
+"perfection",
+"purity",
+"suffix for ship names"
+],
+"pos": [
+"suf"
+]
+},
+{
+"id": "b556900c26",
+"level": "N3",
+"word": "まるで",
+"reading": "まるで",
+"meanings": [
+"quite",
+"entirely",
+"completely"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "c3d0f24680",
+"level": "N3",
+"word": "回す",
+"reading": "まわす",
+"meanings": [
+"to turn",
+"to revolve"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "59d7b934c6",
+"level": "N3",
+"word": "回り",
+"reading": "まわり",
+"meanings": [
+"circumference",
+"surroundings",
+"circulation"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "abbd37156d",
+"level": "N3",
+"word": "万一",
+"reading": "まんいち",
+"meanings": [
+"by some chance",
+"by some possibility",
+"if by any chance"
+],
+"pos": [
+"adv",
+"adj-no"
+]
+},
+{
+"id": "a4f0b205a3",
+"level": "N3",
+"word": "満足",
+"reading": "まんぞく",
+"meanings": [
+"satisfaction"
+],
+"pos": [
+"n",
+"adj-na",
+"vs",
+"vt",
+"vi"
+]
+},
+{
+"id": "ad70550f9b",
+"level": "N3",
+"word": "実",
+"reading": "み",
+"meanings": [
+"fruit",
+"nut",
+"seed",
+"content",
+"good result"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "6ebe370c91",
+"level": "N3",
+"word": "身",
+"reading": "み",
+"meanings": [
+"body",
+"main part",
+"oneself",
+"sword"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "604e1446f4",
+"level": "N3",
+"word": "見送り",
+"reading": "みおくり",
+"meanings": [
+"seeing one off",
+"farewell",
+"escort"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "8e820edd3b",
+"level": "N3",
+"word": "味方",
+"reading": "みかた",
+"meanings": [
+"friend",
+"ally",
+"supporter"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "ace0cb1202",
+"level": "N3",
+"word": "見事",
+"reading": "みごと",
+"meanings": [
+"splendid",
+"magnificent",
+"beautiful",
+"admirable"
+],
+"pos": [
+"adj-na",
+"adv"
+]
+},
+{
+"id": "62682a6308",
+"level": "N3",
+"word": "ミス",
+"reading": "ミス",
+"meanings": [
+"miss (mistake, error, failure)",
+"Miss"
+],
+"pos": [
+"n",
+"vs",
+"vi",
+"vt"
+]
+},
+{
+"id": "38321ff824",
+"level": "N3",
+"word": "満ちる",
+"reading": "みちる",
+"meanings": [
+"to be full",
+"to rise (tide)",
+"to mature",
+"to expire"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "0d0c754a74",
+"level": "N3",
+"word": "密",
+"reading": "みつ",
+"meanings": [
+"dense",
+"thick",
+"crowded"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "e086a9e024",
+"level": "N3",
+"word": "認める",
+"reading": "みとめる",
+"meanings": [
+"to recognize",
+"to appreciate",
+"to approve",
+"to admit",
+"to notice"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "89acdd2f72",
+"level": "N3",
+"word": "見舞い",
+"reading": "みまい",
+"meanings": [
+"enquiry",
+"expression of sympathy",
+"expression of concern"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "8fb52e4502",
+"level": "N3",
+"word": "土産",
+"reading": "みやげ",
+"meanings": [
+"present",
+"souvenir"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "c4956951f6",
+"level": "N3",
+"word": "都",
+"reading": "みやこ",
+"meanings": [
+"capital"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "3b5d6e485c",
+"level": "N3",
+"word": "妙",
+"reading": "みょう",
+"meanings": [
+"strange",
+"unusual"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "1938fb6bcb",
+"level": "N3",
+"word": "明後日",
+"reading": "みょうごにち",
+"meanings": [
+"day after tomorrow"
+],
+"pos": [
+"n",
+"adv"
+]
+},
+{
+"id": "246fc4acb8",
+"level": "N3",
+"word": "未来",
+"reading": "みらい",
+"meanings": [
+"future (life, tense)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "dcdfb791b5",
+"level": "N3",
+"word": "魅力",
+"reading": "みりょく",
+"meanings": [
+"charm",
+"fascination",
+"glamour"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "f3143300d0",
+"level": "N3",
+"word": "ミルク",
+"reading": "ミルク",
+"meanings": [
+"milk"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "bd67aff522",
+"level": "N3",
+"word": "無",
+"reading": "む",
+"meanings": [
+"nothing",
+"naught",
+"nil",
+"zero"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "ea28b7880a",
+"level": "N3",
+"word": "向かい",
+"reading": "むかい",
+"meanings": [
+"facing",
+"opposite",
+"across the street",
+"other side"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "934da0daf8",
+"level": "N3",
+"word": "迎え",
+"reading": "むかえ",
+"meanings": [
+"meeting",
+"person sent to pick up an arrival"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "98c8318e58",
+"level": "N3",
+"word": "向く",
+"reading": "むく",
+"meanings": [
+"to face"
+],
+"pos": [
+"v5k",
+"vt",
+"vi"
+]
+},
+{
+"id": "b8dac563a6",
+"level": "N3",
+"word": "向ける",
+"reading": "むける",
+"meanings": [
+"to turn towards",
+"to point"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "e866d19dae",
+"level": "N3",
+"word": "無視",
+"reading": "むし",
+"meanings": [
+"disregard",
+"ignore"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "be007a1109",
+"level": "N3",
+"word": "虫歯",
+"reading": "むしば",
+"meanings": [
+"cavity",
+"tooth decay",
+"decayed tooth",
+"caries"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "060e802c68",
+"level": "N3",
+"word": "寧ろ",
+"reading": "むしろ",
+"meanings": [
+"rather",
+"better",
+"instead"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "53d0381de5",
+"level": "N3",
+"word": "結ぶ",
+"reading": "むすぶ",
+"meanings": [
+"to tie",
+"to bind",
+"to link"
+],
+"pos": [
+"v5b",
+"vt"
+]
+},
+{
+"id": "a07884c182",
+"level": "N3",
+"word": "無駄",
+"reading": "むだ",
+"meanings": [
+"futility",
+"uselessness"
+],
+"pos": [
+"n",
+"adj-na"
+]
+},
+{
+"id": "a6c8fd99d7",
+"level": "N3",
+"word": "夢中",
+"reading": "むちゅう",
+"meanings": [
+"daze",
+"(in a) trance",
+"ecstasy",
+"delirium",
+"engrossment"
+],
+"pos": [
+"n",
+"adj-na"
+]
+},
+{
+"id": "eb85283cf4",
+"level": "N3",
+"word": "胸",
+"reading": "むね",
+"meanings": [
+"breast",
+"chest"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "bd59d43a89",
+"level": "N3",
+"word": "無料",
+"reading": "むりょう",
+"meanings": [
+"free",
+"no charge"
+],
+"pos": [
+"adj-no",
+"n"
+]
+},
+{
+"id": "1357988d61",
+"level": "N3",
+"word": "芽",
+"reading": "め",
+"meanings": [
+"sprout"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "1be11a9bbe",
+"level": "N3",
+"word": "明確",
+"reading": "めいかく",
+"meanings": [
+"clear up",
+"clarify",
+"define"
+],
+"pos": [
+"adj-na"
+]
+},
+{
+"id": "7bd7d687fa",
+"level": "N3",
+"word": "命じる",
+"reading": "めいじる",
+"meanings": [
+"to order",
+"to command",
+"to appoint"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "37126e35d7",
+"level": "N3",
+"word": "名人",
+"reading": "めいじん",
+"meanings": [
+"master",
+"expert"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "f523e4118d",
+"level": "N3",
+"word": "命令",
+"reading": "めいれい",
+"meanings": [
+"order",
+"command",
+"decree",
+"directive",
+"(software) instruction"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "c6c155ada8",
+"level": "N3",
+"word": "迷惑",
+"reading": "めいわく",
+"meanings": [
+"trouble",
+"bother",
+"annoyance"
+],
+"pos": [
+"n",
+"adj-na"
+]
+},
+{
+"id": "ba21b41503",
+"level": "N3",
+"word": "飯",
+"reading": "めし",
+"meanings": [
+"(slang) meals",
+"food"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "24e21e954d",
+"level": "N3",
+"word": "滅多に",
+"reading": "めったに",
+"meanings": [
+"rarely (with neg. verb)",
+"seldom"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "c13f4ea321",
+"level": "N3",
+"word": "メモ",
+"reading": "メモ",
+"meanings": [
+"memorandum"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "9fbf209387",
+"level": "N3",
+"word": "綿",
+"reading": "めん",
+"meanings": [
+"cotton",
+"padding"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "c40902d092",
+"level": "N3",
+"word": "面",
+"reading": "めん",
+"meanings": [
+"face",
+"mug",
+"surface",
+"facial features",
+"mask",
+"face guard",
+"side or facet",
+"corner",
+"page"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "6b165e8a57",
+"level": "N3",
+"word": "免許",
+"reading": "めんきょ",
+"meanings": [
+"license",
+"permit",
+"licence",
+"certificate"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "3c5dcce6bf",
+"level": "N3",
+"word": "面倒",
+"reading": "めんどう",
+"meanings": [
+"trouble",
+"difficulty",
+"care",
+"attention"
+],
+"pos": [
+"n",
+"adj-na"
+]
+},
+{
+"id": "df62e316d7",
+"level": "N3",
+"word": "メンバー",
+"reading": "メンバー",
+"meanings": [
+"member"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "7b4c98a742",
+"level": "N3",
+"word": "申し込む",
+"reading": "もうしこむ",
+"meanings": [
+"to apply for",
+"to make an application"
+],
+"pos": [
+"v5m",
+"vt"
+]
+},
+{
+"id": "b687c34ed5",
+"level": "N3",
+"word": "申し訳",
+"reading": "もうしわけ",
+"meanings": [
+"apology",
+"excuse"
+],
+"pos": [
+"n",
+"vs"
+]
+},
+{
+"id": "b83a39027b",
+"level": "N3",
+"word": "毛布",
+"reading": "もうふ",
+"meanings": [
+"blanket"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b8f720cf6d",
+"level": "N3",
+"word": "燃える",
+"reading": "もえる",
+"meanings": [
+"to burn"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "0440a8bd4f",
+"level": "N3",
+"word": "目的",
+"reading": "もくてき",
+"meanings": [
+"purpose",
+"goal",
+"aim",
+"objective",
+"intention"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "5a93587f3a",
+"level": "N3",
+"word": "目標",
+"reading": "もくひょう",
+"meanings": [
+"mark",
+"objective",
+"target"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "2b9cc873fb",
+"level": "N3",
+"word": "木曜",
+"reading": "もくよう",
+"meanings": [
+"Thursday"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "2ec7e341be",
+"level": "N3",
+"word": "文字",
+"reading": "もじ",
+"meanings": [
+"letter (of alphabet)",
+"character"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "6aa4147162",
+"level": "N3",
+"word": "もしも",
+"reading": "もしも",
+"meanings": [
+"if"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "1210c0bf0b",
+"level": "N3",
+"word": "持ち上げる",
+"reading": "もちあげる",
+"meanings": [
+"to raise",
+"to lift up",
+"to flatter"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "20bdc60bd0",
+"level": "N3",
+"word": "用いる",
+"reading": "もちいる",
+"meanings": [
+"to use",
+"to make use of"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "779c980843",
+"level": "N3",
+"word": "尤も",
+"reading": "もっとも",
+"meanings": [
+"quite right",
+"plausible",
+"natural",
+"but then",
+"although"
+],
+"pos": [
+"conj"
+]
+},
+{
+"id": "0f4b2590f6",
+"level": "N3",
+"word": "基",
+"reading": "もと",
+"meanings": [
+"basis"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "f5b7534060",
+"level": "N3",
+"word": "元",
+"reading": "もと",
+"meanings": [
+"origin",
+"original",
+"former"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "aa6e296421",
+"level": "N3",
+"word": "素",
+"reading": "もと",
+"meanings": [
+"origin",
+"source",
+"beginning"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b1ba670b85",
+"level": "N3",
+"word": "戻す",
+"reading": "もどす",
+"meanings": [
+"to restore",
+"to put back",
+"to return"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "725adb9c35",
+"level": "N3",
+"word": "基づく",
+"reading": "もとづく",
+"meanings": [
+"to be grounded on",
+"to be based on",
+"to be due to",
+"to originate from"
+],
+"pos": [
+"v5k",
+"vi"
+]
+},
+{
+"id": "bd2ba94516",
+"level": "N3",
+"word": "求める",
+"reading": "もとめる",
+"meanings": [
+"to seek",
+"to request",
+"to demand",
+"to want",
+"to wish for",
+"to search for",
+"to pursue (pleasure)",
+"to hunt (a job)"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "ae498d63bc",
+"level": "N3",
+"word": "者",
+"reading": "もの",
+"meanings": [
+"person"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "013c3a92d2",
+"level": "N3",
+"word": "物音",
+"reading": "ものおと",
+"meanings": [
+"sounds"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "6b8002d0f8",
+"level": "N3",
+"word": "物語",
+"reading": "ものがたり",
+"meanings": [
+"tale",
+"story",
+"legend"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "e810d0494c",
+"level": "N3",
+"word": "物事",
+"reading": "ものごと",
+"meanings": [
+"things",
+"everything"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "3cda3baabf",
+"level": "N3",
+"word": "模様",
+"reading": "もよう",
+"meanings": [
+"pattern",
+"figure",
+"design"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "0e7597cf73",
+"level": "N3",
+"word": "文句",
+"reading": "もんく",
+"meanings": [
+"phrase",
+"complaint"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "eb2bf568d9",
+"level": "N3",
+"word": "やがて",
+"reading": "やがて",
+"meanings": [
+"before long",
+"soon",
+"at length"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "396f83701d",
+"level": "N3",
+"word": "役",
+"reading": "やく",
+"meanings": [
+"use",
+"service",
+"role",
+"position"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "abfa120074",
+"level": "N3",
+"word": "約",
+"reading": "やく",
+"meanings": [
+"approximately",
+"about",
+"some"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "02424c2277",
+"level": "N3",
+"word": "役割",
+"reading": "やくわり",
+"meanings": [
+"part",
+"assigning (allotment of) parts",
+"role",
+"duties"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "0e1d889990",
+"level": "N3",
+"word": "家賃",
+"reading": "やちん",
+"meanings": [
+"rent"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "5f249ce2ae",
+"level": "N3",
+"word": "厄介",
+"reading": "やっかい",
+"meanings": [
+"trouble",
+"burden",
+"care",
+"bother"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "35b2b01bf1",
+"level": "N3",
+"word": "宿",
+"reading": "やど",
+"meanings": [
+"inn",
+"lodging"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b9a7186462",
+"level": "N3",
+"word": "雇う",
+"reading": "やとう",
+"meanings": [
+"to employ",
+"to hire"
+],
+"pos": [
+"v5u",
+"vt"
+]
+},
+{
+"id": "edba3a49e1",
+"level": "N3",
+"word": "屋根",
+"reading": "やね",
+"meanings": [
+"roof"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "aa391c76da",
+"level": "N3",
+"word": "破る",
+"reading": "やぶる",
+"meanings": [
+"to tear",
+"to violate",
+"to defeat",
+"to smash",
+"to destroy"
+],
+"pos": [
+"v5r",
+"vt"
+]
+},
+{
+"id": "22cc737e03",
+"level": "N3",
+"word": "辞める",
+"reading": "やめる",
+"meanings": [
+"to retire"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "586d4c294b",
+"level": "N3",
+"word": "やや",
+"reading": "やや",
+"meanings": [
+"a little",
+"partially",
+"somewhat",
+"a short time",
+"a while"
+],
+"pos": [
+"adv",
+"adj-f"
+]
+},
+{
+"id": "ea7b6990d3",
+"level": "N3",
+"word": "唯一",
+"reading": "ゆいいつ",
+"meanings": [
+"only",
+"sole",
+"unique"
+],
+"pos": [
+"adj-no",
+"n",
+"adv"
+]
+},
+{
+"id": "0f54df5fc1",
+"level": "N3",
+"word": "言う",
+"reading": "ゆう",
+"meanings": [
+"to say"
+],
+"pos": [
+"v5u",
+"vt"
+]
+},
+{
+"id": "1b04830825",
+"level": "N3",
+"word": "勇気",
+"reading": "ゆうき",
+"meanings": [
+"courage",
+"bravery",
+"valour",
+"nerve",
+"boldness"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "8f41bba826",
+"level": "N3",
+"word": "有効",
+"reading": "ゆうこう",
+"meanings": [
+"validity",
+"availability",
+"effectiveness"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "9c2ecc46b9",
+"level": "N3",
+"word": "優秀",
+"reading": "ゆうしゅう",
+"meanings": [
+"superiority",
+"excellence"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "03c4975c1c",
+"level": "N3",
+"word": "優勝",
+"reading": "ゆうしょう",
+"meanings": [
+"overall victory",
+"championship"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "1192e07fed",
+"level": "N3",
+"word": "友情",
+"reading": "ゆうじょう",
+"meanings": [
+"friendship",
+"fellowship"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "95203a9427",
+"level": "N3",
+"word": "友人",
+"reading": "ゆうじん",
+"meanings": [
+"friend"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "568b987a90",
+"level": "N3",
+"word": "有能",
+"reading": "ゆうのう",
+"meanings": [
+"able",
+"capable",
+"efficient",
+"skill"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "9a61747e5d",
+"level": "N3",
+"word": "郵便",
+"reading": "ゆうびん",
+"meanings": [
+"mail",
+"postal service"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "3fa9f114f2",
+"level": "N3",
+"word": "夕べ",
+"reading": "ゆうべ",
+"meanings": [
+"evening"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "271078ced6",
+"level": "N3",
+"word": "ユーモア",
+"reading": "ユーモア",
+"meanings": [
+"humor"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "18a3f78106",
+"level": "N3",
+"word": "有利",
+"reading": "ゆうり",
+"meanings": [
+"advantageous",
+"better",
+"profitable",
+"lucrative"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "5489cdb398",
+"level": "N3",
+"word": "床",
+"reading": "ゆか",
+"meanings": [
+"floor"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "999ee69ee6",
+"level": "N3",
+"word": "愉快",
+"reading": "ゆかい",
+"meanings": [
+"pleasant",
+"happy"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "33f792ec39",
+"level": "N3",
+"word": "譲る",
+"reading": "ゆずる",
+"meanings": [
+"to turn over",
+"to assign",
+"to hand over"
+],
+"pos": [
+"v5r",
+"vt"
+]
+},
+{
+"id": "952c7983d6",
+"level": "N3",
+"word": "豊か",
+"reading": "ゆたか",
+"meanings": [
+"abundant",
+"wealthy",
+"plentiful",
+"rich"
+],
+"pos": [
+"adj-na",
+"suf"
+]
+},
+{
+"id": "ccd27b3d04",
+"level": "N3",
+"word": "ゆっくり",
+"reading": "ゆっくり",
+"meanings": [
+"slowly",
+"at ease"
+],
+"pos": [
+"adv",
+"adv-to",
+"vs"
+]
+},
+{
+"id": "50842f69c2",
+"level": "N3",
+"word": "許す",
+"reading": "ゆるす",
+"meanings": [
+"to permit",
+"to allow",
+"to approve"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "b434efd06b",
+"level": "N3",
+"word": "夜明け",
+"reading": "よあけ",
+"meanings": [
+"dawn",
+"daybreak"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "ae7eaba50f",
+"level": "N3",
+"word": "よい",
+"reading": "よい",
+"meanings": [
+"good",
+"nice",
+"pleasant",
+"ok"
+],
+"pos": [
+"adj-i"
+]
+},
+{
+"id": "72fe9b634b",
+"level": "N3",
+"word": "酔う",
+"reading": "よう",
+"meanings": [
+"to get drunk",
+"to become intoxicated"
+],
+"pos": [
+"v5u",
+"vi"
+]
+},
+{
+"id": "bcab821414",
+"level": "N3",
+"word": "様",
+"reading": "よう",
+"meanings": [
+"way",
+"manner",
+"kind"
+],
+"pos": [
+"n-suf",
+"n"
+]
+},
+{
+"id": "120086e720",
+"level": "N3",
+"word": "容易",
+"reading": "ようい",
+"meanings": [
+"easy",
+"simple",
+"plain"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "e96372be15",
+"level": "N3",
+"word": "陽気",
+"reading": "ようき",
+"meanings": [
+"season",
+"weather",
+"cheerfulness"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "7b812f29c4",
+"level": "N3",
+"word": "要求",
+"reading": "ようきゅう",
+"meanings": [
+"request",
+"demand",
+"requisition"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "6693cfdf82",
+"level": "N3",
+"word": "用心",
+"reading": "ようじん",
+"meanings": [
+"care",
+"precaution",
+"guarding",
+"caution"
+],
+"pos": [
+"n",
+"vs",
+"vt",
+"vi"
+]
+},
+{
+"id": "571736e080",
+"level": "N3",
+"word": "様子",
+"reading": "ようす",
+"meanings": [
+"aspect",
+"state",
+"appearance"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "0910eee377",
+"level": "N3",
+"word": "要するに",
+"reading": "ようするに",
+"meanings": [
+"in a word",
+"after all",
+"the point is ..",
+"in short .."
+],
+"pos": [
+"exp",
+"adv"
+]
+},
+{
+"id": "b6f29d6b8e",
+"level": "N3",
+"word": "要素",
+"reading": "ようそ",
+"meanings": [
+"element"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "654dd204be",
+"level": "N3",
+"word": "要点",
+"reading": "ようてん",
+"meanings": [
+"gist",
+"main point"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "72afed9688",
+"level": "N3",
+"word": "曜日",
+"reading": "ようび",
+"meanings": [
+"day of the week"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "bb4b5f7ee0",
+"level": "N3",
+"word": "ヨーロッパ",
+"reading": "ヨーロッパ",
+"meanings": [
+"Europe"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "8c36af4c9f",
+"level": "N3",
+"word": "予期",
+"reading": "よき",
+"meanings": [
+"expectation",
+"assume will happen",
+"forecast"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "dfec3a3604",
+"level": "N3",
+"word": "横切る",
+"reading": "よこぎる",
+"meanings": [
+"to cross (e.g. arms)",
+"to traverse"
+],
+"pos": [
+"v5r",
+"vt"
+]
+},
+{
+"id": "d7dea8a506",
+"level": "N3",
+"word": "予算",
+"reading": "よさん",
+"meanings": [
+"estimate",
+"budget"
+],
+"pos": [
+"n",
+"vs"
+]
+},
+{
+"id": "9054323c74",
+"level": "N3",
+"word": "止す",
+"reading": "よす",
+"meanings": [
+"to cease",
+"to abolish",
+"to resign",
+"to give up"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "908b44a04b",
+"level": "N3",
+"word": "予測",
+"reading": "よそく",
+"meanings": [
+"prediction",
+"estimation"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "82611a8f51",
+"level": "N3",
+"word": "ヨット",
+"reading": "ヨット",
+"meanings": [
+"yacht"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "19a41952db",
+"level": "N3",
+"word": "夜中",
+"reading": "よなか",
+"meanings": [
+"midnight",
+"dead of night"
+],
+"pos": [
+"n",
+"adv"
+]
+},
+{
+"id": "6f514b9fe7",
+"level": "N3",
+"word": "世の中",
+"reading": "よのなか",
+"meanings": [
+"society",
+"the world",
+"the times"
+],
+"pos": [
+"exp",
+"n"
+]
+},
+{
+"id": "718ef13639",
+"level": "N3",
+"word": "余分",
+"reading": "よぶん",
+"meanings": [
+"extra",
+"excess",
+"surplus"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "6315da87bc",
+"level": "N3",
+"word": "予報",
+"reading": "よほう",
+"meanings": [
+"forecast",
+"prediction"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "7e01f30eaa",
+"level": "N3",
+"word": "予防",
+"reading": "よぼう",
+"meanings": [
+"prevention",
+"precaution",
+"protection against"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "aa98da380d",
+"level": "N3",
+"word": "読み",
+"reading": "よみ",
+"meanings": [
+"reading"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "905e143f7a",
+"level": "N3",
+"word": "嫁",
+"reading": "よめ",
+"meanings": [
+"bride",
+"daughter-in-law"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "8bdbbb4bf4",
+"level": "N3",
+"word": "余裕",
+"reading": "よゆう",
+"meanings": [
+"surplus",
+"composure",
+"margin",
+"room",
+"time",
+"allowance",
+"scope",
+"rope"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "a3e1ac6ec4",
+"level": "N3",
+"word": "よると",
+"reading": "よると",
+"meanings": [
+"according to"
+],
+"pos": [
+"v5r",
+"vi"
+]
+},
+{
+"id": "63d195fd9d",
+"level": "N3",
+"word": "喜び",
+"reading": "よろこび",
+"meanings": [
+"(a) joy",
+"(a) delight",
+"rapture",
+"pleasure",
+"gratification",
+"rejoicing",
+"congratulations",
+"felicitations"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "ceb20bf4f8",
+"level": "N3",
+"word": "よろしく",
+"reading": "よろしく",
+"meanings": [
+"well",
+"properly",
+"suitably",
+"best regards",
+"please remember me"
+],
+"pos": [
+"exp",
+"adv"
+]
+},
+{
+"id": "379b767ed6",
+"level": "N3",
+"word": "来",
+"reading": "らい",
+"meanings": [
+"for (10 days)",
+"next (year)"
+],
+"pos": [
+"pref"
+]
+},
+{
+"id": "0294bdc5ab",
+"level": "N3",
+"word": "ライター",
+"reading": "ライター",
+"meanings": [
+"lighter",
+"rider",
+"writer"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "733b519a1e",
+"level": "N3",
+"word": "楽",
+"reading": "らく",
+"meanings": [
+"comfort",
+"ease"
+],
+"pos": [
+"n",
+"adj-na"
+]
+},
+{
+"id": "f998ef10bc",
+"level": "N3",
+"word": "ラケット",
+"reading": "ラケット",
+"meanings": [
+"paddle",
+"racket"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "d75a953f22",
+"level": "N3",
+"word": "利益",
+"reading": "りえき",
+"meanings": [
+"profits",
+"gains",
+"(political, economic) interest"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "400fee0ea3",
+"level": "N3",
+"word": "理解",
+"reading": "りかい",
+"meanings": [
+"understanding",
+"comprehension"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "b0fe98d49c",
+"level": "N3",
+"word": "陸",
+"reading": "りく",
+"meanings": [
+"six (used in legal documents)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "f392d9e1f8",
+"level": "N3",
+"word": "利口",
+"reading": "りこう",
+"meanings": [
+"clever",
+"shrewd",
+"bright",
+"sharp",
+"wise",
+"intelligent"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "5c0444713b",
+"level": "N3",
+"word": "離婚",
+"reading": "りこん",
+"meanings": [
+"divorce"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "ed6d068863",
+"level": "N3",
+"word": "理想",
+"reading": "りそう",
+"meanings": [
+"ideal"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "50c0503d3d",
+"level": "N3",
+"word": "率",
+"reading": "りつ",
+"meanings": [
+"rate",
+"ratio",
+"proportion",
+"percentage"
+],
+"pos": [
+"n",
+"n-suf"
+]
+},
+{
+"id": "22aaf6b202",
+"level": "N3",
+"word": "留学",
+"reading": "りゅうがく",
+"meanings": [
+"studying abroad"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "52a1844352",
+"level": "N3",
+"word": "流行",
+"reading": "りゅうこう",
+"meanings": [
+"fashionable",
+"fad",
+"in vogue",
+"prevailing"
+],
+"pos": [
+"n",
+"vs",
+"vi",
+"adj-no"
+]
+},
+{
+"id": "8fb3130c49",
+"level": "N3",
+"word": "量",
+"reading": "りょう",
+"meanings": [
+"quantity",
+"amount",
+"volume",
+"portion (of food)"
+],
+"pos": [
+"n",
+"n-suf"
+]
+},
+{
+"id": "38170a2835",
+"level": "N3",
+"word": "両替",
+"reading": "りょうがえ",
+"meanings": [
+"change",
+"money exchange"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "7890b85fc7",
+"level": "N3",
+"word": "料金",
+"reading": "りょうきん",
+"meanings": [
+"fee",
+"charge",
+"fare"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "9768eacb27",
+"level": "N3",
+"word": "例",
+"reading": "れい",
+"meanings": [
+"instance",
+"example",
+"case"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "1dbd51644b",
+"level": "N3",
+"word": "礼",
+"reading": "れい",
+"meanings": [
+"expression of gratitude"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "4caf52bf1b",
+"level": "N3",
+"word": "礼儀",
+"reading": "れいぎ",
+"meanings": [
+"manners",
+"courtesy",
+"etiquette"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "5bc774184b",
+"level": "N3",
+"word": "冷静",
+"reading": "れいせい",
+"meanings": [
+"calm",
+"composure",
+"coolness",
+"serenity"
+],
+"pos": [
+"n",
+"adj-na"
+]
+},
+{
+"id": "bf2843b87f",
+"level": "N3",
+"word": "列",
+"reading": "れつ",
+"meanings": [
+"queue",
+"line",
+"row"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "d06ebb646b",
+"level": "N3",
+"word": "列車",
+"reading": "れっしゃ",
+"meanings": [
+"train (ordinary)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "61c4f4686e",
+"level": "N3",
+"word": "連想",
+"reading": "れんそう",
+"meanings": [
+"association (of ideas)",
+"suggestion"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "67153e2a31",
+"level": "N3",
+"word": "連続",
+"reading": "れんぞく",
+"meanings": [
+"serial",
+"consecutive",
+"continuity",
+"continuing"
+],
+"pos": [
+"n",
+"vs",
+"vt",
+"vi"
+]
+},
+{
+"id": "0c914e9a90",
+"level": "N3",
+"word": "老人",
+"reading": "ろうじん",
+"meanings": [
+"the aged",
+"old person"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "7e15214f9a",
+"level": "N3",
+"word": "労働",
+"reading": "ろうどう",
+"meanings": [
+"manual labor",
+"toil",
+"work"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "cd42c9314f",
+"level": "N3",
+"word": "ロケット",
+"reading": "ロケット",
+"meanings": [
+"locket",
+"rocket"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "6fcfd8b60b",
+"level": "N3",
+"word": "論じる",
+"reading": "ろんじる",
+"meanings": [
+"to argue",
+"to discuss",
+"to debate"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "3a7b01e5d4",
+"level": "N3",
+"word": "論争",
+"reading": "ろんそう",
+"meanings": [
+"controversy",
+"dispute"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "60bb4e1af0",
+"level": "N3",
+"word": "論文",
+"reading": "ろんぶん",
+"meanings": [
+"thesis",
+"essay",
+"treatise",
+"paper"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "3f77054caf",
+"level": "N3",
+"word": "輪",
+"reading": "わ",
+"meanings": [
+"ring",
+"hoop",
+"circle"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "06d663e37a",
+"level": "N3",
+"word": "ワイン",
+"reading": "ワイン",
+"meanings": [
+"wine"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b1861d938a",
+"level": "N3",
+"word": "わがまま",
+"reading": "わがまま",
+"meanings": [
+"selfishness",
+"egoism",
+"wilfulness",
+"disobedience",
+"whim"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "31f9300fb0",
+"level": "N3",
+"word": "別れ",
+"reading": "わかれ",
+"meanings": [
+"parting",
+"separation",
+"farewell"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "037c2ecb86",
+"level": "N3",
+"word": "脇",
+"reading": "わき",
+"meanings": [
+"side"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "1b8be0151e",
+"level": "N3",
+"word": "分ける",
+"reading": "わける",
+"meanings": [
+"to divide",
+"to separate"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "b778777901",
+"level": "N3",
+"word": "わざと",
+"reading": "わざと",
+"meanings": [
+"on purpose"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "b87cfb16ef",
+"level": "N3",
+"word": "僅か",
+"reading": "わずか",
+"meanings": [
+"only",
+"merely",
+"a little",
+"small quantity"
+],
+"pos": [
+"adj-na",
+"adj-no"
+]
+},
+{
+"id": "e7eeb8eff1",
+"level": "N3",
+"word": "話題",
+"reading": "わだい",
+"meanings": [
+"topic",
+"subject"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "40312166c1",
+"level": "N3",
+"word": "笑い",
+"reading": "わらい",
+"meanings": [
+"laugh",
+"laughter",
+"smile"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "733619e0ef",
+"level": "N3",
+"word": "割る",
+"reading": "わる",
+"meanings": [
+"to divide",
+"to cut",
+"to break",
+"to halve"
+],
+"pos": [
+"v5r",
+"vt"
+]
+},
+{
+"id": "b440e7ed66",
+"level": "N3",
+"word": "悪口",
+"reading": "わるくち",
+"meanings": [
+"abuse",
+"insult",
+"slander",
+"evil speaking"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "3fc07b1856",
+"level": "N3",
+"word": "我々",
+"reading": "われわれ",
+"meanings": [
+"we"
+],
+"pos": [
+"pn"
+]
+},
+{
+"id": "ef9bb7868b",
+"level": "N3",
+"word": "湾",
+"reading": "わん",
+"meanings": [
+"bay",
+"gulf",
+"inlet"
+],
+"pos": [
+"n",
+"n-suf"
+]
+},
+{
+"id": "42c4654587",
+"level": "N2",
+"word": "あいかわらず",
+"reading": "あいかわらず",
+"meanings": [
+"as ever",
+"as usual",
+"the same"
+],
+"pos": [
+"adv",
+"adj-no"
+]
+},
+{
+"id": "79169045a2",
+"level": "N2",
+"word": "アイデア",
+"reading": "アイデア",
+"meanings": [
+"idea"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "08e45ae028",
+"level": "N2",
+"word": "あいまい",
+"reading": "あいまい",
+"meanings": [
+"vague",
+"ambiguous"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "5b1dbc60e6",
+"level": "N2",
+"word": "遭う",
+"reading": "あう",
+"meanings": [
+"to meet",
+"to encounter (undesirable nuance)"
+],
+"pos": [
+"v5u",
+"vi"
+]
+},
+{
+"id": "5c46e379a2",
+"level": "N2",
+"word": "扇ぐ",
+"reading": "あおぐ",
+"meanings": [
+"to fan",
+"to flap"
+],
+"pos": [
+"v5g",
+"vt"
+]
+},
+{
+"id": "f24da46d2e",
+"level": "N2",
+"word": "青白い",
+"reading": "あおじろい",
+"meanings": [
+"pale",
+"pallid"
+],
+"pos": [
+"adj-i"
+]
+},
+{
+"id": "b286c3e278",
+"level": "N2",
+"word": "明き",
+"reading": "あき",
+"meanings": [
+"room",
+"time to spare",
+"emptiness"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "4bbc998853",
+"level": "N2",
+"word": "あきれる",
+"reading": "あきれる",
+"meanings": [
+"to be amazed",
+"to be shocked"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "f4f844d9b9",
+"level": "N2",
+"word": "アクセント",
+"reading": "アクセント",
+"meanings": [
+"accent"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "4f70e78ef3",
+"level": "N2",
+"word": "あくび",
+"reading": "あくび",
+"meanings": [
+"yawn"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "a542a76c28",
+"level": "N2",
+"word": "あくまで",
+"reading": "あくまで",
+"meanings": [
+"to the end",
+"to the last",
+"stubbornly"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "817ab81f5e",
+"level": "N2",
+"word": "明け方",
+"reading": "あけがた",
+"meanings": [
+"dawn"
+],
+"pos": [
+"n",
+"adv"
+]
+},
+{
+"id": "8c256fc677",
+"level": "N2",
+"word": "挙げる",
+"reading": "あげる",
+"meanings": [
+"to raise",
+"to fly"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "d4d89391b7",
+"level": "N2",
+"word": "揚げる",
+"reading": "あげる",
+"meanings": [
+"to lift",
+"to fry"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "36c77eda04",
+"level": "N2",
+"word": "憧れる",
+"reading": "あこがれる",
+"meanings": [
+"to long for",
+"to yearn after",
+"to admire"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "c6ff7af051",
+"level": "N2",
+"word": "足跡",
+"reading": "あしあと",
+"meanings": [
+"footprints"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "e62d8e80cc",
+"level": "N2",
+"word": "味わう",
+"reading": "あじわう",
+"meanings": [
+"to taste",
+"to savor",
+"to relish"
+],
+"pos": [
+"v5u",
+"vt"
+]
+},
+{
+"id": "eafba17b69",
+"level": "N2",
+"word": "預かる",
+"reading": "あずかる",
+"meanings": [
+"to keep in custody",
+"to receive on deposit",
+"to take charge of"
+],
+"pos": [
+"v5r",
+"vt"
+]
+},
+{
+"id": "4d006aea23",
+"level": "N2",
+"word": "暖まる",
+"reading": "あたたまる",
+"meanings": [
+"to warm up",
+"to get warm"
+],
+"pos": [
+"v5r",
+"vi"
+]
+},
+{
+"id": "a7a7a09d5d",
+"level": "N2",
+"word": "暖める",
+"reading": "あたためる",
+"meanings": [
+"to warm",
+"to heat"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "ac69e2e6fa",
+"level": "N2",
+"word": "あたりまえ",
+"reading": "あたりまえ",
+"meanings": [
+"usual",
+"common",
+"ordinary"
+],
+"pos": [
+"adj-no",
+"adj-na",
+"n"
+]
+},
+{
+"id": "18818a506e",
+"level": "N2",
+"word": "あちらこちら",
+"reading": "あちらこちら",
+"meanings": [
+"here and there"
+],
+"pos": [
+"pn",
+"adv",
+"vs"
+]
+},
+{
+"id": "a059581841",
+"level": "N2",
+"word": "厚かましい",
+"reading": "あつかましい",
+"meanings": [
+"impudent",
+"shameless",
+"brazen"
+],
+"pos": [
+"adj-i"
+]
+},
+{
+"id": "869960843c",
+"level": "N2",
+"word": "圧縮",
+"reading": "あっしゅく",
+"meanings": [
+"compression",
+"condensation",
+"pressure"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "d3825b176d",
+"level": "N2",
+"word": "宛名",
+"reading": "あてな",
+"meanings": [
+"address",
+"direction"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "83df753526",
+"level": "N2",
+"word": "あてはまる",
+"reading": "あてはまる",
+"meanings": [
+"to be applicable",
+"to come under (a category)",
+"to fulfill"
+],
+"pos": [
+"v5r",
+"vi"
+]
+},
+{
+"id": "a5a037fa3e",
+"level": "N2",
+"word": "あてはめる",
+"reading": "あてはめる",
+"meanings": [
+"to apply",
+"to adapt"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "f87fab18b5",
+"level": "N2",
+"word": "暴れる",
+"reading": "あばれる",
+"meanings": [
+"to act violently",
+"to rage",
+"to struggle",
+"to be riotous"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "cab6203141",
+"level": "N2",
+"word": "脂",
+"reading": "あぶら",
+"meanings": [
+"fat",
+"tallow",
+"lard"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "956a0a55ec",
+"level": "N2",
+"word": "あぶる",
+"reading": "あぶる",
+"meanings": [
+"to scorch"
+],
+"pos": [
+"v5r",
+"vt"
+]
+},
+{
+"id": "3365ac796d",
+"level": "N2",
+"word": "あふれる",
+"reading": "あふれる",
+"meanings": [
+"to flood",
+"to overflow",
+"to brim over"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "0823382f19",
+"level": "N2",
+"word": "雨戸",
+"reading": "あまど",
+"meanings": [
+"sliding storm door"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "e34ae82b35",
+"level": "N2",
+"word": "甘やかす",
+"reading": "あまやかす",
+"meanings": [
+"to pamper",
+"to spoil"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "89251f222d",
+"level": "N2",
+"word": "余る",
+"reading": "あまる",
+"meanings": [
+"to remain",
+"to be left over",
+"to be in excess",
+"to be too many"
+],
+"pos": [
+"v5r",
+"vi"
+]
+},
+{
+"id": "796332c2c7",
+"level": "N2",
+"word": "編物",
+"reading": "あみもの",
+"meanings": [
+"knitting",
+"web"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "fb73ee2899",
+"level": "N2",
+"word": "編む",
+"reading": "あむ",
+"meanings": [
+"to knit"
+],
+"pos": [
+"v5m",
+"vt"
+]
+},
+{
+"id": "488070d93a",
+"level": "N2",
+"word": "危うい",
+"reading": "あやうい",
+"meanings": [
+"dangerous",
+"critical",
+"grave"
+],
+"pos": [
+"adj-i"
+]
+},
+{
+"id": "36d05281eb",
+"level": "N2",
+"word": "怪しい",
+"reading": "あやしい",
+"meanings": [
+"suspicious",
+"dubious",
+"doubtful"
+],
+"pos": [
+"adj-i"
+]
+},
+{
+"id": "c171dadc4a",
+"level": "N2",
+"word": "荒い",
+"reading": "あらい",
+"meanings": [
+"rough",
+"rude",
+"wild"
+],
+"pos": [
+"adj-i"
+]
+},
+{
+"id": "1c9be68b8f",
+"level": "N2",
+"word": "粗い",
+"reading": "あらい",
+"meanings": [
+"coarse",
+"rough"
+],
+"pos": [
+"adj-i"
+]
+},
+{
+"id": "3741d0a778",
+"level": "N2",
+"word": "あらすじ",
+"reading": "あらすじ",
+"meanings": [
+"outline",
+"summary"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "2c37f1e65a",
+"level": "N2",
+"word": "争う",
+"reading": "あらそう",
+"meanings": [
+"to dispute",
+"to argue",
+"to be at variance",
+"to compete"
+],
+"pos": [
+"v5u",
+"vi"
+]
+},
+{
+"id": "ba30b2fc1e",
+"level": "N2",
+"word": "改めて",
+"reading": "あらためて",
+"meanings": [
+"another time",
+"again",
+"over again",
+"anew",
+"formally"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "554088a0dc",
+"level": "N2",
+"word": "改める",
+"reading": "あらためる",
+"meanings": [
+"to change",
+"to alter",
+"to reform",
+"to revise"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "173f8d3f42",
+"level": "N2",
+"word": "著す",
+"reading": "あらわす",
+"meanings": [
+"to write",
+"to publish"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "89034be6d9",
+"level": "N2",
+"word": "有難い",
+"reading": "ありがたい",
+"meanings": [
+"grateful",
+"thankful",
+"welcome",
+"appreciated",
+"evoking gratitude"
+],
+"pos": [
+"adj-i"
+]
+},
+{
+"id": "8c1e168b75",
+"level": "N2",
+"word": "あれこれ",
+"reading": "あれこれ",
+"meanings": [
+"one thing or another",
+"this and that",
+"this or that"
+],
+"pos": [
+"adv",
+"pn"
+]
+},
+{
+"id": "4fcdca6105",
+"level": "N2",
+"word": "あわただしい",
+"reading": "あわただしい",
+"meanings": [
+"busy",
+"hurried",
+"confused",
+"flurried"
+],
+"pos": [
+"adj-i"
+]
+},
+{
+"id": "dedd8df548",
+"level": "N2",
+"word": "あわてる",
+"reading": "あわてる",
+"meanings": [
+"to become confused"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "9b0fdc64d8",
+"level": "N2",
+"word": "安易",
+"reading": "あんい",
+"meanings": [
+"easy-going"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "96370a1ce3",
+"level": "N2",
+"word": "案外",
+"reading": "あんがい",
+"meanings": [
+"unexpectedly"
+],
+"pos": [
+"adv",
+"adv-to"
+]
+},
+{
+"id": "02304543b5",
+"level": "N2",
+"word": "アンテナ",
+"reading": "アンテナ",
+"meanings": [
+"antenna"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "f90c31a922",
+"level": "N2",
+"word": "言い出す",
+"reading": "いいだす",
+"meanings": [
+"to start talking",
+"to speak",
+"to tell",
+"to propose",
+"to suggest",
+"to break the ice"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "319bcb97fb",
+"level": "N2",
+"word": "言い付ける",
+"reading": "いいつける",
+"meanings": [
+"to tell",
+"to tell on (someone)",
+"to order"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "9711352afe",
+"level": "N2",
+"word": "意義",
+"reading": "いぎ",
+"meanings": [
+"meaning",
+"significance"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "c6399cbbfd",
+"level": "N2",
+"word": "生き生き",
+"reading": "いきいき",
+"meanings": [
+"vividly",
+"lively"
+],
+"pos": [
+"adv",
+"adv-to",
+"vs"
+]
+},
+{
+"id": "ad6b4ebbf6",
+"level": "N2",
+"word": "いきなり",
+"reading": "いきなり",
+"meanings": [
+"abruptly",
+"suddenly",
+"all of a sudden",
+"without warning"
+],
+"pos": [
+"adv",
+"adj-no"
+]
+},
+{
+"id": "3308b2d953",
+"level": "N2",
+"word": "育児",
+"reading": "いくじ",
+"meanings": [
+"childcare",
+"nursing",
+"upbringing"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "363c73e228",
+"level": "N2",
+"word": "幾分",
+"reading": "いくぶん",
+"meanings": [
+"somewhat"
+],
+"pos": [
+"adv",
+"n"
+]
+},
+{
+"id": "85d99f2057",
+"level": "N2",
+"word": "生け花",
+"reading": "いけばな",
+"meanings": [
+"flower arrangement"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "e73024b2eb",
+"level": "N2",
+"word": "以後",
+"reading": "いご",
+"meanings": [
+"after this",
+"from now on",
+"hereafter",
+"thereafter"
+],
+"pos": [
+"n",
+"adv"
+]
+},
+{
+"id": "f485f00a3a",
+"level": "N2",
+"word": "以降",
+"reading": "いこう",
+"meanings": [
+"on and after",
+"hereafter",
+"thereafter"
+],
+"pos": [
+"n",
+"adv"
+]
+},
+{
+"id": "7102632d8f",
+"level": "N2",
+"word": "イコール",
+"reading": "イコール",
+"meanings": [
+"equal"
+],
+"pos": [
+"adj-na"
+]
+},
+{
+"id": "3966c8755c",
+"level": "N2",
+"word": "勇ましい",
+"reading": "いさましい",
+"meanings": [
+"brave",
+"valiant",
+"gallant",
+"courageous"
+],
+"pos": [
+"adj-i"
+]
+},
+{
+"id": "05292c6357",
+"level": "N2",
+"word": "衣食住",
+"reading": "いしょくじゅう",
+"meanings": [
+"necessities of life (food, clothing, etc.)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "9332146c42",
+"level": "N2",
+"word": "意地悪",
+"reading": "いじわる",
+"meanings": [
+"malicious",
+"ill-tempered",
+"unkind"
+],
+"pos": [
+"adj-na",
+"n"
+]
+},
+{
+"id": "ca1d593e5e",
+"level": "N2",
+"word": "いちいち",
+"reading": "いちいち",
+"meanings": [
+"one by one",
+"separately"
+],
+"pos": [
+"n",
+"adv"
+]
+},
+{
+"id": "99ff21adbb",
+"level": "N2",
+"word": "一応",
+"reading": "いちおう",
+"meanings": [
+"once",
+"tentatively",
+"in outline",
+"for the time being"
+],
+"pos": [
+"n",
+"adv"
+]
+},
+{
+"id": "28ba375980",
+"level": "N2",
+"word": "一段と",
+"reading": "いちだんと",
+"meanings": [
+"greater",
+"more",
+"further",
+"still more"
+],
+"pos": null
+},
+{
+"id": "9299dcd9c4",
+"level": "N2",
+"word": "一流",
+"reading": "いちりゅう",
+"meanings": [
+"first class",
+"top grade",
+"foremost",
+"top-notch"
+],
+"pos": [
+"adj-no",
+"n"
+]
+},
+{
+"id": "a86f29464a",
+"level": "N2",
+"word": "佚",
+"reading": "いつ",
+"meanings": [
+"be lost",
+"peace",
+"hide",
+"mistake",
+"beautiful",
+"in turn"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "84ce1b3469",
+"level": "N2",
+"word": "一昨年",
+"reading": "いっさくねん",
+"meanings": [
+"year before last"
+],
+"pos": [
+"n",
+"adv"
+]
+},
+{
+"id": "b1205d9b83",
+"level": "N2",
+"word": "一斉",
+"reading": "いっせい",
+"meanings": [
+"simultaneous",
+"all at once"
+],
+"pos": [
+"adv",
+"n"
+]
+},
+{
+"id": "e2c0c40491",
+"level": "N2",
+"word": "一旦",
+"reading": "いったん",
+"meanings": [
+"once",
+"for a moment",
+"one morning",
+"temporarily"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "d56c7f55f8",
+"level": "N2",
+"word": "一定",
+"reading": "いってい",
+"meanings": [
+"fixed",
+"settled",
+"definite"
+],
+"pos": [
+"adj-no"
+]
+},
+{
+"id": "3db8531d3b",
+"level": "N2",
+"word": "いっていらっしゃい",
+"reading": "いっていらっしゃい",
+"meanings": [
+"see you later",
+"take care (said to someone leaving home)"
+],
+"pos": null
+},
+{
+"id": "b36e55026a",
+"level": "N2",
+"word": "いってまいります",
+"reading": "いってまいります",
+"meanings": [
+"good bye",
+"I'm off",
+"see you later"
+],
+"pos": [
+"exp"
+]
+},
+{
+"id": "b95d04294a",
+"level": "N2",
+"word": "いってらっしゃい",
+"reading": "いってらっしゃい",
+"meanings": [
+"have a good day",
+"take care",
+"see you"
+],
+"pos": [
+"int"
+]
+},
+{
+"id": "8c9eb6e298",
+"level": "N2",
+"word": "いつのまにか",
+"reading": "いつのまにか",
+"meanings": [
+"before one knows",
+"unnoticed",
+"unawares"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "2c3f94c2e7",
+"level": "N2",
+"word": "移転",
+"reading": "いてん",
+"meanings": [
+"moving",
+"transfer",
+"demise"
+],
+"pos": [
+"n",
+"vs",
+"vt",
+"vi"
+]
+},
+{
+"id": "2fac4509a1",
+"level": "N2",
+"word": "緯度",
+"reading": "いど",
+"meanings": [
+"latitude (nav.)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "354b630662",
+"level": "N2",
+"word": "井戸",
+"reading": "いど",
+"meanings": [
+"water well"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "8ca2ab5e1d",
+"level": "N2",
+"word": "従姉妹",
+"reading": "いとこ",
+"meanings": [
+"cousin (female)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "d46e97a030",
+"level": "N2",
+"word": "威張る",
+"reading": "いばる",
+"meanings": [
+"to be proud",
+"to swagger"
+],
+"pos": [
+"v5r",
+"vi"
+]
+},
+{
+"id": "608f79c4f1",
+"level": "N2",
+"word": "嫌がる",
+"reading": "いやがる",
+"meanings": [
+"to hate",
+"to dislike"
+],
+"pos": [
+"v5r",
+"vt"
+]
+},
+{
+"id": "17c46940e9",
+"level": "N2",
+"word": "いよいよ",
+"reading": "いよいよ",
+"meanings": [
+"more and more",
+"all the more",
+"increasingly",
+"at last",
+"beyond doubt"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "82a3b17d15",
+"level": "N2",
+"word": "煎る",
+"reading": "いる",
+"meanings": [
+"to parch",
+"to fry"
+],
+"pos": [
+"v5r",
+"vt"
+]
+},
+{
+"id": "228ab529ea",
+"level": "N2",
+"word": "炒る",
+"reading": "いる",
+"meanings": [
+"to roast",
+"to parch",
+"to toast",
+"to boil down"
+],
+"pos": [
+"v5r",
+"vt"
+]
+},
+{
+"id": "c1294618e7",
+"level": "N2",
+"word": "入れ物",
+"reading": "いれもの",
+"meanings": [
+"container",
+"case",
+"receptacle"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "a7cee32023",
+"level": "N2",
+"word": "インキ",
+"reading": "インキ",
+"meanings": [
+"ink"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b1eb46ec35",
+"level": "N2",
+"word": "インタビュー",
+"reading": "インタビュー",
+"meanings": [
+"interview"
+],
+"pos": [
+"n",
+"vs",
+"vt",
+"vi"
+]
+},
+{
+"id": "1cda943bec",
+"level": "N2",
+"word": "引力",
+"reading": "いんりょく",
+"meanings": [
+"gravity"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "2a68d3e319",
+"level": "N2",
+"word": "ウーマン",
+"reading": "ウーマン",
+"meanings": [
+"woman"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b453cd7ae1",
+"level": "N2",
+"word": "ウール",
+"reading": "ウール",
+"meanings": [
+"wool"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "d2573d60e7",
+"level": "N2",
+"word": "ウエートレス",
+"reading": "ウエートレス",
+"meanings": [
+"waitress"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "c7ba433c9d",
+"level": "N2",
+"word": "植木",
+"reading": "うえき",
+"meanings": [
+"garden shrubs",
+"trees",
+"potted plant"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "c20bb40c25",
+"level": "N2",
+"word": "飢える",
+"reading": "うえる",
+"meanings": [
+"to starve"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "155ca82293",
+"level": "N2",
+"word": "浮かぶ",
+"reading": "うかぶ",
+"meanings": [
+"to float",
+"to rise to surface",
+"to come to mind"
+],
+"pos": [
+"v5b",
+"vi"
+]
+},
+{
+"id": "0fd77d7f82",
+"level": "N2",
+"word": "浮かべる",
+"reading": "うかべる",
+"meanings": [
+"to float",
+"to express",
+"to look (sad, glad)"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "3d9613a286",
+"level": "N2",
+"word": "浮く",
+"reading": "うく",
+"meanings": [
+"to float",
+"to become merry",
+"to become loose"
+],
+"pos": [
+"v5k",
+"vi"
+]
+},
+{
+"id": "a4847f22e0",
+"level": "N2",
+"word": "承る",
+"reading": "うけたまわる",
+"meanings": [
+"(humble) to hear",
+"to be told",
+"to know"
+],
+"pos": [
+"v5r",
+"vt"
+]
+},
+{
+"id": "503bf9a13e",
+"level": "N2",
+"word": "受取",
+"reading": "うけとり",
+"meanings": [
+"receipt"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "7b66979a25",
+"level": "N2",
+"word": "受け持つ",
+"reading": "うけもつ",
+"meanings": [
+"to take (be in) charge of"
+],
+"pos": [
+"v5t",
+"vt"
+]
+},
+{
+"id": "609f65f056",
+"level": "N2",
+"word": "薄暗い",
+"reading": "うすぐらい",
+"meanings": [
+"dim",
+"gloomy"
+],
+"pos": [
+"adj-i"
+]
+},
+{
+"id": "30f83846c7",
+"level": "N2",
+"word": "薄める",
+"reading": "うすめる",
+"meanings": [
+"to dilute",
+"to water down"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "40a3c95ccf",
+"level": "N2",
+"word": "打合せ",
+"reading": "うちあわせ",
+"meanings": [
+"business meeting",
+"previous arrangement",
+"appointment"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "4a25e28103",
+"level": "N2",
+"word": "打ち消す",
+"reading": "うちけす",
+"meanings": [
+"to deny",
+"to negate",
+"to contradict"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "1abb6e796a",
+"level": "N2",
+"word": "討つ",
+"reading": "うつ",
+"meanings": [
+"to attack",
+"to avenge"
+],
+"pos": [
+"v5t",
+"vt"
+]
+},
+{
+"id": "079b23ed2d",
+"level": "N2",
+"word": "うっかり",
+"reading": "うっかり",
+"meanings": [
+"carelessly",
+"thoughtlessly",
+"inadvertently"
+],
+"pos": [
+"adv",
+"adv-to",
+"vs"
+]
+},
+{
+"id": "6cfaa71596",
+"level": "N2",
+"word": "映す",
+"reading": "うつす",
+"meanings": [
+"to project",
+"to reflect",
+"to cast (shadow)"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "46b2bb8278",
+"level": "N2",
+"word": "映る",
+"reading": "うつる",
+"meanings": [
+"to be reflected",
+"to harmonize with",
+"to come out (photo)"
+],
+"pos": [
+"v5r",
+"vi"
+]
+},
+{
+"id": "8d45108aac",
+"level": "N2",
+"word": "写る",
+"reading": "うつる",
+"meanings": [
+"to be photographed",
+"to be projected"
+],
+"pos": [
+"v5r",
+"vi"
+]
+},
+{
+"id": "10adbed302",
+"level": "N2",
+"word": "うどん",
+"reading": "うどん",
+"meanings": [
+"noodles (Japanese)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "27a6e0b315",
+"level": "N2",
+"word": "有無",
+"reading": "うむ",
+"meanings": [
+"yes or no",
+"existence",
+"flag indicator (comp)",
+"presence or absence marker"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "04779b98e7",
+"level": "N2",
+"word": "埋める",
+"reading": "うめる",
+"meanings": [
+"to bury",
+"to fill up",
+"to fill (a seat, a vacant position)"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "d95334bf4d",
+"level": "N2",
+"word": "敬う",
+"reading": "うやまう",
+"meanings": [
+"to show respect",
+"to honour"
+],
+"pos": [
+"v5u",
+"vt"
+]
+},
+{
+"id": "27cd0cb3fc",
+"level": "N2",
+"word": "裏返す",
+"reading": "うらがえす",
+"meanings": [
+"to turn inside out",
+"to turn (something) over"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "01cfbc11d9",
+"level": "N2",
+"word": "裏口",
+"reading": "うらぐち",
+"meanings": [
+"backdoor",
+"rear entrance"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "5ba9e0b071",
+"level": "N2",
+"word": "占う",
+"reading": "うらなう",
+"meanings": [
+"to forecast",
+"to predict"
+],
+"pos": [
+"v5u",
+"vt"
+]
+},
+{
+"id": "598e1dd07c",
+"level": "N2",
+"word": "恨み",
+"reading": "うらみ",
+"meanings": [
+"resentment"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "6116be16a9",
+"level": "N2",
+"word": "恨む",
+"reading": "うらむ",
+"meanings": [
+"to curse",
+"to feel bitter"
+],
+"pos": [
+"v5m",
+"vt"
+]
+},
+{
+"id": "d40a8e4a7f",
+"level": "N2",
+"word": "羨ましい",
+"reading": "うらやましい",
+"meanings": [
+"envious",
+"enviable"
+],
+"pos": [
+"adj-i"
+]
+},
+{
+"id": "343bc443c8",
+"level": "N2",
+"word": "羨む",
+"reading": "うらやむ",
+"meanings": [
+"to envy"
+],
+"pos": [
+"v5m",
+"vt"
+]
+},
+{
+"id": "43e8d35afa",
+"level": "N2",
+"word": "売上",
+"reading": "うりあげ",
+"meanings": [
+"amount sold",
+"proceeds"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "f892df3605",
+"level": "N2",
+"word": "売り切れ",
+"reading": "うりきれ",
+"meanings": [
+"sold-out"
+],
+"pos": [
+"adj-no",
+"n"
+]
+},
+{
+"id": "399dac0917",
+"level": "N2",
+"word": "売り切れる",
+"reading": "うりきれる",
+"meanings": [
+"to be sold out"
+],
+"pos": [
+"v1",
+"vi"
+]
+},
+{
+"id": "d5a063f643",
+"level": "N2",
+"word": "売れ行き",
+"reading": "うれゆき",
+"meanings": [
+"sales"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "159326fcca",
+"level": "N2",
+"word": "うろうろ",
+"reading": "うろうろ",
+"meanings": [
+"loiteringly",
+"aimless wandering"
+],
+"pos": [
+"adv",
+"adv-to"
+]
+},
+{
+"id": "5fd1b52022",
+"level": "N2",
+"word": "運河",
+"reading": "うんが",
+"meanings": [
+"canal",
+"waterway"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b3f892f900",
+"level": "N2",
+"word": "うんと",
+"reading": "うんと",
+"meanings": [
+"a great deal",
+"very much"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "aa9dd05f1c",
+"level": "N2",
+"word": "英文",
+"reading": "えいぶん",
+"meanings": [
+"sentence in English"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "b39296190c",
+"level": "N2",
+"word": "英和",
+"reading": "えいわ",
+"meanings": [
+"English-Japanese (e.g. dictionary)"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "5047599345",
+"level": "N2",
+"word": "ええと",
+"reading": "ええと",
+"meanings": [
+"let me see",
+"well",
+"er...."
+],
+"pos": [
+"int"
+]
+},
+{
+"id": "002731ca75",
+"level": "N2",
+"word": "液体",
+"reading": "えきたい",
+"meanings": [
+"liquid",
+"fluid"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "9a206ab4e7",
+"level": "N2",
+"word": "エチケット",
+"reading": "エチケット",
+"meanings": [
+"etiquette"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "5b77043dfc",
+"level": "N2",
+"word": "絵の具",
+"reading": "えのぐ",
+"meanings": [
+"colors",
+"paints"
+],
+"pos": [
+"exp",
+"n"
+]
+},
+{
+"id": "2950903972",
+"level": "N2",
+"word": "エプロン",
+"reading": "エプロン",
+"meanings": [
+"apron"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "6155e8fd84",
+"level": "N2",
+"word": "偉い",
+"reading": "えらい",
+"meanings": [
+"great",
+"celebrated",
+"eminent",
+"terrible",
+"awful",
+"famous",
+"remarkable",
+"excellent"
+],
+"pos": [
+"adj-i"
+]
+},
+{
+"id": "ec666f2c30",
+"level": "N2",
+"word": "宴会",
+"reading": "えんかい",
+"meanings": [
+"party",
+"banquet"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "f428a460b7",
+"level": "N2",
+"word": "園芸",
+"reading": "えんげい",
+"meanings": [
+"horticulture",
+"gardening"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "ac4aba9167",
+"level": "N2",
+"word": "演劇",
+"reading": "えんげき",
+"meanings": [
+"play (theatrical)"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "d098b11716",
+"level": "N2",
+"word": "円周",
+"reading": "えんしゅう",
+"meanings": [
+"circumference"
+],
+"pos": [
+"n",
+"adj-no"
+]
+},
+{
+"id": "75fef7ef0d",
+"level": "N2",
+"word": "遠足",
+"reading": "えんそく",
+"meanings": [
+"trip",
+"hike",
+"picnic"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "dba326f5ee",
+"level": "N2",
+"word": "延長",
+"reading": "えんちょう",
+"meanings": [
+"extension",
+"elongation",
+"prolongation",
+"lengthening"
+],
+"pos": [
+"n",
+"vs",
+"vt",
+"vi"
+]
+},
+{
+"id": "af2a981df0",
+"level": "N2",
+"word": "煙突",
+"reading": "えんとつ",
+"meanings": [
+"chimney"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "06424536bc",
+"level": "N2",
+"word": "追い掛ける",
+"reading": "おいかける",
+"meanings": [
+"to chase or run after someone",
+"to run down",
+"to pursue"
+],
+"pos": [
+"v1",
+"vt"
+]
+},
+{
+"id": "6e96d24d68",
+"level": "N2",
+"word": "追い越す",
+"reading": "おいこす",
+"meanings": [
+"to pass (e.g. car)",
+"to outdistance",
+"to outstrip"
+],
+"pos": [
+"v5s",
+"vt"
+]
+},
+{
+"id": "45c88476cd",
+"level": "N2",
+"word": "オイル",
+"reading": "オイル",
+"meanings": [
+"oil",
+"engine oil",
+"kerosene"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "f4d4c5dfdf",
+"level": "N2",
+"word": "応援",
+"reading": "おうえん",
+"meanings": [
+"aid",
+"assistance",
+"help",
+"reinforcement"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "dcd1a67561",
+"level": "N2",
+"word": "王女",
+"reading": "おうじょ",
+"meanings": [
+"princess"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "f70dc7b6aa",
+"level": "N2",
+"word": "応ずる",
+"reading": "おうずる",
+"meanings": [
+"to answer",
+"to respond",
+"to meet",
+"to satisfy",
+"to accept"
+],
+"pos": [
+"vz",
+"vi"
+]
+},
+{
+"id": "91061f3fb6",
+"level": "N2",
+"word": "応接",
+"reading": "おうせつ",
+"meanings": [
+"reception"
+],
+"pos": [
+"n",
+"vs",
+"vt",
+"vi"
+]
+},
+{
+"id": "675d71d816",
+"level": "N2",
+"word": "応対",
+"reading": "おうたい",
+"meanings": [
+"receiving",
+"dealing with"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "0be1327b16",
+"level": "N2",
+"word": "往復",
+"reading": "おうふく",
+"meanings": [
+"(colloquial) round trip",
+"coming and going",
+"return ticket"
+],
+"pos": [
+"n",
+"vs",
+"vi"
+]
+},
+{
+"id": "950bd50c42",
+"level": "N2",
+"word": "欧米",
+"reading": "おうべい",
+"meanings": [
+"Europe and America",
+"the West"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "8ccc07ea5d",
+"level": "N2",
+"word": "応用",
+"reading": "おうよう",
+"meanings": [
+"application",
+"put to practical use"
+],
+"pos": [
+"n",
+"vs",
+"vt"
+]
+},
+{
+"id": "9ebfa7ef3b",
+"level": "N2",
+"word": "オーケストラ",
+"reading": "オーケストラ",
+"meanings": [
+"orchestra"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "a1b5b4da89",
+"level": "N2",
+"word": "おおざっぱ",
+"reading": "おおざっぱ",
+"meanings": [
+"rough (not precise)",
+"broad",
+"sketchy"
+],
+"pos": [
+"adj-na"
+]
+},
+{
+"id": "395598d52e",
+"level": "N2",
+"word": "大通り",
+"reading": "おおどおり",
+"meanings": [
+"main street"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "ec98265fb1",
+"level": "N2",
+"word": "オートメーション",
+"reading": "オートメーション",
+"meanings": [
+"automation"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "3675b2a9f8",
+"level": "N2",
+"word": "オーバーコート",
+"reading": "オーバーコート",
+"meanings": [
+"overcoat"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "1495560853",
+"level": "N2",
+"word": "おおよそ",
+"reading": "おおよそ",
+"meanings": [
+"about",
+"roughly",
+"as a rule",
+"approximately"
+],
+"pos": [
+"adv"
+]
+},
+{
+"id": "829f937932",
+"level": "N2",
+"word": "お帰り",
+"reading": "おかえり",
+"meanings": [
+"return",
+"welcome"
+],
+"pos": [
+"n"
+]
+},
+{
+"id": "24727f461e",
+"level": "N2",
+"word": "おかけください",
+"reading": "おかけください",
+"meanings": [
+"please sit down",
+"please have a seat"
+],
+"pos": [
+"exp"
+]
+},
+{
+"id": "a3e381631c",
+"level": "N2",
+"word": "おかげさまで",
+"reading": "おかげさまで",
+"meanings": [
+"Thanks to god",
+"thanks to you"
+],
+"pos": [
+"exp"
+]
+}
+]

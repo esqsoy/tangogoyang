@@ -1,0 +1,1710 @@
+[
+{
+"id": "25a3345e54",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "fea8ab21fe",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "0a65b39cf7",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "6c0551dd8a",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "64778c95f5",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "5e5a5dfee9",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "5b1670aea6",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "c2946190ea",
+"action": "fix",
+"why": "가나 で는 조사와 혼동. 出로 표기",
+"word": "出"
+},
+{
+"id": "5750d76e14",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "7b53295093",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "eda767b81b",
+"action": "drop",
+"why": "표준 표기는 タイヤ. 변이 표기"
+},
+{
+"id": "5a16851bd6",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "1d578a6738",
+"action": "drop",
+"why": "옛 읽기. いってい가 이미 있음"
+},
+{
+"id": "d56c7f55f8",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "84ce1b3469",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "b75778f0ce",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "3554fb81b8",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "2dc7289c82",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "4f60e61ae2",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "fbe9c362bd",
+"action": "drop",
+"why": "드문 읽기. じょうぶ가 이미 있음"
+},
+{
+"id": "50525927ee",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "5cb07674a3",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "68e9c896bf",
+"action": "drop",
+"why": "단독으로 み라 쓰지 않음(みっつ)"
+},
+{
+"id": "08a3ed212d",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "9ce542fed7",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "1f3b016d79",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "7a4cf36303",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "4436cfdbab",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "1763fc412a",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "264ec34f18",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "06b85de79a",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "5d32281da9",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "8814988b80",
+"action": "drop",
+"why": "드문 속어 읽기"
+},
+{
+"id": "eae8d1488f",
+"action": "drop",
+"why": "글말 잔재. 보통 主な"
+},
+{
+"id": "d4517d7970",
+"action": "drop",
+"why": "옛 읽기. 보통 よげん"
+},
+{
+"id": "6bebbaf4b0",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "d91ee7a9ed",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "81d5a1e831",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "0400a204bd",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "380bf1226c",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "7911dfc293",
+"action": "keep",
+"why": "日仏 등 프랑스 약칭",
+"ko": "프랑스 (약칭)"
+},
+{
+"id": "b1358dbe27",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "a29824a4ad",
+"action": "drop",
+"why": "단독으로 쓰지 않는 접미 읽기"
+},
+{
+"id": "4d62fb410a",
+"action": "keep",
+"why": "件の 꼴로 쓰는 실제 말",
+"ko": "앞서 말한, 예의 (글말)"
+},
+{
+"id": "5da1033412",
+"action": "drop",
+"why": "불교 특수 읽기, 원본 뜻도 불일치"
+},
+{
+"id": "53e1ba680a",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "a556e5edce",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "060bd26d75",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "9d47958486",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "558866ef86",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "4ec7fe1166",
+"action": "drop",
+"why": "どれどれ는 가나로 씀. 표기 오류"
+},
+{
+"id": "a19d9e358c",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "a86f29464a",
+"action": "drop",
+"why": "거의 안 쓰는 한자 단독 항목"
+},
+{
+"id": "4bec3c72cb",
+"action": "drop",
+"why": "드문 읽기. さくもつ가 이미 있음"
+},
+{
+"id": "9eb3e2a34e",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "d16c7a5e1e",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "9768eacb27",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "b7459622cc",
+"action": "drop",
+"why": "옛 읽기. ぼく가 이미 있음"
+},
+{
+"id": "1587d6fbcf",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "957434f95c",
+"action": "drop",
+"why": "단어가 아닌 조각 항목"
+},
+{
+"id": "f5b7534060",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "4d852efca2",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "bad0f9f7f6",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "0d79c7283f",
+"action": "drop",
+"why": "복합어에만 남음. はいる가 있음"
+},
+{
+"id": "c428d02d43",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "ed188cc69e",
+"action": "fix",
+"why": "드문 읽기 대신 흔한 읽기로 (풀에 없음)",
+"reading": "こらす",
+"ko": "(궁리·눈을) 집중하다, 짜내다",
+"c": ""
+},
+{
+"id": "308f45926c",
+"action": "fix",
+"why": "드문 읽기 대신 흔한 읽기로 (풀에 없음)",
+"reading": "こる",
+"ko": "열중하다, (어깨가) 결리다",
+"c": ""
+},
+{
+"id": "be922b216d",
+"action": "drop",
+"why": "드문 말, できる와 혼동"
+},
+{
+"id": "9e39f13090",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "3c5ff54bea",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "21f2e9018e",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "319e218950",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "05b951102a",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "ab6fd5bdbb",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "67f7a8d49f",
+"action": "drop",
+"why": "단독 단어로 쓰지 않음. みなみ 있음"
+},
+{
+"id": "84e465b526",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "579a1fd344",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "365fe85edb",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "19bf853f89",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "3d1e878581",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "f7b907fc12",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "08cfe03cb3",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "ee21222664",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "5d1ad6cf31",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "15d4ea5f82",
+"action": "drop",
+"why": "いや는 보통 가나로 씀"
+},
+{
+"id": "e5f9192daa",
+"action": "drop",
+"why": "드문 읽기. みやげ가 이미 있음"
+},
+{
+"id": "8fb52e4502",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "26c17d8895",
+"action": "drop",
+"why": "특수 읽기. ちほう가 이미 있음"
+},
+{
+"id": "fbeac8c220",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "0f4b2590f6",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "c2b9455981",
+"action": "drop",
+"why": "글말 읽기. もと가 이미 있음"
+},
+{
+"id": "f9aaf64bd0",
+"action": "drop",
+"why": "화학 용어 단독, しお가 있음"
+},
+{
+"id": "b366a3d677",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "265c8a1e27",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "43e8d35afa",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "3fa9f114f2",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "d6c56bc73f",
+"action": "drop",
+"why": "드문 읽기. よなか가 이미 있음"
+},
+{
+"id": "19a41952db",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "c117100746",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "de9d61dd71",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "b442490fff",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "c76123f3f7",
+"action": "drop",
+"why": "변이 읽기. だいぶ가 이미 있음"
+},
+{
+"id": "8cb1bad29a",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "1fc733c113",
+"action": "drop",
+"why": "원본 뜻 오류(大分과 혼동)"
+},
+{
+"id": "4570b0ab6b",
+"action": "drop",
+"why": "옛말"
+},
+{
+"id": "f71c5d995e",
+"action": "drop",
+"why": "옛 읽기. てんのう가 이미 있음"
+},
+{
+"id": "8058eb2a5b",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "13fe04cb12",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "64d280f093",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "5eae712fd9",
+"action": "drop",
+"why": "옛말·사투리. じょし가 있음"
+},
+{
+"id": "0596cdc023",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "f3203359ee",
+"action": "drop",
+"why": "옛 읽기. 보통 やつ"
+},
+{
+"id": "02122dbf6e",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "13e5e36fd0",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "dd89673ae0",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "6dcfd99e2c",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "ad70550f9b",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "fd76167657",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "5b32f6a19b",
+"action": "drop",
+"why": "보통 乙女로 씀. しょうじょ 있음"
+},
+{
+"id": "17c0d3a658",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "8b7434e649",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "9adc22cc25",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "56d7bebebd",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "2af3aed135",
+"action": "fix",
+"why": "표준 표기는 年寄り",
+"word": "年寄り"
+},
+{
+"id": "75abef3a63",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "5489cdb398",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "1941689b4f",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "0c8a588e53",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "3c74d17c1d",
+"action": "drop",
+"why": "옛 읽기. おとうと가 이미 있음"
+},
+{
+"id": "db32745bbc",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "925301438b",
+"action": "drop",
+"why": "한자 표기 오류(豪気)"
+},
+{
+"id": "2d36cfac32",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "08fac022a1",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "23911a0718",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "ca47625fe8",
+"action": "drop",
+"why": "역사 전문 읽기. やく가 있음"
+},
+{
+"id": "396f83701d",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "4f134c9b38",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "aeff3c4d96",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "9c851c43f7",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "a017bb3c0c",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "ec976107e1",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "11cc069a92",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "fedad22ef0",
+"action": "drop",
+"why": "글말 읽기. おこる가 이미 있음"
+},
+{
+"id": "2e0f32c097",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "1a801cd8e5",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "2e8753951c",
+"action": "drop",
+"why": "원본 오류. にくい는 憎い"
+},
+{
+"id": "13b6dbec03",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "06dc06725b",
+"action": "drop",
+"why": "드문 읽기. わるくち가 있음"
+},
+{
+"id": "b440e7ed66",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "03b0ef5987",
+"action": "drop",
+"why": "원본 오류. あくび는 하품"
+},
+{
+"id": "d5373e6a45",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "1e176e82e5",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "6f4691297f",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "c858640672",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "e6f3a7d91a",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "08fb4b13c1",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "40a3c95ccf",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "97600f5aa8",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "691f993a5a",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "6ba1bae967",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "0a81eafbf4",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "a63d59c119",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "371f1b3f39",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "856da87e15",
+"action": "drop",
+"why": "옛말. ぶん이 이미 있음"
+},
+{
+"id": "39b0ac16ca",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "a988a95058",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "69209e023f",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "e34295f3e1",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "9dda296d47",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "b115c24eac",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "55a030e65f",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "b286c3e278",
+"action": "fix",
+"why": "이 뜻은 空き로 씀",
+"word": "空き"
+},
+{
+"id": "115ec83476",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "4c3461199c",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "334a8aa633",
+"action": "drop",
+"why": "글말 읽기. ひま가 이미 있음"
+},
+{
+"id": "7a9ce8e2df",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "18c78b84a5",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "56319c8bb4",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "08f7ce07ce",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "096c8b698e",
+"action": "drop",
+"why": "십이지 전문 읽기"
+},
+{
+"id": "30935266bc",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "f3f408a1e8",
+"action": "drop",
+"why": "옛 읽기. すえ가 이미 있음"
+},
+{
+"id": "4f0c39291a",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "a6b638592c",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "815dc7a9f6",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "48d1eb2573",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "2e2abd26ca",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "24b670d6d3",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "d0379ff55e",
+"action": "drop",
+"why": "옛 읽기. ひがし가 이미 있음"
+},
+{
+"id": "0a38c65004",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "2306950c03",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "82e39c46a6",
+"action": "drop",
+"why": "원본 오류. 梯子는 はしご"
+},
+{
+"id": "07f4ebd73d",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "6b56c41e59",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "2e94c5f285",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "bcab821414",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "966e181cea",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "d00ef0a9d5",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "e9f0941d9e",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "9d1aa046d6",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "7515db0cfd",
+"action": "drop",
+"why": "留める とどめる와 중복"
+},
+{
+"id": "3aadcbc234",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "9de629082f",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "46adc4e436",
+"action": "drop",
+"why": "옛 군사 용어 읽기"
+},
+{
+"id": "3ebdf0c56a",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "3ffc020bb5",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "9ba2a9c365",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "c4db898159",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "fc259785af",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "87db0f1329",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "eb830c293c",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "9ba2fec541",
+"action": "drop",
+"why": "드문 읽기. しゃれ가 이미 있음"
+},
+{
+"id": "f28cffe595",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "aac375dbab",
+"action": "fix",
+"why": "이 뜻은 澄む로 씀",
+"word": "澄む"
+},
+{
+"id": "55bb56c25e",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "898777096e",
+"action": "drop",
+"why": "쓰지 않는 수 단위"
+},
+{
+"id": "91af54997d",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "a603c7698c",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "6659596f97",
+"action": "fix",
+"why": "드문 읽기 대신 흔한 읽기로 (풀에 없음)",
+"reading": "しお",
+"ko": "조수, 밀물과 썰물",
+"c": ""
+},
+{
+"id": "f38adaef87",
+"action": "drop",
+"why": "드문 한자어"
+},
+{
+"id": "1151601f8e",
+"action": "fix",
+"why": "ほり는 보통 堀로 씀",
+"word": "堀"
+},
+{
+"id": "35398ed297",
+"action": "drop",
+"why": "드문 읽기. やけど가 이미 있음"
+},
+{
+"id": "ebea673dd1",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "9db5fc5943",
+"action": "drop",
+"why": "글말. 灯 ひ가 이미 있음"
+},
+{
+"id": "de6ed799d8",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "7f13f5edd2",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "fc4763325c",
+"action": "drop",
+"why": "보통 가나. 然も는 しかも로 읽힘"
+},
+{
+"id": "bce14973f2",
+"action": "drop",
+"why": "장기 전문 용어"
+},
+{
+"id": "5ac33a4880",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "45e3926625",
+"action": "drop",
+"why": "보통 甕로 씀. びん과 혼동"
+},
+{
+"id": "1ea7451e69",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "f1134267ba",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "04f80af544",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "302bc4694a",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "87333c0d40",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "99d671e7c9",
+"action": "drop",
+"why": "십간 전문 읽기"
+},
+{
+"id": "d067bdf300",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "4591eb1d00",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "28bac43acc",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "afd91341e1",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "b5579bc4a6",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "f95cf14304",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "4ae5663b6a",
+"action": "drop",
+"why": "복합어에만 남음. もる가 있음"
+},
+{
+"id": "2b64f87c29",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "04428b9eb4",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "0894c700f3",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "60eed96a97",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "8b180f444a",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "6f6edac49d",
+"action": "fix",
+"why": "드문 읽기 대신 흔한 읽기로 (풀에 없음)",
+"reading": "そうたい",
+"ko": "상대, 상대적임",
+"c": ""
+},
+{
+"id": "208f1c892d",
+"action": "drop",
+"why": "드문 읽기. めがね가 이미 있음"
+},
+{
+"id": "72eb77e07a",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "ee7bcbddd5",
+"action": "drop",
+"why": "옛말. 보통 ひ/石碑"
+},
+{
+"id": "12b7d3e1db",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "c53570cabd",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "775cb6278a",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "6859422547",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "d5c2e69813",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "6fdfa5e5ee",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "0167b18f74",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "8ce4616a78",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "6ff51bace3",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "f6833a87fe",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "2564dfcfcb",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "8ee5c7c8db",
+"action": "drop",
+"why": "특수 전문 용어"
+},
+{
+"id": "f167fd3a76",
+"action": "fix",
+"why": "보통 個々로 씀",
+"word": "個々"
+},
+{
+"id": "8ac22c99b5",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "14d9875a05",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "57054ddfeb",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "f898b4b8d2",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "9fbf209387",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "f11ad5d8d2",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "7f83598742",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "5fa4cbe539",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "7ea034ef1f",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "898b067287",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "e7e5bb3758",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "45d920815a",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "281570f768",
+"action": "drop",
+"why": "글말 읽기. つや가 이미 있음"
+},
+{
+"id": "7985190c1e",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "1255ad0e6f",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "904529718c",
+"action": "fix",
+"why": "드문 읽기 대신 흔한 읽기로 (풀에 없음)",
+"reading": "きゃしゃ",
+"ko": "가냘프다, 날씬하고 여리다",
+"c": ""
+},
+{
+"id": "42cf1a5950",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "f91eb72b15",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "721424863e",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "ae29f467bd",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "89acdd2f72",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "b913b671ea",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "4092bfd9bb",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "778765a79e",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "ae0cc00f94",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "0f54df5fc1",
+"action": "drop",
+"why": "표기는 いう. 소리만 ゆう"
+},
+{
+"id": "4956c845dc",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "d8a877df8f",
+"action": "drop",
+"why": "옛 읽기. みとめる가 이미 있음"
+},
+{
+"id": "e086a9e024",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "8399cefa4f",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "c72bbc5aaa",
+"action": "drop",
+"why": "단독으로 거의 안 씀. ぞう 있음"
+},
+{
+"id": "3836c2c8bd",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "c7ae16d498",
+"action": "fix",
+"why": "표준 표기는 途切れる",
+"word": "途切れる"
+},
+{
+"id": "cb3d7cda2e",
+"action": "drop",
+"why": "戦 いくさ와 중복, 드문 표기"
+},
+{
+"id": "a3bb21b401",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "c0b0e43f57",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "3f77054caf",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "c33ec335f7",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "d2546ac97b",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "1213823fa2",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "3bd1fc1cbb",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "dd86bf4e80",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "79095736b4",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "c5951376c9",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "986998f6c6",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "0bfbb7af91",
+"action": "fix",
+"why": "표준 표기는 使い",
+"word": "使い"
+},
+{
+"id": "53162e310d",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "c4956951f6",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "2f10aed466",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "832f591208",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "8ba1e58b80",
+"action": "drop",
+"why": "옛 읽기. じゅう가 이미 있음"
+},
+{
+"id": "1f8754ca0a",
+"action": "drop",
+"why": "옛 읽기. もん이 이미 있음"
+},
+{
+"id": "5b92758003",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "fc3bc1e6f1",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "dddceb65a5",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "d1a343e501",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "8421f715e7",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "aed9fbb1c2",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "9ff6bba172",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "9215794cc3",
+"action": "drop",
+"why": "옛 읽기. かみなり가 이미 있음"
+},
+{
+"id": "1e21784548",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "e6562f65be",
+"action": "drop",
+"why": "글말 읽기. 表 おもて·面 めん 있음"
+},
+{
+"id": "c40902d092",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "c6815e7618",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "26e15c1ade",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "88e26cec55",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "3b5b1c60b8",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "bd7dce62ae",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+},
+{
+"id": "2c6219aa10",
+"action": "fix",
+"why": "드문 읽기 대신 흔한 읽기로 (풀에 없음)",
+"reading": "たましい",
+"ko": "넋, 영혼",
+"c": ""
+},
+{
+"id": "1ac6d9ceaf",
+"action": "drop",
+"why": "줄임 읽기. ねずみ가 이미 있음"
+},
+{
+"id": "38191588bb",
+"action": "keep",
+"why": "일반적인 단어·읽기"
+}
+]

@@ -1,0 +1,3026 @@
+[
+{
+"id": "25a3345e54",
+"lv": "N3",
+"word": "おそらく",
+"reading": "おそらく",
+"en": "perhaps",
+"ko": "아마",
+"c": "多分보다 글말"
+},
+{
+"id": "fea8ab21fe",
+"lv": "N3",
+"word": "かわいらしい",
+"reading": "かわいらしい",
+"en": "lovely; sweet",
+"ko": "사랑스럽다, 귀엽다",
+"c": "かわいい보다 조금 글말스럽다"
+},
+{
+"id": "0a65b39cf7",
+"lv": "N5",
+"word": "こんにちは",
+"reading": "こんにちは",
+"en": "hello; good day (daytime greeting, id)",
+"ko": "안녕하세요 (낮 인사)",
+"c": "끝 글자 は는 'わ'로 읽는다"
+},
+{
+"id": "6c0551dd8a",
+"lv": "N5",
+"word": "こんばんは",
+"reading": "こんばんは",
+"en": "good evening",
+"ko": "안녕하세요 (저녁 인사)",
+"c": "끝 글자 は는 'わ'로 읽는다"
+},
+{
+"id": "64778c95f5",
+"lv": "N1",
+"word": "しかしながら",
+"reading": "しかしながら",
+"en": "nevertheless; however",
+"ko": "그렇지만, 그러나",
+"c": "しかし보다 딱딱한 글말"
+},
+{
+"id": "5e5a5dfee9",
+"lv": "N3",
+"word": "しまい",
+"reading": "しまい",
+"en": "sisters",
+"ko": "끝, 마지막",
+"c": "'仕舞い'. 'おしまい'로 많이 쓴다"
+},
+{
+"id": "5b1670aea6",
+"lv": "N2",
+"word": "せめて",
+"reading": "せめて",
+"en": "offense; method of attack",
+"ko": "하다못해, 적어도",
+"c": ""
+},
+{
+"id": "c2946190ea",
+"lv": "N3",
+"word": "で",
+"reading": "で",
+"en": "outflow; coming (going) out; graduate (of)",
+"ko": "~출신 / 나옴",
+"c": "보통 出로 쓴다. 大学出(대학 출신)처럼 붙인다"
+},
+{
+"id": "5750d76e14",
+"lv": "N3",
+"word": "どうか",
+"reading": "どうか",
+"en": "copper coin",
+"ko": "부디, 제발 / 어떻게든",
+"c": ""
+},
+{
+"id": "7b53295093",
+"lv": "N2",
+"word": "よる",
+"reading": "よる",
+"en": "to come from",
+"ko": "(~에) 의하다, 따르다, 달려 있다",
+"c": ""
+},
+{
+"id": "eda767b81b",
+"lv": "N2",
+"word": "タイア",
+"reading": "タイア",
+"en": "tire; tyre",
+"ko": "타이어",
+"c": "보통 タイヤ로 쓴다"
+},
+{
+"id": "5a16851bd6",
+"lv": "N1",
+"word": "一別",
+"reading": "いちべつ",
+"en": "parting",
+"ko": "헤어짐, 이별 (글말)",
+"c": ""
+},
+{
+"id": "1d578a6738",
+"lv": "N1",
+"word": "一定",
+"reading": "いちじょう",
+"en": "fixed; settled; definite",
+"ko": "틀림없음, 확실함 (옛말)",
+"c": "보통은 'いってい'(일정함)로 읽는다"
+},
+{
+"id": "d56c7f55f8",
+"lv": "N2",
+"word": "一定",
+"reading": "いってい",
+"en": "fixed; settled; definite",
+"ko": "일정하다",
+"c": ""
+},
+{
+"id": "84ce1b3469",
+"lv": "N2",
+"word": "一昨年",
+"reading": "いっさくねん",
+"en": "year before last",
+"ko": "재작년",
+"c": "'おととし'의 딱딱한 읽기"
+},
+{
+"id": "b75778f0ce",
+"lv": "N5",
+"word": "一昨年",
+"reading": "おととし",
+"en": "year before last",
+"ko": "재작년",
+"c": ""
+},
+{
+"id": "3554fb81b8",
+"lv": "N5",
+"word": "一月",
+"reading": "ひとつき",
+"en": "one month",
+"ko": "한 달",
+"c": "ひとつき. 'いちがつ'로 읽으면 1월"
+},
+{
+"id": "2dc7289c82",
+"lv": "N5",
+"word": "一緒",
+"reading": "いっしょ",
+"en": "together",
+"ko": "함께, 같이",
+"c": "보통 一緒に의 꼴로 쓴다"
+},
+{
+"id": "4f60e61ae2",
+"lv": "N1",
+"word": "一見",
+"reading": "いちげん",
+"en": "unfamiliar; never before met",
+"ko": "처음 온 손님",
+"c": "'いっけん'으로 읽으면 '언뜻 봄'"
+},
+{
+"id": "fbe9c362bd",
+"lv": "N1",
+"word": "丈夫",
+"reading": "じょうふ",
+"en": "hero; gentleman; warrior",
+"ko": "대장부, 사내",
+"c": "'じょうぶ'로 읽으면 '튼튼하다'"
+},
+{
+"id": "50525927ee",
+"lv": "N5",
+"word": "丈夫",
+"reading": "じょうぶ",
+"en": "strong; durable",
+"ko": "튼튼하다",
+"c": ""
+},
+{
+"id": "5cb07674a3",
+"lv": "N5",
+"word": "三",
+"reading": "さん",
+"en": "three",
+"ko": "삼, 셋",
+"c": ""
+},
+{
+"id": "68e9c896bf",
+"lv": "N1",
+"word": "三",
+"reading": "み",
+"en": "three",
+"ko": "셋",
+"c": "'さん'이 아닌 고유어 읽기"
+},
+{
+"id": "08a3ed212d",
+"lv": "N5",
+"word": "上",
+"reading": "うえ",
+"en": "on top of",
+"ko": "위",
+"c": ""
+},
+{
+"id": "9ce542fed7",
+"lv": "N3",
+"word": "上",
+"reading": "うわ",
+"en": "upper; outer; surface",
+"ko": "위, 겉 / 겉~, 위~",
+"c": "上着(윗옷)처럼 접두어로 쓴다"
+},
+{
+"id": "1f3b016d79",
+"lv": "N1",
+"word": "上下",
+"reading": "うえした",
+"en": "high and low; up and down; unloading and loading",
+"ko": "위아래",
+"c": "'じょうげ'로도 읽는다"
+},
+{
+"id": "7a4cf36303",
+"lv": "N2",
+"word": "上下",
+"reading": "じょうげ",
+"en": "high and low; up and down; unloading and loading",
+"ko": "위아래, 상하 / 오르내림",
+"c": ""
+},
+{
+"id": "4436cfdbab",
+"lv": "N1",
+"word": "上手",
+"reading": "うわて",
+"en": "upper part; upper stream; left side (of a stage)",
+"ko": "한 수 위, 윗길",
+"c": "'じょうず'로 읽으면 '잘하다'"
+},
+{
+"id": "1763fc412a",
+"lv": "N5",
+"word": "上手",
+"reading": "じょうず",
+"en": "skillful",
+"ko": "잘하다, 능숙하다",
+"c": "な형용사: 〜が上手だ. 자기 일에는 잘 쓰지 않는다"
+},
+{
+"id": "264ec34f18",
+"lv": "N3",
+"word": "与える",
+"reading": "あたえる",
+"en": "to give; to present; to award",
+"ko": "주다, 부여하다",
+"c": "あげる보다 글말. 윗사람이 아랫사람에게"
+},
+{
+"id": "06b85de79a",
+"lv": "N3",
+"word": "中",
+"reading": "ちゅう",
+"en": "inside; middle; among",
+"ko": "중, 가운데 / ~중",
+"c": "'授業中'처럼 '~하는 중'. 'なか'로 읽으면 '안'"
+},
+{
+"id": "5d32281da9",
+"lv": "N5",
+"word": "中",
+"reading": "なか",
+"en": "middle",
+"ko": "안, 속, 가운데",
+"c": ""
+},
+{
+"id": "8814988b80",
+"lv": "N1",
+"word": "中腹",
+"reading": "ちゅうっぱら",
+"en": "irritated; offended",
+"ko": "부아가 남, 화가 남",
+"c": "'ちゅうふく'로 읽으면 '산 중턱'"
+},
+{
+"id": "eae8d1488f",
+"lv": "N1",
+"word": "主なる",
+"reading": "おもなる",
+"en": "main; principal; important",
+"ko": "주된, 주요한 (글말)",
+"c": "보통은 '主な'를 쓴다"
+},
+{
+"id": "d4517d7970",
+"lv": "N1",
+"word": "予言",
+"reading": "かねごと",
+"en": "prediction; promise; prognostication",
+"ko": "예언, 약속 (옛말)",
+"c": "보통은 'よげん'으로 읽는다"
+},
+{
+"id": "6bebbaf4b0",
+"lv": "N1",
+"word": "人",
+"reading": "じん",
+"en": "man; person; people",
+"ko": "~인, 사람",
+"c": "日本人처럼 국적·부류를 나타낸다"
+},
+{
+"id": "d91ee7a9ed",
+"lv": "N5",
+"word": "人",
+"reading": "ひと",
+"en": "person",
+"ko": "사람",
+"c": ""
+},
+{
+"id": "81d5a1e831",
+"lv": "N3",
+"word": "人気",
+"reading": "にんき",
+"en": "popularity; public favor",
+"ko": "인기",
+"c": "'ひとけ'로 읽으면 '인기척'"
+},
+{
+"id": "0400a204bd",
+"lv": "N5",
+"word": "今日",
+"reading": "きょう",
+"en": "today",
+"ko": "오늘",
+"c": "きょう. 'こんにち'는 '오늘날'"
+},
+{
+"id": "380bf1226c",
+"lv": "N3",
+"word": "今日",
+"reading": "こんにち",
+"en": "today; this day",
+"ko": "오늘날, 요즘",
+"c": "'こんにち'는 '오늘날'. 'きょう'는 '오늘'"
+},
+{
+"id": "7911dfc293",
+"lv": "N1",
+"word": "仏",
+"reading": "ふつ",
+"en": "French",
+"ko": "프랑스",
+"c": "'ほとけ'로 읽으면 부처"
+},
+{
+"id": "b1358dbe27",
+"lv": "N3",
+"word": "仏",
+"reading": "ほとけ",
+"en": "Buddha; merciful person; Buddhist image",
+"ko": "부처 / 고인",
+"c": ""
+},
+{
+"id": "a29824a4ad",
+"lv": "N1",
+"word": "代",
+"reading": "しろ",
+"en": "price; materials; substitution",
+"ko": "대금, 값 / 재료",
+"c": "'だい'로 읽으면 '대, 값'. 代金과 다르다"
+},
+{
+"id": "4d62fb410a",
+"lv": "N1",
+"word": "件",
+"reading": "くだん",
+"en": "example; precedent; the usual",
+"ko": "앞에서 말한, 예의 / 전례",
+"c": "'けん'으로 읽으면 '일, 건'"
+},
+{
+"id": "5da1033412",
+"lv": "N1",
+"word": "会",
+"reading": "え",
+"en": "understanding",
+"ko": "(불교) 모임, 법회",
+"c": "'かい'로 읽으면 '모임'"
+},
+{
+"id": "53e1ba680a",
+"lv": "N3",
+"word": "会",
+"reading": "かい",
+"en": "meeting; assembly; party",
+"ko": "모임, 회",
+"c": ""
+},
+{
+"id": "a556e5edce",
+"lv": "N5",
+"word": "体",
+"reading": "からだ",
+"en": "body",
+"ko": "몸",
+"c": ""
+},
+{
+"id": "060bd26d75",
+"lv": "N1",
+"word": "体",
+"reading": "てい",
+"en": "appearance; air; condition",
+"ko": "모양새, 꼴",
+"c": "'からだ'가 아니다. '〜の体で' 꼴"
+},
+{
+"id": "9d47958486",
+"lv": "N3",
+"word": "何",
+"reading": "なに",
+"en": "what",
+"ko": "무엇",
+"c": ""
+},
+{
+"id": "558866ef86",
+"lv": "N5",
+"word": "何",
+"reading": "なん",
+"en": "what",
+"ko": "무엇",
+"c": "なん. 'なに'로도 읽는다"
+},
+{
+"id": "4ec7fe1166",
+"lv": "N1",
+"word": "何々",
+"reading": "どれどれ",
+"en": "which (emphatic)",
+"ko": "어디 어디, 어디 보자",
+"c": ""
+},
+{
+"id": "a19d9e358c",
+"lv": "N2",
+"word": "何々",
+"reading": "なになに",
+"en": "such and such; What?",
+"ko": "무엇무엇 / 뭐라고?",
+"c": ""
+},
+{
+"id": "a86f29464a",
+"lv": "N2",
+"word": "佚",
+"reading": "いつ",
+"en": "be lost; peace; hide",
+"ko": "잃음, 숨음 / 편안함",
+"c": "거의 쓰지 않는 한자다"
+},
+{
+"id": "4bec3c72cb",
+"lv": "N1",
+"word": "作物",
+"reading": "さくぶつ",
+"en": "literary work",
+"ko": "작품",
+"c": "'さくもつ'로 읽으면 '농작물'"
+},
+{
+"id": "9eb3e2a34e",
+"lv": "N3",
+"word": "作物",
+"reading": "さくもつ",
+"en": "produce (e.g. agricultural); crops",
+"ko": "농작물",
+"c": ""
+},
+{
+"id": "d16c7a5e1e",
+"lv": "N1",
+"word": "例",
+"reading": "ためし",
+"en": "instance; example; case",
+"ko": "전례, 예",
+"c": "'〜ためしがない(~한 적이 없다)' 꼴"
+},
+{
+"id": "9768eacb27",
+"lv": "N3",
+"word": "例",
+"reading": "れい",
+"en": "instance; example; case",
+"ko": "예, 보기",
+"c": ""
+},
+{
+"id": "b7459622cc",
+"lv": "N1",
+"word": "僕",
+"reading": "しもべ",
+"en": "manservant; servant (of God)",
+"ko": "하인, 종",
+"c": "'ぼく'로 읽으면 '나(남자)'"
+},
+{
+"id": "1587d6fbcf",
+"lv": "N4",
+"word": "僕",
+"reading": "ぼく",
+"en": "I (used by males)",
+"ko": "나 (남자)",
+"c": "남자가 쓰는 '나'"
+},
+{
+"id": "957434f95c",
+"lv": "N1",
+"word": "優",
+"reading": "やさ",
+"en": "gentle; affectionate",
+"ko": "상냥한~, 다정한~",
+"c": ""
+},
+{
+"id": "f5b7534060",
+"lv": "N3",
+"word": "元",
+"reading": "もと",
+"en": "origin; original; former",
+"ko": "원래, 근원 / 전~, 예전",
+"c": "基·素와 같은 'もと'"
+},
+{
+"id": "4d852efca2",
+"lv": "N2",
+"word": "元々",
+"reading": "もともと",
+"en": "originally; by nature; from the start",
+"ko": "원래, 본디",
+"c": ""
+},
+{
+"id": "bad0f9f7f6",
+"lv": "N1",
+"word": "元来",
+"reading": "がんらい",
+"en": "originally; primarily; essentially",
+"ko": "원래, 본디",
+"c": ""
+},
+{
+"id": "0d79c7283f",
+"lv": "N1",
+"word": "入る",
+"reading": "いる",
+"en": "to get in; to go in; to come in",
+"ko": "들다, 들어가다 (굳은 말)",
+"c": "'気に入る' 등에만 남고 보통은 'はいる'"
+},
+{
+"id": "c428d02d43",
+"lv": "N5",
+"word": "入る",
+"reading": "はいる",
+"en": "to enter; to contain",
+"ko": "들어가다, 들어오다",
+"c": "〜に入る. 타동사 '넣다'는 入れる"
+},
+{
+"id": "ed188cc69e",
+"lv": "N1",
+"word": "凝らす",
+"reading": "こごらす",
+"en": "to freeze; to congeal",
+"ko": "얼리다, 엉기게 하다",
+"c": "'こらす'로 읽으면 '(궁리를) 짜내다'"
+},
+{
+"id": "308f45926c",
+"lv": "N1",
+"word": "凝る",
+"reading": "こごる",
+"en": "to congeal; to freeze",
+"ko": "엉기다, 얼어붙다",
+"c": "'こる'로 읽으면 '열중하다, 어깨가 결리다'"
+},
+{
+"id": "be922b216d",
+"lv": "N1",
+"word": "出切る",
+"reading": "できる",
+"en": "to be out of; to have no more at hand",
+"ko": "다 나오다, 바닥나다",
+"c": ""
+},
+{
+"id": "9e39f13090",
+"lv": "N1",
+"word": "分",
+"reading": "ふん",
+"en": "minute",
+"ko": "~분 (시간)",
+"c": ""
+},
+{
+"id": "3c5ff54bea",
+"lv": "N3",
+"word": "分",
+"reading": "ぶん",
+"en": "dividing; part",
+"ko": "몫, 분량, ~분",
+"c": ""
+},
+{
+"id": "21f2e9018e",
+"lv": "N1",
+"word": "前",
+"reading": "ぜん",
+"en": "before",
+"ko": "전~ (이전의)",
+"c": "前首相처럼 직함 앞에 붙는다"
+},
+{
+"id": "319e218950",
+"lv": "N5",
+"word": "前",
+"reading": "まえ",
+"en": "before",
+"ko": "앞, 전",
+"c": ""
+},
+{
+"id": "05b951102a",
+"lv": "N1",
+"word": "十分",
+"reading": "じっぷん",
+"en": "10 minutes",
+"ko": "10분",
+"c": "'じゅうぶん'으로 읽으면 '충분'"
+},
+{
+"id": "ab6fd5bdbb",
+"lv": "N4",
+"word": "十分",
+"reading": "じゅうぶん",
+"en": "enough",
+"ko": "충분하다",
+"c": "읽기가 じっぷん이면 '10분'"
+},
+{
+"id": "67f7a8d49f",
+"lv": "N1",
+"word": "南",
+"reading": "なん",
+"en": "south",
+"ko": "남 (남쪽)",
+"c": "'みなみ'의 음독. 南極·南北처럼 쓴다"
+},
+{
+"id": "84e465b526",
+"lv": "N5",
+"word": "南",
+"reading": "みなみ",
+"en": "south",
+"ko": "남쪽",
+"c": ""
+},
+{
+"id": "579a1fd344",
+"lv": "N1",
+"word": "印",
+"reading": "いん",
+"en": "seal; stamp; mark",
+"ko": "도장, 인",
+"c": "'しるし'로 읽으면 '표시'"
+},
+{
+"id": "365fe85edb",
+"lv": "N3",
+"word": "印",
+"reading": "しるし",
+"en": "mark; symbol; evidence",
+"ko": "표시, 표",
+"c": ""
+},
+{
+"id": "19bf853f89",
+"lv": "N1",
+"word": "原",
+"reading": "げん",
+"en": "original; primitive; primary",
+"ko": "원~, 본래의",
+"c": ""
+},
+{
+"id": "3d1e878581",
+"lv": "N3",
+"word": "原",
+"reading": "はら",
+"en": "field; plain; prairie",
+"ko": "들판, 벌판",
+"c": ""
+},
+{
+"id": "f7b907fc12",
+"lv": "N1",
+"word": "原書",
+"reading": "げんしょ",
+"en": "original document",
+"ko": "원서",
+"c": "'지원서'가 아니라 번역 전 원래 책"
+},
+{
+"id": "08cfe03cb3",
+"lv": "N1",
+"word": "吐く",
+"reading": "つく",
+"en": "to breathe; to tell (lies); to vomit",
+"ko": "(숨을) 내쉬다, (거짓말을) 하다",
+"c": "'はく'로 읽으면 '토하다'"
+},
+{
+"id": "ee21222664",
+"lv": "N3",
+"word": "吐く",
+"reading": "はく",
+"en": "to breathe; to tell (lies); to vomit",
+"ko": "뱉다, 토하다, (숨을) 내쉬다",
+"c": "'はく(신다)'와 같은 소리"
+},
+{
+"id": "5d1ad6cf31",
+"lv": "N1",
+"word": "否",
+"reading": "いな",
+"en": "no; nay; yes",
+"ko": "아니, 아니오 (글말)",
+"c": ""
+},
+{
+"id": "15d4ea5f82",
+"lv": "N3",
+"word": "否",
+"reading": "いや",
+"en": "no; the noes",
+"ko": "아니, 아니야",
+"c": ""
+},
+{
+"id": "e5f9192daa",
+"lv": "N1",
+"word": "土産",
+"reading": "どさん",
+"en": "product of the land",
+"ko": "토산물",
+"c": "'みやげ'로 읽으면 '선물'"
+},
+{
+"id": "8fb52e4502",
+"lv": "N3",
+"word": "土産",
+"reading": "みやげ",
+"en": "present; souvenir",
+"ko": "(여행) 선물, 기념품",
+"c": "보통 お土産로 쓴다"
+},
+{
+"id": "26c17d8895",
+"lv": "N1",
+"word": "地方",
+"reading": "じかた",
+"en": "area; locality; district",
+"ko": "지방, 지역",
+"c": "'ちほう'로 흔히 읽는다. 이 카드는 'じかた'"
+},
+{
+"id": "fbeac8c220",
+"lv": "N3",
+"word": "地方",
+"reading": "ちほう",
+"en": "area; locality; district",
+"ko": "지방",
+"c": ""
+},
+{
+"id": "0f4b2590f6",
+"lv": "N3",
+"word": "基",
+"reading": "もと",
+"en": "basis",
+"ko": "기초, 토대",
+"c": "元·素와 같은 'もと'"
+},
+{
+"id": "c2b9455981",
+"lv": "N1",
+"word": "基",
+"reading": "もとい",
+"en": "basis",
+"ko": "기초, 근본",
+"c": "보통 'もと'로 읽는다"
+},
+{
+"id": "f9aaf64bd0",
+"lv": "N1",
+"word": "塩",
+"reading": "えん",
+"en": "salt",
+"ko": "염 (화학)",
+"c": "먹는 소금은 'しお'"
+},
+{
+"id": "b366a3d677",
+"lv": "N5",
+"word": "塩",
+"reading": "しお",
+"en": "salt",
+"ko": "소금",
+"c": ""
+},
+{
+"id": "265c8a1e27",
+"lv": "N1",
+"word": "声明",
+"reading": "せいめい",
+"en": "declaration; statement; proclamation",
+"ko": "성명, 공식 발표",
+"c": "'しょうみょう'로 읽으면 불교 성가"
+},
+{
+"id": "43e8d35afa",
+"lv": "N2",
+"word": "売上",
+"reading": "うりあげ",
+"en": "amount sold; proceeds",
+"ko": "매상, 매출",
+"c": "보통 売り上げ로 쓴다"
+},
+{
+"id": "3fa9f114f2",
+"lv": "N3",
+"word": "夕べ",
+"reading": "ゆうべ",
+"en": "evening",
+"ko": "저녁 / 어젯밤",
+"c": "'어젯밤'은 보통 昨夜로 쓴다"
+},
+{
+"id": "d6c56bc73f",
+"lv": "N1",
+"word": "夜中",
+"reading": "やちゅう",
+"en": "all night; the whole night",
+"ko": "밤중, 밤새",
+"c": "보통은 'よなか'로 읽는다"
+},
+{
+"id": "19a41952db",
+"lv": "N3",
+"word": "夜中",
+"reading": "よなか",
+"en": "midnight; dead of night",
+"ko": "한밤중",
+"c": ""
+},
+{
+"id": "c117100746",
+"lv": "N1",
+"word": "大事",
+"reading": "おおごと",
+"en": "important; valuable; serious matter",
+"ko": "큰일, 중대한 일",
+"c": "'だいじ'로 읽으면 '소중함'"
+},
+{
+"id": "de9d61dd71",
+"lv": "N4",
+"word": "大事",
+"reading": "だいじ",
+"en": "important; valuable; serious matter",
+"ko": "소중하다, 중요하다",
+"c": "大切와 거의 바꿔 쓴다. お大事に(몸조리 잘하세요)"
+},
+{
+"id": "b442490fff",
+"lv": "N4",
+"word": "大分",
+"reading": "だいぶ",
+"en": "greatly",
+"ko": "꽤, 상당히",
+"c": "大分(おおいた)로 읽으면 지명"
+},
+{
+"id": "c76123f3f7",
+"lv": "N2",
+"word": "大分",
+"reading": "だいぶん",
+"en": "considerably; greatly; a lot",
+"ko": "꽤, 상당히",
+"c": "보통 'だいぶ'라고 읽는다"
+},
+{
+"id": "8cb1bad29a",
+"lv": "N3",
+"word": "大家",
+"reading": "おおや",
+"en": "landlord; landlady",
+"ko": "집주인",
+"c": "'たいか'로 읽으면 '대가(거장)'"
+},
+{
+"id": "1fc733c113",
+"lv": "N1",
+"word": "大部",
+"reading": "たいぶ",
+"en": "most (e.g. most part); greater; fairly",
+"ko": "대부분 / 꽤, 상당히",
+"c": "보통 '大分(だいぶ)'로 쓴다"
+},
+{
+"id": "4570b0ab6b",
+"lv": "N1",
+"word": "天津",
+"reading": "あまつ",
+"en": "heavenly; imperial",
+"ko": "하늘의, 천상의 (옛말)",
+"c": ""
+},
+{
+"id": "f71c5d995e",
+"lv": "N1",
+"word": "天皇",
+"reading": "すめらぎ",
+"en": "Emperor of Japan",
+"ko": "일왕, 천황",
+"c": "'てんのう'로 흔히 읽는다. 이 카드는 옛말 'すめらぎ'"
+},
+{
+"id": "8058eb2a5b",
+"lv": "N2",
+"word": "天皇",
+"reading": "てんのう",
+"en": "Emperor of Japan",
+"ko": "일왕, 천황",
+"c": ""
+},
+{
+"id": "13fe04cb12",
+"lv": "N3",
+"word": "失う",
+"reading": "うしなう",
+"en": "to lose; to part with",
+"ko": "잃다",
+"c": "なくす보다 글말"
+},
+{
+"id": "64d280f093",
+"lv": "N3",
+"word": "失望",
+"reading": "しつぼう",
+"en": "disappointment; despair",
+"ko": "실망",
+"c": "がっかり와 뜻이 같은 한자어. 글말"
+},
+{
+"id": "5eae712fd9",
+"lv": "N1",
+"word": "女子",
+"reading": "おなご",
+"en": "woman; girl",
+"ko": "여자 (옛말·사투리)",
+"c": "보통은 'じょし'로 읽는다"
+},
+{
+"id": "0596cdc023",
+"lv": "N3",
+"word": "女子",
+"reading": "じょし",
+"en": "woman; girl",
+"ko": "여자, 여학생",
+"c": ""
+},
+{
+"id": "f3203359ee",
+"lv": "N1",
+"word": "奴",
+"reading": "やっこ",
+"en": "servant; fellow",
+"ko": "(옛) 하인, 녀석",
+"c": "보통 '녀석'은 'やつ'로 읽는다"
+},
+{
+"id": "02122dbf6e",
+"lv": "N3",
+"word": "好む",
+"reading": "このむ",
+"en": "to like; to prefer",
+"ko": "좋아하다(글말)",
+"c": "好き보다 딱딱하다. '~を好む'"
+},
+{
+"id": "13e5e36fd0",
+"lv": "N1",
+"word": "字",
+"reading": "あざ",
+"en": "section of village",
+"ko": "(마을 안의) 구역, 마을 이름",
+"c": "'じ'로 읽으면 '글자'"
+},
+{
+"id": "dd89673ae0",
+"lv": "N4",
+"word": "字",
+"reading": "じ",
+"en": "character",
+"ko": "글자, 글씨",
+"c": ""
+},
+{
+"id": "6dcfd99e2c",
+"lv": "N1",
+"word": "実",
+"reading": "じつ",
+"en": "truth; reality; sincerity",
+"ko": "진실, 실제",
+"c": ""
+},
+{
+"id": "ad70550f9b",
+"lv": "N3",
+"word": "実",
+"reading": "み",
+"en": "fruit; nut; seed",
+"ko": "열매, 씨",
+"c": ""
+},
+{
+"id": "fd76167657",
+"lv": "N1",
+"word": "寒気",
+"reading": "かんき",
+"en": "cold; frost; chill",
+"ko": "추위, 한기",
+"c": "'さむけ'로 읽으면 '오한'"
+},
+{
+"id": "5b32f6a19b",
+"lv": "N1",
+"word": "少女",
+"reading": "おとめ",
+"en": "daughter; young lady; virgin",
+"ko": "소녀, 처녀",
+"c": "보통은 'しょうじょ'. 'おとめ'는 乙女로 많이 쓴다"
+},
+{
+"id": "17c0d3a658",
+"lv": "N3",
+"word": "少女",
+"reading": "しょうじょ",
+"en": "daughter; young lady; virgin",
+"ko": "소녀",
+"c": ""
+},
+{
+"id": "8b7434e649",
+"lv": "N4",
+"word": "工場",
+"reading": "こうじょう",
+"en": "factory",
+"ko": "공장",
+"c": ""
+},
+{
+"id": "9adc22cc25",
+"lv": "N3",
+"word": "工場",
+"reading": "こうば",
+"en": "factory; plant; mill",
+"ko": "(작은) 공장, 작업장",
+"c": "'こうじょう'로 읽으면 일반적인 공장"
+},
+{
+"id": "56d7bebebd",
+"lv": "N3",
+"word": "市場",
+"reading": "いちば",
+"en": "(the) market (as a concept)",
+"ko": "시장, 장 (장 보는 곳)",
+"c": "'しじょう'로 읽으면 경제 용어 '시장'"
+},
+{
+"id": "2af3aed135",
+"lv": "N3",
+"word": "年寄",
+"reading": "としより",
+"en": "old people; the aged",
+"ko": "노인, 늙은이",
+"c": "보통 年寄り로 쓴다"
+},
+{
+"id": "75abef3a63",
+"lv": "N1",
+"word": "床",
+"reading": "とこ",
+"en": "bed; sickbed; alcove",
+"ko": "잠자리 / 도코노마",
+"c": "'ゆか'로 읽으면 '마루, 바닥'"
+},
+{
+"id": "5489cdb398",
+"lv": "N3",
+"word": "床",
+"reading": "ゆか",
+"en": "floor",
+"ko": "마루, 바닥",
+"c": ""
+},
+{
+"id": "1941689b4f",
+"lv": "N1",
+"word": "店",
+"reading": "てん",
+"en": "store; shop; establishment",
+"ko": "~점 (가게)",
+"c": ""
+},
+{
+"id": "0c8a588e53",
+"lv": "N5",
+"word": "店",
+"reading": "みせ",
+"en": "shop",
+"ko": "가게",
+"c": ""
+},
+{
+"id": "3c74d17c1d",
+"lv": "N1",
+"word": "弟",
+"reading": "おと",
+"en": "younger brother",
+"ko": "아우 (옛말)",
+"c": "보통은 'おとうと'로 읽는다"
+},
+{
+"id": "db32745bbc",
+"lv": "N5",
+"word": "弟",
+"reading": "おとうと",
+"en": "younger brother",
+"ko": "남동생",
+"c": ""
+},
+{
+"id": "925301438b",
+"lv": "N1",
+"word": "強気",
+"reading": "ごうぎ",
+"en": "great; grand",
+"ko": "굉장하다, 대단하다",
+"c": "'つよき'로 읽으면 '강경함, 자신만만함'. 보통 豪気로 쓴다"
+},
+{
+"id": "2d36cfac32",
+"lv": "N2",
+"word": "強気",
+"reading": "つよき",
+"en": "firm; strong",
+"ko": "강경하다, 자신만만하다",
+"c": ""
+},
+{
+"id": "08fac022a1",
+"lv": "N1",
+"word": "弾く",
+"reading": "はじく",
+"en": "to flip; to snap",
+"ko": "튀기다, (손가락으로) 퉁기다",
+"c": "'ひく'로 읽으면 (악기를) 치다"
+},
+{
+"id": "23911a0718",
+"lv": "N5",
+"word": "弾く",
+"reading": "ひく",
+"en": "to play an instrument with strings; including piano",
+"ko": "(악기를) 켜다, 치다",
+"c": "피아노·기타처럼 손가락으로 연주하는 악기. 피리는 吹く"
+},
+{
+"id": "ca47625fe8",
+"lv": "N1",
+"word": "役",
+"reading": "えき",
+"en": "war; campaign; battle",
+"ko": "전쟁, 싸움 (역사 용어)",
+"c": "'やく'로 읽으면 '역할'"
+},
+{
+"id": "396f83701d",
+"lv": "N3",
+"word": "役",
+"reading": "やく",
+"en": "use; service; role",
+"ko": "역할, 직책 / 쓸모",
+"c": "役に立つ(도움이 되다)"
+},
+{
+"id": "4f134c9b38",
+"lv": "N5",
+"word": "後",
+"reading": "あと",
+"en": "afterwards",
+"ko": "뒤, 나중, 다음",
+"c": "시간의 뒤. 공간의 뒤는 後ろ"
+},
+{
+"id": "aeff3c4d96",
+"lv": "N3",
+"word": "後",
+"reading": "のち",
+"en": "afterwards; since then; in the future",
+"ko": "뒤, 나중, 후",
+"c": "'あと'보다 딱딱한 읽기"
+},
+{
+"id": "9c851c43f7",
+"lv": "N3",
+"word": "御",
+"reading": "お",
+"en": "honourable",
+"ko": "공손·높임 접두사",
+"c": "お茶, お名前처럼 붙인다"
+},
+{
+"id": "a017bb3c0c",
+"lv": "N1",
+"word": "御",
+"reading": "ご",
+"en": "go-; honourable",
+"ko": "~님, 귀~(존경 접두사)",
+"c": "한자어 앞에 붙는 'ご'. 고유어 앞은 'お'"
+},
+{
+"id": "ec976107e1",
+"lv": "N1",
+"word": "微笑",
+"reading": "びしょう",
+"en": "smile",
+"ko": "미소",
+"c": "ほほえみ와 같은 뜻의 글말"
+},
+{
+"id": "11cc069a92",
+"lv": "N1",
+"word": "心中",
+"reading": "しんじゅう",
+"en": "double suicide; lovers suicide",
+"ko": "동반 자살, 정사",
+"c": "'しんちゅう'로 읽으면 '속마음'"
+},
+{
+"id": "fedad22ef0",
+"lv": "N1",
+"word": "怒る",
+"reading": "いかる",
+"en": "to get angry; to be angry",
+"ko": "성내다, 화내다 (글말)",
+"c": "보통은 'おこる'로 읽는다"
+},
+{
+"id": "2e0f32c097",
+"lv": "N4",
+"word": "怒る",
+"reading": "おこる",
+"en": "to get angry; to be angry",
+"ko": "화내다, 혼내다",
+"c": ""
+},
+{
+"id": "1a801cd8e5",
+"lv": "N3",
+"word": "恐ろしい",
+"reading": "おそろしい",
+"en": "terrible; dreadful",
+"ko": "무섭다, 두렵다",
+"c": "怖い보다 글말이고 강하다"
+},
+{
+"id": "2e8753951c",
+"lv": "N1",
+"word": "悪い",
+"reading": "にくい",
+"en": "hateful; abominable; poor-looking",
+"ko": "밉다, 얄밉다",
+"c": "이 읽기는 보통 '憎い'로 쓴다. 悪い는 'わるい'"
+},
+{
+"id": "13b6dbec03",
+"lv": "N5",
+"word": "悪い",
+"reading": "わるい",
+"en": "bad",
+"ko": "나쁘다",
+"c": ""
+},
+{
+"id": "06dc06725b",
+"lv": "N1",
+"word": "悪口",
+"reading": "あっこう",
+"en": "abuse; insult; slander",
+"ko": "욕, 험담",
+"c": "보통은 'わるぐち'로 읽는다"
+},
+{
+"id": "b440e7ed66",
+"lv": "N3",
+"word": "悪口",
+"reading": "わるくち",
+"en": "abuse; insult; slander",
+"ko": "욕, 험담",
+"c": ""
+},
+{
+"id": "03b0ef5987",
+"lv": "N1",
+"word": "悪日",
+"reading": "あくび",
+"en": "unlucky day",
+"ko": "운 나쁜 날, 흉일",
+"c": "이 날은 보통 'あくにち'로 읽는다. 'あくび'는 보통 하품"
+},
+{
+"id": "d5373e6a45",
+"lv": "N1",
+"word": "戦",
+"reading": "いくさ",
+"en": "war; battle; campaign",
+"ko": "싸움, 전쟁 (옛말)",
+"c": "軍로도 쓴다. 'せん'은 '~전'"
+},
+{
+"id": "1e176e82e5",
+"lv": "N1",
+"word": "戸",
+"reading": "こ",
+"en": "counter for houses",
+"ko": "~호(집을 세는 말)",
+"c": ""
+},
+{
+"id": "6f4691297f",
+"lv": "N5",
+"word": "戸",
+"reading": "と",
+"en": "Japanese style door",
+"ko": "문 (미닫이)",
+"c": "일본식 문. 서양식 문은 ドア"
+},
+{
+"id": "c858640672",
+"lv": "N4",
+"word": "戻る",
+"reading": "もどる",
+"en": "to turn back",
+"ko": "되돌아가다, 돌아오다",
+"c": "원래 자리로 돌아가다"
+},
+{
+"id": "e6f3a7d91a",
+"lv": "N4",
+"word": "打つ",
+"reading": "うつ",
+"en": "to hit",
+"ko": "치다, 때리다",
+"c": ""
+},
+{
+"id": "08fb4b13c1",
+"lv": "N3",
+"word": "打つ",
+"reading": "ぶつ",
+"en": "to hit; to strike",
+"ko": "때리다, 치다",
+"c": "'うつ'의 거친 입말"
+},
+{
+"id": "40a3c95ccf",
+"lv": "N2",
+"word": "打合せ",
+"reading": "うちあわせ",
+"en": "business meeting; previous arrangement; appointment",
+"ko": "(사전) 협의, 미팅",
+"c": "보통 打ち合わせ로 쓴다"
+},
+{
+"id": "97600f5aa8",
+"lv": "N3",
+"word": "抱く",
+"reading": "いだく",
+"en": "(slang) to embrace; to hug; to harbour",
+"ko": "(마음에) 품다, 안다",
+"c": "'だく'로 읽으면 몸으로 안다. 'いだく'는 주로 생각을 품다"
+},
+{
+"id": "691f993a5a",
+"lv": "N1",
+"word": "摘む",
+"reading": "つまむ",
+"en": "to pinch; to hold; to pick up",
+"ko": "(손끝으로) 집다",
+"c": "'つむ'로 읽으면 '따다'"
+},
+{
+"id": "6ba1bae967",
+"lv": "N1",
+"word": "擦る",
+"reading": "かする",
+"en": "to touch lightly; to take a percentage (from)",
+"ko": "스치다",
+"c": ""
+},
+{
+"id": "0a81eafbf4",
+"lv": "N2",
+"word": "擦る",
+"reading": "こする",
+"en": "to rub; to chafe; to file",
+"ko": "문지르다, 비비다",
+"c": ""
+},
+{
+"id": "a63d59c119",
+"lv": "N1",
+"word": "敵",
+"reading": "かたき",
+"en": "enemy; rival",
+"ko": "원수, 적 / 맞수",
+"c": ""
+},
+{
+"id": "371f1b3f39",
+"lv": "N3",
+"word": "敵",
+"reading": "てき",
+"en": "enemy; rival",
+"ko": "적, 상대",
+"c": ""
+},
+{
+"id": "856da87e15",
+"lv": "N1",
+"word": "文",
+"reading": "ふみ",
+"en": "letter; writings",
+"ko": "편지, 글",
+"c": "'ぶん'으로 읽으면 문장"
+},
+{
+"id": "39b0ac16ca",
+"lv": "N3",
+"word": "文",
+"reading": "ぶん",
+"en": "sentence",
+"ko": "문장, 글",
+"c": ""
+},
+{
+"id": "a988a95058",
+"lv": "N1",
+"word": "文語",
+"reading": "ぶんご",
+"en": "written language; literary language",
+"ko": "문어, 글말",
+"c": ""
+},
+{
+"id": "69209e023f",
+"lv": "N3",
+"word": "新た",
+"reading": "あらた",
+"en": "new; fresh; novel",
+"ko": "새롭다",
+"c": "新しい보다 글말"
+},
+{
+"id": "e34295f3e1",
+"lv": "N5",
+"word": "方",
+"reading": "かた",
+"en": "person; way of doing",
+"ko": "분 (사람) / ~하는 법",
+"c": "かた. 'ほう'로 읽으면 '쪽, 편'"
+},
+{
+"id": "9dda296d47",
+"lv": "N3",
+"word": "方",
+"reading": "ほう",
+"en": "side",
+"ko": "쪽, 방향 / 편",
+"c": ""
+},
+{
+"id": "b115c24eac",
+"lv": "N3",
+"word": "日",
+"reading": "にち",
+"en": "day (of the month); counter for days; Sunday (abbreviation)",
+"ko": "~일",
+"c": ""
+},
+{
+"id": "55a030e65f",
+"lv": "N4",
+"word": "日",
+"reading": "ひ",
+"en": "day; sun",
+"ko": "날, 해",
+"c": ""
+},
+{
+"id": "b286c3e278",
+"lv": "N2",
+"word": "明き",
+"reading": "あき",
+"en": "room; time to spare; emptiness",
+"ko": "빈자리, 빈틈 / 짬",
+"c": "보통 空き로 쓴다"
+},
+{
+"id": "115ec83476",
+"lv": "N5",
+"word": "明日",
+"reading": "あした",
+"en": "tomorrow",
+"ko": "내일",
+"c": "あした. 'あす'는 더 딱딱한 말"
+},
+{
+"id": "4c3461199c",
+"lv": "N4",
+"word": "明日",
+"reading": "あす",
+"en": "tomorrow",
+"ko": "내일",
+"c": "あす. あした보다 딱딱한 말"
+},
+{
+"id": "334a8aa633",
+"lv": "N1",
+"word": "暇",
+"reading": "いとま",
+"en": "free time; leisure; leave",
+"ko": "틈, 휴가 / 작별",
+"c": "보통은 'ひま'로 읽는다"
+},
+{
+"id": "7a9ce8e2df",
+"lv": "N5",
+"word": "暇",
+"reading": "ひま",
+"en": "free time",
+"ko": "틈, 짬, 한가함",
+"c": "暇な(한가한)로도 쓴다"
+},
+{
+"id": "18c78b84a5",
+"lv": "N1",
+"word": "月日",
+"reading": "がっぴ",
+"en": "(the) date",
+"ko": "날짜 (월일)",
+"c": "'つきひ'로 읽으면 '세월'"
+},
+{
+"id": "56319c8bb4",
+"lv": "N2",
+"word": "月日",
+"reading": "つきひ",
+"en": "time; years; days",
+"ko": "세월, 날짜",
+"c": ""
+},
+{
+"id": "08f7ce07ce",
+"lv": "N1",
+"word": "有する",
+"reading": "ゆうする",
+"en": "to own; to be endowed with",
+"ko": "가지다, 소유하다 (글말)",
+"c": ""
+},
+{
+"id": "096c8b698e",
+"lv": "N1",
+"word": "未",
+"reading": "ひつじ",
+"en": "eighth sign of Chinese zodiac (The Ram, 1pm-3pm, south-southwest, June)",
+"ko": "미 (십이지의 여덟째), 양띠",
+"c": "'み'로 읽으면 '아직 ~않은'"
+},
+{
+"id": "30935266bc",
+"lv": "N1",
+"word": "未だ",
+"reading": "いまだ",
+"en": "as yet; hitherto; not yet (neg)",
+"ko": "아직 (글말)",
+"c": "まだ보다 글말"
+},
+{
+"id": "f3f408a1e8",
+"lv": "N1",
+"word": "末",
+"reading": "うら",
+"en": "top end; tip",
+"ko": "끝, 끄트머리 (옛말)",
+"c": "보통은 'すえ'로 읽는다"
+},
+{
+"id": "4f0c39291a",
+"lv": "N3",
+"word": "末",
+"reading": "すえ",
+"en": "the end of; powder",
+"ko": "끝, 말(무렵) / 끝에",
+"c": "'月末'처럼 '~末'로도 쓴다. '~した末(に)'는 '~한 끝에'"
+},
+{
+"id": "a6b638592c",
+"lv": "N1",
+"word": "末期",
+"reading": "まっき",
+"en": "closing years (period, days); last stage",
+"ko": "말기",
+"c": "'まつご'로 읽으면 임종"
+},
+{
+"id": "815dc7a9f6",
+"lv": "N2",
+"word": "本来",
+"reading": "ほんらい",
+"en": "essentially; naturally; by nature",
+"ko": "본래, 원래",
+"c": ""
+},
+{
+"id": "48d1eb2573",
+"lv": "N1",
+"word": "来る",
+"reading": "きたる",
+"en": "to come; to arrive; to be due to",
+"ko": "오는 (날짜), 다가오는",
+"c": "'くる'와 달리 날짜 앞에서 '오는 ~일'로 쓴다"
+},
+{
+"id": "2e2abd26ca",
+"lv": "N5",
+"word": "来る",
+"reading": "くる",
+"en": "to come",
+"ko": "오다",
+"c": ""
+},
+{
+"id": "24b670d6d3",
+"lv": "N1",
+"word": "杯",
+"reading": "さかずき",
+"en": "wine cups",
+"ko": "술잔",
+"c": "'はい'로 읽으면 '~잔(세는 말)'"
+},
+{
+"id": "d0379ff55e",
+"lv": "N1",
+"word": "東",
+"reading": "あずま",
+"en": "east; Eastern Japan",
+"ko": "동쪽, 관동 지방 (옛말)",
+"c": "보통 '東'은 'ひがし'로 읽는다"
+},
+{
+"id": "0a38c65004",
+"lv": "N5",
+"word": "東",
+"reading": "ひがし",
+"en": "east",
+"ko": "동쪽",
+"c": ""
+},
+{
+"id": "2306950c03",
+"lv": "N3",
+"word": "柄",
+"reading": "え",
+"en": "handle; grip",
+"ko": "자루, 손잡이",
+"c": "'がら'로 읽으면 '무늬'"
+},
+{
+"id": "82e39c46a6",
+"lv": "N1",
+"word": "梯子",
+"reading": "ていし",
+"en": "ladder; stairs",
+"ko": "사다리",
+"c": "보통 'はしご'로 읽는다"
+},
+{
+"id": "07f4ebd73d",
+"lv": "N2",
+"word": "梯子",
+"reading": "はしご",
+"en": "ladder; stairs",
+"ko": "사다리",
+"c": ""
+},
+{
+"id": "6b56c41e59",
+"lv": "N1",
+"word": "業",
+"reading": "ごう",
+"en": "Buddhist karma; actions committed in a former life",
+"ko": "업, 업보",
+"c": "'ぎょう'로 읽으면 '일, 직업'"
+},
+{
+"id": "2e94c5f285",
+"lv": "N1",
+"word": "様",
+"reading": "さま",
+"en": "Mr. or Mrs.; manner; kind",
+"ko": "~님 / 모양, 모습",
+"c": "さん보다 정중하다"
+},
+{
+"id": "bcab821414",
+"lv": "N3",
+"word": "様",
+"reading": "よう",
+"en": "way; manner; kind",
+"ko": "모양, 상태 / ~같은",
+"c": "〜ようだ, 〜ように"
+},
+{
+"id": "966e181cea",
+"lv": "N1",
+"word": "次",
+"reading": "じ",
+"en": "order; sequence; times",
+"ko": "~차, 다음",
+"c": "第一次(제1차)처럼 쓴다"
+},
+{
+"id": "d00ef0a9d5",
+"lv": "N5",
+"word": "次",
+"reading": "つぎ",
+"en": "next",
+"ko": "다음",
+"c": ""
+},
+{
+"id": "e9f0941d9e",
+"lv": "N1",
+"word": "止まる",
+"reading": "とどまる",
+"en": "to be limited to",
+"ko": "머무르다, 그치다",
+"c": "'とまる'로 읽으면 '멈추다'"
+},
+{
+"id": "9d1aa046d6",
+"lv": "N5",
+"word": "止まる",
+"reading": "とまる",
+"en": "to come to a halt",
+"ko": "멈추다, 서다",
+"c": "자동사. 타동사 '세우다'는 止める"
+},
+{
+"id": "7515db0cfd",
+"lv": "N1",
+"word": "止める",
+"reading": "とどめる",
+"en": "to stop; to cease; to put an end to",
+"ko": "만류하다, 멈추게 하다, 남기다",
+"c": "'とめる・やめる'로도 읽는다"
+},
+{
+"id": "3aadcbc234",
+"lv": "N4",
+"word": "止める",
+"reading": "とめる",
+"en": "to stop something",
+"ko": "멈추다, 세우다, 말리다",
+"c": "타동사. '멈추다(자동)'는 止まる"
+},
+{
+"id": "9de629082f",
+"lv": "N1",
+"word": "歩む",
+"reading": "あゆむ",
+"en": "to walk; to go on foot",
+"ko": "걷다, 나아가다 (글말)",
+"c": "歩く보다 글말로, 인생길 등에 쓴다"
+},
+{
+"id": "46adc4e436",
+"lv": "N1",
+"word": "殿",
+"reading": "しんがり",
+"en": "rear; rear unit guard",
+"ko": "후미, 맨 뒤",
+"c": "'との'로 읽으면 '주군'. 'どの'는 '~님'"
+},
+{
+"id": "3ebdf0c56a",
+"lv": "N1",
+"word": "毎",
+"reading": "ごと",
+"en": "each respectively",
+"ko": "~마다",
+"c": "'まい'로 읽으면 '매~'. 日ごと(날마다)처럼 붙여 쓴다"
+},
+{
+"id": "3ffc020bb5",
+"lv": "N1",
+"word": "氏",
+"reading": "うじ",
+"en": "family name",
+"ko": "씨족, 성 (가문)",
+"c": "'し'로 읽으면 '~씨'"
+},
+{
+"id": "9ba2a9c365",
+"lv": "N3",
+"word": "氏",
+"reading": "し",
+"en": "Mr; Mrs; Ms",
+"ko": "~씨(글말)",
+"c": "さん보다 딱딱한 말"
+},
+{
+"id": "c4db898159",
+"lv": "N2",
+"word": "気配",
+"reading": "けはい",
+"en": "indication; market trend; worry",
+"ko": "기색, 기미, 낌새",
+"c": "'きはい'가 아니라 'けはい'로 읽는다"
+},
+{
+"id": "fc259785af",
+"lv": "N1",
+"word": "汚す",
+"reading": "けがす",
+"en": "to disgrace; to dishonour",
+"ko": "(명예를) 더럽히다, 욕되게 하다",
+"c": "'よごす'로 읽으면 '때를 묻혀 더럽히다'"
+},
+{
+"id": "87db0f1329",
+"lv": "N2",
+"word": "汚す",
+"reading": "よごす",
+"en": "to disgrace; to dishonour; to pollute",
+"ko": "더럽히다",
+"c": ""
+},
+{
+"id": "eb830c293c",
+"lv": "N1",
+"word": "汚れ",
+"reading": "けがれ",
+"en": "uncleanness; impurity; disgrace",
+"ko": "부정, 더러움, 오점",
+"c": "'よごれ'로 읽으면 '때, 얼룩'"
+},
+{
+"id": "9ba2fec541",
+"lv": "N1",
+"word": "洒落",
+"reading": "しゃらく",
+"en": "frank; open-hearted",
+"ko": "소탈하다, 시원시원하다",
+"c": "'しゃれ'로 읽으면 '농담, 멋 부림'"
+},
+{
+"id": "f28cffe595",
+"lv": "N2",
+"word": "洒落",
+"reading": "しゃれ",
+"en": "joke; pun; witticism",
+"ko": "익살, 말장난, 농담",
+"c": ""
+},
+{
+"id": "aac375dbab",
+"lv": "N2",
+"word": "清む",
+"reading": "すむ",
+"en": "to become clear (water, air, etc.); to become transparent",
+"ko": "맑아지다 (물·공기)",
+"c": "보통 澄む로 쓴다"
+},
+{
+"id": "55bb56c25e",
+"lv": "N1",
+"word": "準ずる",
+"reading": "じゅんずる",
+"en": "to apply correspondingly; to correspond to; to be proportionate to",
+"ko": "준하다, 따르다",
+"c": "準じる와 같은 말. 글말에서 쓴다"
+},
+{
+"id": "898777096e",
+"lv": "N1",
+"word": "溝",
+"reading": "こう",
+"en": "hundred undecillion (American); hundred sextillion (British)",
+"ko": "구(10의 32제곱)",
+"c": "매우 큰 수의 단위. 'みぞ'로 읽으면 '도랑'"
+},
+{
+"id": "91af54997d",
+"lv": "N1",
+"word": "潜る",
+"reading": "くぐる",
+"en": "to pass through; to go under; to slip through",
+"ko": "빠져나가다, 밑으로 지나가다",
+"c": "'もぐる(잠수하다)'와 같은 한자. 이 카드는 'くぐる'"
+},
+{
+"id": "a603c7698c",
+"lv": "N2",
+"word": "潜る",
+"reading": "もぐる",
+"en": "to dive (into or under water); to go underground; to hide oneself",
+"ko": "잠수하다, 기어들다",
+"c": ""
+},
+{
+"id": "6659596f97",
+"lv": "N1",
+"word": "潮",
+"reading": "うしお",
+"en": "tide",
+"ko": "조수, 바닷물",
+"c": "보통은 'しお'로 읽는다"
+},
+{
+"id": "f38adaef87",
+"lv": "N1",
+"word": "濠",
+"reading": "ごう",
+"en": "moat",
+"ko": "해자",
+"c": ""
+},
+{
+"id": "1151601f8e",
+"lv": "N3",
+"word": "濠",
+"reading": "ほり",
+"en": "moat",
+"ko": "해자",
+"c": "보통 堀로 쓴다"
+},
+{
+"id": "35398ed297",
+"lv": "N1",
+"word": "火傷",
+"reading": "かしょう",
+"en": "burn; scald",
+"ko": "화상, 덴 상처",
+"c": "보통은 'やけど'로 읽는다"
+},
+{
+"id": "ebea673dd1",
+"lv": "N2",
+"word": "火傷",
+"reading": "やけど",
+"en": "burn; scald",
+"ko": "화상",
+"c": ""
+},
+{
+"id": "9db5fc5943",
+"lv": "N1",
+"word": "灯",
+"reading": "ともしび",
+"en": "light",
+"ko": "등불",
+"c": ""
+},
+{
+"id": "de6ed799d8",
+"lv": "N3",
+"word": "灯",
+"reading": "ひ",
+"en": "light",
+"ko": "불빛, 등불",
+"c": ""
+},
+{
+"id": "7f13f5edd2",
+"lv": "N1",
+"word": "無論",
+"reading": "むろん",
+"en": "of course; naturally",
+"ko": "물론",
+"c": "もちろん과 같은 뜻의 글말"
+},
+{
+"id": "fc4763325c",
+"lv": "N1",
+"word": "然も",
+"reading": "さも",
+"en": "with gusto; with satisfaction",
+"ko": "정말 ~인 듯이, 자못",
+"c": "'しかも'로 읽으면 '게다가'"
+},
+{
+"id": "bce14973f2",
+"lv": "N1",
+"word": "玉",
+"reading": "ぎょく",
+"en": "king (shogi)",
+"ko": "(장기) 왕장",
+"c": "'たま'로 읽으면 '구슬'"
+},
+{
+"id": "5ac33a4880",
+"lv": "N3",
+"word": "玉",
+"reading": "たま",
+"en": "ball; sphere; coin",
+"ko": "구슬, 공",
+"c": ""
+},
+{
+"id": "45e3926625",
+"lv": "N1",
+"word": "瓶",
+"reading": "かめ",
+"en": "earthenware pot",
+"ko": "독, 항아리",
+"c": "'びん'으로 읽으면 '병'"
+},
+{
+"id": "1ea7451e69",
+"lv": "N3",
+"word": "瓶",
+"reading": "びん",
+"en": "bottle",
+"ko": "병",
+"c": ""
+},
+{
+"id": "f1134267ba",
+"lv": "N1",
+"word": "生",
+"reading": "き",
+"en": "pure; undiluted; raw",
+"ko": "섞이지 않은, 날~",
+"c": "'生地', '生糸'처럼 앞에 붙여 쓴다"
+},
+{
+"id": "04f80af544",
+"lv": "N3",
+"word": "生",
+"reading": "なま",
+"en": "draft (beer); raw; unprocessed",
+"ko": "날것 / 생, 생맥주",
+"c": ""
+},
+{
+"id": "302bc4694a",
+"lv": "N3",
+"word": "生地",
+"reading": "きじ",
+"en": "cloth; fabric; material",
+"ko": "옷감, 천",
+"c": "'せいち'로 읽으면 출생지"
+},
+{
+"id": "87333c0d40",
+"lv": "N3",
+"word": "生物",
+"reading": "せいぶつ",
+"en": "living thing; organism; creature",
+"ko": "생물",
+"c": "'なまもの'로 읽으면 날것(익히지 않은 음식)"
+},
+{
+"id": "99d671e7c9",
+"lv": "N1",
+"word": "甲",
+"reading": "きのえ",
+"en": "1st in rank; first sign of the Chinese calendar; shell",
+"ko": "갑 (십간의 첫째)",
+"c": "'こう'로 읽으면 '갑, 첫째'"
+},
+{
+"id": "d067bdf300",
+"lv": "N1",
+"word": "留める",
+"reading": "とどめる",
+"en": "to stop; to cease; to put an end to",
+"ko": "남기다, 머무르게 하다",
+"c": "'とめる'로 읽으면 '고정하다'"
+},
+{
+"id": "4591eb1d00",
+"lv": "N3",
+"word": "留める",
+"reading": "とめる",
+"en": "to fasten; to turn off; to detain",
+"ko": "고정하다, 꽂다 / 머무르게 하다",
+"c": "止める(멈추다)와 같은 'とめる'"
+},
+{
+"id": "28bac43acc",
+"lv": "N3",
+"word": "異なる",
+"reading": "ことなる",
+"en": "to differ; to vary; to disagree",
+"ko": "다르다(글말)",
+"c": "違う보다 딱딱하고 글에 쓴다"
+},
+{
+"id": "afd91341e1",
+"lv": "N1",
+"word": "畳",
+"reading": "じょう",
+"en": "tatami mat (esp. as a measure of room size, either 1.82 sqm or 1.54 sqm)",
+"ko": "~장(다다미를 세는 말)",
+"c": ""
+},
+{
+"id": "b5579bc4a6",
+"lv": "N4",
+"word": "畳",
+"reading": "たたみ",
+"en": "Japanese straw mat",
+"ko": "다다미",
+"c": ""
+},
+{
+"id": "f95cf14304",
+"lv": "N1",
+"word": "病",
+"reading": "やまい",
+"en": "illness; disease",
+"ko": "병",
+"c": "病気의 글말"
+},
+{
+"id": "4ae5663b6a",
+"lv": "N1",
+"word": "盛る",
+"reading": "さかる",
+"en": "to prosper; to flourish; to copulate (animals)",
+"ko": "한창이다, 번성하다",
+"c": "'もる'로 읽으면 '(그릇에) 담다'"
+},
+{
+"id": "2b64f87c29",
+"lv": "N2",
+"word": "盛る",
+"reading": "もる",
+"en": "to serve (food, etc.); to fill up; to prescribe",
+"ko": "(음식을) 담다 / 쌓아 올리다",
+"c": ""
+},
+{
+"id": "04428b9eb4",
+"lv": "N2",
+"word": "目下",
+"reading": "めした",
+"en": "subordinate; subordinates; inferior",
+"ko": "아랫사람",
+"c": "'めした'로 읽는 카드. 'もっか'는 '지금, 현재'"
+},
+{
+"id": "0894c700f3",
+"lv": "N3",
+"word": "直",
+"reading": "じき",
+"en": "soon; in a moment; before long",
+"ko": "곧, 금방",
+"c": "'じかに'로 읽으면 '직접'"
+},
+{
+"id": "60eed96a97",
+"lv": "N3",
+"word": "直ちに",
+"reading": "ただちに",
+"en": "at once; immediately; directly",
+"ko": "곧, 즉시",
+"c": "すぐ보다 딱딱한 글말"
+},
+{
+"id": "8b180f444a",
+"lv": "N3",
+"word": "直に",
+"reading": "じかに",
+"en": "immediately; readily; directly",
+"ko": "직접, 바로",
+"c": "'直接'과 비슷하다. 'じき'로 읽으면 '곧'"
+},
+{
+"id": "6f6edac49d",
+"lv": "N1",
+"word": "相対",
+"reading": "あいたい",
+"en": "confrontation; facing; between ourselves",
+"ko": "마주함, 당사자끼리 함",
+"c": "'そうたい'로 읽으면 '상대(적)'"
+},
+{
+"id": "208f1c892d",
+"lv": "N1",
+"word": "眼鏡",
+"reading": "がんきょう",
+"en": "spectacles; glasses",
+"ko": "안경 (글말)",
+"c": "보통은 'めがね'로 읽는다"
+},
+{
+"id": "72eb77e07a",
+"lv": "N5",
+"word": "眼鏡",
+"reading": "めがね",
+"en": "glasses",
+"ko": "안경",
+"c": ""
+},
+{
+"id": "ee7bcbddd5",
+"lv": "N1",
+"word": "碑",
+"reading": "いしぶみ",
+"en": "stone monument bearing an inscription",
+"ko": "비석 (옛말)",
+"c": "보통은 'ひ'로 읽는다"
+},
+{
+"id": "12b7d3e1db",
+"lv": "N1",
+"word": "社",
+"reading": "やしろ",
+"en": "Shinto shrine",
+"ko": "신사, 사당",
+"c": "'しゃ'로 읽으면 회사"
+},
+{
+"id": "c53570cabd",
+"lv": "N3",
+"word": "祭",
+"reading": "まつり",
+"en": "festival; feast",
+"ko": "축제",
+"c": "보통 祭り로 쓴다"
+},
+{
+"id": "775cb6278a",
+"lv": "N1",
+"word": "禁ずる",
+"reading": "きんずる",
+"en": "to forbid; to suppress",
+"ko": "금하다, 금지하다",
+"c": "禁じる와 같은 말. 글말에서 쓴다"
+},
+{
+"id": "6859422547",
+"lv": "N1",
+"word": "私",
+"reading": "あたし",
+"en": "I (fem)",
+"ko": "나 (여성·허물없는 말)",
+"c": "わたし의 허물없는 꼴"
+},
+{
+"id": "d5c2e69813",
+"lv": "N5",
+"word": "私",
+"reading": "わたくし",
+"en": "(humble) I; myself",
+"ko": "저 (정중)",
+"c": "わたくし. わたし보다 격식 있는 말"
+},
+{
+"id": "6fdfa5e5ee",
+"lv": "N1",
+"word": "種",
+"reading": "しゅ",
+"en": "kind; variety; species",
+"ko": "종류, 종",
+"c": ""
+},
+{
+"id": "0167b18f74",
+"lv": "N3",
+"word": "種",
+"reading": "たね",
+"en": "seed; material; cause",
+"ko": "씨, 씨앗 / 원인, 재료",
+"c": ""
+},
+{
+"id": "8ce4616a78",
+"lv": "N3",
+"word": "空",
+"reading": "から",
+"en": "emptiness; being empty",
+"ko": "빔, 비어 있음",
+"c": "空(そら)는 하늘. 'から'로 읽으면 '빈'"
+},
+{
+"id": "6ff51bace3",
+"lv": "N5",
+"word": "空",
+"reading": "そら",
+"en": "sky",
+"ko": "하늘",
+"c": ""
+},
+{
+"id": "f6833a87fe",
+"lv": "N2",
+"word": "突く",
+"reading": "つく",
+"en": "to thrust; to strike; to poke",
+"ko": "찌르다, 치다",
+"c": ""
+},
+{
+"id": "2564dfcfcb",
+"lv": "N1",
+"word": "突く",
+"reading": "つつく",
+"en": "to thrust; to strike; to attack",
+"ko": "쿡쿡 찌르다, 쪼다",
+"c": "'つく'로 읽으면 '찌르다'"
+},
+{
+"id": "8ee5c7c8db",
+"lv": "N1",
+"word": "立方",
+"reading": "たちかた",
+"en": "dancing (geisha)",
+"ko": "(일본 무용에서) 춤추는 사람",
+"c": "'りっぽう'로 읽으면 '세제곱'"
+},
+{
+"id": "f167fd3a76",
+"lv": "N1",
+"word": "箇箇",
+"reading": "ここ",
+"en": "individual; separate",
+"ko": "하나하나, 각각",
+"c": "보통 個々로 쓴다"
+},
+{
+"id": "8ac22c99b5",
+"lv": "N1",
+"word": "管",
+"reading": "かん",
+"en": "pipe; tube",
+"ko": "관, 대롱",
+"c": ""
+},
+{
+"id": "14d9875a05",
+"lv": "N3",
+"word": "管",
+"reading": "くだ",
+"en": "pipe; tube",
+"ko": "관, 대롱",
+"c": ""
+},
+{
+"id": "57054ddfeb",
+"lv": "N1",
+"word": "節",
+"reading": "せつ",
+"en": "node; section; occasion",
+"ko": "때, 무렵 / 절 (글의 단락)",
+"c": "'ふし'로 읽으면 '마디, 가락'"
+},
+{
+"id": "f898b4b8d2",
+"lv": "N3",
+"word": "節",
+"reading": "ふし",
+"en": "tune; tone; knot",
+"ko": "마디 / 가락",
+"c": ""
+},
+{
+"id": "9fbf209387",
+"lv": "N3",
+"word": "綿",
+"reading": "めん",
+"en": "cotton; padding",
+"ko": "솜, 무명",
+"c": "'わた'로 읽어도 '솜'"
+},
+{
+"id": "f11ad5d8d2",
+"lv": "N1",
+"word": "縁",
+"reading": "えん",
+"en": "chance; fate; destiny",
+"ko": "인연",
+"c": ""
+},
+{
+"id": "7f83598742",
+"lv": "N3",
+"word": "縁",
+"reading": "ふち",
+"en": "rim; brim; edge",
+"ko": "가장자리, 테두리",
+"c": ""
+},
+{
+"id": "5fa4cbe539",
+"lv": "N1",
+"word": "罰",
+"reading": "ばち",
+"en": "(divine) punishment; curse; retribution",
+"ko": "천벌, 벌",
+"c": "'ばつ'로 읽으면 사람이 주는 벌"
+},
+{
+"id": "7ea034ef1f",
+"lv": "N1",
+"word": "群",
+"reading": "ぐん",
+"en": "group (math)",
+"ko": "무리, 떼 / ~군",
+"c": "'(수학의) 군'은 드문 뜻"
+},
+{
+"id": "898b067287",
+"lv": "N5",
+"word": "背",
+"reading": "せ",
+"en": "height; stature",
+"ko": "키 / 등",
+"c": ""
+},
+{
+"id": "e7e5bb3758",
+"lv": "N3",
+"word": "背",
+"reading": "せい",
+"en": "height; stature",
+"ko": "키",
+"c": "'せ'로도 읽는다"
+},
+{
+"id": "45d920815a",
+"lv": "N4",
+"word": "舟",
+"reading": "ふね",
+"en": "ship",
+"ko": "배 (작은 배)",
+"c": "큰 배는 보통 船로 쓴다"
+},
+{
+"id": "281570f768",
+"lv": "N1",
+"word": "艶",
+"reading": "えん",
+"en": "charming; fascinating; voluptuous",
+"ko": "요염하다",
+"c": "'つや'로 읽으면 '윤기'"
+},
+{
+"id": "7985190c1e",
+"lv": "N2",
+"word": "艶",
+"reading": "つや",
+"en": "gloss; glaze",
+"ko": "윤기, 광택",
+"c": ""
+},
+{
+"id": "1255ad0e6f",
+"lv": "N3",
+"word": "茶",
+"reading": "ちゃ",
+"en": "tea",
+"ko": "차",
+"c": "보통 'お茶'로 쓴다"
+},
+{
+"id": "904529718c",
+"lv": "N1",
+"word": "華奢",
+"reading": "かしゃ",
+"en": "luxury; pomp; delicate",
+"ko": "사치, 화려함 (글말)",
+"c": "'きゃしゃ'로 읽으면 '가냘프다'"
+},
+{
+"id": "42cf1a5950",
+"lv": "N1",
+"word": "街",
+"reading": "がい",
+"en": "~street; ~quarters",
+"ko": "~가, 거리",
+"c": ""
+},
+{
+"id": "f91eb72b15",
+"lv": "N3",
+"word": "街",
+"reading": "まち",
+"en": "town; street; road",
+"ko": "거리, 번화가",
+"c": "町는 행정 단위의 '마을, 동네'"
+},
+{
+"id": "721424863e",
+"lv": "N4",
+"word": "表",
+"reading": "おもて",
+"en": "the front",
+"ko": "겉, 앞면",
+"c": "おもて. 'ひょう'로 읽으면 '표'"
+},
+{
+"id": "ae29f467bd",
+"lv": "N3",
+"word": "表",
+"reading": "ひょう",
+"en": "table (e.g. Tab 1); chart; list",
+"ko": "표",
+"c": ""
+},
+{
+"id": "89acdd2f72",
+"lv": "N3",
+"word": "見舞い",
+"reading": "みまい",
+"en": "enquiry; expression of sympathy; expression of concern",
+"ko": "병문안, 위문",
+"c": "보통 お見舞い로 쓴다"
+},
+{
+"id": "b913b671ea",
+"lv": "N1",
+"word": "角",
+"reading": "かく",
+"en": "angle; bishop (shogi)",
+"ko": "각, 모서리 / (장기) 각",
+"c": ""
+},
+{
+"id": "4092bfd9bb",
+"lv": "N5",
+"word": "角",
+"reading": "かど",
+"en": "a corner",
+"ko": "모퉁이, 모서리",
+"c": "かど. 'つの'로 읽으면 '뿔'"
+},
+{
+"id": "778765a79e",
+"lv": "N3",
+"word": "角",
+"reading": "つの",
+"en": "horn",
+"ko": "뿔",
+"c": "'かど'로 읽으면 '모퉁이'"
+},
+{
+"id": "ae0cc00f94",
+"lv": "N5",
+"word": "言う",
+"reading": "いう",
+"en": "to say",
+"ko": "말하다",
+"c": ""
+},
+{
+"id": "0f54df5fc1",
+"lv": "N3",
+"word": "言う",
+"reading": "ゆう",
+"en": "to say",
+"ko": "말하다",
+"c": "言う는 'いう'로 쓰고 'ゆう'로 소리 낸다"
+},
+{
+"id": "4956c845dc",
+"lv": "N1",
+"word": "詰る",
+"reading": "なじる",
+"en": "to rebuke; to scold; to tell off",
+"ko": "따지며 나무라다",
+"c": "'つまる'로 읽으면 '막히다'"
+},
+{
+"id": "d8a877df8f",
+"lv": "N1",
+"word": "認める",
+"reading": "したためる",
+"en": "to write up",
+"ko": "(글을) 쓰다, 적다",
+"c": "'みとめる'로 흔히 읽는다. 이 카드는 'したためる'"
+},
+{
+"id": "e086a9e024",
+"lv": "N3",
+"word": "認める",
+"reading": "みとめる",
+"en": "to recognize; to appreciate; to approve",
+"ko": "인정하다",
+"c": ""
+},
+{
+"id": "8399cefa4f",
+"lv": "N3",
+"word": "誤り",
+"reading": "あやまり",
+"en": "error",
+"ko": "잘못, 오류",
+"c": "같은 읽기의 謝る는 '사과하다'"
+},
+{
+"id": "c72bbc5aaa",
+"lv": "N1",
+"word": "象",
+"reading": "しょう",
+"en": "phenomenon",
+"ko": "형상, 현상",
+"c": ""
+},
+{
+"id": "3836c2c8bd",
+"lv": "N3",
+"word": "象",
+"reading": "ぞう",
+"en": "elephant",
+"ko": "코끼리",
+"c": ""
+},
+{
+"id": "c7ae16d498",
+"lv": "N1",
+"word": "跡切れる",
+"reading": "とぎれる",
+"en": "to pause; to be interrupted",
+"ko": "끊기다, 중단되다",
+"c": "보통 '途切れる'로 쓴다"
+},
+{
+"id": "cb3d7cda2e",
+"lv": "N1",
+"word": "軍",
+"reading": "いくさ",
+"en": "war; battle; campaign",
+"ko": "싸움, 전쟁 (옛말)",
+"c": "戦와 같은 말"
+},
+{
+"id": "a3bb21b401",
+"lv": "N3",
+"word": "軍",
+"reading": "ぐん",
+"en": "army; force; troops",
+"ko": "군, 군대",
+"c": ""
+},
+{
+"id": "c0b0e43f57",
+"lv": "N1",
+"word": "輪",
+"reading": "りん",
+"en": "counter for wheels and flowers",
+"ko": "~송이 (꽃), ~륜 (바퀴)",
+"c": "'わ'로 읽으면 고리"
+},
+{
+"id": "3f77054caf",
+"lv": "N3",
+"word": "輪",
+"reading": "わ",
+"en": "ring; hoop; circle",
+"ko": "고리, 바퀴, 원",
+"c": ""
+},
+{
+"id": "c33ec335f7",
+"lv": "N3",
+"word": "轢く",
+"reading": "ひく",
+"en": "to run somebody over (with vehicle); to knock someone down",
+"ko": "(차가 사람을) 치다",
+"c": "보통 ひく로 쓴다"
+},
+{
+"id": "d2546ac97b",
+"lv": "N5",
+"word": "辛い",
+"reading": "からい",
+"en": "spicy",
+"ko": "맵다, 짜다",
+"c": "からい. 'つらい'로 읽으면 '괴롭다'"
+},
+{
+"id": "1213823fa2",
+"lv": "N3",
+"word": "辛い",
+"reading": "つらい",
+"en": "painful; heart-breaking",
+"ko": "괴롭다, 힘들다",
+"c": "'からい'로 읽으면 '맵다'"
+},
+{
+"id": "3bd1fc1cbb",
+"lv": "N1",
+"word": "返る",
+"reading": "かえる",
+"en": "to return; to come back; to go back",
+"ko": "되돌아가다, 원래대로 되다",
+"c": ""
+},
+{
+"id": "dd86bf4e80",
+"lv": "N1",
+"word": "退く",
+"reading": "しりぞく",
+"en": "to retreat; to recede; to withdraw",
+"ko": "물러나다, 물러서다",
+"c": ""
+},
+{
+"id": "79095736b4",
+"lv": "N2",
+"word": "退く",
+"reading": "どく",
+"en": "to step aside; to move (out of the way); to make way",
+"ko": "비키다, 물러나다",
+"c": "'どく'로 읽는 카드. 'しりぞく'는 '물러나다'"
+},
+{
+"id": "c5951376c9",
+"lv": "N1",
+"word": "退ける",
+"reading": "しりぞける",
+"en": "to repel; to drive away",
+"ko": "물리치다, 거절하다",
+"c": ""
+},
+{
+"id": "986998f6c6",
+"lv": "N2",
+"word": "退ける",
+"reading": "どける",
+"en": "to remove; to take away; to dislodge",
+"ko": "치우다, 비키게 하다",
+"c": ""
+},
+{
+"id": "0bfbb7af91",
+"lv": "N1",
+"word": "遣い",
+"reading": "つかい",
+"en": "mission; simple task; doing",
+"ko": "심부름 / 심부름꾼",
+"c": "보통 '使い'로 쓴다"
+},
+{
+"id": "53162e310d",
+"lv": "N4",
+"word": "都",
+"reading": "と",
+"en": "metropolitan",
+"ko": "도 (행정 구역)",
+"c": "東京都의 都"
+},
+{
+"id": "c4956951f6",
+"lv": "N3",
+"word": "都",
+"reading": "みやこ",
+"en": "capital",
+"ko": "수도, 도읍",
+"c": ""
+},
+{
+"id": "2f10aed466",
+"lv": "N3",
+"word": "金",
+"reading": "かね",
+"en": "money",
+"ko": "돈",
+"c": "보통 'お金'로 쓴다. 'きん'으로 읽으면 금"
+},
+{
+"id": "832f591208",
+"lv": "N3",
+"word": "銃",
+"reading": "じゅう",
+"en": "gun",
+"ko": "총",
+"c": ""
+},
+{
+"id": "8ba1e58b80",
+"lv": "N1",
+"word": "銃",
+"reading": "つつ",
+"en": "gun",
+"ko": "총",
+"c": "보통 'じゅう'로 읽는다"
+},
+{
+"id": "1f8754ca0a",
+"lv": "N1",
+"word": "門",
+"reading": "かど",
+"en": "gate",
+"ko": "문, 대문 (옛말)",
+"c": "보통은 'もん'으로 읽는다"
+},
+{
+"id": "5b92758003",
+"lv": "N5",
+"word": "門",
+"reading": "もん",
+"en": "gate",
+"ko": "문, 대문",
+"c": ""
+},
+{
+"id": "fc3bc1e6f1",
+"lv": "N5",
+"word": "開く",
+"reading": "あく",
+"en": "to open; to become open",
+"ko": "열리다",
+"c": "자동사. 타동사 '열다'는 開ける"
+},
+{
+"id": "dddceb65a5",
+"lv": "N4",
+"word": "開く",
+"reading": "ひらく",
+"en": "to open an event",
+"ko": "열다, 열리다, (모임을) 열다",
+"c": "あく·あける와 같은 한자. 행사·책·꽃에 잘 쓴다"
+},
+{
+"id": "d1a343e501",
+"lv": "N4",
+"word": "間",
+"reading": "あいだ",
+"en": "a space",
+"ko": "사이, 동안",
+"c": ""
+},
+{
+"id": "8421f715e7",
+"lv": "N3",
+"word": "間",
+"reading": "ま",
+"en": "space; room; time",
+"ko": "사이, 틈 / 방 / 겨를",
+"c": ""
+},
+{
+"id": "aed9fbb1c2",
+"lv": "N1",
+"word": "際",
+"reading": "きわ",
+"en": "edge; brink; verge",
+"ko": "가장자리, 가",
+"c": "'さい'로 읽으면 '때'"
+},
+{
+"id": "9ff6bba172",
+"lv": "N3",
+"word": "際",
+"reading": "さい",
+"en": "on the occasion of; circumstances",
+"ko": "때, 즈음",
+"c": "'~の際(~할 때)' 꼴. 글말"
+},
+{
+"id": "9215794cc3",
+"lv": "N1",
+"word": "雷",
+"reading": "いかずち",
+"en": "thunder",
+"ko": "천둥, 벼락 (옛말)",
+"c": "보통은 'かみなり'로 읽는다"
+},
+{
+"id": "1e21784548",
+"lv": "N3",
+"word": "雷",
+"reading": "かみなり",
+"en": "thunder",
+"ko": "천둥, 벼락",
+"c": ""
+},
+{
+"id": "e6562f65be",
+"lv": "N1",
+"word": "面",
+"reading": "おもて",
+"en": "face",
+"ko": "얼굴, 표면 / 탈",
+"c": "'めん'으로도 읽는다"
+},
+{
+"id": "c40902d092",
+"lv": "N3",
+"word": "面",
+"reading": "めん",
+"en": "face; mug; surface",
+"ko": "얼굴, 가면 / 면, 측면",
+"c": ""
+},
+{
+"id": "c6815e7618",
+"lv": "N4",
+"word": "音",
+"reading": "おと",
+"en": "sound; note",
+"ko": "소리",
+"c": "물건이 내는 소리. 사람·동물의 목소리는 声"
+},
+{
+"id": "26e15c1ade",
+"lv": "N3",
+"word": "音",
+"reading": "おん",
+"en": "sound; note",
+"ko": "음, 소리",
+"c": "보통 '소리'는 おと. おん은 한자어·발음 단위에"
+},
+{
+"id": "88e26cec55",
+"lv": "N1",
+"word": "音",
+"reading": "ね",
+"en": "sound; note",
+"ko": "소리 (악기·벌레 소리)",
+"c": "'おと'보다 듣기 좋은 소리에 쓴다"
+},
+{
+"id": "3b5b1c60b8",
+"lv": "N1",
+"word": "骨",
+"reading": "こつ",
+"en": "knack; skill",
+"ko": "요령",
+"c": "'ほね'로 읽으면 '뼈'. 보통 가타카나 コツ로 쓴다"
+},
+{
+"id": "bd7dce62ae",
+"lv": "N3",
+"word": "骨",
+"reading": "ほね",
+"en": "bone",
+"ko": "뼈",
+"c": ""
+},
+{
+"id": "2c6219aa10",
+"lv": "N1",
+"word": "魂",
+"reading": "こん",
+"en": "soul; spirit",
+"ko": "넋, 혼",
+"c": "'たましい'로도 읽는다. 이 카드는 'こん'(주로 다른 말에 붙음)"
+},
+{
+"id": "1ac6d9ceaf",
+"lv": "N1",
+"word": "鼠",
+"reading": "ねず",
+"en": "mouse; rat; dark gray",
+"ko": "쥐 / 쥐색",
+"c": "보통 'ねずみ'로 읽는다"
+},
+{
+"id": "38191588bb",
+"lv": "N3",
+"word": "鼠",
+"reading": "ねずみ",
+"en": "mouse; rat; dark gray",
+"ko": "쥐",
+"c": ""
+}
+]

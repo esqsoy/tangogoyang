@@ -1,0 +1,41 @@
+# 日本語能力試験 과정 (탄고고양 · 1단계)
+
+JLPT N5→N1 단어를 **예문 없는 마더텅 방식**으로 담은 과정이다. 한국어 뜻과 가나 글자 수를 보고 일본어(가나)를 친다. 결정과 이유는 [PRINCIPLES 0-1](../../PRINCIPLES.md#0-1-니혼고양-기본-설계-2026-11-03)과 HANDOFF 26.11.06 절.
+
+## 원본과 조립
+
+| 파일 | 무엇 | 원본인가 |
+|---|---|---|
+| `source/vocab.json` | OpenJLPT 0.3.0 N5~N1 7,811어(표제어·읽기·영어 뜻·품사). Tatoeba 예문은 뺐다 | 원본(CC BY-SA 4.0, `source/LICENSE-OpenJLPT`·`NOTICE-OpenJLPT.md`) |
+| `ko/batch-01~10.json` | 한국어 뜻(ko)·주제·uk(보통 가나로 씀)·해설(c). 규격은 [KO_SPEC.md](KO_SPEC.md) | 원본 |
+| `review-decisions.json` | 원본 목록의 이상 항목 336개 판정: keep / drop(뺌) / fix(표기·읽기 바로잡음) | 원본(덮어쓰기) |
+| `ko-fixes.json` | 뜻 줄이 똑같은 카드를 갈라 쓴 것 | 원본(덮어쓰기) |
+| `template.html` | 화면. 보카고양 마더텅 화면에서 [derive-template.py](derive-template.py)로 한 번 뽑은 뒤 손으로 고친다 | 원본 |
+| `../../tangogoyangjlpt.html` | 조립 결과 | **생성물. 직접 고치지 않는다** |
+
+```
+python3 pipeline/jlpt/build.py      # tangogoyangjlpt.html, index.html 단어 수
+node pipeline/jlpt/test-jlpt.cjs    # 로마자→가나·판정·화면 흐름 검사
+```
+
+## 묶는 법
+
+급수(N5→N1) → 주제 23갈래(`build.py`의 `TOPICS` 순서) → 연습(약 12카드). 한 급수를 약 400카드씩 강으로 나눈다(N5 ①②…). 진도는 강 이름+연습 제목으로, 모아둔 카드는 OpenJLPT id로 저장한다. 그래서 묶음을 바꾸면 진도 기록은 이어지지 않는다.
+
+## 입력·판정 (template.html)
+
+- 로마자로 치면 그 자리에서 가나로 바뀐다(`jpRomaToKana`). 카드가 가타카나 말이면 가타카나로 보인다. `-`는 ー. `nn`·`n'`은 ん.
+- 일본어 자판으로 친 가나·한자도 받는다. 한자는 그 카드 표기(`w`)나 별표기(`alt`)와 같을 때만 맞다.
+- 판정은 히라가나로 맞춘 뒤 비교한다. 장음 ー는 앞 모음과 같게 본다(コーヒー = こおひい).
+- こんにちは·こんばんは를 소리대로 わ로 치면 맞다고 하되 쓰는 법을 알려 준다.
+- 일본어 자판 변환 중(composition)에는 판정·넘김을 하지 않는다.
+- 발음은 브라우저 ja-JP 음성으로 가나 읽기를 읽힌다(한자를 넘기면 잘못 읽을 수 있다). IPA 효과는 없다.
+
+## 저장 키
+
+모두 `tangogoyang-`로 시작한다. 같은 esqsoy.github.io의 보카고양(`goyang-`)과 겹치지 않는다.
+
+## 남은 것
+
+- 2단계: 예문(FABLE 방식)·고양이 대사. 영신: JLPT 기출이 있으면 분석해서 예문으로 쓰자(저작권 때문에 그대로 옮기지 않고 분석해 새로 쓴다는 안은 HANDOFF 참고).
+- 뜻이 일부 겹치는 카드(뜻 조각만 같은 것) 정리, 일본어 사람 검수.
