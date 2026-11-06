@@ -470,6 +470,24 @@ body.roaring{animation:roarshake .5s .15s;}
 .jp-ko{display:block;font-size:.8em;opacity:.78;margin-top:2px;}
 .jp-kana{font-size:2.4em;line-height:1.15;}
 .jp-snd{font-family:inherit;font-size:1.35rem;}
+/*KANA_FONT_FACE*/
+.jp-hand{font-family:"KanaHand","Klee One",serif;font-weight:600;}
+.kana-cap{display:block;font-size:.7rem;opacity:.6;font-weight:400;letter-spacing:.05em;}
+.kana-forms{display:flex;gap:16px;justify-content:center;align-items:flex-end;flex-wrap:wrap;margin:4px 0 2px;}
+.kana-form{display:flex;flex-direction:column;align-items:center;gap:2px;}
+.kana-form>b{font-weight:400;font-size:2.4rem;line-height:1.1;}
+.kana-form>b.jp-hand{font-weight:600;}
+.kana-form small{font-size:.72rem;opacity:.7;}
+.kana-strokes{display:flex;gap:2px;cursor:pointer;}
+.kana-strokes svg{width:62px;height:62px;}
+.kana-q{justify-content:center;margin-top:4px;}.kana-q svg{width:54px;height:54px;}
+.kana-strokes path{fill:none;stroke:currentColor;stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round;}
+.kana-strokes .ghost{opacity:.13;}
+.kana-strokes .live{stroke-dasharray:1;stroke-dashoffset:1;animation:kanaStroke .5s ease forwards;animation-delay:calc(var(--i)*.6s + .2s);}
+.kana-strokes text{font-size:10px;fill:#e0464b;opacity:0;animation:kanaNum .2s forwards;animation-delay:calc(var(--i)*.6s + .2s);}
+@keyframes kanaStroke{to{stroke-dashoffset:0;}}
+@keyframes kanaNum{to{opacity:1;}}
+@media (prefers-reduced-motion:reduce){.kana-strokes .live{animation:none;stroke-dashoffset:0;}.kana-strokes text{animation:none;opacity:1;}}
 .jp-qko{display:block;font-size:.5em;font-weight:700;color:var(--muted);margin-top:4px;}
 .blanks .slot-glyph{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",sans-serif;}
 .rv .rv-word{margin-top:4px;}
@@ -1518,7 +1536,7 @@ body.playing .appbar{display:flex;padding:0 5px;}
         <div class="grid" id="lessonGrid" style="padding:0 13px 13px;"></div>
       </div>
       <p class="homeCredit"><a href="https://blog.naver.com/study1study" target="_blank" rel="noopener"><b>STUDY1</b> 국어 블로그 ›</a></p>
-      <p class="homeCredit" style="font-size:.72rem;opacity:.75;">단어 목록: <a href="https://github.com/evanclan/OpenJLPT" target="_blank" rel="noopener">OpenJLPT</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
+      <p class="homeCredit" style="font-size:.72rem;opacity:.75;">단어 목록: <a href="https://github.com/evanclan/OpenJLPT" target="_blank" rel="noopener">OpenJLPT</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a><!--KANA_CREDIT--></p>
     </section>
 
     <!-- LESSON -->
@@ -2260,10 +2278,17 @@ function mtNeedsWholePronunciation(w){
  const c=w.context,[a,b]=mtInlineRanges(w)[0];
  return !!c.surfaceParts?.length||c.example.slice(a,b).toLowerCase()!==w.term.toLowerCase();
 }
+// 五十音 쓰는 순서: KanjiVG(CC BY-SA 3.0) 획 경로. build.py가 kana 모드에서만 채운다.
+const KANA_STROKES=/*KANA_STROKES*/{};
+function kanaStrokeSvg(c){const d=KANA_STROKES[c];if(!d)return '';
+ return '<svg viewBox="0 0 109 109" role="img" aria-label="'+c+' 쓰는 순서">'+d.p.map(p=>'<path class="ghost" d="'+p+'"/>').join('')+d.p.map((p,i)=>'<path class="live" pathLength="1" style="--i:'+i+'" d="'+p+'"/>').join('')+d.n.map((xy,i)=>'<text x="'+xy[0]+'" y="'+xy[1]+'" style="--i:'+i+'">'+(i+1)+'</text>').join('')+'</svg>';}
+document.addEventListener("click",e=>{const k=e.target.closest&&e.target.closest(".kana-strokes");if(k)k.innerHTML=k.innerHTML;}); // 쓰는 순서 다시 보기(kana 모드에만 생긴다)
 function mtRevealHtml(term,meaning){
  const w=mtCurrentWord();if(!w)return '';
  if(JP_MODE==="kana"){const snd=[w.rm,w.hg].filter(Boolean).join(' · ');
-   return (snd?'<div class="jp-head jp-snd">'+esc(snd)+'</div>':'')+(w.meaning?'<div class="ov-tr">'+esc(w.meaning)+'</div>':'')+(w.note?'<div class="ov-tr jp-note">'+esc(w.note)+'</div>':'');}
+   const ch=[...w.jw],st=w.hw&&ch.length<=3?ch.map(kanaStrokeSvg).join(''):''; // 배우는 연습은 문제 칸에 이미 보인다
+   const forms='<div class="kana-forms"><span class="kana-form"><b lang="ja">'+esc(w.jw)+'</b><small>인쇄체</small></span><span class="kana-form"><b class="jp-hand" lang="ja">'+esc(w.jw)+'</b><small>손글씨</small></span>'+(st?'<span class="kana-form"><span class="kana-strokes" title="누르면 다시">'+st+'</span><small>쓰는 순서</small></span>':'')+'</div>';
+   return forms+(snd?'<div class="jp-head jp-snd">'+esc(snd)+'</div>':'')+(w.meaning?'<div class="ov-tr">'+esc(w.meaning)+'</div>':'')+(w.note?'<div class="ov-tr jp-note">'+esc(w.note)+'</div>':'');}
  const head=JP_MODE==="yomi"?'<div class="jp-head" lang="ja">'+jpRuby(w.jw,w.term)+'</div>':w.jw&&w.jw!==w.term?'<div class="jp-head" lang="ja">'+jpRuby(w.jw,w.term)+'</div>':'';
  const note=w.note?'<div class="ov-tr jp-note">'+esc(w.note)+'</div>':'';
  return head+note;
@@ -2298,7 +2323,7 @@ function buildLessons(){
     exercises:L.exercises.map(ex=>({
       title:ex.title||((ex.scope==='prev'?"이전기출 ":"Exercise ")+ex.ex),
       ex:ex.ex, scope:ex.scope||'2026',
-      words:ex.words.map(w=>({term:w.en,meaning:w.ko,jw:w.w||w.en,alt:w.alt||[],ar:w.ar||[],rm:w.rm||"",hg:w.hg||"",note:w.c||"",lv:w.lv||"",savedId:w.id}))
+      words:ex.words.map(w=>({term:w.en,meaning:w.ko,jw:w.w||w.en,alt:w.alt||[],ar:w.ar||[],rm:w.rm||"",hg:w.hg||"",hw:w.hw||0,note:w.c||"",lv:w.lv||"",savedId:w.id}))
     }))
   }));
 }
@@ -2755,7 +2780,8 @@ function nextCard(){
     s.cardLimit=limitFor(w.term);s.cardStart=Date.now();s.opening=false;s.hintLevel=0;
     const card=$("#quizCard");clearTimeout(card._growT);card.style.height="";card.style.transition="";card.className="panel quiz";
     if(JP_MODE==="yomi")$("#meaning").innerHTML='<span class="jp-q" lang="ja">'+esc(w.jw)+'</span><span class="jp-qko">'+esc(w.meaning)+'</span>';
-    else if(JP_MODE==="kana")$("#meaning").innerHTML='<span class="jp-q jp-kana" lang="ja">'+esc(w.jw)+'</span>'; // 五十音: 글자만 보이고 소리를 친다
+    else if(JP_MODE==="kana"){const st=!w.hw&&[...w.jw].length<=3?[...w.jw].map(kanaStrokeSvg).join(''):'';
+      $("#meaning").innerHTML=w.hw?'<span class="jp-q jp-kana jp-hand" lang="ja"><span class="kana-cap">손글씨</span>'+esc(w.jw)+'</span>':'<span class="jp-q jp-kana" lang="ja">'+esc(w.jw)+'</span>'+(st?'<span class="kana-strokes kana-q" title="누르면 다시">'+st+'</span>':'');} // 五十音: 글자만 보이고 소리를 친다. 배우는 연습은 쓰는 순서를 함께(소리는 드러나지 않는다), 복습·단어 읽기는 손글씨 모양으로 // 五十音: 글자만 보이고 소리를 친다
     else $("#meaning").textContent=w.meaning;
     $("#hoeCtx").innerHTML=mtQuestionHtml(w);
     const rv=$("#reveal");rv.className="rv";rv.innerHTML="";

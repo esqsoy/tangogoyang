@@ -197,6 +197,15 @@ def write(out, data, mode):
     if mode == 'kana':
         # 五十音: 따로 진도(tangogoyang-kana-), 고양이는 한국어 고양체(일본어 대사는 漢字読み에만).
         html = html.replace(mode_marker, 'const JP_MODE="kana";')
+        # 쓰는 순서(KanjiVG, CC BY-SA 3.0)와 손글씨 모양(Klee One 가나만 뽑은 것, OFL). 26.11.06 영신 요청.
+        import base64
+        strokes = (HERE / 'kanjivg' / 'kana-strokes.json').read_text()
+        font = base64.b64encode((HERE / 'fonts' / 'klee-kana.woff2').read_bytes()).decode()
+        for old, new in [('/*KANA_STROKES*/{}', strokes),
+                         ('/*KANA_FONT_FACE*/', '@font-face{font-family:"KanaHand";src:url(data:font/woff2;base64,' + font + ') format("woff2");font-display:swap;}'),
+                         ('<!--KANA_CREDIT-->', ' · 쓰는 순서: <a href="https://kanjivg.tagaini.net" target="_blank" rel="noopener">KanjiVG</a>(Ulrich Apel, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>) · 손글씨: <a href="https://github.com/fontworks-fonts/Klee" target="_blank" rel="noopener">Klee One</a>(Fontworks, OFL)')]:
+            assert html.count(old) == 1, old
+            html = html.replace(old, new)
         html = re.sub(r'(["\'`])tangogoyang-', r'\1tangogoyang-kana-', html)
         for old, new in [('<title>日本語能力試験 · 単語高陽</title>', '<title>五十音 · 単語高陽</title>'),
                          ('<h2>日本語能力試験 N5–N1</h2>', '<h2>五十音 ひらがな・カタカナ</h2>'),

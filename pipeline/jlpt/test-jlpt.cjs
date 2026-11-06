@@ -81,9 +81,15 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   ok(await p3.evaluate(()=>jpTentative('ㄴ','ん')==='ん'&&jpTentative('파','ファ')==='ファ'&&jpTentative('오','を')==='を'),'五十音: 한글 ㄴ=ん, 파=ファ, 오=を');
   await p3.evaluate(()=>{openLesson(0);startExercise(0);});await p3.waitForTimeout(3000);
   const kw=await p3.evaluate(()=>state.session.words[state.session.currentId]);
-  ok((await p3.innerText('#meaning')).trim()===kw.jw,'五十音: 문제에 글자만');
+  ok((await p3.innerText('#meaning .jp-q')).trim()===kw.jw,'五十音: 문제에 글자만');
+  ok(await p3.evaluate(()=>document.querySelectorAll('#meaning .kana-strokes svg .live').length>0),'五十音: 배우는 연습은 쓰는 순서가 문제 칸에');
+  ok(await p3.evaluate(async()=>Object.keys(KANA_STROKES).length>=150&&(await document.fonts.load('600 20px KanaHand','あ')).length>0),'五十音: 획 자료·손글씨 글꼴 실림');
   await p3.focus('#ainput');await p3.keyboard.type(kw.rm);await p3.waitForTimeout(400);
   ok(await p3.evaluate(()=>document.querySelector('#ainput').classList.contains('ok')),`五十音: ${kw.rm} 로 ${kw.jw} 정답`);
   ok((await p3.innerText('#reveal')).includes(kw.hg),'五十音: 공개에 한글 소리');
+  await p3.evaluate(()=>{openLesson(0);startExercise(5);});await p3.waitForTimeout(3000);
+  ok(await p3.evaluate(()=>!!document.querySelector('#meaning .jp-hand')&&!document.querySelector('#meaning .kana-strokes')),'五十音: 전체 복습은 손글씨 모양으로');
+  await p3.focus('#ainput');await p3.keyboard.type('zz');await p3.keyboard.press('Enter');await p3.waitForTimeout(1500);
+  ok(await p3.evaluate(()=>!!document.querySelector('#reveal .kana-strokes')&&!!document.querySelector('#reveal .kana-form b:not(.jp-hand)')),'五十音: 손글씨 문제를 틀리면 인쇄체·쓰는 순서 공개');
   await b.close();console.log(fail?`실패 ${fail}`:'모두 통과');process.exit(fail?1:0);
 })();
