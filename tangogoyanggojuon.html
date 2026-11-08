@@ -2494,8 +2494,11 @@ function speakPronunciation(term,meaning){
   const effect=ipaEffectRequest(info,()=>effectCurrent()&&!state.muted);
   const text=pronunciationEntry(term,meaning).speech||term;
   const say=()=>{if(!stillRevealed())return;try{
-    const utterance=new window.SpeechSynthesisUtterance(text);
-    utterance.lang=pronunciationVoice?.lang||"ja-JP";utterance.rate=.9;
+    // 五十音: 가나 한 글자는 음성 엔진이 한 박자만 툭 읽고 끊겨 들린다(26.11.08 영신 "아가 아주 짧게 나오고 끊기는 식").
+    // 한두 글자는 0.6배, 단어는 0.8배로 읽고 「。」를 붙여 문장 끝처럼 맺는다. 장음(ー)으로 늘이지 않는다(장음과 헷갈린다).
+    const kana=JP_MODE==="kana",short=[...text].length<=2;
+    const utterance=new window.SpeechSynthesisUtterance(kana?text+"。":text);
+    utterance.lang=pronunciationVoice?.lang||"ja-JP";utterance.rate=kana?(short?.6:.8):.9;
     if(pronunciationVoice)utterance.voice=pronunciationVoice;
     ipaEffectAttach(utterance,effect);
     window.speechSynthesis.speak(utterance);
