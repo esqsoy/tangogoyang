@@ -94,6 +94,13 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   ok(await p3.evaluate(()=>!!document.querySelector('#reveal .kp-print svg .live')&&!!document.querySelector('#reveal svg.hand[data-fit] .hlive')),'五十音: 손글씨 문제를 틀리면 인쇄체 획순·손글씨 공개');
   ok(await p3.evaluate(()=>{const w=state.session.words[state.session.currentId],ul=document.querySelector('#reveal .jp-pn');return Object.keys(KANA_HAND).length>=150&&(w.pn.length?!!ul&&ul.querySelectorAll('li').length===w.pn.length:!ul);}),'五十音: 손글씨 경로·발음 설명(한국어와 같은 소리는 없음)');
   ok(await p3.evaluate(()=>{const all=DATA.flatMap(L=>L.exercises.flatMap(e=>e.words));const f=c=>all.find(w=>w.w===c);return f('あ').pn.length===0&&f('つ').pn.some(x=>/한국어에 없다.*voiceless alveolar affricate/.test(x))&&f('が').pn.some(x=>/식으로 하면 안 된다.*voiced velar plosive.*주의/.test(x))&&f('を').pn.some(x=>/‘오’식으로 해도 된다.*차이/.test(x))&&!DATA.some(L=>L.exercises.some(e=>e.words.some(w=>w.pn.some(x=>/%/.test(x)))));}),'五十音: 같은 소리 생략·한국어식 허용과 차이·꼭 구별·영어 용어');
+  // 五十音 발음: 첫 키에 소리 없는 발화로 음성을 열고, 정답이면 ja-JP로 가나를 읽는다(Safari 대비)
+  const p5=await b.newPage();p5.on('pageerror',e=>errs.push(e.message));
+  await p5.addInitScript(()=>{window.__said=[];Object.defineProperty(window,'speechSynthesis',{configurable:true,value:{speak:u=>window.__said.push([u.text,u.lang,u.volume]),cancel(){},getVoices:()=>[{name:'Kyoko',lang:'ja-JP'}],addEventListener(){},speaking:false,pending:false}});window.SpeechSynthesisUtterance=function(t){this.text=t;};});
+  await p5.goto('file://'+path.resolve(__dirname,'../../tangogoyanggojuon.html'));await p5.waitForTimeout(400);
+  await p5.evaluate(()=>{openLesson(0);startExercise(0);});await p5.waitForTimeout(2500);
+  const k5=await p5.evaluate(()=>state.session.words[state.session.currentId]);await p5.focus('#ainput');await p5.keyboard.type(k5.rm);await p5.waitForTimeout(800);
+  ok(await p5.evaluate(jw=>window.__said.length>=2&&window.__said[0][2]===0&&window.__said.some(s=>s[0]===jw&&s[1]==='ja-JP'),k5.jw),'五十音: 음성 열기 뒤 정답 가나를 ja-JP로 읽음');
   // 기록 옮기기(index)
   const p4=await b.newPage();p4.on('pageerror',e=>errs.push(e.message));await p4.goto('file://'+path.resolve(__dirname,'../../index.html'));
   ok(await p4.evaluate(()=>{const m=rtMerge({'tangogoyang-kana-seoul-v1':'{"a":{"x":{"completed":true}}}'},{'tangogoyang-kana-seoul-v1':'{"a":{"y":{"completed":true}}}','goyang-seoul-v1':'{}'});return !!document.getElementById('rtOpen')&&RT_PREFIX==='tangogoyang-'&&m.summary.exercises===1&&!('goyang-seoul-v1' in m.writes);}),'기록 옮기기: 탄고고양 키만, 합치기');
