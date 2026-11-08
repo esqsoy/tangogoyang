@@ -1777,7 +1777,7 @@ function replayAnswerFromEvent(e){
   const s=state.session;if(!s||s.currentId===null||!s.answered||s.copyMode||!screens.game.classList.contains('active'))return;
   e.preventDefault();e.stopPropagation();
   const w=s.words[s.currentId];
-  if(typeof speakPronunciation==='function')speakNow(()=>speakPronunciation(w.term,w.meaning));else speak(w.term);
+  if(typeof speakPronunciation==='function')speakPronunciation(w.term,w.meaning);else speak(w.term);
 }
 /* Browser TTS drives the start/end. Internal beats are estimates, never audio timestamps. */
 let ipaEffectRun=null,ipaEffectGeneration=0,ipaEffectGate=null;
@@ -2321,7 +2321,7 @@ function kanaHandFit(root){(root||document).querySelectorAll('svg.hand:not([data
 function kanaPairStart(root){const go=()=>{kanaHandFit(root);(root||document).querySelectorAll('.kana-pair').forEach(k=>{clearTimeout(k._t);k._t=setTimeout(()=>k.querySelectorAll('.mlive').forEach(m=>{m.style.animation='none';m.style.strokeDashoffset='0';m.style.strokeOpacity='1';}),(+k.dataset.n||0)*600+900);});};
  (document.fonts&&document.fonts.load?document.fonts.load('600 40px KanaHand','あ'):Promise.resolve()).then(go,go);}
 document.addEventListener("click",e=>{const pr=e.target.closest&&e.target.closest(".kana-pair");if(pr){pr.outerHTML=kanaPairHtml(pr.dataset.jw,[...pr.classList].filter(c=>c!=='kana-pair'&&c!=='multi').join(' '));kanaPairStart();
-  const s=state.session;if(s&&s.answered&&!s.copyMode&&s.currentId!==null){const w=s.words[s.currentId];speakNow(()=>speakPronunciation(w.term,w.meaning));} // 공개 뒤 글자를 누르면 획순을 다시 그리며 발음도(답하기 전에는 소리 없음: 답이 드러난다)
+  const s=state.session;if(s&&s.answered&&!s.copyMode&&s.currentId!==null){const w=s.words[s.currentId];speakPronunciation(w.term,w.meaning);} // 공개 뒤 글자를 누르면 획순을 다시 그리며 발음도(답하기 전에는 소리 없음: 답이 드러난다)
   return;}const k=e.target.closest&&e.target.closest(".kana-strokes");if(k)k.innerHTML=k.innerHTML;}); // 쓰는 순서 다시 보기(kana 모드에만 생긴다)
 function mtRevealHtml(term,meaning){
  const w=mtCurrentWord();if(!w)return '';
@@ -2455,8 +2455,7 @@ function pickPronunciationVoice(){try{
 function stopPronunciation(cancelSpeech=true){
   ipaEffectCancel();
   pronunciationSeq++;clearInterval(pronunciationWait);pronunciationWait=null;
-  // 읽고 있는 것이 없으면 cancel()을 부르지 않는다(Safari는 cancel 바로 뒤 speak를 잘라 먹는 일이 있다, 26.11.08)
-  if(cancelSpeech&&window.speechSynthesis)try{if(JP_MODE!=="kana"||window.speechSynthesis.speaking||window.speechSynthesis.pending)window.speechSynthesis.cancel();}catch(e){}
+  if(cancelSpeech&&window.speechSynthesis)try{window.speechSynthesis.cancel();}catch(e){}
 }
 function pronunciationEntry(term,meaning,originalMeaning){
   const word=mtCurrentWord(),original=originalMeaning||(word?.term===term?word.originalMeaning:meaning);
@@ -2485,9 +2484,6 @@ function pronunciationAudioInfo(term,meaning,originalMeaning){
   if(Array.isArray(entry.alternatives)&&entry.alternatives.some(p=>p.ipa))return null;
   return {term,ipa:entry.ipa};
 }
-// 탭으로 다시 듣기는 탭 안에서 바로 읽어야 Safari가 소리를 낸다(26.11.08 영신 "글자를 눌렀을때는 소리가 아예 안나와")
-let kanaSpeakNow=false;
-function speakNow(fn){kanaSpeakNow=true;try{fn();}finally{kanaSpeakNow=false;}}
 function speakPronunciation(term,meaning){
   const session=state.session,id=session&&session.currentId;
   if(!session||id===null||!session.answered||session.words[id]?.term!==term||!screens.game.classList.contains("active"))return;
@@ -2504,10 +2500,7 @@ function speakPronunciation(term,meaning){
     utterance.lang=pronunciationVoice?.lang||"ja-JP";utterance.rate=.9;
     if(pronunciationVoice)utterance.voice=pronunciationVoice;
     ipaEffectAttach(utterance,effect);
-    // 五十音: Safari에서 가나 발음이 짧게 끊김(26.11.08 영신 "사파리문제야 크롬에선 원래도 잘됐어"). 정답 효과음(웹 오디오 0.32초)과 겹치면
-    // iOS가 음성을 끊는 일이 있어 효과음이 끝난 뒤 읽는다. 다른 과정은 그대로.
-    if(JP_MODE==="kana"&&!kanaSpeakNow){window.__kanaUtter=utterance;setTimeout(()=>{if(stillRevealed())try{window.speechSynthesis.speak(utterance);}catch(e){ipaEffectCancel();}},350);}
-    else window.speechSynthesis.speak(utterance);
+    window.speechSynthesis.speak(utterance);
   }catch(e){ipaEffectCancel();}};
   const native=()=>{
     if(!stillRevealed())return;
