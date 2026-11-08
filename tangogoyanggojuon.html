@@ -2453,7 +2453,8 @@ function pickPronunciationVoice(){try{
 function stopPronunciation(cancelSpeech=true){
   ipaEffectCancel();
   pronunciationSeq++;clearInterval(pronunciationWait);pronunciationWait=null;
-  if(cancelSpeech&&window.speechSynthesis)try{window.speechSynthesis.cancel();}catch(e){}
+  // 읽고 있는 것이 없으면 cancel()을 부르지 않는다(Safari는 cancel 바로 뒤 speak를 잘라 먹는 일이 있다, 26.11.08)
+  if(cancelSpeech&&window.speechSynthesis)try{if(JP_MODE!=="kana"||window.speechSynthesis.speaking||window.speechSynthesis.pending)window.speechSynthesis.cancel();}catch(e){}
 }
 function pronunciationEntry(term,meaning,originalMeaning){
   const word=mtCurrentWord(),original=originalMeaning||(word?.term===term?word.originalMeaning:meaning);
@@ -2494,14 +2495,14 @@ function speakPronunciation(term,meaning){
   const effect=ipaEffectRequest(info,()=>effectCurrent()&&!state.muted);
   const text=pronunciationEntry(term,meaning).speech||term;
   const say=()=>{if(!stillRevealed())return;try{
-    // 五十音: 가나 한 글자는 음성 엔진이 한 박자만 툭 읽고 끊겨 들린다(26.11.08 영신 "아가 아주 짧게 나오고 끊기는 식").
-    // 한두 글자는 0.6배, 단어는 0.8배로 읽고 「。」를 붙여 문장 끝처럼 맺는다. 장음(ー)으로 늘이지 않는다(장음과 헷갈린다).
-    const kana=JP_MODE==="kana",short=[...text].length<=2;
-    const utterance=new window.SpeechSynthesisUtterance(kana?text+"。":text);
-    utterance.lang=pronunciationVoice?.lang||"ja-JP";utterance.rate=kana?(short?.6:.8):.9;
+    const utterance=new window.SpeechSynthesisUtterance(text);
+    utterance.lang=pronunciationVoice?.lang||"ja-JP";utterance.rate=.9;
     if(pronunciationVoice)utterance.voice=pronunciationVoice;
     ipaEffectAttach(utterance,effect);
-    window.speechSynthesis.speak(utterance);
+    // 五十音: Safari에서 가나 발음이 짧게 끊김(26.11.08 영신 "사파리문제야 크롬에선 원래도 잘됐어"). 정답 효과음(웹 오디오 0.32초)과 겹치면
+    // iOS가 음성을 끊는 일이 있어 효과음이 끝난 뒤 읽는다. 다른 과정은 그대로.
+    if(JP_MODE==="kana"){window.__kanaUtter=utterance;setTimeout(()=>{if(stillRevealed())try{window.speechSynthesis.speak(utterance);}catch(e){ipaEffectCancel();}},350);}
+    else window.speechSynthesis.speak(utterance);
   }catch(e){ipaEffectCancel();}};
   const native=()=>{
     if(!stillRevealed())return;
