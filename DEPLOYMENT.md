@@ -1,3 +1,7 @@
+# 五十音 글자 탭 발음 공개 · 2026-11-08
+
+- main `4ef97a0` 공개. 공개 `tangogoyanggojuon.html` SHA-256이 로컬과 같다(`2de26d684f43…`). 새로 실행: 로컬 test-jlpt.cjs 모두 통과. Safari 소리는 영신 확인 대기.
+
 # 五十音 Safari 발음(효과음 뒤 읽기) 공개 · 2026-11-08
 
 - main `3c1127e` 공개. 공개 `tangogoyanggojuon.html` SHA-256이 로컬과 같다(`21a46e7266d4…`). 새로 실행: 로컬 test-jlpt.cjs 모두 통과. Safari 소리는 영신 확인 대기.
