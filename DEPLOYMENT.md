@@ -1,3 +1,7 @@
+# 五十音 가나 발음 천천히 공개 · 2026-11-08
+
+- main `462a4d9` 공개. 공개 `tangogoyanggojuon.html` SHA-256이 로컬과 같다(`108f3a6589d7…`). 새로 실행: 로컬 test-jlpt.cjs 모두 통과. 실제 소리는 영신 확인 대기.
+
 # 五十音 Safari 발음 고침 롤백 공개 · 2026-11-08
 
 - main `e6a952e` 공개. 공개 `tangogoyanggojuon.html`이 `217117d` 판과 같다(SHA-256 `918ca403ce90…`). 원인은 영신 폰 설정이었다. 새로 실행: 로컬 test-jlpt.cjs 모두 통과.
