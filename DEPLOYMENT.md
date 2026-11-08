@@ -1,3 +1,7 @@
+# 五十音 발음 정리 공개 · 2026-11-08
+
+- main `2eb7596` 공개. 공개 `tangogoyanggojuon.html` SHA-256이 로컬과 같다(`a5fc5b782637…`), `lab/speech-test.html`은 공개에서 사라짐(404). 새로 실행: 로컬 test-jlpt.cjs 모두 통과. 아이폰 한 글자 발음 끊김은 보류(iOS 음성 한계).
+
 # 五十音 글자 탭 발음 공개 · 2026-11-08
 
 - main `4ef97a0` 공개. 공개 `tangogoyanggojuon.html` SHA-256이 로컬과 같다(`2de26d684f43…`). 새로 실행: 로컬 test-jlpt.cjs 모두 통과. Safari 소리는 영신 확인 대기.
