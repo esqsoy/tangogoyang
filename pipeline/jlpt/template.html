@@ -2431,12 +2431,6 @@ function resumeTarget(){let last=null;try{last=JSON.parse(localStorage.getItem(L
 /* 발음은 정답을 공개한 뒤에만 읽는다. 자료가 없는 항목도 영어 표기로 들을 수 있다. */
 let pronunciationVoice=null,pronunciationVoiceName=null,pronunciationSeq=0,pronunciationWait=null;
 function pronunciationSupported(){return !!(window.speechSynthesis&&window.SpeechSynthesisUtterance);}
-/* iOS Safari: 음성은 사용자 동작(탭·키) 안에서 한 번 말해야 그다음 자동 발음이 나온다. 답을 치면 바로 판정해 읽는 이 게임은
-   그 동작 밖에서 말하게 되므로, 첫 탭·키에 소리 없는 발화로 음성을 열어 둔다(26.11.08 영신: 五十音 사파리에서 발음이 안 나옴). */
-let speechUnlocked=false;
-function unlockSpeech(){if(speechUnlocked||!pronunciationSupported())return;speechUnlocked=true;
-  try{const u=new window.SpeechSynthesisUtterance(" ");u.lang="ja-JP";u.volume=0;window.speechSynthesis.speak(u);}catch(e){}}
-["touchend","pointerdown","keydown","click"].forEach(t=>document.addEventListener(t,unlockSpeech,{capture:true,passive:true}));
 function pronunciationVoiceScore(v){
   const name=v.name||"",lang=(v.lang||"").replace(/_/g,"-");
   if(!/^ja(?:-|$)/i.test(lang))return -1;
@@ -2504,8 +2498,7 @@ function speakPronunciation(term,meaning){
     utterance.lang=pronunciationVoice?.lang||"ja-JP";utterance.rate=.9;
     if(pronunciationVoice)utterance.voice=pronunciationVoice;
     ipaEffectAttach(utterance,effect);
-    // Safari는 cancel() 바로 뒤의 speak()를 버리는 일이 있어 잠깐 띄운다.
-    setTimeout(()=>{if(stillRevealed())try{window.speechSynthesis.speak(utterance);}catch(e){ipaEffectCancel();}},60);
+    window.speechSynthesis.speak(utterance);
   }catch(e){ipaEffectCancel();}};
   const native=()=>{
     if(!stillRevealed())return;
