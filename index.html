@@ -81,6 +81,8 @@ body::before{
 .foot{text-align:center;color:var(--muted);font-size:.78rem;opacity:.8;line-height:1.5;}
 .foot b{color:var(--pink2);}
 .foot .credit{display:block;width:fit-content;margin:4px auto 0;padding:8px 12px;font-size:.84rem;font-weight:800;letter-spacing:.4px;color:inherit;text-decoration:none;}
+</style>
+<style id="record-transfer-style">
 .rt-open{align-self:center;margin:2px auto 0;padding:9px 16px;border:1.5px solid var(--line);border-radius:99px;background:transparent;
   color:var(--muted);font:inherit;font-size:.86rem;font-weight:800;letter-spacing:.2px;cursor:pointer;}
 .rt-open:hover,.rt-open:focus-visible{border-color:var(--pink2);color:var(--ink);outline:none;}
@@ -174,11 +176,11 @@ body.rt-lock{overflow:hidden;}
 </div>
 <script id="record-transfer">
 /* RECORD_TRANSFER_START */
-var RT_CONFIG={"game": "탄고고양", "app": "tangogoyang-records", "prefix": "tangogoyang-", "skip": [], "target": "index.html", "kinds": {"progress": "^tangogoyang-(kana-|yomi-)?seoul-v1$", "saved": "-saved-cards-v1$", "learned": "^tangogoyang-(kana-|yomi-)?learned-words-v1$", "missed": "^tangogoyang-(kana-|yomi-)?missed-words-v1$", "milestone": "^tangogoyang-(kana-|yomi-)?milestone-v1$", "paceMeta": "^tangogoyang-(kana-|yomi-)?pace-meta-", "pace": "^tangogoyang-(kana-|yomi-)?pace-"}};
+var RT_CONFIG={"game":"탄고고양","app":"tangogoyang-records","prefix":"tangogoyang-","skip":[],"target":"index.html","kinds":{"progress":"^tangogoyang-(kana-|yomi-)?seoul-v1$","saved":"-saved-cards-v1$","learned":"^tangogoyang-(kana-|yomi-)?learned-words-v1$","missed":"^tangogoyang-(kana-|yomi-)?missed-words-v1$","milestone":"^tangogoyang-(kana-|yomi-)?milestone-v1$","paceMeta":"^tangogoyang-(kana-|yomi-)?pace-meta-","pace":"^tangogoyang-(kana-|yomi-)?pace-"}};
 /* 기록 옮기기(26.11.04 영신 "1번이면 충분해!"): 이 기기의 기록을 파일로 내보내고, 다른 기기에서 그 파일을 합친다.
    합치기는 아무것도 지우지 않는다. 어느 기기에서 한 것이든 남고, 같은 파일을 두 번 합쳐도 그대로다.
-   보카고양(esqsoy/vocagoyang 공개 index, 26.11.06)에서 그대로 가져왔다(영신 "보카고양으로부터 받아옴 돼"). 바꾼 것은 RT_CONFIG뿐:
-   탄고고양은 'tangogoyang-' 키(五十音 kana-·漢字読み yomi-)를 쓴다. 같은 주소의 보카고양 'goyang-' 기록은 건드리지 않는다. 세트 도장은 없다. */
+   단어장끼리 같이 쓰는 파일이다(SHARED.md). 게임마다 다른 값(이름, 저장 키 접두어, 키 종류)은 config.json에 있고,
+   빌드가 RT_CONFIG로 넣는다. 보카고양은 'goyang-' 키를 쓴다(세 교재가 같은 주소라 저장 공간을 함께 쓴다). */
 var RT_CFG=typeof RT_CONFIG!=='undefined'?RT_CONFIG:require('./config.json');
 var RT_APP=RT_CFG.app,RT_VERSION=1,RT_PREFIX=RT_CFG.prefix,RT_GAME=RT_CFG.game;
 var RT_SKIP=RT_CFG.skip||[];                // 검사용 키 등 옮기지 않는 것

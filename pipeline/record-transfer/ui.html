@@ -1,0 +1,25 @@
+  <button class="rt-open" id="rtOpen" type="button">⇄ 다른 기기로 기록 옮기기</button>
+  <div class="rt-sheet" id="rtSheet" hidden role="dialog" aria-modal="true" aria-labelledby="rtTitle">
+    <div class="rt-card">
+      <button class="rt-x" id="rtClose" type="button" aria-label="닫기">×</button>
+      <h2 id="rtTitle">기록 옮기기</h2>
+      <p class="rt-lead">진도·도장·모아둔 카드는 이 기기의 이 브라우저에만 저장된다고양. 다른 기기에서 이어 하려면 파일로 옮기라고양.</p>
+      <div class="rt-step">
+        <b>① 지금 기기에서</b>
+        <button class="rt-btn" id="rtMake" type="button">기록 파일 만들기</button>
+        <small>카톡 ‘나와의 채팅’처럼 다른 기기에서 열 수 있는 곳으로 보내라고양.</small>
+      </div>
+      <div class="rt-step">
+        <b>② 다른 기기에서</b>
+        <label class="rt-btn" for="rtFile">기록 파일 열기</label>
+        <input id="rtFile" type="file" accept=".json,application/json,text/plain" hidden>
+        <small>덮어쓰지 않고 합친다고양. 두 기기에서 한 것이 다 남는다고양.</small>
+      </div>
+      <p class="rt-status" id="rtStatus" aria-live="polite"></p>
+      <div class="rt-confirm" id="rtConfirm" hidden>
+        <button class="rt-btn" id="rtMerge" type="button">합치기</button>
+        <button class="rt-btn ghost" id="rtCancel" type="button">그만두기</button>
+      </div>
+      <p class="rt-note">카톡 안에서 연 화면과 사파리·크롬은 같은 폰이어도 기록이 따로라고양.</p>
+    </div>
+  </div>

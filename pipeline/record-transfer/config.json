@@ -1,0 +1,17 @@
+{
+  "about": "이 저장소(게임)마다 다른 값. merge.js·runtime.js는 단어장끼리 같이 쓰고, 이 파일만 고친다. 공통 기능 표는 SHARED.md.",
+  "game": "탄고고양",
+  "app": "tangogoyang-records",
+  "prefix": "tangogoyang-",
+  "skip": [],
+  "target": "index.html",
+  "kinds": {
+    "progress": "^tangogoyang-(kana-|yomi-)?seoul-v1$",
+    "saved": "-saved-cards-v1$",
+    "learned": "^tangogoyang-(kana-|yomi-)?learned-words-v1$",
+    "missed": "^tangogoyang-(kana-|yomi-)?missed-words-v1$",
+    "milestone": "^tangogoyang-(kana-|yomi-)?milestone-v1$",
+    "paceMeta": "^tangogoyang-(kana-|yomi-)?pace-meta-",
+    "pace": "^tangogoyang-(kana-|yomi-)?pace-"
+  }
+}
