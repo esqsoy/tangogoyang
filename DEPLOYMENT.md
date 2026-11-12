@@ -1,3 +1,7 @@
+# 五十音 Fable 5.2 검수 반영 공개 · 2026-11-12
+
+- main `84435d6` 공개. 공개 `tangogoyanggojuon.html` SHA-256이 로컬과 같다(`9fd809a18f1e…`). 새로 실행: 로컬 test-jlpt.cjs 모두 통과.
+
 # 기록 옮기기 본가 방식 빌드 공개 · 2026-11-09
 
 - main `f86b339` 공개. 공개 `index.html` SHA-256이 로컬 빌드와 같다(`f37c7fce67dd…`). 기록 옮기기 코드는 전과 같고 주석 한 줄과 안내 문구('진도·도장·모아둔 카드', 본가 ui.html 그대로)만 바뀜. 새로 실행: `build.cjs --check`, test-jlpt.cjs 모두 통과.
