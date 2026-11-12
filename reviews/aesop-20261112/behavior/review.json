@@ -1,0 +1,167 @@
+{
+ "baseline": "8d1ccf4",
+ "items": [
+  {
+   "id": "B01",
+   "severity": "P1",
+   "where": "pipeline/jlpt/template.html:2664-2702 (JP_HG_L·JP_HG_V·jpHangulCands·jpHangulToKana), 같은 코드가 tangogoyanggojuon.html:2664-2702. 五十音 글자 카드 223종 중 183종",
+   "what": "五十音에서 한글로 소리를 칠 때, 다른 글자의 소리를 쳐도 정답이 된다. 한글 음절 하나가 여러 가나 후보가 되고 그중 '그 카드 정답과 같은 것'을 고르기 때문이다. 다른 카드의 소리(hg)를 쳐도 통과하는 카드가 67장(히라가나·가타카나 합쳐): ぱ←바(ば의 소리), ぴゃ←뱌, か←가, た←다, ち←지·디·티, つ←즈·두·투, ちゃ←자, ちゅ←주, じ←디, ず←두·주, じゅ←즈, ふ←푸, ファ←하, フィ←히, フェ←헤, フォ←호, チェ←제, ティ←디, せ←셰. 모음도 느슨하다: お←어, こ←거·커, よ←여, きょ←겨·켜, え←애·얘·예, う←으, い←의, か←과. 받침 ㄹ 계열(ㄹㄺㄻㄼㄽㄾㄿㅀ)은 버려져 '칼'=か(218종). README '입력·판정'은 か/が·た/だ·ぱ/ば·ざ/じゃ/ちゃ를 정답 쪽으로 읽는다고 적었지만 그건 단어를 떠올려 치는 과정 기준이고, 五十音은 그 구별(탁음·반탁음·ち/じ·つ/ず)이 곧 문제다. 반대 방향(が에 카, ば에 파)은 틀리게 처리한다. 로마자 입력은 엄격하다(통과하는 것은 si·ti·tu·hu·zi·la 같은 같은 글자의 다른 로마자뿐).",
+   "repro": "node reviews/aesop-20261112/behavior/02-bruteforce-kana.cjs → out/bruteforce-kana.tsv(카드마다 통과하는 한글 음절 전부), out/kana-hangul-false-accepts.json. 손으로: 五十音 ひらがな ② 'ぱ행 + 복습'에서 ぱ 카드에 '바' 입력 → 정답 처리. ひらがな ① 'さ·た행'에서 つ에 '즈', ち에 '지'.",
+   "proposed": "kana 모드에서는 후보를 정답 쪽으로 고르지 말고 한 음절 = 한 소리로 정한다(카=か, 가=が, 파=ぱ, 바=ば, 치=ち, 지=じ, 츠·쓰=つ, 즈=ず). 정말 한글로 못 가르는 것(じ/ぢ, ず/づ, お/を)만 정답 쪽으로 둔다. 모음 ㅓ·ㅕ·ㅐ·ㅒ·ㅖ·ㅢ·ㅘ류와 받침 ㄹ 계열은 kana 모드에서 틀리게 하거나 최소한 '오로 쳐야 한다'고 알려 준다. 어디까지 봐줄지는 영신 결정(으=う는 실제 소리에 가까워 남길 만하다).",
+   "confidence": "high"
+  },
+  {
+   "id": "B02",
+   "severity": "P1",
+   "where": "pipeline/jlpt/template.html:2383-2392 (loadProgress는 페이지를 열 때 한 번, setRec→saveProgress는 메모리의 진도 전체를 덮어씀). pipeline/record-transfer/runtime.js:59 (합친 뒤 안내만 함). 세 게임 모두",
+   "what": "진도 기록이 사라지는 길이 둘 있다. (1) 같은 게임을 두 탭(또는 두 창)에 열어 두고 탭마다 다른 연습을 끝내면, 나중에 끝낸 탭이 먼저 끝낸 탭의 기록을 지운다(실측: 탭 A가 あ·か행 저장 → 탭 B가 さ·た행 저장 → 저장소에는 さ·た행만). (2) 게임 탭을 열어 둔 채 교재 선택 화면에서 기록 파일을 합치고, 그 게임 탭에서 새로고침 없이 한 판을 끝내면 방금 합친 기록(다른 기기에서 가져온 것)이 통째로 사라진다(실측: 합친 2개 연습이 없어지고 새로 끝낸 1개만 남음). 합치기 화면이 '다른 탭에 게임이 열려 있으면 새로고침하라고양'이라고 말하긴 하지만, 안 하면 잃는다. 모아둔 카드는 저장 직전에 다시 읽어서 괜찮다.",
+   "repro": "node reviews/aesop-20261112/behavior/08-record-loss.cjs → L01·L02 FAIL (out/record-loss.json).",
+   "proposed": "setRec에서 저장 직전에 localStorage의 진도를 다시 읽어 '한쪽이라도 클리어면 클리어, bestMs는 빠른 쪽'(merge.js progress 규칙)으로 합친 뒤 쓴다. 또는 storage 이벤트에서 state.progress를 다시 읽는다(지금은 모아둔 카드 키만 듣는다, template.html:4710). 보카고양과 같이 쓰는 코드면 SHARED.md 절차로 본가에도 알린다.",
+   "confidence": "high"
+  },
+  {
+   "id": "B03",
+   "severity": "P2",
+   "where": "pipeline/jlpt/template.html:2601 (히라가나 말에 ー는 틀림), :2991-2996 (submitCopy에는 は→わ 봐주기 없음), pipeline/jlpt/gojuon-data.json의 hg·rm(원본 gojuon.py). 五十音 히라가나 장음 단어 24종 59자리 + こんにちは·こんばんは",
+   "what": "五十音은 '글자를 보고 소리를 치는' 과정인데, 히라가나 장음 단어는 공개 칸이 가르치는 소리대로 치면 오답이다. がっこう의 공개 칸은 'gakkō · 갓코-'인데 '갓코-'도 'gakko-'도 'gakkoo'도 틀리고 gakkou·갓코우만 맞다. hg가 '-'로 적힌 히라가나 단어 24종(がっこう おかあさん おとうさん おにいさん おねえさん せんせい くうき ちいさい とけい きょう りょこう ありがとう いいえ ええ おはよう ごちそうさま さあ さようなら どうぞ どうも おじいさん おばあさん おいしい しょうゆ)이 첫 입력과 오답 따라쓰기 모두에서 그렇다. 틀린 뒤 따라쓰기에서는 화면에 보이는 소리를 그대로 쳐도 카드가 흔들리기만 하고 왜 안 되는지 말해 주지 않는다. 가타카나 장음(コーヒー=코-히-)은 된다. こんにちは·こんばんは는 첫 입력에서 konnichiwa·콘니치와가 통과하지만 따라쓰기에서는 거부된다(konnichiha만 됨).",
+   "repro": "node reviews/aesop-20261112/behavior/09-kana-reveal-vs-input.cjs (out/kana-reveal-vs-input.json), node reviews/aesop-20261112/behavior/03-flow.cjs 의 D01·D02. 손으로: ひらがな ④ 'っ·장음 단어 1'의 がっこう에서 일부러 틀린 뒤 '갓코-' 입력.",
+   "proposed": "둘 중 하나. (가) kana 모드에서는 히라가나 말에도 장음 '-'(ー)를 앞 모음으로 받아 준다(소리를 묻는 과정이므로). (나) hg·rm을 치는 대로 적는다(갓코우 / gakkou, 장음 설명은 pn에 이미 있음). 따라쓰기에도 isSpellingVariant를 적용하거나, kana 모드의 こんにちは는 처음부터 わ를 정답으로 둔다.",
+   "confidence": "high"
+  },
+  {
+   "id": "B04",
+   "severity": "P2",
+   "where": "tangogoyangjlpt.html:2568·2586, tangogoyangyomi.html:2568·2586 (공개본과 같음) ↔ pipeline/jlpt/template.html:2623·2643-2645·2664. pipeline/jlpt/build.py",
+   "what": "공개된 日本語能力試験·漢字読み 두 HTML은 지금의 template.html보다 옛 판으로 조립돼 있다(11-06 조립, template은 11-08까지 고침, 五十音만 --only gojuon으로 다시 만듦). 그래서 template에는 있는 고침이 두 게임에는 없다. 헵번식 로마자로 못 치는 카드: 日本語能力試験 43장, 漢字読み 36장 — づ·ぢ가 든 말 전부(つづく tsuzuku→つずく, ちぢむ chijimu→ちじむ, かたづける 등 35장), を가 든 말(きをつける, やむをえない), ティ·ディ(パーティー pa-ti-→パーチー, メディア, ビルディング, レディー, メロディー, ティッシュペーパー). du·di·wo·thi를 아는 사람만 칠 수 있다. 한글로 못 치는 카드: ファ·フィ·フェ·フォ가 든 15장(フォーク '포-쿠'→ポーク, オフィス, ソファー …; '호-쿠'로 치면 되지만 그건 다른 소리). template.html로 사본을 다시 조립해 같은 검사를 돌리면 0건이다. 자료(DATA)는 사본과 공개본이 같고 코드만 다르다. 또 build.py를 --only 없이 돌리면 '완성'이라고 둔 두 파일이 말없이 바뀐다.",
+   "repro": "node reviews/aesop-20261112/behavior/01-input-sim.cjs → 'a1 헵번식' 43·36 실패, 'b1 한글 소리' 15 실패(out/input-summary.txt에 카드 목록). 사본 대조: pipeline/jlpt와 index.html을 빈 폴더에 복사해 그 안에서 python3 pipeline/jlpt/build.py → AESOP_ROOT=<그 폴더> node reviews/aesop-20261112/behavior/01-input-sim.cjs → 0건.",
+   "proposed": "두 게임을 지금 template로 다시 조립해 올린다(진도 키·묶음은 그대로라 기록은 이어진다. 다시 조립한 사본에서 전 카드 입력 검사 통과 확인함). 일부러 얼려 둔 것이라면 README에 '두 파일은 11-06 template 기준, 이후 고침 미반영'이라고 적고 build.py가 실수로 덮지 않게 한다.",
+   "confidence": "high"
+  },
+  {
+   "id": "B05",
+   "severity": "P2",
+   "where": "pipeline/jlpt/template.html:2632·2635 (끝의 n·nn은 다음 글자를 기다림), :2860 (시간 초과는 입력을 보지 않고 오답), :2907-2909. ん으로 끝나는 카드: 日本語能力試験 895장, 漢字読み 809장, 五十音 50장",
+   "what": "ん으로 끝나는 답을 로마자로 다 쳐도(hon → 칸에 'ほn') 자동으로 넘어가지 않는다. 다른 카드는 마지막 글자를 치면 바로 판정되는데 이 카드들만 Enter를 눌러야 한다. 일본어 자판 습관대로 nn을 쳐도('ほnn') 안 되고, n' 이나 Enter만 된다. 그대로 기다리면 제한 시간(14~45초)이 끝나 오답 처리되고 따라쓰기로 간다 — 맞는 답을 쳐 놓고 틀린 것이 된다(실측: 五十音 ん 카드에 n 입력 후 시간 초과 → 오답 1). 한글도 조합 중(마지막 음절이 아직 확정 안 됨)에 시간이 끝나면 같은 일이 생긴다(조합 이벤트를 흉내 내 확인. 실제 한글 자판에서는 못 봄).",
+   "repro": "node reviews/aesop-20261112/behavior/03-flow.cjs 의 C01·C02, node reviews/aesop-20261112/behavior/06-extra.cjs 의 X01(카드 수), 09-kana-reveal-vs-input.cjs 끝줄(hon·honn·hon' 비교).",
+   "proposed": "끝에 남은 n(또는 nn)까지 합쳐 정답 가나 수가 찼으면 ん으로 확정해 바로 판정한다(정답이 ん으로 끝날 때만). 그리고 시간 초과 때 판정 전에 jpConvertInput(true)/jpTentative로 바꿔 보고 정답이면 정답으로 받는다.",
+   "confidence": "high"
+  },
+  {
+   "id": "B06",
+   "severity": "P2",
+   "where": "pipeline/jlpt/template.html:2827 (3글자 이하·인쇄체 판이면 kanaPairHtml), :492 (.kana-pair.multi svg 74px). 五十音 3글자 단어 43종 59자리(ひらがな ④·⑤, カタカナ ④·⑤의 인쇄체 판)",
+   "what": "3글자 단어의 문제 칸은 인쇄체 획순 3개 + 손글씨 3개를 한 줄에 그리는데 폭이 423px이라 390px 화면에서 양쪽으로 16~17px, 360px에서 31~32px씩 화면 밖으로 나간다. 카드가 넘치는 부분을 가려서 첫 글자(인쇄체, 획순 번호가 있는 쪽)와 끝 글자(손글씨)가 잘린다. 360px에서는 첫 글자의 절반쯤이 안 보인다. 오답 따라쓰기·공개 상태에서도 같다. 2글자·1글자 카드는 괜찮다. (이 기계의 일본어 글꼴은 IPAGothic이지만 획순 그림은 SVG 고정 폭이라 기기와 같다.)",
+   "repro": "node reviews/aesop-20261112/behavior/05-layout.cjs → out/layout.json, shots/gojuon-390-overflow-q-1.png · shots/gojuon-360-overflow-q-1.png (きって).",
+   "proposed": "3글자일 때 그림 폭을 줄이거나(예: min(74px, (카드 안쪽 폭-구분선)/6)) 인쇄체 줄·손글씨 줄을 위아래 두 줄로 쌓는다. 조립 뒤 360px에서 59자리 모두 다시 잰다.",
+   "confidence": "high"
+  },
+  {
+   "id": "B07",
+   "severity": "P2",
+   "where": "pipeline/jlpt/template.html:2665 (ㅖ→e, ㅝ→wo), :2673-2678, :2689. 五十音 カタカナ ④ '외래어 소리'의 ウォ·シェ·ヴ (3종 9자리)",
+   "what": "이 세 카드는 한글로는 어떤 음절을 쳐도 정답이 안 된다(한글 음절 11,172개 전수). 카드가 보여 주는 소리 '워'는 ヲ로, '셰'·'쉐'는 セ로, '부'는 ブ로 바뀐다. 로마자(wo·she·vu)로는 된다. 한글만 쓰는 학습자는 이 카드에서 반드시 틀리고, 따라쓰기에서도 한글로는 빠져나올 수 없다(로마자나 가나로 바꿔 쳐야 함).",
+   "repro": "node reviews/aesop-20261112/behavior/02-bruteforce-kana.cjs → out/bruteforce-kana.tsv 의 ウォ·シェ·ヴ 줄(통과 한글 없음).",
+   "proposed": "jpHangulCands에 워→うぉ(정답이 うぉ일 때), 셰·쉐→しぇ, 부→ゔ(정답이 ゔ일 때)를 넣는다. test-jlpt.cjs에 '五十音 모든 카드가 자기 hg로 통과' 검사를 넣으면 다시 생기지 않는다.",
+   "confidence": "high"
+  },
+  {
+   "id": "B08",
+   "severity": "P2",
+   "where": "pipeline/jlpt/template.html:2384 (saveProgress에 try/catch 없음) ← :3042 finishExercise",
+   "what": "브라우저가 저장을 거부하면(저장 공간이 찼거나 막힌 경우) 연습의 마지막 카드를 맞힌 뒤 결과 화면이 뜨지 않고 문제 화면에 멈춘다. 예외가 finishExercise 중간에서 나기 때문이다. 고양이도 아무 말이 없다. 모아둔 카드 쪽은 같은 경우에 '카드를 못 담았다고양'이라고 알려 준다. setItem이 예외를 던지게 바꿔 놓고 확인한 것이라 실제 기기에서 얼마나 자주 생기는지는 모른다.",
+   "repro": "node reviews/aesop-20261112/behavior/08-record-loss.cjs 의 L04.",
+   "proposed": "saveProgress를 try/catch로 감싸고 실패하면 고양이가 '기록을 못 남겼다'고 알린 뒤 결과 화면은 그대로 띄운다.",
+   "confidence": "medium"
+  },
+  {
+   "id": "B09",
+   "severity": "P3",
+   "where": "pipeline/jlpt/template.html:2664-2667·2695. 日本語能力試験·漢字読み",
+   "what": "B01과 같은 느슨함이 두 단어 과정에도 있다. 한글로 どうぞ를 '더우저'·'도으조'로, ありがとう를 '아리가터우'로 쳐도 정답이다(ㅓ=o 3,565/2,811건, ㅡ=u 4,947/4,376건, ㅐ=e, ㅕ=yo, 쓰=す, 지·즈·자=ち·つ·ちゃ 1,145/1,017건, 받침 ㄹ 무시). ファ행은 '호-쿠'(フォーク)도 통과한다. 가나·로마자로 친 틀린 답(장음 빠짐, っ 빠짐, 탁점, 작은 글자, 비슷한 글자, 순서 바뀜)은 한 건도 통과하지 않았다. 단어를 떠올리는 과정이라 한글 적기를 넓게 받는 것은 설계로 볼 수 있어 P3로 둔다.",
+   "repro": "node reviews/aesop-20261112/behavior/01-input-sim.cjs → out/input-meaning.json·input-yomi.json 의 falseAcceptCounts, out/input-summary.txt.",
+   "proposed": "적어도 받침 ㄹ 계열은 틀리게 하고, ㅓ·ㅕ는 받지 않는 쪽을 권한다(오/어는 한국어 화자가 일본어 お를 잘못 익히는 대표 자리). README '입력·판정'에 실제로 받는 범위를 적는다.",
+   "confidence": "high"
+  },
+  {
+   "id": "B10",
+   "severity": "P3",
+   "where": "pipeline/jlpt/template.html:4329 (카드 클릭 = 다음 카드, .kana-pair만 예외), :1774-1781 (replayAnswerFromEvent는 따라쓰기 중 무시), :2323",
+   "what": "정답 공개 뒤 '글자를 누르면 다시 듣기'가 카드 종류마다 다르다. 배우는 연습(획순 그림)은 문제 칸 글자를 누르면 다시 읽는다. 그런데 손글씨 판과 긴 단어 카드는 문제 칸의 큰 글자를 누르면 읽지 않고 다음 카드로 넘어간다(작은 답 칸이나 공개 칸의 획순 그림을 눌러야 읽는다. 4글자 이상 단어는 획순 그림도 없다). 漢字読み도 공개 칸의 한자+후리가나를 누르면 넘어간다. 오답 따라쓰기 중에는 글자도 답 칸도 다시 듣기가 안 된다(답 칸 위에 입력 칸이 덮여 있다). 따라쓰기를 시작할 때와 마칠 때 한 번씩 읽어 주기는 한다.",
+   "repro": "node reviews/aesop-20261112/behavior/04-speech.cjs 의 S07·S10·S11·S23 (out/speech.json).",
+   "proposed": "공개 뒤에는 #meaning의 .jp-q와 공개 칸 .jp-head도 '다시 듣기'로 삼고 넘어가기에서 뺀다. 따라쓰기 중에도 문제 칸 글자 탭은 발음만 하게 한다.",
+   "confidence": "high"
+  },
+  {
+   "id": "B11",
+   "severity": "P3",
+   "where": "pipeline/jlpt/template.html:2415-2422 (scheduleNext 1500ms), :1951-1957 (IPA 효과가 없으면 읽기 끝을 기다리지 않음). 日本語能力試験·漢字読み",
+   "what": "두 단어 과정은 맞힌 뒤 1.5초에 다음 카드로 넘어가면서 읽던 소리를 끊는다(해설 없는 카드). 주석에는 '발음이 끝나길 기다린다'고 돼 있지만 그 기다림은 IPA 효과가 있을 때만 걸리고 탄고고양에는 IPA 자료가 없다. 가짜 음성(0.25초 뒤 시작, 한 글자 0.17초)으로는 8가나 이상에서 끊겼다: テープレコーダー, デモンストレーション, しょくりょうひん. 가나 8자 이상·해설 없는 카드는 20장/5장, 7자 이상은 75장/40장. 실제 음성 속도는 기기마다 달라 어디서부터 끊기는지는 못 쟀다. 五十音은 3초 이상 기다려서 해당 없다.",
+   "repro": "node reviews/aesop-20261112/behavior/04-speech.cjs 의 S21.",
+   "proposed": "읽기가 끝날 때(onend)까지 넘김을 미루거나, 대기 시간을 가나 수에 맞춘다(예: 1.5초 + 6자 넘는 글자당 0.2초).",
+   "confidence": "medium"
+  },
+  {
+   "id": "B12",
+   "severity": "P3",
+   "where": "pipeline/jlpt/template.html:4513-4523 (savedInit: 카드 id로 한 장만 둠), gojuon-data.json(같은 글자가 여러 판에 같은 id: 347종이 953자리)",
+   "what": "五十音에서 배우는 연습(인쇄체 획순)에서 담은 글자가 모아둔 카드에서는 손글씨 문제로 나오고, 출처도 '46자 무작위 · 손글씨'로 적힌다. 같은 글자가 여러 판에 같은 id로 있어서 마지막 판 것이 덮기 때문이다. 기록 자체는 멀쩡하다.",
+   "repro": "node reviews/aesop-20261112/behavior/03-flow.cjs 의 E01.",
+   "proposed": "kana 모드에서는 먼저 나온 판(배우는 연습)을 남기거나, id에 판 종류(인쇄체/손글씨)를 붙인다.",
+   "confidence": "high"
+  },
+  {
+   "id": "B13",
+   "severity": "P3",
+   "where": "pipeline/jlpt/template.html:184 (.gtitle 말줄임), :2784",
+   "what": "게임 화면 아래 줄의 연습 제목이 잘린다. 五十音은 무작위·단어 읽기 판 20꼴 전부에서 '46자 무작위 · 인쇄체'가 '46자 무…'처럼 보여, 지금 판이 인쇄체인지 손글씨인지 제목으로는 알 수 없다(390px에서 85px만 보이고 129px 필요). 두 단어 과정은 '사회·제도 · 문화·취미 1' 같은 긴 제목 1~2꼴만 조금 잘린다.",
+   "repro": "node reviews/aesop-20261112/behavior/06-extra.cjs 의 X05. 그림: shots/gojuon-360-overflow-r-4.png 아래 줄.",
+   "proposed": "kana 모드에서는 강 이름(ひらがな ①)을 줄이거나 제목을 두 줄로 둔다. 또는 판 종류를 앞에 둔다('손글씨 · 46자').",
+   "confidence": "high"
+  },
+  {
+   "id": "B14",
+   "severity": "P3",
+   "where": "pipeline/jlpt/template.html:479 (.jp-kana-long nowrap 1.75em), :494 (.kana-pair.kp-rv.multi svg 56px). 五十音, 360px",
+   "what": "360px에서만 생기는 작은 넘침 둘. (1) 6글자 단어(いただきます ごちそうさま ごめんなさい はじめまして エレベーター 등)의 문제 글자가 상자보다 18px 넓어 끝 글자가 카드 테두리에 닿는다(390px에서는 딱 맞음). (2) 손글씨 판 3글자 단어 33종의 공개 칸·따라쓰기 획순 그림이 카드 안쪽 여백을 넘어 양 끝 글자가 테두리에 걸린다. 글꼴 폭에 달린 (1)은 실제 기기(Hiragino·Noto Sans JP)에서 조금 다를 수 있다. 그 밖에 넘치는 것은 없었다: 작은 가나(きゃ)·발음 설명이 긴 카드(ボールペン 따라쓰기 카드 높이 1,210px)는 세로로 길어질 뿐 가로로 넘치지 않고, 홈·연습 목록·기록 옮기기 창도 가로 넘침이 없다. 두 단어 과정의 긴 카드 82·99장도 1~2px 말고는 없다.",
+   "repro": "node reviews/aesop-20261112/behavior/05-layout.cjs. 그림: shots/gojuon-360-longest-q-7.png, shots/gojuon-360-overflow-r-4.png, shots/gojuon-360-overflow-c-5.png.",
+   "proposed": "6글자 이상은 글자 크기를 한 단계 더 줄이고(clamp), kp-rv.multi 3글자는 48px쯤으로 줄인다.",
+   "confidence": "medium"
+  },
+  {
+   "id": "B15",
+   "severity": "P3",
+   "where": "pipeline/jlpt/template.html:2808 ('3회독부터 무작위'), :2889-2892. PRINCIPLES.md 0-1 五十音 항목 '무작위 판은 1회독부터 섞는다(다른 판은 3회독부터)'",
+   "what": "3회독에는 닿지 않는다. 2회독은 틀린 카드를 두 번 이어 맞힐 때까지 같은 회독 안에서 되풀이하고(틀리면 3장 뒤에 다시), 다 통과하면 끝난다. 그래서 '다른 판은 3회독부터 섞는다'는 실제로는 일어나지 않고, 순서 판의 2회독은 늘 틀린 순서 그대로다. 흐름 자체(1회독 전체 → 2회독 틀린 것만 두 번 연속 → 완료, 결과 화면·진도 저장)는 맞게 돈다.",
+   "repro": "node reviews/aesop-20261112/behavior/03-flow.cjs 의 A07~A11.",
+   "proposed": "문서를 실제 동작에 맞추거나, 2회독 대상을 섞을지 정한다.",
+   "confidence": "high"
+  },
+  {
+   "id": "B16",
+   "severity": "P3",
+   "where": "pipeline/jlpt/template.html:3002-3012 (giveHint), :2599-2608. 五十音",
+   "what": "五十音에서는 답(가나)이 곧 문제에 보이는 글자라서, 첫 칸 힌트를 누르면 문제 글자가 그대로 들어간다. 한 글자 카드는 힌트 → Enter로 소리를 몰라도 통과한다(첫 정답률에는 안 잡히지만 연습은 클리어된다). 일본어 자판으로 보이는 가나를 그대로 쳐도 통과한다. 두 단어 과정에서는 힌트가 읽기의 첫 가나라서 뜻이 있다.",
+   "repro": "node reviews/aesop-20261112/behavior/06-extra.cjs 의 X04-kana. 01-input-sim.cjs 의 'c1 가나 한 자씩'.",
+   "proposed": "kana 모드에서는 힌트를 소리의 첫 글자(rm 첫 자나 hg 첫 음절)로 바꾸거나 힌트를 끈다. 가나 직접 입력을 막을지는 영신 결정.",
+   "confidence": "high"
+  },
+  {
+   "id": "B17",
+   "severity": "P3",
+   "where": "pipeline/jlpt/README.md:28, pipeline/record-transfer/README.md:39, PRINCIPLES.md:80, pipeline/jlpt/test-jlpt.cjs",
+   "what": "문서와 실제가 다른 곳. (1) README는 日本語能力試験을 7,743카드라고 적었는데 조립 결과와 index.html은 7,737카드다. (2) record-transfer README의 검증 명령 pipeline/tests/record-transfer.test.cjs 파일이 이 저장소에 없다(기록 옮기기 검사는 test-jlpt.cjs 끝의 한 줄뿐). (3) PRINCIPLES 0-1에 五十音 공개 칸 읽을 시간이 두 가지로 적혀 있다(3초+글자당 0.085초·25초/10초까지, 그리고 3초+0.06초·16초/7초까지). 코드는 앞의 것이다(template.html:2236). (4) test-jlpt.cjs는 카드 몇 장만 쳐 본다. 이번에 찾은 B03·B04·B05·B07은 '모든 카드를 자기 소리로 쳐 보는' 검사가 있었으면 걸렸다.",
+   "repro": "grep -n '7,743' pipeline/jlpt/README.md; ls pipeline/tests | grep record; grep -n '0.06초' PRINCIPLES.md; node pipeline/jlpt/test-jlpt.cjs (모두 통과).",
+   "proposed": "숫자·경로를 고치고, 읽을 시간은 어느 쪽이 지금 결정인지 한 줄로 정리한다. 01-input-sim.cjs의 통과 검사(a1·b1·b3·c1)를 test-jlpt.cjs에 옮겨 넣는다.",
+   "confidence": "high"
+  },
+  {
+   "id": "B18",
+   "severity": "P3",
+   "where": "pipeline/jlpt/template.html:2220, :2873. 五十音 ひらがな ⑤ こんにちは·こんばんは",
+   "what": "五十音에서 こんにちは를 소리대로 konnichiwa·콘니치와로 치면 정답이지만 고양이가 '소리는 맞다고양! 근데 글자는 こんにちは로 쓴다고양'이라고 한다. 글자를 보고 소리를 치는 과정에서는 거꾸로 된 말이다(학습자는 글자를 보고 소리를 맞게 읽었다). 반대로 konnichiha(글자대로, 소리는 틀림)는 아무 말 없이 정답이다.",
+   "repro": "node reviews/aesop-20261112/behavior/09-kana-reveal-vs-input.cjs ('は→わ 봐주기로 통과' 줄).",
+   "proposed": "kana 모드에서는 わ로 친 것을 그냥 정답으로 하고, ha로 친 쪽에 '끝의 は는 わ로 읽는다'고 알려 준다.",
+   "confidence": "high"
+  }
+ ]
+}

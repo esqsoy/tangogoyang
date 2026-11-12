@@ -131,13 +131,16 @@ const FILES={meaning:'tangogoyangjlpt.html',yomi:'tangogoyangyomi.html',kana:'ta
           if(badH)out.falseAccepts.push({kind,input:s,base:baseHg,got:r.final,places});
         }
       });}}
-      out.unique=seen.size;return out;
+      out.unique=seen.size;
+      // 파일이 커지지 않게: 틀렸는데 통과한 입력은 종류별 건수와 앞의 40건만 남긴다
+      const cnt={},keep=[];for(const f of out.falseAccepts){cnt[f.kind]=(cnt[f.kind]||0)+1;if(cnt[f.kind]<=40)keep.push(f);}
+      out.falseAcceptCounts=cnt;out.falseAccepts=keep;return out;
     });
     res.pageErrors=errs;
     fs.writeFileSync(path.join(__dirname,'out','input-'+mode+SUF+'.json'),JSON.stringify(res,null,1));
     console.log(`\n== ${f} (${res.mode}) ${res.lessons}강 ${res.exercises}연습 ${res.cards}카드(서로 다른 카드 ${res.unique}) 오류 ${errs.length}`);
     for(const [k,v] of Object.entries(res.tests))console.log(`  ${v.fail?'FAIL':'ok  '} ${k}: ${v.n}번 중 ${v.fail}번 실패`);
-    console.log('  설계상 허용:',JSON.stringify(res.designAccepts));console.log('  입력 못 만든 카드:',res.noInput.length,' 통과 못 한 것:',res.fails.length,' 틀렸는데 통과:',res.falseAccepts.length);
+    console.log('  설계상 허용:',JSON.stringify(res.designAccepts));console.log('  입력 못 만든 카드:',res.noInput.length,' 통과 못 한 것:',res.fails.length,' 틀렸는데 통과:',Object.values(res.falseAcceptCounts).reduce((a,b)=>a+b,0),JSON.stringify(res.falseAcceptCounts));
     await p.close();
   }
   await b.close();

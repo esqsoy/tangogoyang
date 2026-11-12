@@ -16,7 +16,7 @@ for mode in ['meaning','yomi','kana']:
     by=collections.defaultdict(list)
     for f in d['falseAccepts']: by[f['kind']].append(f)
     for t,fs in by.items():
-        print(f"\n-- 틀렸는데 통과 [{t}] {len(fs)}건")
+        print(f"\n-- 틀렸는데 통과 [{t}] {d.get('falseAcceptCounts',{}).get(t,len(fs))}건(예시 {len(fs)}건)")
         for f in fs[: None if full else 12]:
             p=f['places'][0]
             print(f"   정답 {p['term']}({p['jw']}) ← 입력 {f['input']!r} (앱이 본 것 {f.get('got')!r}) [{p['lesson']} / {p['ex']} #{p['i']+1}]")
