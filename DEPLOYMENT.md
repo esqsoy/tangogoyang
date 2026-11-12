@@ -1,3 +1,8 @@
+# 이솝 전반 검수 반영 공개 · 2026-11-12
+
+- main `fe951f3` 공개. 공개 `tangogoyanggojuon.html`(`38a3894a40cc…`)·`index.html`(`17caf3069e45…`) SHA-256이 로컬과 같다. 루트 f1.png는 404(지움). 완성본 두 게임은 그대로(재조립 안 함).
+- 새로 실행: test-jlpt.cjs 모두 통과, record-transfer build --check·test.cjs 통과, 이솝 재현 스크립트(09·08·03·05) 확인. 실기기는 아직.
+
 # 五十音 Fable 5.2 검수 반영 공개 · 2026-11-12
 
 - main `84435d6` 공개. 공개 `tangogoyanggojuon.html` SHA-256이 로컬과 같다(`9fd809a18f1e…`). 새로 실행: 로컬 test-jlpt.cjs 모두 통과.
