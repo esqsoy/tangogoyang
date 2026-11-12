@@ -489,7 +489,7 @@ body.roaring{animation:roarshake .5s .15s;}
 .kana-main{display:flex;justify-content:center;margin:0 auto;}
 .kana-pair{display:inline-flex;gap:14px;align-items:flex-end;justify-content:center;cursor:pointer;}
 .kana-pair .kana-strokes{gap:0;}
-.kana-pair svg{width:118px;height:118px;}.kana-pair.multi svg{width:74px;height:74px;}
+.kana-pair svg{width:118px;height:118px;}.kana-pair.multi svg{width:74px;height:74px;}.kana-pair.multi3 svg{width:50px;height:50px;}.kana-pair.multi3 svg.sm{width:36px;height:36px;}.kana-pair.multi3{gap:8px;}.kana-pair.multi3 .kp-hand{padding-left:6px;}
 .kana-pair svg.sm{width:80px;height:80px;}.kana-pair.multi svg.sm{width:50px;height:50px;}
 .kana-pair.kp-rv svg{width:70px;height:70px;}.kana-pair.kp-rv svg.sm{width:48px;height:48px;}.kana-pair.kp-rv.multi svg{width:56px;height:56px;}.kana-pair.kp-rv.multi svg.sm{width:40px;height:40px;}
 .kp-hand{border-left:1px dashed rgba(255,255,255,.18);padding-left:12px;}
@@ -2169,6 +2169,19 @@ const LINES = {
   ],
 };
 const pick=a=>a[Math.floor(Math.random()*a.length)];
+// 五十音 강 완료 문구(26.11.12 이솝 G03: 영어 독해용 문구가 그대로 나왔다)
+const KANA_CLEAR={
+ 1:"히라가나 46자를 다 봤다고양! 이제 글자가 그림이 아니라 소리로 보인다고양!",
+ 2:"점 두 개, 동그라미 하나에 안 속는다고양. 탁음·반탁음 잡았다고양!",
+ 3:"작은 ゃゅょ도 한 박자로 읽는다고양!",
+ 4:"っ 쉼이랑 장음 길이까지 챙겼다고양. 박자 감각 생겼다고양!",
+ 5:"히라가나 단어가 술술 읽힌다고양!",
+ 6:"가타카나 46자도 끝났다고양! シ랑 ツ도 이제 안 헷갈린다고양!",
+ 7:"가타카나 탁음까지 잡았다고양!",
+ 8:"キャ·シュ·チョ도 한눈에 읽는다고양!",
+ 9:"외래어 소리랑 ー까지 정복했다고양. 메뉴판도 읽겠다고양!",
+ 10:"가타카나 단어도 술술이라고양. 五十音 끝이라고양!"
+};
 const LESSONCLEAR={
  1:"글쓴이가 왜 이 글을 썼는지 이제 훤히 보이겠다고양!",
  2:"등장인물 마음이 어떻게 흔들리는지 다 읽힌다고양!",
@@ -2311,7 +2324,7 @@ function kanaNStrokes(s){return [...s].reduce((a,c)=>a+((KANA_STROKES[c]||{p:[]}
 /* 인쇄체 획순 → 이어서 손글씨 획순. 반환: HTML */
 function kanaPairHtml(jw,cls){const ch=[...jw];let off=0;const pr=ch.map(c=>{const s=kanaStrokeSvg(c,off);off+=(KANA_STROKES[c]||{p:[]}).p.length;return s;}).join('');
  const hd=ch.map(c=>kanaHandSvg(c,0)).join('');
- return '<span class="kana-pair '+(cls||'')+(ch.length>1?' multi':'')+'" data-jw="'+esc(jw)+'" data-n="'+off+'" title="누르면 다시"><span class="kana-strokes kp-print">'+pr+'</span><span class="kana-strokes kp-hand">'+hd+'</span></span>';}
+ return '<span class="kana-pair '+(cls||'')+(ch.length>2?' multi multi3':ch.length>1?' multi':'')+'" data-jw="'+esc(jw)+'" data-n="'+off+'" title="누르면 다시"><span class="kana-strokes kp-print">'+pr+'</span><span class="kana-strokes kp-hand">'+hd+'</span></span>';}
 function kanaHandFit(root){(root||document).querySelectorAll('svg.hand:not([data-fit])').forEach(svg=>{try{
   const ps=[...svg.querySelectorAll('.mlive')].map(p=>p.getBBox());if(!ps.length)return;
   const x0=Math.min(...ps.map(r=>r.x)),y0=Math.min(...ps.map(r=>r.y)),x1=Math.max(...ps.map(r=>r.x+r.width)),y1=Math.max(...ps.map(r=>r.y+r.height));
@@ -2320,9 +2333,11 @@ function kanaHandFit(root){(root||document).querySelectorAll('svg.hand:not([data
   svg.setAttribute('data-fit','1');}catch(e){}});}
 function kanaPairStart(root){const go=()=>{kanaHandFit(root);(root||document).querySelectorAll('.kana-pair').forEach(k=>{clearTimeout(k._t);k._t=setTimeout(()=>k.querySelectorAll('.mlive').forEach(m=>{m.style.animation='none';m.style.strokeDashoffset='0';m.style.strokeOpacity='1';}),(+k.dataset.n||0)*600+900);});};
  (document.fonts&&document.fonts.load?document.fonts.load('600 40px KanaHand','あ'):Promise.resolve()).then(go,go);}
-document.addEventListener("click",e=>{const pr=e.target.closest&&e.target.closest(".kana-pair");if(pr){pr.outerHTML=kanaPairHtml(pr.dataset.jw,[...pr.classList].filter(c=>c!=='kana-pair'&&c!=='multi').join(' '));kanaPairStart();
+document.addEventListener("click",e=>{const pr=e.target.closest&&e.target.closest(".kana-pair");if(pr){pr.outerHTML=kanaPairHtml(pr.dataset.jw,[...pr.classList].filter(c=>c!=='kana-pair'&&c!=='multi'&&c!=='multi3').join(' '));kanaPairStart();
   const s=state.session;if(s&&s.answered&&!s.copyMode&&s.currentId!==null){const w=s.words[s.currentId];speakPronunciation(w.term,w.meaning);} // 공개 뒤 글자를 누르면 획순을 다시 그리며 발음도(답하기 전에는 소리 없음: 답이 드러난다)
-  return;}const k=e.target.closest&&e.target.closest(".kana-strokes");if(k)k.innerHTML=k.innerHTML;}); // 쓰는 순서 다시 보기(kana 모드에만 생긴다)
+  return;}const k=e.target.closest&&e.target.closest(".kana-strokes");if(k){k.innerHTML=k.innerHTML;return;}
+  const q=JP_MODE==="kana"&&e.target.closest&&e.target.closest("#meaning .jp-q, #reveal .kana-form");const s2=state.session;
+  if(q&&s2&&s2.answered&&!s2.copyMode&&s2.currentId!==null){const w=s2.words[s2.currentId];speakPronunciation(w.term,w.meaning);}}); // 공개 뒤 문제 글자를 눌러도 다시 듣기(26.11.12 이솝 B10) // 쓰는 순서 다시 보기(kana 모드에만 생긴다)
 function mtRevealHtml(term,meaning){
  const w=mtCurrentWord();if(!w)return '';
  if(JP_MODE==="kana"){const snd=[w.rm,w.hg].filter(Boolean).join(' · ');
@@ -2366,7 +2381,7 @@ function buildLessons(){
     exercises:L.exercises.map(ex=>({
       title:ex.title||((ex.scope==='prev'?"이전기출 ":"Exercise ")+ex.ex),
       ex:ex.ex, scope:ex.scope||'2026', rnd:!!ex.rnd,
-      words:ex.words.map(w=>({term:w.en,meaning:w.ko,jw:w.w||w.en,alt:w.alt||[],ar:w.ar||[],rm:w.rm||"",hg:w.hg||"",hw:w.hw||0,ipa:w.ipa||"",pn:w.pn||[],note:w.c||"",lv:w.lv||"",savedId:w.id}))
+      words:ex.words.map(w=>({term:w.en,meaning:w.ko,jw:w.w||w.en,alt:w.alt||[],ar:w.ar||[],rm:w.rm||"",hg:w.hg||"",hw:w.hw||0,ipa:w.ipa||"",pn:w.pn||[],hgs:w.hgs||[],note:w.c||"",lv:w.lv||"",savedId:w.id}))
     }))
   }));
 }
@@ -2381,7 +2396,13 @@ function nextLessonIndex(li){if(state.savedLesson)return -1;for(let i=li+1;i<sta
 
 /* ===== progress / route ===== */
 function loadProgress(){try{return JSON.parse(localStorage.getItem(STORAGE))||{};}catch{return{};}}
-function saveProgress(){localStorage.setItem(STORAGE,JSON.stringify(state.progress));}
+// 저장할 때 저장소의 최신 기록과 합친다: 다른 탭이나 '기록 옮기기'로 들어온 클리어를 덮어 지우지 않게(26.11.12 이솝 동작 검수 B02).
+function saveProgress(){const disk=loadProgress();
+  for(const lid of Object.keys(state.progress||{})){const m=state.progress[lid];if(!m||typeof m!=="object")continue;disk[lid]=disk[lid]&&typeof disk[lid]==="object"?disk[lid]:{};
+    for(const t of Object.keys(m)){const r=m[t],d=disk[lid][t];if(!r)continue;
+      disk[lid][t]=d?{...d,...r,completed:!!(d.completed||r.completed),bestMs:(d.bestMs&&r.bestMs)?Math.min(d.bestMs,r.bestMs):(r.bestMs||d.bestMs)}:r;}}
+  state.progress=disk;try{localStorage.setItem(STORAGE,JSON.stringify(disk));}catch(e){} // 저장 공간이 차도 판은 끝까지 간다(이솝 B08)
+}
 function getRec(lid,t){return state.progress?.[lid]?.[t]||null;}
 function setRec(lid,t,rec){
   if(lid==="모아둔 카드")return;
@@ -2588,6 +2609,7 @@ function limitFor(term){
 /* 과정: meaning = 한국어 뜻 보고 읽기(日本語能力試験), yomi = 한자 보고 읽기(漢字読み, JLPT 문자·어휘 '漢字読み' 대비).
    26.11.06 영신: "jlpt어휘는 한자를 보고 히라가나로 맞추는거라는데 그점이 대비되게도 해야겠어". build.py가 바꿔 넣는다. */
 const JP_MODE=/*__MODE__*/"meaning";
+if(JP_MODE==="kana")$("#ainput").placeholder="소리를 치라고양 · ka 또는 카"; // 무엇을 치는지 안내(26.11.12 이솝 G11)
 function jpHira(v){return String(v||"").replace(/[ァ-ヶ]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60));}
 function jpKata(v){return String(v||"").replace(/[ぁ-ゖ]/g,c=>String.fromCharCode(c.charCodeAt(0)+0x60));}
 /* 함수로 둔다: GLOSS가 이 정의보다 먼저 normalize를 부른다(const는 그 전에 못 쓴다). */
@@ -2620,7 +2642,7 @@ const JP_ROMA=(()=>{const t={a:"あ",i:"い",u:"う",e:"え",o:"お",
  Object.assign(t,{sha:"しゃ",shu:"しゅ",sho:"しょ",cha:"ちゃ",chu:"ちゅ",cho:"ちょ",ja:"じゃ",ju:"じゅ",jo:"じょ"});delete t.ti_;return t;})();
 /* 같은 로마자를 다른 가나로도 읽는 경우: 정답이 그 가나일 때만 그쪽으로(五十音 26.11.06).
    ti=ティ, di=ディ, tu=トゥ, du=ドゥ, ji=ぢ, zu=づ, o=を, wo=ウォ. */
-const JP_ROMA_ALT={ti:["てぃ"],di:["でぃ","ぢ"],tu:["とぅ"],du:["どぅ","づ"],ji:["ぢ"],zu:["づ"],o:["を"],wo:["うぉ"]};
+const JP_ROMA_ALT={ti:["てぃ"],di:["でぃ","ぢ"],tu:["とぅ"],du:["どぅ","づ"],ji:["ぢ"],zu:["づ"],o:["を"],wo:["うぉ"],bu:["ゔ"]}; // bu=ヴ: 일본에서도 대개 ブ로 읽는다(26.11.12 이솝 G04)
 /* 로마자 → 히라가나. done=false면 끝의 덜 친 글자(k, sh, n 등)를 남긴다. */
 /* answer(카드 정답)를 주면 nn+모음이 「ん+な行」인지 「ん+모음」인지 정답 쪽으로 가른다(minna=みんな, konnya=こんや). 최종 검수 26.11.06. */
 function jpRomaToKana(src,done=false,answer=""){
@@ -2629,10 +2651,10 @@ function jpRomaToKana(src,done=false,answer=""){
     const c=s[i];
     if(!/[a-z'\-]/.test(c)){out+=src[i];i++;continue;}
     if(c==="n"){const nx=s[i+1];
-      if(nx===undefined){if(done){out+="ん";i++;continue;}out+=src.slice(i);break;}
+      if(nx===undefined){if(done||(ans&&ans[jpHira(out).length]==="ん"&&jpHira(out).length===ans.length-1)){out+="ん";i++;continue;}out+=src.slice(i);break;} // 정답 끝의 ん은 바로(26.11.12 이솝 B05)
       if(nx==="'"){out+="ん";i+=2;continue;}
       if(nx==="n"){const af=s[i+2];
-        if(af===undefined){if(done){out+="ん";i+=2;continue;}out+=src.slice(i);break;} // 끝의 nn은 다음 글자를 기다린다(한 자씩 칠 때 minn+a)
+        if(af===undefined){if(done||(ans&&ans[jpHira(out).length]==="ん"&&jpHira(out).length===ans.length-1)){out+="ん";i+=2;continue;}out+=src.slice(i);break;} // 끝의 nn은 다음 글자를 기다린다(한 자씩 칠 때 minn+a). 정답 끝의 ん이면 바로
         if(/[aiueoy]/.test(af)){const j=jpHira(out).length;
           if(!ans||(ans[j]==="ん"&&/[なにぬねの]/.test(ans[j+1]||""))){out+="ん";i+=1;continue;} // ん+な行: konnichiha, onna
           out+="ん";i+=2;continue;} // ん+모음: konnya(こんや)
@@ -2641,6 +2663,7 @@ function jpRomaToKana(src,done=false,answer=""){
     if(/[bcdfghjklmpqrstvwxyz]/.test(c)&&s[i+1]===c&&c!=="n"){out+="っ";i++;continue;}
     if(c==="t"&&s[i+1]==="c"&&s[i+2]==="h"){out+="っ";i++;continue;} // 헵번식 matchi = マッチ
     let hit="";for(let L=4;L>=1;L--){const k=s.slice(i,i+L);if(JP_ROMA[k]!==undefined){hit=k;break;}}
+    if(hit==="-"&&JP_MODE==="kana"&&ans){const j=jpHira(out).length;if(/[あいうえお]/.test(ans[j]||"")&&answer[j]!=="ー"){out+=ans[j];i++;continue;}} // 五十音: 공개 칸 '갓코-'대로 친 장음(26.11.12 이솝 B03)
     if(hit){const alts=ans&&JP_ROMA_ALT[hit];
       if(alts){const j=jpHira(out).length,alt=alts.find(a=>ans.startsWith(a,j));if(alt){out+=alt;i+=hit.length;continue;}}
       out+=JP_ROMA[hit];i+=hit.length;continue;}
@@ -2703,6 +2726,7 @@ function jpHangulToKana(v,answer){
 function jpConvertInput(done=false){
   const el=document.getElementById("ainput");if(!el||state.composing)return;
   const v=el.value;if(!/[A-Za-z'\-\uac00-\ud7a3\u3131-\u314e]/.test(v))return;
+  if(JP_MODE==="kana"&&hasHangul(v))return; // 五十音 한글은 친 그대로 두고 카드 소리와 견준다(kanaHangulMatch)
   const s=state.session,w=s&&s.currentId!==null?s.words[s.currentId]:null;
   const target=w?(s.copyMode?s.copyAns:w.term):"";
   // 한글은 마지막 글자를 아직 바꾸지 않는다: 조합 이벤트 없이 자모를 넣는 자판에서 '타'+'ㅂ'이 'た'+'っ'이 되지 않게(탑 → 타베).
@@ -2716,7 +2740,11 @@ function jpConvertInput(done=false){
 }
 function jpPending(v){return /[A-Za-z'\uac00-\ud7a3\u3131-\u314e]/.test(v||"");}
 /* 한글이 끝에 남아 있어도 바꿔 보면 정답이면 바로 받는다(틀린 경우는 Enter까지 기다린다). */
-function jpTentative(raw,term){return jpScriptLike(jpRomaToKana(jpHangulToKana(raw,term),true,term),term);}
+/* 五十音: 한글은 가나로 그때그때 바꾸지 않고, 그 카드에 보인 한글 소리(hg, 장음을 안 늘인 꼴 등 hgs)와 같을 때만 정답 가나로 받는다.
+   한글이 가르지 못하는 か/が·ぱ/ば를 '정답 쪽으로' 읽으면 五十音에서는 문제 자체가 사라진다(26.11.12 이솝 동작 검수 B01). */
+function kanaHangulMatch(raw,term){const s=state.session;if(!s||s.currentId===null)return false;const w=s.words[s.currentId];if(!w||w.term!==term)return false;
+  const n=v=>String(v||"").replace(/\s+/g,"").replace(/[ー―−–]/g,"-");const r=n(raw);return [w.hg,...(w.hgs||[])].some(h=>h&&n(h)===r);}
+function jpTentative(raw,term){if(JP_MODE==="kana"&&hasHangul(raw))return kanaHangulMatch(raw,term)?term:raw;return jpScriptLike(jpRomaToKana(jpHangulToKana(raw,term),true,term),term);}
 /* 漢字読み 과정의 고양고양이 대사: 프리저 말투의 일본어 + 한국어 번역(pipeline/jlpt/lines-yomi.json, build.py가 넣는다). 26.11.06 영신. */
 const LINES_YOMI=/*__LINES_YOMI__*/null;
 if(JP_MODE==="yomi"&&LINES_YOMI){
@@ -2824,7 +2852,7 @@ function nextCard(){
     s.cardLimit=limitFor(w.term);s.cardStart=Date.now();s.opening=false;s.hintLevel=0;
     const card=$("#quizCard");clearTimeout(card._growT);card.style.height="";card.style.transition="";card.className="panel quiz";
     if(JP_MODE==="yomi")$("#meaning").innerHTML='<span class="jp-q" lang="ja">'+esc(w.jw)+'</span><span class="jp-qko">'+esc(w.meaning)+'</span>';
-    else if(JP_MODE==="kana"){const st=!w.hw&&[...w.jw].length<=3?[...w.jw].map(kanaStrokeSvg).join(''):'';
+    else if(JP_MODE==="kana"){const st=!w.hw&&!(state.session.exercise&&state.session.exercise.rnd)&&[...w.jw].length<=3?[...w.jw].map(kanaStrokeSvg).join(''):'';
       const lg=[...w.jw].length>3?' jp-kana-long':'';
       $("#meaning").innerHTML=w.hw?'<span class="jp-q jp-kana jp-hand'+lg+'" lang="ja"><span class="kana-cap">손글씨</span>'+esc(w.jw)+'</span>':st?'<span class="jp-q kana-main" lang="ja" data-jw="'+esc(w.jw)+'">'+kanaPairHtml(w.jw)+'</span>':'<span class="jp-q jp-kana'+lg+'" lang="ja">'+esc(w.jw)+'</span>';if(st)kanaPairStart($("#meaning"));} // 26.11.06 영신: 쓰는 순서 그림을 본 글자로, 손글씨가 이어서 써진다 // 五十音: 글자만 보이고 소리를 친다. 배우는 연습은 쓰는 순서를 함께(소리는 드러나지 않는다), 복습·단어 읽기는 손글씨 모양으로 // 五十音: 글자만 보이고 소리를 친다
     else $("#meaning").textContent=w.meaning;
@@ -2855,6 +2883,7 @@ function submit(opt={}){
   if(s.answered)return;
   const w=s.words[s.currentId];
   jpConvertInput(true);
+  if(JP_MODE==="kana"&&hasHangul($("#ainput").value)&&jpTentative($("#ainput").value,w.term)===w.term)$("#ainput").value=w.term;
   const typed=$("#ainput").value;
   if(!typed.trim()&&!opt.forced&&!opt.timeout&&Date.now()-s.cardStart<400)return;
   let correct=!opt.forced&&!opt.timeout&&isCorrect(typed,w.term);
@@ -2870,7 +2899,7 @@ function submit(opt={}){
     w.corrects++;$("#ainput").classList.add("ok");
     const combo=(s.streak||0)+1;applyCorrect(w);fx(true,combo);beep("ok",combo);setCat('quizCat','win');
     const passed=w.passed;
-    const line= variantHit ? ("소리는 맞다고양! 근데 글자는 ‘"+w.term+"’로 쓴다고양. 끝의 は는 わ로 읽는다고양 ✦")
+    const line= (variantHit&&JP_MODE!=="kana") ? ("소리는 맞다고양! 근데 글자는 ‘"+w.term+"’로 쓴다고양. 끝의 は는 わ로 읽는다고양 ✦")
       : (passed ? ((s.streak||0)>=3?pick(LINES.correctStreak):pick(LINES.correct)) : (JP_MODE==="yomi"&&LINES.correctAgain?pick(LINES.correctAgain):"정답이라고양! 한 번 더 가자고양."));
     showReveal("good",w.term,w.meaning,line);
     s.streak=(s.streak||0)+1;
@@ -2895,7 +2924,7 @@ function answerInputActive(){const s=state.session;return !!(s&&s.currentId!==nu
 function hasHangul(v){return /[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]/.test(v);}
 function composingKey(e){return state.composing||e.isComposing||e.keyCode===229;}
 function focusAnswerInput(){if(!answerInputActive())return;$("#ainput").focus({preventScroll:true});}
-function handleCopyInput(){const s=state.session;if(!s||!s.copyMode)return;jpConvertInput();{const el=$("#ainput");if(hasHangul(el.value)){const t=jpTentative(el.value,s.copyAns);if(isCorrect(t,s.copyAns))el.value=t;}}const v=$("#ainput").value;renderCopyBlank(v);if(!state.composing&&isCorrect(v,s.copyAns)){$("#ainput").oninput=null;submitCopy();}}
+function handleCopyInput(){const s=state.session;if(!s||!s.copyMode)return;jpConvertInput();{const el=$("#ainput");if(hasHangul(el.value)){const t=jpTentative(el.value,s.copyAns);if(isCorrect(t,s.copyAns))el.value=t;}}const v=$("#ainput").value;renderCopyBlank(v);if(!state.composing&&(isCorrect(v,s.copyAns)||(JP_MODE==="kana"&&isSpellingVariant(v,s.copyAns)))){$("#ainput").oninput=null;submitCopy();}}
 function mirrorTyped(options={}){
   const s=state.session;if(!s||s.answered||s.copyMode||s.currentId===null)return;
   jpConvertInput();
@@ -2991,7 +3020,8 @@ function startCopy(term,meaning,line){
 function submitCopy(){
   const s=state.session;if(!s||!s.copyMode||state.composing)return;
   jpConvertInput(true);
-  if(!isCorrect($("#ainput").value,s.copyAns)){
+  if(JP_MODE==="kana"&&hasHangul($("#ainput").value)&&jpTentative($("#ainput").value,s.copyAns)===s.copyAns)$("#ainput").value=s.copyAns;
+  if(!isCorrect($("#ainput").value,s.copyAns)&&!isSpellingVariant($("#ainput").value,s.copyAns)){ // 따라쓰기도 소리대로 친 こんにちわ를 받는다(26.11.12 이솝)
     const p=$("#quizCard");p.classList.remove("wrong");void p.offsetWidth;p.classList.add("wrong");return;
   }
   s.copyMode=false;s.copyAns="";$("#ainput").oninput=null;$("#submitBtn").disabled=true;
@@ -3008,6 +3038,7 @@ function giveHint(){
   input.value=answer.slice(0,first+1)+typed.slice(tail);
   const caret=input.value.length;if(input.selectionStart!==caret||input.selectionEnd!==caret)input.setSelectionRange(caret,caret); // 끝이 아닐 때만 옮긴다(iOS는 옮길 때마다 화면을 끈다)
   s.hintLevel=1;s.hints++;$("#hintBtn").disabled=true;
+  if(JP_MODE==="kana"){const hw=s.words[s.currentId];if(hw)hw.wrongEver=true;} // 五十音은 힌트가 곧 답이라 힌트 쓴 카드는 2회독에 다시(26.11.12 이솝 G05·B16)
   mirrorTyped({fromHint:true});focusAnswerInput();
 }
 
@@ -3049,7 +3080,7 @@ function finishExercise(){
   let line=pick(LINES.exerciseDone),expr='evil';
   if(s.lesson.kind==="saved"){$("#sumTitle").textContent="모아둔 카드 복습 끝 ✦";}
   else if(allCleared){line=pick(LINES.allDone);expr='win';$("#sumTitle").textContent="BIG MOUNTAIN 입성! 🎓";}
-  else if(lessonCleared){const _cnt=visEx(s.lesson).reduce((a,e)=>a+e.words.length,0);line=JP_MODE==="yomi"&&LINES.lessonDone?pick(LINES.lessonDone).replace(/\{n\}/g,_cnt):_cnt+"개 단어를 다 확인했다고양! "+(LESSONCLEAR[s.lesson.lesson]||"한 강을 통째로 정복했다고양!");expr='win';$("#sumTitle").textContent=s.lesson.id+" 완전 정복!";}
+  else if(lessonCleared){const _cnt=visEx(s.lesson).reduce((a,e)=>a+e.words.length,0);line=JP_MODE==="yomi"&&LINES.lessonDone?pick(LINES.lessonDone).replace(/\{n\}/g,_cnt):_cnt+"개 단어를 다 확인했다고양! "+((JP_MODE==="kana"?KANA_CLEAR:LESSONCLEAR)[s.lesson.lesson]||"한 강을 통째로 정복했다고양!");expr='win';$("#sumTitle").textContent=s.lesson.id+" 완전 정복!";}
   else $("#sumTitle").textContent="연습 클리어 ✦";
   const perfectRun=completePerfectRun(s,first);if(!allCleared&&perfectRun>0)showRoar(perfectRun);
   const wrong=s.words.filter(w=>w.wrongEver);
@@ -4326,7 +4357,7 @@ function quizOpenEnd(s){
 /* events */
 
 function advanceRevealed(){const s=state.session;if(s&&s.answered&&!s.copyMode&&Date.now()-(s.revealedAt||0)>=280){cancelPendingAdvance();nextCard();}}
-$("#quizCard").addEventListener("click",e=>{if(!e.target.closest("button,input,a,.kana-strokes,.kana-pair"))advanceRevealed();});
+$("#quizCard").addEventListener("click",e=>{if(!e.target.closest("button,input,a,.kana-strokes,.kana-pair")&&!(JP_MODE==="kana"&&e.target.closest("#meaning .jp-q, #reveal .kana-form")))advanceRevealed();});
 $("#sumWrong").addEventListener("click",e=>{
   const b=e.target.closest(".wrow"),s=state.session;if(!b||!s||b.classList.contains("gone")||!screens.sum.classList.contains("active"))return;
   const w=s.words[Number(b.dataset.id)];if(!w)return;

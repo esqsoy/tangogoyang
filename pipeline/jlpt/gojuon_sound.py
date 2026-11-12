@@ -54,7 +54,7 @@ def _batchim(syl, jong):  # 한글 음절에 받침을 단다(jong: 종성 번�
 READ = {'こんにちは': 'こんにちわ', 'こんばんは': 'こんばんわ'}  # 인사말 끝 は는 조사라 [ɰa]
 
 
-def sound(word):
+def sound(word, merge=True):
     """가나 낱말 → (IPA, 로마자, 한글). 장음: ー, 같은 모음 겹침, えい·おう(낱말 끝 동사 제외는 쓰는 쪽이 확인)."""
     h = hira(READ.get(word, word))
     toks, i = [], 0
@@ -65,7 +65,7 @@ def sound(word):
         else:
             toks.append(h[i]); i += 1
     ipa, rm, hg = [], [], []
-    prev_v = None
+    prev_v = last_v = None
     for j, t in enumerate(toks):
         nxt = MORA.get(toks[j + 1]) if j + 1 < len(toks) else None
         if t == 'っ':
@@ -78,12 +78,13 @@ def sound(word):
             ipa.append('m' if re.match(r'[pbm]', n0) else 'ŋ' if re.match(r'[kɡ]', n0) else 'ɲ' if re.match(r'(tɕ|dʑ|ɲ)', n0) else 'n' if re.match(r'(t|d|n|ɾ|ts|dz|z)', n0) else 'ɴ')  # tɕ·dʑ를 t·d보다 먼저(26.11.12 Fable 검수)
             rm.append("n'" if nxt and (nxt[1][0] in 'aiueoy') else 'n')
             if hg and hg[-1] == '-':
-                hg.append('ㄴ')
+                hg[-1] = {'a': '안', 'i': '인', 'ɯ': '운', 'e': '엔', 'o': '온'}.get(last_v, '-ㄴ')  # 장음 뒤 ん: 스푸-ㄴ → 스푸운(26.11.12 이솝 G20)
             elif hg:
                 hg[-1] = _batchim(hg[-1], 4)  # 한글은 ㄴ 하나로(실제 소리는 IPA가 보인다)
             prev_v = None; continue
-        if t == 'ー' or (prev_v and t in 'あいうえお' and (MORA[t][0] == prev_v or (prev_v, MORA[t][0]) in (('e', 'i'), ('o', 'ɯ')))):
+        if t == 'ー' or (merge and prev_v and t in 'あいうえお' and (MORA[t][0] == prev_v or (prev_v, MORA[t][0]) in (('e', 'i'), ('o', 'ɯ')))):
             v = prev_v
+            last_v = v
             ipa.append('ː'); hg.append('-')
             if t == 'ー' or (v, MORA[t][0]) == ('o', 'ɯ') or (t != 'い' and MORA[t][0] == v):
                 rm[-1] = rm[-1][:-1] + MAC[VOW[v]]
@@ -204,6 +205,11 @@ def explain(kana, ipa, word=False):
             lines.append('작은 ' + kana[1] + ': 외래어 소리를 적는 법. 앞 글자와 합쳐 한 박자')
     for s in symbols(ipa, 'っ' in h):
         line = sym_line(s)
+        # 낱말 카드는 '한국어식으로 해도 된다'(ok) 줄을 빼고, 꼭 구별할 것·없는 소리·기호 표시만(26.11.12 이솝 G08·G09: 공개 칸이 화면을 넘고 [o]·[ɯ] 줄이 수백 번 되풀이)
+        if word and SYM.get(s, (None, ''))[1] == 'ok':
+            continue
+        if line and word and s not in MARK:
+            line = line.split(' (')[0].split(' — ')[0]  # 낱말 카드는 머리줄만(자세한 요령은 글자 카드에)
         if line and not (word and s == 'ʲ'):  # 낱말 카드에서는 [ʲ] 기호 읽기까지는 되풀이하지 않는다
             lines.append(line)
     return lines

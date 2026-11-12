@@ -65,15 +65,16 @@ CONFUSE = {  # 헷갈리는 글자 해설(꼭 필요한 것만, PRINCIPLES 4)
     'さ': 'ち와 좌우가 반대다', 'ち': 'さ와 좌우가 반대다', 'き': 'さ보다 가로획이 하나 더', 'ぬ': 'め와 비슷. 끝이 동그랗게 말린다',
     'め': 'ぬ와 비슷. 끝이 말리지 않는다', 'ね': 'れ·わ와 비슷. 끝이 동그랗게 말린다', 'れ': 'ね·わ와 비슷. 끝이 바깥으로 꺾인다',
     'わ': 'ね·れ와 비슷. 끝이 안쪽으로 둥글게 휘고 고리가 없다', 'る': 'ろ와 비슷. 끝이 동그랗게 말린다', 'ろ': 'る와 비슷. 끝이 말리지 않는다',
-    'は': 'ほ와 비슷. 가로획이 하나', 'ほ': 'は와 비슷. 가로획이 둘', 'い': 'り와 비슷. 왼쪽 획이 더 길다',
+    'は': 'ほ와 비슷. 가로획이 하나. 조사 「~은/는」일 때는 わ로 읽는다', 'ほ': 'は와 비슷. 가로획이 둘', 'い': 'り와 비슷. 왼쪽 획이 더 길다',
     'り': 'い와 비슷. 오른쪽 획이 더 길다', 'を': '조사 「~을/를」에만 쓴다. 소리는 お와 같다', 'ん': '뒤 소리에 따라 ㄴ·ㅇ·ㅁ처럼 난다',
-    'ぢ': 'じ와 소리가 같다. 거의 안 쓴다', 'づ': 'ず와 소리가 같다. つづく처럼 쓸 때만',
+    'へ': '조사 「~에/로」일 때는 え로 읽는다. 가타카나 ヘ와 모양이 거의 같다', 'ぢ': 'じ와 소리가 같다. 거의 안 쓴다', 'づ': 'ず와 소리가 같다. つづく처럼 쓸 때만',
     'シ': 'ツ와 비슷. 점이 왼쪽에 세로로, 마지막 획은 아래에서 위로', 'ツ': 'シ와 비슷. 점이 위에 가로로, 마지막 획은 위에서 아래로',
     'ソ': 'ン과 비슷. 마지막 획은 위에서 아래로', 'ン': 'ソ와 비슷. 마지막 획은 아래에서 위로',
     'ク': 'ケ·タ와 비슷', 'ケ': 'ク와 비슷. 가로획이 튀어나온다', 'ウ': 'ワ·フ와 비슷. 위에 점이 있다', 'ワ': 'ウ와 비슷. 위에 점이 없다',
     'フ': 'ワ와 비슷. 왼쪽 세로획이 없다', 'ヌ': 'ス와 비슷. 둘째 획이 첫 획을 가로지른다', 'ス': 'ヌ와 비슷. 둘째 획이 첫 획을 가로지르지 않는다',
     'コ': 'ユ와 비슷. 아래 가로획이 튀어나오지 않는다', 'ユ': 'コ와 비슷. 아래 가로획이 길게 오른쪽으로 튀어나온다', 'チ': 'テ와 비슷. 위가 비스듬하다', 'テ': 'チ와 비슷. 위가 반듯하다',
     'ー': '장음. 앞 소리를 길게',
+    'ヲ': '조사 「~을/를」에만 쓴다. 가타카나로는 거의 안 쓴다', 'ヂ': 'ジ와 소리가 같다. 거의 안 쓴다', 'ヅ': 'ズ와 소리가 같다. 거의 안 쓴다',  # 26.11.12 이솝 G07
 }
 # 손글씨 메모(26.11.06, 조사: 일본어 모어 화자 손글씨 연구·학습 자료. 확인된 것만. PRINCIPLES 0-1 五十音)
 HAND = {'き': '인쇄체는 아래가 이어져 보이지만 손으로는 떼어 쓴다', 'さ': '인쇄체는 아래가 이어져 보이지만 손으로는 떼어 쓴다',
@@ -93,9 +94,20 @@ def card(kana, rm, hg, ko='', script='h', word=False):
         ipa = MORA[hira(kana)][0]
     c = {'id': f'kana-{script}-{kana}', 'en': kana, 'w': kana, 'ko': ko, 'rm': rm, 'hg': hg, 'ipa': ipa,
          'pn': explain(kana, ipa, word), 'lv': 'かな'}
+    # 한글로 쳤을 때 받는 꼴(26.11.12 이솝 B01·G01·G04): 보인 소리(hg)와, (f)(v) 표시를 뺀 꼴, 장음을 안 늘인 꼴(갓코우), ん은 ㄴ·ㅇ·ㅁ
+    hgs = {hg, re.sub(r'\([fv]\)', '', hg)}
+    if word:
+        hgs.add(sound(kana, merge=False)[2])
+    if hira(kana) == 'ん':
+        hgs |= {'ㄴ', 'ㅇ', 'ㅁ'}
+    hgs.discard(hg)
+    if hgs:
+        c['hgs'] = sorted(hgs)
     note = CONFUSE.get(kana)
     if note:
         c['c'] = note
+    elif word and 'ː' in ipa and re.search(r'[ぁ-ゖ]', kana):  # 히라가나 장음 쓰는 법(26.11.12 이솝 G16)
+        c['c'] = '장음: お단+う·え단+い·같은 모음 겹침은 한 박자 길게 읽고, う·い를 따로 읽지 않는다'
     return c
 
 
@@ -134,7 +146,7 @@ def lessons(script):
     d = daku  # 10장 안팎으로: が·ざ / だ·ば / ぱ + 앞 행 첫 글자 복습
     out.append({'id': f'{pfx} ②', 'name': '탁음·반탁음', 'exercises': [ex(f'{conv("が")}·{conv("ざ")}행', d[0:10]), ex(f'{conv("だ")}·{conv("ば")}행', d[10:20]), ex(f'{conv("ぱ")}행 + 복습', d[20:25] + d[0:20:5])] + mixed('25자', daku)})
     yoon = [card(conv(k), r, h, script=script) for k, r, h in YOON]
-    out.append({'id': f'{pfx} ③', 'name': '작은 ' + '·'.join(conv(x) for x in 'ゃゅょ'), 'exercises': [ex('합친 소리 ' + str(i + 1), g) for i, g in enumerate(chunks(yoon, 11))] + mixed('33자', yoon)})
+    out.append({'id': f'{pfx} ③', 'name': '작은 ' + '·'.join(conv(x) for x in 'ゃゅょ'), 'exercises': [ex('합친 소리 ' + str(i + 1), g) for i, g in enumerate([yoon[0:12], yoon[12:24], yoon[24:33]])] + mixed('33자', yoon)})  # 행(3장)을 끊지 않게 4·4·3행(26.11.12 이솝 G06)
     if script == 'h':
         words = [card(k, r, h, ko=m, script='h', word=True) for k, r, h, m in SOKU_H]
         out.append({'id': f'{pfx} ④', 'name': '작은 っ·장음', 'exercises': [ex('っ·장음 단어 ' + str(i + 1), g) for i, g in enumerate(chunks(words, 8))] + mixed('단어 ' + str(len(words)) + '개', words)})
@@ -162,7 +174,14 @@ def kana_words(script):
                     seen.add(w['en'])
                     c = card(w['en'], '', '', ko=KO_FIX.get(w['en'], w['ko']), word=True)
                     out.append({**c, 'id': f'kana-w-{w["id"]}'})
-    return out[:48]
+    # 48개를 앞에서 자르지 않고, 아직 안 나온 글자(가나)를 가장 많이 새로 덮는 말부터 고른다(26.11.12 이솝 G14: 앞 48개는 N5 앞 강뿐이라 ぬ·の·ひ… 가 0번)
+    picked, covered = [], set()
+    pool = out[:]
+    while pool and len(picked) < 48:
+        best = max(pool, key=lambda c: (len(set(hira(c['en'])) - covered), -pool.index(c)))
+        pool.remove(best); picked.append(best); covered |= set(hira(best['en']))
+    order = {id(c): i for i, c in enumerate(out)}
+    return sorted(picked, key=lambda c: order[id(c)])
 
 
 ROOT = HERE.parents[1]

@@ -78,7 +78,11 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   ok(await p3.evaluate(()=>JP_MODE==='kana'&&STORAGE.startsWith('tangogoyang-kana-')),'五十音: 저장 키 따로');
   const kg=await p3.evaluate(()=>[['ti','ティ'],['ji','ぢ'],['zu','づ'],['o','を'],['ka','カ']].map(([r,a])=>{let v='';for(const ch of r)v=jpScriptLike(jpRomaToKana(v+ch,false,a),a);return jpScriptLike(jpRomaToKana(v,true,a),a)===a;}));
   ok(kg.every(Boolean),'五十音: ti=ティ, ji=ぢ, zu=づ, o=を, ka=カ');
-  ok(await p3.evaluate(()=>jpTentative('ㄴ','ん')==='ん'&&jpTentative('파','ファ')==='ファ'&&jpTentative('오','を')==='を'),'五十音: 한글 ㄴ=ん, 파=ファ, 오=を');
+  ok(await p3.evaluate(()=>{openLesson(0);startExercise(0);const s=state.session,id=s.currentId,keep=s.words[id];const t=(w,raw)=>{s.words[id]={...keep,...w};const r=jpTentative(raw,w.term);s.words[id]=keep;return r;};
+    return t({term:'ぱ',hg:'파',hgs:[]},'파')==='ぱ'&&t({term:'ぱ',hg:'파',hgs:[]},'바')!=='ぱ'&&t({term:'ち',hg:'치',hgs:[]},'지')!=='ち'&&t({term:'ん',hg:'ㄴ·ㅇ 받침',hgs:['ㄴ','ㅇ','ㅁ']},'ㄴ')==='ん'&&t({term:'がっこう',hg:'갓코-',hgs:['갓코우']},'갓코-')==='がっこう'&&t({term:'がっこう',hg:'갓코-',hgs:['갓코우']},'갓코우')==='がっこう'&&t({term:'ファ',hg:'파(f)',hgs:['파']},'파')==='ファ'&&t({term:'ファ',hg:'파(f)',hgs:['파']},'하')!=='ファ';}),'五十音: 한글은 카드에 보인 소리만(바≠ぱ, 지≠ち, 하≠ファ), 갓코-·갓코우·ㄴ 받음');
+  ok(await p3.evaluate(()=>{const r=(src,a)=>jpScriptLike(jpRomaToKana(src,false,a),a);return r('gakko-','がっこう')==='がっこう'&&r('ko-hi-','コーヒー')==='コーヒー'&&r('hon','ほん')==='ほん'&&r('honn','ほん')==='ほん'&&r('kon','こんにちは')!=='こん';}),'五十音: 장음 - 는 정답 모음으로, 정답 끝 ん은 n·nn에서 바로');
+  ok(await p3.evaluate(()=>{const L=state.lessons[0],i=L.exercises.findIndex(e=>e.rnd&&!e.words[0].hw);openLesson(0);startExercise(i);return !document.querySelector('#meaning .kana-pair')&&!!document.querySelector('#meaning .jp-kana');}),'五十音: 무작위 · 인쇄체 판은 글꼴(획순 그림 아님)');
+  ok(await p3.evaluate(()=>{localStorage.setItem(STORAGE,JSON.stringify({'X':{'a':{completed:true,bestMs:5}}}));state.progress={'Y':{'b':{completed:true,bestMs:7}}};saveProgress();const d=JSON.parse(localStorage.getItem(STORAGE));localStorage.removeItem(STORAGE);state.progress={};return !!(d.X&&d.X.a&&d.Y&&d.Y.b);}),'진도 저장: 다른 탭·기록 옮기기로 들어온 기록을 지우지 않고 합침');
   await p3.evaluate(()=>{openLesson(0);startExercise(0);});await p3.waitForTimeout(3000);
   const kw=await p3.evaluate(()=>state.session.words[state.session.currentId]);
   ok(await p3.evaluate(jw=>{const q=document.querySelector('#meaning .jp-q');return q&&(q.dataset.jw||q.innerText.trim())===jw&&!document.querySelector('#meaning .jp-kana');},kw.jw),'五十音: 문제는 쓰는 순서 그림 글자 하나');
