@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 # 검사 도구가 출력 폴더 인자 없이 돌면 만드는 폴더(26.10.17, faca268에 이어 두 번째)
 undefined/
+# 이솝 동작 검수의 큰 중간 결과(다시 만들 수 있음, 공개 저장소에 올리지 않음)
+reviews/*/behavior/out/*.json
+reviews/*/behavior/out/*.tsv

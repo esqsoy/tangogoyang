@@ -2,7 +2,8 @@
 // 사용: node reviews/aesop-20261112/behavior/01-input-sim.cjs   → out/input-<mode>.json
 // 키 입력 대신 앱 함수(jpConvertInput·jpTentative·isCorrect…)를 그대로 부른다(page-helpers.js). 앱 파일은 읽기만 한다.
 const {chromium}=require('playwright');const path=require('path');const fs=require('fs');
-const ROOT=path.resolve(__dirname,'../../..');
+const ROOT=process.env.AESOP_ROOT||path.resolve(__dirname,'../../..'); // AESOP_ROOT: 다른 곳에 조립한 HTML을 볼 때(template.html로 다시 조립한 사본 등)
+const SUF=process.env.AESOP_SUFFIX||'';
 const FILES={meaning:'tangogoyangjlpt.html',yomi:'tangogoyangyomi.html',kana:'tangogoyanggojuon.html'};
 (async()=>{
   const b=await chromium.launch();
@@ -133,7 +134,7 @@ const FILES={meaning:'tangogoyangjlpt.html',yomi:'tangogoyangyomi.html',kana:'ta
       out.unique=seen.size;return out;
     });
     res.pageErrors=errs;
-    fs.writeFileSync(path.join(__dirname,'out','input-'+mode+'.json'),JSON.stringify(res,null,1));
+    fs.writeFileSync(path.join(__dirname,'out','input-'+mode+SUF+'.json'),JSON.stringify(res,null,1));
     console.log(`\n== ${f} (${res.mode}) ${res.lessons}강 ${res.exercises}연습 ${res.cards}카드(서로 다른 카드 ${res.unique}) 오류 ${errs.length}`);
     for(const [k,v] of Object.entries(res.tests))console.log(`  ${v.fail?'FAIL':'ok  '} ${k}: ${v.n}번 중 ${v.fail}번 실패`);
     console.log('  설계상 허용:',JSON.stringify(res.designAccepts));console.log('  입력 못 만든 카드:',res.noInput.length,' 통과 못 한 것:',res.fails.length,' 틀렸는데 통과:',res.falseAccepts.length);
