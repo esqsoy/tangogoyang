@@ -1,0 +1,238 @@
+{
+ "baseline": "8d1ccf4",
+ "items": [
+  {
+   "id": "C01",
+   "severity": "P2",
+   "card_id": "6dc70626da",
+   "game": "yomi",
+   "w": "寂しい",
+   "field": "ar",
+   "current": "(없음) 정답 さびしい만",
+   "proposed": {
+    "readings": [
+     "さみしい"
+    ]
+   },
+   "reason": "さみしい도 표준 읽기(2010년 상용한자표에 실림)이고 입말에서 흔하다. 漢字読み에서 さみしい를 치면 틀렸다고 나온다.",
+   "confidence": "high"
+  },
+  {
+   "id": "C02",
+   "severity": "P2",
+   "card_id": "fc3bc1e6f1",
+   "game": "yomi",
+   "w": "開く",
+   "field": "ar",
+   "current": "(없음) 정답 あく만",
+   "proposed": {
+    "readings": [
+     "ひらく"
+    ]
+   },
+   "reason": "'열리다' 뜻의 開く는 ひらく로도 읽는다(ドアが開く). N4의 開く(ひらく) 카드는 あく를 받게 고쳤는데 N5 쪽은 반대 방향이 빠졌다.",
+   "confidence": "high"
+  },
+  {
+   "id": "C03",
+   "severity": "P2",
+   "card_id": "79ddbb2b98",
+   "game": "jlpt",
+   "w": "文章",
+   "field": "ko",
+   "current": "글, 문장",
+   "proposed": {
+    "ko": "글 (여러 문장으로 쓴 것)",
+    "c": "한국어 '문장'(한 문장)은 文(ぶん). 文章은 글 전체"
+   },
+   "reason": "거짓 친구. 文章은 여러 문장으로 된 글이고, 한국어 '문장'(sentence)은 文이다. 지금 뜻으로는 '한 문장'으로 오해한다.",
+   "confidence": "medium"
+  },
+  {
+   "id": "C04",
+   "severity": "P2",
+   "card_id": "424826c446",
+   "game": "jlpt",
+   "w": "すっと",
+   "field": "ko",
+   "current": "쓱, 슥 / 후련하게 (N4)",
+   "proposed": {
+    "drop": true
+   },
+   "reason": "원본 급수 목록의 오류로 보인다. 옛 3급(N4) 단어는 ずっと(쭉, 훨씬)인데 이 과정에서 ずっと는 N3에 있고, 드문 의태어 すっと가 N4에 들어와 있다. 뜻 자체는 맞다. 빼지 않으려면 그대로 둬도 틀린 내용은 아니다(급수만 문제).",
+   "confidence": "medium"
+  },
+  {
+   "id": "C05",
+   "severity": "P3",
+   "card_id": "c65a346458",
+   "game": "yomi",
+   "w": "二十歳",
+   "field": "ar",
+   "current": "にじゅっさい",
+   "proposed": {
+    "readings": [
+     "にじゅっさい",
+     "にじっさい"
+    ]
+   },
+   "reason": "にじゅっさい를 받는다면 전통 표준 읽기 にじっさい도 받아야 한다(교과서·방송 기준).",
+   "confidence": "high"
+  },
+  {
+   "id": "C06",
+   "severity": "P3",
+   "card_id": "ae2b9f6d7e",
+   "game": "jlpt",
+   "w": "夕飯",
+   "field": "ko",
+   "current": "저녁밥 (조금 격식 있는 말)",
+   "proposed": {
+    "ko": "저녁밥, 저녁 끼니",
+    "c": "晩ご飯과 바꿔 쓸 수 있다. 격식 있는 말은 夕食",
+    "readings": [
+     "ゆうめし"
+    ]
+   },
+   "reason": "夕飯은 격식 있는 말이 아니라 평범한 일상어다(격식은 夕食). 같은 연습의 晩ご飯과 뜻 줄을 가르려고 붙인 말이 사실과 다르다. ゆうめし로도 읽는다.",
+   "confidence": "medium"
+  },
+  {
+   "id": "C07",
+   "severity": "P3",
+   "card_id": "bdad768057",
+   "game": "jlpt",
+   "w": "今夜",
+   "field": "ko",
+   "current": "오늘 밤 (글말·격식)",
+   "proposed": {
+    "ko": "오늘 밤 (밤 시간 전체)",
+    "c": "今晩과 거의 바꿔 쓴다. 今晩은 저녁 무렵에 더 쓴다"
+   },
+   "reason": "今夜는 글말·격식어가 아니라 입말에서도 흔한 말이다. 今晩과 가르려고 붙인 말이 사실과 다르다.",
+   "confidence": "medium"
+  },
+  {
+   "id": "C08",
+   "severity": "P3",
+   "card_id": "6d0bb40a1f",
+   "game": "jlpt",
+   "w": "触る",
+   "field": "c",
+   "current": "〜に触る(~을 만지다, を가 아니라 に)",
+   "proposed": {
+    "c": "〜に触る·〜を触る 둘 다 쓴다"
+   },
+   "reason": "を触る도 표준으로 널리 쓴다(スマホを触る). 'を가 아니라'는 틀린 단정이다.",
+   "confidence": "medium"
+  },
+  {
+   "id": "C09",
+   "severity": "P3",
+   "card_id": "12d9487797",
+   "game": "jlpt",
+   "w": "おばあさん",
+   "field": "w",
+   "current": "alt 없음",
+   "proposed": {
+    "alt": [
+     "お祖母さん"
+    ]
+   },
+   "reason": "おじいさん은 お祖父さん을 정답 표기로 받는데 おばあさん은 お祖母さん을 받지 않는다. 일본어 자판으로 한자를 치면 틀린다.",
+   "confidence": "high"
+  },
+  {
+   "id": "C10",
+   "severity": "P3",
+   "card_id": "03d7b15720",
+   "game": "jlpt",
+   "w": "おばさん",
+   "field": "w",
+   "current": "alt 伯母さん",
+   "proposed": {
+    "alt": [
+     "叔母さん"
+    ]
+   },
+   "reason": "伯母さん(부모의 언니)만 받고 叔母さん(부모의 여동생)은 받지 않는다. 뜻 줄 '고모, 이모'는 둘 다 가리킨다.",
+   "confidence": "high"
+  },
+  {
+   "id": "C11",
+   "severity": "P3",
+   "card_id": "68ff489ea4",
+   "game": "jlpt",
+   "w": "お祭り",
+   "field": "c",
+   "current": "祭에 お를 붙인 말. 보통 이쪽을 쓴다",
+   "proposed": {
+    "c": "祭り에 お를 붙인 말. 보통 이쪽을 쓴다"
+   },
+   "reason": "낱말로 쓸 때의 표기는 祭り다(祭는 주로 '~祭' 이름에).",
+   "confidence": "medium"
+  },
+  {
+   "id": "C12",
+   "severity": "P3",
+   "card_id": "23911a0718",
+   "game": "jlpt",
+   "w": "弾く",
+   "field": "c",
+   "current": "피아노·기타처럼 손가락으로 연주하는 악기. 피리는 吹く",
+   "proposed": {
+    "c": "피아노·기타·바이올린 같은 건반·현악기. 피리는 吹く"
+   },
+   "reason": "활로 켜는 바이올린도 弾く다. 뜻 줄의 '켜다'와 '손가락으로'가 맞지 않는다.",
+   "confidence": "medium"
+  },
+  {
+   "id": "C13",
+   "severity": "P3",
+   "card_id": "898b067287",
+   "game": "yomi",
+   "w": "背",
+   "field": "ar",
+   "current": "(없음) 정답 せ만",
+   "proposed": {
+    "readings": [
+     "せい"
+    ]
+   },
+   "reason": "'키' 뜻으로는 せい도 표준 읽기(背が高い). N3에 같은 표기 背(せい, 키) 카드가 따로 있어 漢字読み에서는 표기와 뜻이 겹친다. 그 N3 카드도 せ를 받는지 함께 볼 것(범위 밖이라 확인만 권함).",
+   "confidence": "medium"
+  },
+  {
+   "id": "C14",
+   "severity": "P3",
+   "card_id": "66e4692df7",
+   "game": "yomi",
+   "w": "行く",
+   "field": "ar",
+   "current": "(없음) 정답 いく만",
+   "proposed": {
+    "readings": [
+     "ゆく"
+    ]
+   },
+   "reason": "ゆく도 같은 뜻의 표준 읽기다. 입말은 いく가 보통이라 낮은 순위.",
+   "confidence": "medium"
+  },
+  {
+   "id": "C15",
+   "severity": "P3",
+   "card_id": "8b7434e649",
+   "game": "yomi",
+   "w": "工場",
+   "field": "ar",
+   "current": "(없음) 정답 こうじょう만",
+   "proposed": {
+    "readings": [
+     "こうば"
+    ]
+   },
+   "reason": "こうば도 같은 뜻의 표준 읽기(작은 공장, 町工場). JLPT 정답은 こうじょう라 낮은 순위.",
+   "confidence": "medium"
+  }
+ ]
+}
