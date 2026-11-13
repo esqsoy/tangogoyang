@@ -1,3 +1,7 @@
+# 五十音 누적 복습 두 판 공개 · 2026-11-13
+
+- main `1b4647b` 공개. 공개 `tangogoyanggojuon.html` SHA-256이 로컬과 같다(`502df2d39377…`, 10강·72연습·1,557카드). 새로 실행: test-jlpt.cjs 통과.
+
 # 五十音 짝 단어·누적 복습 공개 · 2026-11-13
 
 - main `38a4def` 공개. 공개 `tangogoyanggojuon.html` SHA-256이 로컬과 같다(`27dd8b22c424…`, 10강·68연습·1,557카드). 새로 실행: test-jlpt.cjs 통과, 새 판 넷 끝까지 흉내 플레이.
