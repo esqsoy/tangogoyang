@@ -147,6 +147,19 @@ def ex(title, cards, rnd=False, hw=False):
     return e
 
 
+def cumulative(name, cards, script):
+    """전체 누적 복습: 104자를 고정된 순서로 한 번 섞어 52자씩 두 판으로(26.11.13 영신 "두판으로 나눕시다 길면 질림").
+    두 판 모두 기본·탁음·요음이 섞이게 하고, 판마다 인쇄체·손글씨."""
+    import random
+    pool = cards[:]
+    random.Random('gojuon-cumulative-' + script).shuffle(pool)
+    half = len(pool) // 2
+    out = []
+    for i, part in enumerate([pool[:half], pool[half:]]):
+        out += mixed(f'{name} 전체 {i + 1}/2', part)
+    return out
+
+
 def mixed(name, cards):
     """강 끝: 강 전체 글자를 한 판에 섞어 인쇄체로 한 번, 손글씨로 한 번(영신: "무작위로는 그냥 히라가나 전체를 한판으로 해서 완전히 섞이게", "같은걸 인쇄판, 필기판따로")."""
     return [ex(name + ' 무작위 · 인쇄체', cards, rnd=True), ex(name + ' 무작위 · 손글씨', cards, rnd=True, hw=True)]
@@ -177,7 +190,7 @@ def lessons(script):
                 + [ex('청탁 섞기', basic[5:20] + basic[25:30] + daku, rnd=True)]})  # か·さ·た·は행과 탁음·반탁음을 한 판에(26.11.13 영신 "다 추천대로", 이솝 G12)
     yoon = [card(conv(k), r, h, script=script) for k, r, h in YOON]
     out.append({'id': f'{pfx} ③', 'name': '작은 ' + '·'.join(conv(x) for x in 'ゃゅょ'), 'exercises': [ex('합친 소리 ' + str(i + 1), g) for i, g in enumerate([yoon[0:12], yoon[12:24], yoon[24:33]])] + mixed('33자', yoon)
-                + mixed(('히라가나' if script == 'h' else '가타카나') + ' 전체 104자', basic + daku + yoon)})  # 누적 복습(26.11.13 영신, 이솝 G17)  # 행(3장)을 끊지 않게 4·4·3행(26.11.12 이솝 G06)
+                + cumulative(('히라가나' if script == 'h' else '가타카나'), basic + daku + yoon, script)})  # 누적 복습(26.11.13 영신, 이솝 G17)  # 행(3장)을 끊지 않게 4·4·3행(26.11.12 이솝 G06)
     if script == 'h':
         words = [card(k, r, h, ko=m, script='h', word=True) for k, r, h, m in SOKU_H]
         out.append({'id': f'{pfx} ④', 'name': '작은 っ·장음', 'exercises': [ex('っ·장음 단어 ' + str(i + 1), g) for i, g in enumerate(chunks(words, 8))] + mixed('단어 ' + str(len(words)) + '개', words) + [ex('짝 단어', pair_cards(PAIRS_H, 'h'), rnd=True)]})
