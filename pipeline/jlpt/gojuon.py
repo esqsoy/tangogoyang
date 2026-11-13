@@ -83,6 +83,29 @@ for k, v in HAND.items():
     CONFUSE[k] = CONFUSE[k] + '. ' + v if k in CONFUSE else v
 
 
+# 짝 단어 판(26.11.13 영신 "짝 단어판과 히라가나 전체 누적복습 좋은거같아. 카타가나도 마찬가지고", 이솝 G12): 한 박자·점·작은 글자 차이로 뜻이 갈리는 짝
+PAIRS_H = [('おばさん', '아주머니', 'おばあさん', '할머니'), ('おじさん', '아저씨', 'おじいさん', '할아버지'),
+           ('ゆき', '눈(雪)', 'ゆうき', '용기'), ('ここ', '여기', 'こうこう', '고등학교'),
+           ('きて', '와 (와 줘)', 'きって', '우표'), ('さか', '언덕', 'さっか', '작가'),
+           ('かこ', '과거', 'かっこ', '괄호'), ('びょういん', '병원', 'びよういん', '미용실'),
+           ('じゆう', '자유', 'じゅう', '열(10)'), ('きねん', '기념', 'きんえん', '금연')]
+PAIRS_K = [('ビル', '빌딩', 'ビール', '맥주'), ('ハート', '하트', 'ハット', '모자'),
+           ('シーツ', '침대 시트', 'シャツ', '셔츠'), ('コート', '코트', 'コード', '전선, 코드'),
+           ('バッグ', '가방', 'バグ', '버그(프로그램 오류)'), ('バス', '버스', 'パス', '패스, 통행증'),
+           ('ベッド', '침대', 'ペット', '반려동물')]
+
+
+def pair_cards(pairs, script):
+    out = []
+    for a, am, b, bm in pairs:
+        ca = card(a, '', '', ko=am, script=script, word=True)
+        cb = card(b, '', '', ko=bm, script=script, word=True)
+        ca['c'] = '짝: ' + b + ' = ' + bm + ('. ' + ca['c'] if ca.get('c') else '')
+        cb['c'] = '짝: ' + a + ' = ' + am + ('. ' + cb['c'] if cb.get('c') else '')
+        out += [ca, cb]
+    return out
+
+
 def kata(s):
     return re.sub(r'[ぁ-ゖ]', lambda m: chr(ord(m.group()) + 0x60), s)
 
@@ -153,14 +176,15 @@ def lessons(script):
     out.append({'id': f'{pfx} ②', 'name': '탁음·반탁음', 'exercises': [ex(f'{conv("が")}·{conv("ざ")}행', d[0:10]), ex(f'{conv("だ")}·{conv("ば")}행', d[10:20]), ex(f'{conv("ぱ")}행 + 복습', d[20:25] + d[0:20:5])] + mixed('25자', daku)
                 + [ex('청탁 섞기', basic[5:20] + basic[25:30] + daku, rnd=True)]})  # か·さ·た·は행과 탁음·반탁음을 한 판에(26.11.13 영신 "다 추천대로", 이솝 G12)
     yoon = [card(conv(k), r, h, script=script) for k, r, h in YOON]
-    out.append({'id': f'{pfx} ③', 'name': '작은 ' + '·'.join(conv(x) for x in 'ゃゅょ'), 'exercises': [ex('합친 소리 ' + str(i + 1), g) for i, g in enumerate([yoon[0:12], yoon[12:24], yoon[24:33]])] + mixed('33자', yoon)})  # 행(3장)을 끊지 않게 4·4·3행(26.11.12 이솝 G06)
+    out.append({'id': f'{pfx} ③', 'name': '작은 ' + '·'.join(conv(x) for x in 'ゃゅょ'), 'exercises': [ex('합친 소리 ' + str(i + 1), g) for i, g in enumerate([yoon[0:12], yoon[12:24], yoon[24:33]])] + mixed('33자', yoon)
+                + mixed(('히라가나' if script == 'h' else '가타카나') + ' 전체 104자', basic + daku + yoon)})  # 누적 복습(26.11.13 영신, 이솝 G17)  # 행(3장)을 끊지 않게 4·4·3행(26.11.12 이솝 G06)
     if script == 'h':
         words = [card(k, r, h, ko=m, script='h', word=True) for k, r, h, m in SOKU_H]
-        out.append({'id': f'{pfx} ④', 'name': '작은 っ·장음', 'exercises': [ex('っ·장음 단어 ' + str(i + 1), g) for i, g in enumerate(chunks(words, 8))] + mixed('단어 ' + str(len(words)) + '개', words)})
+        out.append({'id': f'{pfx} ④', 'name': '작은 っ·장음', 'exercises': [ex('っ·장음 단어 ' + str(i + 1), g) for i, g in enumerate(chunks(words, 8))] + mixed('단어 ' + str(len(words)) + '개', words) + [ex('짝 단어', pair_cards(PAIRS_H, 'h'), rnd=True)]})
     else:
         gai = [card(k, r, h, script='k') for k, r, h in GAIRAI]
         words = [card(k, r, h, ko=m, script='k', word=True) for k, r, h, m in SOKU_K]
-        out.append({'id': f'{pfx} ④', 'name': '외래어 소리·ー·ッ', 'exercises': [ex('외래어 소리', gai), ex('ー·ッ 단어', words)] + mixed(str(len(gai) + len(words)) + '개', gai + words)})
+        out.append({'id': f'{pfx} ④', 'name': '외래어 소리·ー·ッ', 'exercises': [ex('외래어 소리', gai), ex('ー·ッ 단어', words)] + mixed(str(len(gai) + len(words)) + '개', gai + words) + [ex('짝 단어', pair_cards(PAIRS_K, 'k'), rnd=True)]})
     return out
 
 
