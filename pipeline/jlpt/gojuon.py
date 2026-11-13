@@ -143,10 +143,15 @@ def lessons(script):
     groups = [basic[0:10], basic[10:20], basic[20:30], basic[30:38], basic[38:46]]
     names = [f'{conv("あ")}·{conv("か")}행', f'{conv("さ")}·{conv("た")}행', f'{conv("な")}·{conv("は")}행', f'{conv("ま")}·{conv("や")}행', f'{conv("ら")}·{conv("わ")}행·{conv("ん")}']
     exs = [ex(n, g) for n, g in zip(names, groups)] + mixed('46자', basic)
+    # 헷갈리는 글자 판(26.11.13 영신 "다 추천대로", 이솝 G13): 모양이 비슷한 글자만 두 번씩 섞어 가려 본다
+    look = 'ぬめねれわるろはほさきちいりあお' if script == 'h' else 'シツソンクタケウワフコユスヌチテ'
+    by = {c['w']: c for c in basic}
+    exs.append(ex('헷갈리는 글자', [by[k] for k in look] * 2, rnd=True))
     out.append({'id': f'{pfx} ①', 'name': '기본 글자', 'exercises': exs})
     daku = [card(conv(k), r, h, script=script) for k, r, h in DAKU]
     d = daku  # 10장 안팎으로: が·ざ / だ·ば / ぱ + 앞 행 첫 글자 복습
-    out.append({'id': f'{pfx} ②', 'name': '탁음·반탁음', 'exercises': [ex(f'{conv("が")}·{conv("ざ")}행', d[0:10]), ex(f'{conv("だ")}·{conv("ば")}행', d[10:20]), ex(f'{conv("ぱ")}행 + 복습', d[20:25] + d[0:20:5])] + mixed('25자', daku)})
+    out.append({'id': f'{pfx} ②', 'name': '탁음·반탁음', 'exercises': [ex(f'{conv("が")}·{conv("ざ")}행', d[0:10]), ex(f'{conv("だ")}·{conv("ば")}행', d[10:20]), ex(f'{conv("ぱ")}행 + 복습', d[20:25] + d[0:20:5])] + mixed('25자', daku)
+                + [ex('청탁 섞기', basic[5:20] + basic[25:30] + daku, rnd=True)]})  # か·さ·た·は행과 탁음·반탁음을 한 판에(26.11.13 영신 "다 추천대로", 이솝 G12)
     yoon = [card(conv(k), r, h, script=script) for k, r, h in YOON]
     out.append({'id': f'{pfx} ③', 'name': '작은 ' + '·'.join(conv(x) for x in 'ゃゅょ'), 'exercises': [ex('합친 소리 ' + str(i + 1), g) for i, g in enumerate([yoon[0:12], yoon[12:24], yoon[24:33]])] + mixed('33자', yoon)})  # 행(3장)을 끊지 않게 4·4·3행(26.11.12 이솝 G06)
     if script == 'h':
