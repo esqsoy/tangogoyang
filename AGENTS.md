@@ -15,7 +15,7 @@
 ## 유지할 기준
 
 - **원본과 생성물을 구분한다.** 세 게임 HTML은 `pipeline/jlpt/template.html`과 데이터에서 `python3 pipeline/jlpt/build.py`로 조립한다. 생성된 HTML만 고치지 않는다.
-- **완성본 두 게임(日本語能力試験·漢字読み)은 영신이 허락할 때만 다시 조립한다**(26.11.06 영신 "이제 두게임파일은 완성이니 건드릴게 없고"). 五十音만 만들 때는 `python3 pipeline/jlpt/gojuon.py && python3 pipeline/jlpt/build.py --only gojuon`.
+- **세 게임 모두 계속 고친다**(26.11.13 영신 "일능검판 포함 완성본이라고 해도 지속 업그레이드를 하는걸로 해줘". 26.11.06 "두게임파일은 완성이니 건드릴게 없고"는 대체됨). template.html을 고치면 세 게임을 다 다시 조립하고(`python3 pipeline/jlpt/gojuon.py && python3 pipeline/jlpt/build.py`), 전 카드 입력 흉내(`reviews/aesop-20261112/behavior/01-input-sim.cjs` + `01b-summarize.py`)로 '통과 못 함'이 새로 생기지 않았는지 본다.
 - **고침의 자리:** 학생 리포트·검수로 고칠 뜻·해설·표기·읽기·빼기·되살리기는 `pipeline/jlpt/fixes.json`(마지막에 덮는 고침). 五十音은 `gojuon.py`·`gojuon_sound.py`.
 - **공통 기능(기록 옮기기)은 본가 파일을 그대로 쓰고 `config.json`만 고친다.** 같이 쓰는 파일을 고쳐야 하면 AL `[보카고양]` 이슈로 부탁한다([SHARED.md](SHARED.md)).
 - **저장 키는 `tangogoyang-`로 시작한다**(五十音 `tangogoyang-kana-`, 漢字読み `tangogoyang-yomi-`). 같은 주소의 보카고양 `goyang-`과 겹치면 안 된다.

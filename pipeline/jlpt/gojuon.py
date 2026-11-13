@@ -9,7 +9,7 @@ import json, re, sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from gojuon_sound import sound, explain, MORA, hira  # 발음기호·발음 설명(26.11.06 영신)
+from gojuon_sound import sound, explain, MORA, hira, ALT_HG  # 발음기호·발음 설명(26.11.06 영신)
 
 HERE = Path(__file__).resolve().parent
 
@@ -97,9 +97,11 @@ def card(kana, rm, hg, ko='', script='h', word=False):
     # 한글로 쳤을 때 받는 꼴(26.11.12 이솝 B01·G01·G04): 보인 소리(hg)와, (f)(v) 표시를 뺀 꼴, 장음을 안 늘인 꼴(갓코우), ん은 ㄴ·ㅇ·ㅁ
     hgs = {hg, re.sub(r'\([fv]\)', '', hg)}
     if word:
-        hgs.add(sound(kana, merge=False)[2])
+        hgs |= {sound(kana, merge=False)[2], sound(kana, alt=True)[2], sound(kana, merge=False, alt=True)[2]}
     if hira(kana) == 'ん':
         hgs |= {'ㄴ', 'ㅇ', 'ㅁ'}
+    # 한국에서 흔히 쓰는 다른 표기(다른 카드의 소리와 겹치지 않는 것만, 26.11.13)
+    hgs |= {ALT_HG[hira(kana)]} if hira(kana) in ALT_HG else set()
     hgs.discard(hg)
     if hgs:
         c['hgs'] = sorted(hgs)

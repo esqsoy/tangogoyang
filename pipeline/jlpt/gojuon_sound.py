@@ -46,6 +46,9 @@ MAC = {'a': 'ā', 'i': 'ī', 'u': 'ū', 'e': 'ē', 'o': 'ō'}
 CHO = 'ᄀᄁᄂᄃᄄᄅᄆᄇᄈᄉᄊᄋᄌᄍᄎᄏᄐᄑᄒ'
 
 def _batchim(syl, jong):  # 한글 음절에 받침을 단다(jong: 종성 번호)
+    m = re.match(r'^(.*?)([가-힣])(\([fv]\))$', syl)  # '파(f)'처럼 표시가 붙은 음절(26.11.13: ファックス가 파쿠스로 나왔다)
+    if m:
+        return m.group(1) + _batchim(m.group(2), jong) + m.group(3)
     c = ord(syl[-1]) - 0xAC00
     if c < 0 or c >= 11172 or c % 28:
         return syl
@@ -54,7 +57,10 @@ def _batchim(syl, jong):  # 한글 음절에 받침을 단다(jong: 종성 번�
 READ = {'こんにちは': 'こんにちわ', 'こんばんは': 'こんばんわ'}  # 인사말 끝 は는 조사라 [ɰa]
 
 
-def sound(word, merge=True):
+ALT_HG = {'つ': '쓰', 'ちゃ': '챠', 'ちゅ': '츄', 'ちょ': '쵸', 'じゃ': '쟈', 'じゅ': '쥬', 'じょ': '죠', 'しぇ': '쉐'}  # 한국에서 흔히 쓰는 다른 표기(입력으로만 받음, 26.11.13)
+
+
+def sound(word, merge=True, alt=False):
     """가나 낱말 → (IPA, 로마자, 한글). 장음: ー, 같은 모음 겹침, えい·おう(낱말 끝 동사 제외는 쓰는 쪽이 확인)."""
     h = hira(READ.get(word, word))
     toks, i = [], 0
@@ -92,6 +98,8 @@ def sound(word, merge=True):
                 rm.append(MORA[t][1])
             prev_v = None; continue
         a, r, g = MORA[t]
+        if alt:
+            g = ALT_HG.get(t, g)
         ipa.append(a); rm.append(r); hg.append(g)
         prev_v = a[-1] if a[-1] in VOW else None
     g = ''.join(hg)

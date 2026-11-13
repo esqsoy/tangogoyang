@@ -2182,6 +2182,14 @@ const KANA_CLEAR={
  9:"외래어 소리랑 ー까지 정복했다고양. 메뉴판도 읽겠다고양!",
  10:"가타카나 단어도 술술이라고양. 五十音 끝이라고양!"
 };
+// 日本語能力試験 강 완료 문구: 급수별(26.11.13. 영어 독해용 LESSONCLEAR가 그대로 나왔다, 이솝 검수 묶음)
+const JLPT_CLEAR={
+ N5:["N5 한 강 끝이라고양! 일본어 첫 계단을 밟았다고양!","기초 단어가 손에 붙는다고양. 이대로 가자고양!"],
+ N4:["N4 한 강 끝이라고양! 일상 단어가 점점 들린다고양!","N4도 쭉쭉 넘어간다고양. 기초는 이제 탄탄하다고양!"],
+ N3:["N3 한 강 끝이라고양! 이제 중급 고개라고양!","N3 단어 한 묶음 정복이라고양. 글이 조금씩 읽힌다고양!"],
+ N2:["N2 한 강 끝이라고양! 어른 일본어에 들어섰다고양!","N2 단어가 쌓인다고양. 신문 냄새가 난다고양!"],
+ N1:["N1 한 강 끝이라고양?! 고양이도 놀랐다고양!","N1 단어 한 묶음 끝이라고양. 정상이 보인다고양!"]
+};
 const LESSONCLEAR={
  1:"글쓴이가 왜 이 글을 썼는지 이제 훤히 보이겠다고양!",
  2:"등장인물 마음이 어떻게 흔들리는지 다 읽힌다고양!",
@@ -2646,6 +2654,7 @@ const JP_ROMA_ALT={ti:["てぃ"],di:["でぃ","ぢ"],tu:["とぅ"],du:["どぅ",
 /* 로마자 → 히라가나. done=false면 끝의 덜 친 글자(k, sh, n 등)를 남긴다. */
 /* answer(카드 정답)를 주면 nn+모음이 「ん+な行」인지 「ん+모음」인지 정답 쪽으로 가른다(minna=みんな, konnya=こんや). 최종 검수 26.11.06. */
 function jpRomaToKana(src,done=false,answer=""){
+  if(JP_MODE==="kana"&&/[āīūēō]/i.test(src))src=src.replace(/[āīūēō]/gi,m=>({"ā":"a","ī":"i","ū":"u","ē":"e","ō":"o"})[m.toLowerCase()]+"-"); // 五十音: 공개 칸 로마자(gakkō)의 장음 표시도 받는다
   const ans=jpHira(answer||"");let out="",i=0;const s=src.toLowerCase();
   while(i<s.length){
     const c=s[i];
@@ -2725,7 +2734,7 @@ function jpHangulToKana(v,answer){
 }
 function jpConvertInput(done=false){
   const el=document.getElementById("ainput");if(!el||state.composing)return;
-  const v=el.value;if(!/[A-Za-z'\-\uac00-\ud7a3\u3131-\u314e]/.test(v))return;
+  const v=el.value;if(!/[A-Za-z'\-\uac00-\ud7a3\u3131-\u314eāīūēōĀĪŪĒŌ]/.test(v))return;
   if(JP_MODE==="kana"&&hasHangul(v))return; // 五十音 한글은 친 그대로 두고 카드 소리와 견준다(kanaHangulMatch)
   const s=state.session,w=s&&s.currentId!==null?s.words[s.currentId]:null;
   const target=w?(s.copyMode?s.copyAns:w.term):"";
@@ -3080,7 +3089,7 @@ function finishExercise(){
   let line=pick(LINES.exerciseDone),expr='evil';
   if(s.lesson.kind==="saved"){$("#sumTitle").textContent="모아둔 카드 복습 끝 ✦";}
   else if(allCleared){line=pick(LINES.allDone);expr='win';$("#sumTitle").textContent="BIG MOUNTAIN 입성! 🎓";}
-  else if(lessonCleared){const _cnt=visEx(s.lesson).reduce((a,e)=>a+e.words.length,0);line=JP_MODE==="yomi"&&LINES.lessonDone?pick(LINES.lessonDone).replace(/\{n\}/g,_cnt):_cnt+"개 단어를 다 확인했다고양! "+((JP_MODE==="kana"?KANA_CLEAR:LESSONCLEAR)[s.lesson.lesson]||"한 강을 통째로 정복했다고양!");expr='win';$("#sumTitle").textContent=s.lesson.id+" 완전 정복!";}
+  else if(lessonCleared){const _cnt=visEx(s.lesson).reduce((a,e)=>a+e.words.length,0);line=JP_MODE==="yomi"&&LINES.lessonDone?pick(LINES.lessonDone).replace(/\{n\}/g,_cnt):_cnt+"개 단어를 다 확인했다고양! "+((JP_MODE==="kana"?KANA_CLEAR:JP_MODE==="meaning"?{[s.lesson.lesson]:pick(JLPT_CLEAR[(String(s.lesson.id).match(/N[1-5]/)||[""])[0]]||[""])||undefined}:LESSONCLEAR)[s.lesson.lesson]||"한 강을 통째로 정복했다고양!");expr='win';$("#sumTitle").textContent=s.lesson.id+" 완전 정복!";}
   else $("#sumTitle").textContent="연습 클리어 ✦";
   const perfectRun=completePerfectRun(s,first);if(!allCleared&&perfectRun>0)showRoar(perfectRun);
   const wrong=s.words.filter(w=>w.wrongEver);
