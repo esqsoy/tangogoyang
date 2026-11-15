@@ -108,6 +108,20 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   const n5=await p5.evaluate(()=>window.__said.length);
   const now=await p5.evaluate(()=>{const n=window.__said.length;document.querySelector('#meaning .kana-pair').dispatchEvent(new MouseEvent('click',{bubbles:true}));return window.__said.length-n;});
   ok(before===0&&n5>=1&&now===1&&await p5.evaluate(()=>state.session.answered),'五十音: 공개 뒤 글자 탭 = 바로 발음(답하기 전엔 없음, 넘어가지 않음)');
+  // 五十音: 아이폰 한글 자판은 글자가 '조합 중'인 채로 남는다. 카드 소리와 똑같으면 조합 중이어도 받는다(첫 답·오답 따라쓰기). 따라쓰기 성공 뒤엔 1.2초 안에 넘어간다.
+  const p6=await b.newPage();p6.on('pageerror',e=>errs.push(e.message));
+  await p6.goto('file://'+path.resolve(__dirname,'../../tangogoyanggojuon.html'));await p6.waitForTimeout(400);
+  await p6.evaluate(()=>{openLesson(0);startExercise(0);});await p6.waitForTimeout(2500);
+  const compose=(v)=>p6.evaluate(v=>{const el=document.querySelector('#ainput');el.focus();el.dispatchEvent(new CompositionEvent('compositionstart',{bubbles:true}));el.value=v;el.dispatchEvent(new InputEvent('input',{bubbles:true,isComposing:true}));},v);
+  const k6=await p6.evaluate(()=>state.session.words[state.session.currentId]);await compose(k6.hg);await p6.waitForTimeout(300);
+  const first=await p6.evaluate(()=>({ans:state.session.answered,copy:state.session.copyMode,comp:state.composing}));
+  await p6.evaluate(()=>{openLesson(0);startExercise(0);});await p6.waitForTimeout(2500);
+  const id6=await p6.evaluate(()=>state.session.currentId);const k7=await p6.evaluate(()=>state.session.words[state.session.currentId]);
+  await p6.focus('#ainput');await p6.keyboard.type('qq');await p6.keyboard.press('Enter');await p6.waitForTimeout(600);
+  const inCopy=await p6.evaluate(()=>state.session.copyMode);await compose(k7.hg);await p6.waitForTimeout(300);
+  const copied=await p6.evaluate(()=>!state.session.copyMode);await p6.waitForTimeout(1300);
+  const moved=await p6.evaluate(id=>state.session.currentId!==id||state.session.round!==1,id6);
+  ok(first.ans&&!first.copy&&!first.comp&&inCopy&&copied&&moved,'五十音: 조합 중 한글도 카드 소리와 같으면 받음(첫 답·따라쓰기), 따라쓰기 뒤 1.2초에 넘어감');
   // 기록 옮기기(index)
   const p4=await b.newPage();p4.on('pageerror',e=>errs.push(e.message));await p4.goto('file://'+path.resolve(__dirname,'../../index.html'));
   ok(await p4.evaluate(()=>{const m=rtMerge({'tangogoyang-kana-seoul-v1':'{"a":{"x":{"completed":true}}}'},{'tangogoyang-kana-seoul-v1':'{"a":{"y":{"completed":true}}}','goyang-seoul-v1':'{}'});return !!document.getElementById('rtOpen')&&RT_PREFIX==='tangogoyang-'&&m.summary.exercises===1&&!('goyang-seoul-v1' in m.writes);}),'기록 옮기기: 탄고고양 키만, 합치기');

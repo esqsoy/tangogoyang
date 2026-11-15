@@ -2887,7 +2887,7 @@ function nextCard(){
 
 function submit(opt={}){
   const s=state.session;if(!s||s.currentId===null)return;
-  if(state.composing&&!opt.timeout&&!opt.forced)return;
+  if(state.composing&&!opt.timeout&&!opt.forced&&!opt.composedOk)return;
   if(s.copyMode){submitCopy();return;}
   if(s.answered)return;
   const w=s.words[s.currentId];
@@ -2933,12 +2933,16 @@ function answerInputActive(){const s=state.session;return !!(s&&s.currentId!==nu
 function hasHangul(v){return /[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]/.test(v);}
 function composingKey(e){return state.composing||e.isComposing||e.keyCode===229;}
 function focusAnswerInput(){if(!answerInputActive())return;$("#ainput").focus({preventScroll:true});}
-function handleCopyInput(){const s=state.session;if(!s||!s.copyMode)return;jpConvertInput();{const el=$("#ainput");if(hasHangul(el.value)){const t=jpTentative(el.value,s.copyAns);if(isCorrect(t,s.copyAns))el.value=t;}}const v=$("#ainput").value;renderCopyBlank(v);if(!state.composing&&(isCorrect(v,s.copyAns)||(JP_MODE==="kana"&&isSpellingVariant(v,s.copyAns)))){$("#ainput").oninput=null;submitCopy();}}
+// 조합을 끝내고 정답 가나를 넣는다(조합 중인 한글이 카드 소리와 맞을 때)
+function kanaEndComposition(term){const el=$("#ainput");state.composing=false;el.value=term;try{el.blur();}catch(e){}setTimeout(()=>{try{focusAnswerInput();}catch(e){}},0);}
+function handleCopyInput(){const s=state.session;if(!s||!s.copyMode)return;
+  {const el=$("#ainput");if(state.composing&&JP_MODE==="kana"&&hasHangul(el.value)&&kanaHangulMatch(el.value,s.copyAns)){kanaEndComposition(s.copyAns);renderCopyBlank(s.copyAns);el.oninput=null;submitCopy(true);return;}}jpConvertInput();{const el=$("#ainput");if(hasHangul(el.value)){const t=jpTentative(el.value,s.copyAns);if(isCorrect(t,s.copyAns))el.value=t;}}const v=$("#ainput").value;renderCopyBlank(v);if(!state.composing&&(isCorrect(v,s.copyAns)||(JP_MODE==="kana"&&isSpellingVariant(v,s.copyAns)))){$("#ainput").oninput=null;submitCopy();}}
 function mirrorTyped(options={}){
   const s=state.session;if(!s||s.answered||s.copyMode||s.currentId===null)return;
   jpConvertInput();
   const wrap=$("#hoeCtx .blanks");if(!wrap)return;const w=s.words[s.currentId],raw=$("#ainput").value;
   wrap.innerHTML=blankSlots(w.term,raw);
+  if(state.composing&&JP_MODE==="kana"&&hasHangul(raw)&&!options.fromHint&&kanaHangulMatch(raw,w.term)){kanaEndComposition(w.term);submit({composedOk:true});return;} // 五十音: 아이폰 한글 자판은 다음 글자를 칠 때까지 조합이 안 끝난다(26.11.15 영신 "답을 입력해도 다음으로 넘어가지 않거나")
   if(state.composing)return;
   if(hasHangul(raw)){const t=jpTentative(raw,w.term);if(isCorrect(t,w.term)&&!options.fromHint){$("#ainput").value=t;wrap.innerHTML=blankSlots(w.term,t);submit();}return;}
   // '=' and accented letters remain significant in the original MT grader.
@@ -3026,8 +3030,8 @@ function startCopy(term,meaning,line){
   speakPronunciation(term,meaning);
   focusAnswerInput();requestAnimationFrame(focusAnswerInput);
 }
-function submitCopy(){
-  const s=state.session;if(!s||!s.copyMode||state.composing)return;
+function submitCopy(force){
+  const s=state.session;if(!s||!s.copyMode||(state.composing&&!force))return;
   jpConvertInput(true);
   if(JP_MODE==="kana"&&hasHangul($("#ainput").value)&&jpTentative($("#ainput").value,s.copyAns)===s.copyAns)$("#ainput").value=s.copyAns;
   if(!isCorrect($("#ainput").value,s.copyAns)&&!isSpellingVariant($("#ainput").value,s.copyAns)){ // 따라쓰기도 소리대로 친 こんにちわ를 받는다(26.11.12 이솝)
@@ -3035,7 +3039,7 @@ function submitCopy(){
   }
   s.copyMode=false;s.copyAns="";$("#ainput").oninput=null;$("#submitBtn").disabled=true;
   const w=s.words[s.currentId];s.revealedAt=Date.now();
-  revealInPlace(w.term);beep("ok");speakPronunciation(w.term,w.meaning);scheduleNext(1500);
+  revealInPlace(w.term);beep("ok");speakPronunciation(w.term,w.meaning);scheduleNext(JP_MODE==="kana"?1200:1500); // 五十音: 따라 치는 동안 설명을 이미 봤으니 읽을 시간을 다시 기다리지 않는다(26.11.15 영신)
 }
 
 function giveHint(){
