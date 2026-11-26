@@ -1,3 +1,7 @@
+# 五十音 '쯔' 받기·まし 뜻 공개 · 2026-11-26
+
+- main `4700a90` 공개. 공개 SHA-256이 로컬과 같다: `tangogoyanggojuon.html` `ca2f04161eb5…`(10강·72연습·1,557카드), `tangogoyangjlpt.html` `db87b05d4009…`(7,737카드). 漢字読み는 바뀌지 않음. 새로 실행: test-jlpt.cjs 통과.
+
 # 五十音 발음 설명 고침 공개 · 2026-11-26
 
 - main `6df284b` 공개. 공개 `tangogoyanggojuon.html` SHA-256이 로컬과 같다(`66803d0b3632…`, 10강·72연습·1,557카드). 두 게임 파일은 바뀌지 않음. 새로 실행: test-jlpt.cjs 통과.
