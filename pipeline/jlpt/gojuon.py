@@ -9,7 +9,7 @@ import json, re, sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from gojuon_sound import sound, explain, MORA, hira, ALT_HG  # 발음기호·발음 설명(26.11.06 영신)
+from gojuon_sound import sound, explain, MORA, hira, ALT_HG, ALT_HG2  # 발음기호·발음 설명(26.11.06 영신)
 
 HERE = Path(__file__).resolve().parent
 
@@ -121,10 +121,12 @@ def card(kana, rm, hg, ko='', script='h', word=False):
     hgs = {hg, re.sub(r'\([fv]\)', '', hg)}
     if word:
         hgs |= {sound(kana, merge=False)[2], sound(kana, alt=True)[2], sound(kana, merge=False, alt=True)[2]}
+        hgs |= {sound(kana, alt=2)[2], sound(kana, merge=False, alt=2)[2]}
     if hira(kana) == 'ん':
         hgs |= {'ㄴ', 'ㅇ', 'ㅁ'}
     # 한국에서 흔히 쓰는 다른 표기(다른 카드의 소리와 겹치지 않는 것만, 26.11.13)
     hgs |= {ALT_HG[hira(kana)]} if hira(kana) in ALT_HG else set()
+    hgs |= {ALT_HG2[hira(kana)]} if hira(kana) in ALT_HG2 else set()
     hgs.discard(hg)
     if hgs:
         c['hgs'] = sorted(hgs)
