@@ -21,7 +21,7 @@
 ## 2차 연구: 재량 모음과 단계 (26.11.28)
 
 영신: "아니면 복습카드 모임도 단계로 두는 방법도 있지 않을까? 지금 네 의견도 모두 좋고 좀 연구해보자 좋은 방향으로 논의가 되는거같아"
-- [brief2.md](brief2.md), [report-apps.md](report-apps.md)(야마다, 실제 앱들: WaniKani·Duolingo·Anki·Bunpro·Mochi·Busuu 등). 이솝(학습자 쪽 연구) 대기.
+- [brief2.md](brief2.md), [report-apps.md](report-apps.md)(야마다, 실제 앱들), [report-learner.md](report-learner.md)(이솝, 학습자 쪽 약 70편) → [proposal-v3.md](proposal-v3.md): **겐보 3판(재량 + 보이는 단계), 시안 mock/**. 영신 확인 뒤 본가가 만든다.
 
 ### 발견: 아이폰 Safari가 저장 기록을 지운다 (고양 시리즈 전체)
 - WebKit 블로그 2020-03-24 "Full Third-Party Cookie Blocking and More" 원문 확인(26.11.28 겐보): 사이트와 상호작용 없이 Safari를 7일 쓰면 그 사이트의 스크립트 저장(LocalStorage·IndexedDB·SessionStorage 등)을 모두 지운다. 홈 화면에 추가한 웹앱은 Safari와 따로 세고, 쓰면 타이머가 다시 시작된다.
