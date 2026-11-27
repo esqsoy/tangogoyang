@@ -1513,6 +1513,31 @@ body.playing .appbar{display:flex;padding:0 5px;}
 /* 진행 속도 예측 한 줄(결과 화면, 고양이 말풍선 바로 밑). 말풍선이 주인공이라 작고 흐리게 둔다. */
 .pace-note{margin:-2px 4px 2px;color:var(--muted);font-size:.76rem;font-weight:700;line-height:1.5;text-align:center;letter-spacing:-.2px;word-break:keep-all;}
 </style>
+<style id="fix-report-style">/*FIX_REPORT_STYLE_START*/
+.fx-flag{position:absolute;right:12px;bottom:10px;z-index:3;min-width:44px;height:36px;padding:0 12px;border-radius:18px;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.28);color:#fff;font:600 14px/1 system-ui,sans-serif;display:inline-flex;align-items:center;gap:6px;cursor:pointer}
+.fx-flag.on{border-color:#ffcf5a;color:#ffcf5a}
+.fx-has-flag{padding-bottom:52px!important}
+.fx-bg{position:fixed;inset:0;background:rgba(10,0,20,.55);z-index:900}
+.fx-sheet{position:fixed;left:0;right:0;bottom:0;max-height:86vh;overflow:auto;background:#2a1640;border-top:1px solid rgba(255,255,255,.25);border-radius:20px 20px 0 0;padding:18px 16px calc(22px + env(safe-area-inset-bottom));z-index:901;color:#fff;font-family:system-ui,sans-serif;box-sizing:border-box}
+.fx-sheet h3{margin:0 0 4px;font-size:17px}
+.fx-sheet .fx-sub{opacity:.75;font-size:13px;margin:0 0 12px;line-height:1.45}
+.fx-card{border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:10px 12px;margin-bottom:12px;font-size:15px;line-height:1.4}
+.fx-card .fx-ans{color:#ffcf5a}
+.fx-card .fx-place{font-size:12px;opacity:.6;margin-top:4px}
+.fx-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.fx-chip{height:40px;padding:0 14px;border-radius:20px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;font:500 14px system-ui,sans-serif;cursor:pointer}
+.fx-chip[aria-pressed="true"]{background:#ffcf5a;color:#2a1640;border-color:#ffcf5a;font-weight:700}
+.fx-memo{display:block;width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.3);border-radius:12px;min-height:64px;padding:10px 12px;font:15px/1.45 system-ui,sans-serif;background:rgba(0,0,0,.2);color:#fff;margin-bottom:14px;resize:vertical}
+.fx-row{display:flex;gap:10px}
+.fx-btn{flex:1;height:46px;border-radius:14px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;font:700 15px system-ui,sans-serif;cursor:pointer}
+.fx-btn.fx-main{background:#ffcf5a;color:#2a1640;border-color:#ffcf5a}
+.fx-btn:disabled{opacity:.45}
+.fx-home{grid-column:1/-1;border:1px solid #ffcf5a;border-radius:16px;padding:12px 14px;color:#fff;font-family:system-ui,sans-serif;display:flex;align-items:center;gap:10px;background:rgba(255,207,90,.08);text-align:left}
+.fx-home .fx-t{flex:1;font-size:14px;line-height:1.4}.fx-home .fx-t b{color:#ffcf5a;font-size:15px}
+.fx-home .fx-c{min-height:40px;padding:0 14px;border-radius:12px;border:0;background:#ffcf5a;color:#2a1640;font:700 14px system-ui,sans-serif;cursor:pointer}
+.fx-toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#fff;color:#2a1640;padding:10px 16px;border-radius:20px;font:700 14px system-ui,sans-serif;z-index:950;max-width:90vw;text-align:center}
+.fx-copybox{display:block;width:100%;box-sizing:border-box;min-height:160px;font:13px/1.4 ui-monospace,monospace;background:rgba(0,0,0,.25);color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:12px;padding:10px;margin-bottom:12px}
+/*FIX_REPORT_STYLE_END*/</style>
 </head>
 <body>
 <div class="app">
@@ -2567,6 +2592,7 @@ function renderHome(){
   (rb.hidden?$("#homeHeading"):rb).appendChild($("#homeMeta"));
   const g=$("#lessonGrid");g.innerHTML="";
   if(typeof savedRenderHome==="function")savedRenderHome();
+  if(typeof fixReport!=="undefined"&&fixReport)fixReport.renderHome(g,g.querySelector(".saved-home"));
   state.lessons.forEach((L,i)=>{
     const ev=visEx(L);
     const cleared=ev.filter(e=>getRec(L.id,e.title)?.completed).length;
@@ -2851,6 +2877,7 @@ function startRound(n){
 function nextCard(){
   const s=state.session;if(!s)return;
   // Manual navigation cancels speech and its overlay immediately.
+  if(typeof fixReport!=="undefined"&&fixReport){if(fixReport.isOpen())return;fixReport.offReveal();}
   stopPronunciation();cancelPendingAdvance();
   while(s.queue.length){
     const id=s.queue.shift();const w=s.words[id];
@@ -2999,7 +3026,7 @@ function growCard(fill){
   clearTimeout(card._growT);
   card._growT=setTimeout(()=>{card.style.transition="";card.style.height="";},330);
 }
-function openReveal(kind){const card=$("#quizCard");card.classList.add(kind);$("#qmini").style.display="none";$("#timeWrap").style.visibility="hidden";const rv=$("#reveal");rv.className="rv show";
+function openReveal(kind){if(typeof fixReport!=="undefined"&&fixReport)setTimeout(()=>fixReport.onReveal(),0);const card=$("#quizCard");card.classList.add(kind);$("#qmini").style.display="none";$("#timeWrap").style.visibility="hidden";const rv=$("#reveal");rv.className="rv show";
   /* scrollTo(0)은 아래로 스크롤해 둔 상태에서 화면을 통째로 튕긴다. 카드가 이미 보이면 건드리지 않는다 */
   if(card.getBoundingClientRect().top<-8)card.scrollIntoView({block:"start",behavior:"smooth"});
   return rv;}
@@ -5327,6 +5354,116 @@ function paceInit(){
 paceInit();
 /* PACE_END */
 renderHome();
+</script>
+<script>/*FIX_REPORT_JS_START*/
+var FIX_REPORT_CONFIG={"game":"탄고고양","kinds":["뜻","읽기·표기","해설","소리","빼야 할 단어","기타"],"storageSuffix":"-fix-reports-v1"};
+/* 고칠 점 남기기(fix-report). 고양 단어 게임끼리 같이 쓰는 파일이다. 게임 값은 config.json(→ FIX_REPORT_CONFIG),
+   게임과의 연결은 게임 쪽이 window.FIX_REPORT_HOST로 준다:
+     storageKey() 저장 키, course() 과정 이름, current() 지금 카드 {id, front, answer, place} 또는 null,
+     pause() 저절로 넘어가기 멈춤, resume() 다시 넘어가기, card() 단추를 붙일 카드 요소.
+   카드 id는 그 게임의 '모아둔 카드' id를 그대로 쓴다(받은 글로 카드를 정확히 찾으려고). 26.11.28 */
+var fixReportCore=(function(){
+  function clean(s,n){return String(s==null?'':s).replace(/\s+/g,' ').trim().slice(0,n||400);}
+  function read(raw){try{const a=JSON.parse(raw||'[]');return Array.isArray(a)?a.filter(r=>r&&typeof r.id==='string'&&typeof r.kind==='string'):[];}catch(e){return [];}}
+  /* 같은 카드·같은 종류는 하나로(메모는 새 것으로, 보낸 표시는 지움). */
+  function add(list,item,now){
+    const it={id:clean(item.id,300),kind:clean(item.kind,30),memo:clean(item.memo,400),course:clean(item.course,60),front:clean(item.front,120),answer:clean(item.answer,120),place:clean(item.place,120),at:now};
+    const out=list.filter(r=>!(r.id===it.id&&r.kind===it.kind&&r.course===it.course));
+    out.push(it);return out;
+  }
+  function unsent(list){return list.filter(r=>!r.sent);}
+  function day(ms){const d=new Date(ms);return String(d.getFullYear()%100).padStart(2,'0')+'.'+(d.getMonth()+1)+'.'+d.getDate();}
+  /* 사람이 읽는 줄 + 끝에 기계가 읽는 한 줄(#고칠점 v1). 카톡·대화에 그대로 붙여도 된다. */
+  function text(game,list,now){
+    const rows=unsent(list);
+    const lines=['⚑ '+game+' 고칠 점 '+rows.length+'개 ('+day(now)+')'];
+    rows.forEach((r,i)=>lines.push((i+1)+'. '+[r.course,r.place].filter(Boolean).join(' · ')+' · '+r.answer+(r.front?'('+r.front+')':'')+' — '+r.kind+(r.memo?': '+r.memo:'')));
+    lines.push('#고칠점 v1 '+JSON.stringify(rows.map(r=>[r.course,r.id,r.kind,r.memo])));
+    return lines.join('\n');
+  }
+  function markSent(list,now){return list.map(r=>r.sent?r:Object.assign({},r,{sent:now}));}
+  return {read,add,unsent,text,markSent,day};
+})();
+if(typeof module!=='undefined')module.exports=fixReportCore;
+
+var fixReport=(function(){
+  if(typeof document==='undefined')return null;
+  const C=(typeof FIX_REPORT_CONFIG!=='undefined'&&FIX_REPORT_CONFIG)||{};
+  const H=()=>window.FIX_REPORT_HOST||{};
+  const key=()=>H().storageKey?H().storageKey():'fix-reports';
+  function load(){try{return fixReportCore.read(localStorage.getItem(key()));}catch(e){return [];}}
+  function save(list){try{localStorage.setItem(key(),JSON.stringify(list));return true;}catch(e){return false;}}
+  function toast(msg){const t=document.createElement('div');t.className='fx-toast';t.textContent=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),2200);}
+  function el(tag,cls,txt){const e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e;}
+  let flag=null,sheet=null;
+  function offReveal(){if(flag){const c=flag.parentElement;flag.remove();flag=null;if(c)c.classList.remove('fx-has-flag');}}
+  function onReveal(){
+    offReveal();const h=H(),cur=h.current&&h.current(),card=h.card&&h.card();
+    if(!cur||!card)return;
+    flag=el('button','fx-flag');flag.type='button';flag.setAttribute('aria-label','이 카드의 고칠 점 남기기');
+    const has=load().some(r=>r.id===cur.id&&!r.sent);if(has)flag.classList.add('on');
+    flag.innerHTML='⚑ <span>고칠 점</span>';
+    flag.addEventListener('click',e=>{e.stopPropagation();e.preventDefault();open(cur);});
+    if(getComputedStyle(card).position==='static')card.style.position='relative';
+    card.classList.add('fx-has-flag');card.appendChild(flag);
+  }
+  function close(resume){if(sheet){sheet.bg.remove();sheet.box.remove();sheet=null;}if(resume){const h=H();if(h.resume)h.resume();}}
+  function open(cur){
+    const h=H();if(h.pause)h.pause();close(false);
+    const bg=el('div','fx-bg'),box=el('div','fx-sheet');box.setAttribute('role','dialog');box.setAttribute('aria-label','고칠 점 남기기');
+    box.appendChild(el('h3',null,'⚑ 이 카드에서 이상한 곳'));
+    box.appendChild(el('p','fx-sub','고른 것과 메모가 이 기기에 모인다. 처음 화면에서 한꺼번에 복사해 보낸다.'));
+    const cd=el('div','fx-card');cd.appendChild(document.createTextNode((cur.front||'')+' '));cd.appendChild(el('span','fx-ans',cur.answer||''));
+    cd.appendChild(el('div','fx-place',[h.course&&h.course(),cur.place].filter(Boolean).join(' · ')));box.appendChild(cd);
+    const chips=el('div','fx-chips');let kind=null;const go=el('button','fx-btn fx-main','남기기');go.type='button';go.disabled=true;
+    (C.kinds||['기타']).forEach(k=>{const b=el('button','fx-chip',k);b.type='button';b.setAttribute('aria-pressed','false');
+      b.onclick=()=>{kind=k;chips.querySelectorAll('.fx-chip').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));go.disabled=false;};chips.appendChild(b);});
+    box.appendChild(chips);
+    const memo=el('textarea','fx-memo');memo.placeholder='메모(안 써도 된다)';memo.maxLength=400;box.appendChild(memo);
+    const row=el('div','fx-row'),no=el('button','fx-btn','취소');no.type='button';row.appendChild(no);row.appendChild(go);box.appendChild(row);
+    no.onclick=()=>close(true);bg.onclick=()=>close(true);
+    go.onclick=()=>{if(!kind)return;const ok=save(fixReportCore.add(load(),{id:cur.id,kind,memo:memo.value,course:h.course&&h.course(),front:cur.front,answer:cur.answer,place:cur.place},Date.now()));
+      close(true);if(flag)flag.classList.add('on');toast(ok?'고칠 점을 남겼다고양 ✦':'저장 공간이 꽉 차서 못 남겼다고양');};
+    box.addEventListener('keydown',e=>{e.stopPropagation();if(e.key==='Escape')close(true);});
+    document.body.appendChild(bg);document.body.appendChild(box);sheet={bg,box};
+  }
+  async function copy(txt){
+    try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(txt);return true;}}catch(e){}
+    try{const t=document.createElement('textarea');t.value=txt;t.setAttribute('readonly','');t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();const ok=document.execCommand('copy');t.remove();if(ok)return true;}catch(e){}
+    return false;
+  }
+  function showText(txt){ /* 복사가 막힌 브라우저: 글을 보여 주고 손으로 고르게 한다 */
+    close(false);const bg=el('div','fx-bg'),box=el('div','fx-sheet');box.appendChild(el('h3',null,'⚑ 고칠 점'));
+    box.appendChild(el('p','fx-sub','복사가 안 돼서 글을 보여 준다고양. 길게 눌러 전부 골라 복사해 보내 줘.'));
+    const ta=el('textarea','fx-copybox');ta.value=txt;ta.readOnly=true;box.appendChild(ta);
+    const b=el('button','fx-btn fx-main','닫기');b.type='button';b.onclick=()=>close(false);box.appendChild(b);bg.onclick=()=>close(false);
+    document.body.appendChild(bg);document.body.appendChild(box);sheet={bg,box};ta.focus();ta.select();
+  }
+  function renderHome(parent,before){
+    const list=load(),n=fixReportCore.unsent(list).length;if(!n||!parent)return null;
+    const row=el('div','fx-home'),t=el('div','fx-t');t.appendChild(el('b',null,'⚑ 고칠 점 '+n+'개'));t.appendChild(document.createElement('br'));
+    t.appendChild(document.createTextNode('복사해서 보내 주면 고친다고양'));row.appendChild(t);
+    const b=el('button','fx-c','복사');b.type='button';row.appendChild(b);
+    b.onclick=async()=>{const now=Date.now(),txt=fixReportCore.text(C.game||'',load(),now);
+      if(await copy(txt)){save(fixReportCore.markSent(load(),now));row.remove();toast('고칠 점 '+n+'개를 복사했다고양 ✦ 붙여서 보내 줘');}
+      else{save(fixReportCore.markSent(load(),now));row.remove();showText(txt);}};
+    parent.insertBefore(row,before||null);return row;
+  }
+  return {onReveal,offReveal,renderHome,open,load,isOpen:()=>!!sheet};
+})();
+/*FIX_REPORT_JS_END*/</script>
+<script>
+/* 고칠 점 남기기(pipeline/fix-report) 게임 연결. 카드 id는 모아둔 카드 id(w.savedCardId) 그대로(26.11.28 본가 요청). */
+window.FIX_REPORT_HOST={
+  storageKey:()=>STORAGE.replace(/-seoul-v1$/,'')+FIX_REPORT_CONFIG.storageSuffix,
+  course:()=>SAVED_COURSE,
+  current:()=>{const s=state.session;if(!s||!s.answered||s.currentId==null)return null;const w=s.words[s.currentId];if(!w)return null;
+    const id=w.savedCardId||w.savedId||w.id;const c=(typeof savedCatalog!=='undefined')&&savedCatalog.get(id);
+    return {id:String(id),front:w.meaning||'',answer:(w.jw&&w.jw!==w.term?w.jw+'('+w.term+')':w.term)||'',place:c?c.source:''};},
+  pause:()=>{cancelPendingAdvance();},
+  resume:()=>{const s=state.session;if(s&&s.answered&&!s.copyMode)scheduleNext(900);},
+  card:()=>document.getElementById('quizCard')
+};
 </script>
 </body>
 </html>

@@ -61,6 +61,8 @@ node pipeline/record-transfer/build.cjs --check  # 교재 선택 화면의 기�
 node pipeline/record-transfer/test.cjs           # 기록 옮기기 공통 검사(본가 파일)
 node pipeline/storage-guard/check.cjs            # 저장 키가 tangogoyang- 로만 시작하는지, 저장 공간을 통째로 지우지 않는지(본가 파일)
 node pipeline/storage-guard/test.cjs
+node pipeline/fix-report/build.cjs --check        # 고칠 점 남기기가 template에 공용 파일 그대로 들어갔는지
+node pipeline/fix-report/test.cjs
 ```
 
 이솝 검수의 재현 스크립트(전 카드 입력 흉내, 화면 넘침 등)는 `reviews/aesop-20261112/behavior/`에 있다.

@@ -1,0 +1,7 @@
+{
+  "about": "이 게임마다 다른 값. runtime.js·style.css·build.cjs·test.cjs는 고양 단어 게임끼리 같이 쓰고, 이 파일만 고친다(SHARED.md).",
+  "game": "탄고고양",
+  "target": "pipeline/jlpt/template.html",
+  "storageSuffix": "-fix-reports-v1",
+  "kinds": ["뜻", "읽기·표기", "해설", "소리", "빼야 할 단어", "기타"]
+}

@@ -122,6 +122,23 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   const copied=await p6.evaluate(()=>!state.session.copyMode);await p6.waitForTimeout(1300);
   const moved=await p6.evaluate(id=>state.session.currentId!==id||state.session.round!==1,id6);
   ok(first.ans&&!first.copy&&!first.comp&&inCopy&&copied&&moved,'五十音: 조합 중 한글도 카드 소리와 같으면 받음(첫 답·따라쓰기), 따라쓰기 뒤 1.2초에 넘어감');
+  // 고칠 점 남기기(pipeline/fix-report, 26.11.28): 정답 뒤 ⚑ → 누르면 넘어가기 멈춤 → 종류 골라 남기기 → 처음 화면 줄 → 복사하면 보낸 것으로
+  const p7=await b.newPage({viewport:{width:390,height:844}});p7.on('pageerror',e=>errs.push(e.message));
+  await p7.goto('file://'+path.resolve(__dirname,'../../tangogoyangjlpt.html'));await p7.waitForTimeout(400);
+  await p7.evaluate(()=>{openLesson(0);startExercise(0);});await p7.waitForTimeout(2500);
+  const w7=await p7.evaluate(()=>state.session.words[state.session.currentId]);const id7=await p7.evaluate(()=>state.session.currentId);
+  await p7.focus('#ainput');await p7.keyboard.type(w7.term);await p7.waitForTimeout(500);
+  const flag7=await p7.$('#quizCard .fx-flag');
+  await p7.click('#quizCard .fx-flag');await p7.waitForTimeout(4000);
+  const stayed=await p7.evaluate(id=>state.session.currentId===id&&!!document.querySelector('.fx-sheet'),id7);
+  await p7.click('.fx-chip >> text=뜻');await p7.fill('.fx-memo','시험 메모');await p7.click('.fx-btn.fx-main');await p7.waitForTimeout(2500);
+  const saved7=await p7.evaluate(()=>JSON.parse(localStorage.getItem('tangogoyang-fix-reports-v1')||'[]'));
+  const moved7=await p7.evaluate(id=>state.session.currentId!==id,id7);
+  await p7.evaluate(()=>{show('home');renderHome();});await p7.waitForTimeout(300);
+  const home7=await p7.evaluate(()=>{const r=document.querySelector('.fx-home');return r?r.textContent:'';});
+  await p7.evaluate(()=>{document.execCommand=()=>true;});await p7.click('.fx-home .fx-c');await p7.waitForTimeout(300);
+  const sent7=await p7.evaluate(()=>JSON.parse(localStorage.getItem('tangogoyang-fix-reports-v1')||'[]').every(r=>r.sent)&&!document.querySelector('.fx-home'));
+  ok(!!flag7&&stayed&&saved7.length===1&&saved7[0].kind==='뜻'&&saved7[0].memo==='시험 메모'&&saved7[0].id===w7.savedCardId&&moved7&&/고칠 점 1개/.test(home7)&&sent7,'고칠 점: ⚑ 누르면 멈춤, 남기기(모아둔 카드 id), 처음 화면 줄, 복사하면 보냄');
   // 기록 옮기기(index)
   const p4=await b.newPage();p4.on('pageerror',e=>errs.push(e.message));await p4.goto('file://'+path.resolve(__dirname,'../../index.html'));
   ok(await p4.evaluate(()=>{const m=rtMerge({'tangogoyang-kana-seoul-v1':'{"a":{"x":{"completed":true}}}'},{'tangogoyang-kana-seoul-v1':'{"a":{"y":{"completed":true}}}','goyang-seoul-v1':'{}'});return !!document.getElementById('rtOpen')&&RT_PREFIX==='tangogoyang-'&&m.summary.exercises===1&&!('goyang-seoul-v1' in m.writes);}),'기록 옮기기: 탄고고양 키만, 합치기');

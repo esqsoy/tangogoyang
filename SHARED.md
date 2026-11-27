@@ -6,6 +6,7 @@
 |---|---|---|---|---|---|
 | 기록 옮기기 | `pipeline/record-transfer/` | `merge.js` `runtime.js` `ui.html` `style.css` `build.cjs` `README.md` `test.cjs` | `config.json`: 이름 탄고고양, `app` tangogoyang-records, 접두어 `tangogoyang-`, 키 종류(五十音 `kana-`·漢字読み `yomi-` 포함), 넣을 파일 `index.html`. 세트 도장 없음 | `64d6d0e` (26.11.12: 공통 검사 `test.cjs` 포함. 화면 동작은 `69e8d5e`와 같음) | `node pipeline/record-transfer/build.cjs` (`--check`로 확인), 검사 `node pipeline/record-transfer/test.cjs`와 `pipeline/jlpt/test-jlpt.cjs`의 '기록 옮기기' |
 | 저장 키 검사 | `pipeline/storage-guard/` | `check.cjs` `test.cjs` `registry.json` `README.md` | `config.json`: game 탄고고양, targets index.html·세 게임 HTML | 본가 main `4bfb320` 시점 파일(첫 판 `a6affe7`, 26.11.28 가져옴) | `node pipeline/storage-guard/check.cjs`, `node pipeline/storage-guard/test.cjs` |
+| 고칠 점 남기기 | `pipeline/fix-report/` | `runtime.js` `style.css` `build.cjs` `test.cjs` `README.md` | `config.json`: 게임 이름, 대상 template.html, 저장 키 꼬리, 이상한 곳 종류 | **탄고고양이 먼저 만듦(26.11.28, 예외)**. 1~2주 써 보고 본가가 폴더째 넘겨받아 '본가 버전'으로 올린 뒤부터 본가에서만 고친다 | `node pipeline/fix-report/build.cjs --check`, `node pipeline/fix-report/test.cjs` |
 
 - 본가 검사 `pipeline/tests/record-transfer.test.cjs`는 보카고양 저장 키(`goyang-`)가 박혀 있어 여기서는 그대로 못 돌린다. 설정을 읽게 해 달라고 `[보카고양]` 이슈로 부탁했다(26.11.09).
 - 26.11.06에는 보카고양 공개 화면에서 손으로 옮겨 넣었고, 26.11.09에 본가 빌드 방식으로 바꿨다. 결과 코드는 같다(주석 한 줄만 다름).
