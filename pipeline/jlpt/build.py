@@ -223,10 +223,42 @@ def write(out, data, mode):
 ONLY = set(sys.argv[sys.argv.index('--only') + 1].split(',')) if '--only' in sys.argv else {'jlpt', 'yomi', 'gojuon'}
 data, stats = make_data(lambda c: True)
 ydata, ystats = make_data(lambda c: bool(KANJI.search(c['w'])))
+gdata = json.loads((HERE / 'gojuon-data.json').read_text())
+# 진도 열쇠 지키기(26.11.28 회의, 발음고양 8-13 A에서 배움): 진도는 '강 id + 연습 제목'으로 저장된다.
+# 고침(fixes.json)으로 카드가 빠지거나 되살아나면 연습·강 경계가 움직여 옛 열쇠가 사라질 수 있다 → 학생 진도가 끊긴다.
+# 장부(progress-keys.json)와 비교해 사라진 열쇠가 있으면 멈춘다. 일부러 바꾼 것이면 --accept-progress-keys로 장부를 고친다(옮김표는 그때 따로 만든다).
+def _keys(d):
+    return {L['id']: [e['title'] for e in L['exercises']] for L in d}
+def _cards(d):
+    return {L['id'] + '|' + e['title']: [w['id'] for w in e['words']] for L in d for e in L['exercises']}
+_ledger_p = HERE / 'progress-keys.json'
+_ledger = json.loads(_ledger_p.read_text()) if _ledger_p.exists() else {}
+_now = {'jlpt': data, 'yomi': ydata, 'gojuon': gdata}
+_gone_all, _moved_all = {}, {}
+for g in ONLY:
+    cur = {f'{lid}|{t}' for lid, ts in _keys(_now[g]).items() for t in ts}
+    old = set(_ledger.get(g, {}).get('keys', []))
+    gone = sorted(old - cur)
+    if gone:
+        _gone_all[g] = gone
+    oc = _ledger.get(g, {}).get('cards', {})
+    nc = _cards(_now[g])
+    _moved_all[g] = sum(1 for k, v in nc.items() if k in oc and oc[k] != v)
+for g, n in _moved_all.items():
+    if n:
+        print(f'진도 열쇠: {g} 카드 구성이 바뀐 연습 {n}개(열쇠는 그대로, 진도는 이어짐)')
+if _gone_all and '--accept-progress-keys' not in sys.argv:
+    for g, gone in _gone_all.items():
+        print(f'진도 열쇠: {g}에서 사라진 열쇠 {len(gone)}개 — 학생 진도가 끊긴다. 예: {gone[:5]}')
+    sys.exit('멈춤: 진도 열쇠가 사라졌다. 일부러 바꾼 것이면 --accept-progress-keys (옮김표 필요 여부 판단)')
+for g in ONLY:
+    _ledger[g] = {'keys': sorted(f'{lid}|{t}' for lid, ts in _keys(_now[g]).items() for t in ts), 'cards': _cards(_now[g])}
+_ledger_p.write_text(json.dumps(_ledger, ensure_ascii=False, separators=(',', ':')) + '\n')
+
 n_all = write(OUT, data, 'meaning') if 'jlpt' in ONLY else sum(len(e['words']) for L in data for e in L['exercises'])
 n_yomi = write(ROOT / 'tangogoyangyomi.html', ydata, 'yomi') if 'yomi' in ONLY else sum(len(e['words']) for L in ydata for e in L['exercises'])
-gdata = json.loads((HERE / 'gojuon-data.json').read_text())
 n_kana = write(ROOT / 'tangogoyanggojuon.html', gdata, 'kana') if 'gojuon' in ONLY else 0
+
 idx = ROOT / 'index.html'
 it = idx.read_text()
 it = re.sub(r'<!-- VOCAB_STATS:jlpt:START -->.*?<!-- VOCAB_STATS:jlpt:END -->', lambda m: f'<!-- VOCAB_STATS:jlpt:START --><b>{n_all:,}단어</b> · 한국어 뜻을 보고 가나로<!-- VOCAB_STATS:jlpt:END -->', it, flags=re.S)
