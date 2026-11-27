@@ -1,3 +1,7 @@
+# 고칠 점 남기기 공개 · 2026-11-28
+
+- main `e2ec745` 공개. 공개 SHA-256이 로컬과 같다: 五十音 `7d1d2c0a4482…`, 日本語能力試験 `a5c9d0aa976e…`, 漢字読み `ef81feee46e8…`. 새로 실행: test-jlpt.cjs(고칠 점 흐름 포함)·fix-report test·--check·storage-guard·record-transfer --check 통과.
+
 # 五十音 '쯔' 받기·まし 뜻 공개 · 2026-11-26
 
 - main `4700a90` 공개. 공개 SHA-256이 로컬과 같다: `tangogoyanggojuon.html` `ca2f04161eb5…`(10강·72연습·1,557카드), `tangogoyangjlpt.html` `db87b05d4009…`(7,737카드). 漢字読み는 바뀌지 않음. 새로 실행: test-jlpt.cjs 통과.
