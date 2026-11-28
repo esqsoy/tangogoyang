@@ -1,3 +1,7 @@
+# 五十音 가나 사람 녹음(35개) 공개 · 2026-11-28
+
+- main `3ab54c6` 공개. 공개 `tangogoyanggojuon.html` SHA-256이 로컬과 같다(`e49c1538b62d…`), 녹음 파일 공개 주소 200 확인. 새로 실행: test-jlpt.cjs(녹음 검사 포함)·storage-guard 통과. 아이폰 실기기 재생은 영신 확인 대기.
+
 # 치는 법·고칠 점 단추 자리 공개 · 2026-11-28
 
 - main `c607a5d` 공개(`fd14d8f` 치는 법 포함). 공개 SHA-256이 로컬과 같다: 五十音 `a6635edf1807…`, 日本語能力試験 `506016fd078f…`, 漢字読み `edebe8baaef8…`. 새로 실행: test-jlpt.cjs(치는 법 전수·고칠 점 단추 포함)·fix-report test·--check 통과.
