@@ -127,9 +127,10 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   await p7.goto('file://'+path.resolve(__dirname,'../../tangogoyangjlpt.html'));await p7.waitForTimeout(400);
   await p7.evaluate(()=>{openLesson(0);startExercise(0);});await p7.waitForTimeout(2500);
   const w7=await p7.evaluate(()=>state.session.words[state.session.currentId]);const id7=await p7.evaluate(()=>state.session.currentId);
+  const pre7=await p7.evaluate(()=>document.getElementById('fixBtn').disabled);
   await p7.focus('#ainput');await p7.keyboard.type(w7.term);await p7.waitForTimeout(500);
-  const flag7=await p7.$('#quizCard .fx-flag');
-  await p7.click('#quizCard .fx-flag');await p7.waitForTimeout(4000);
+  const flag7=pre7&&await p7.evaluate(()=>!document.getElementById('fixBtn').disabled);
+  await p7.click('#fixBtn');await p7.waitForTimeout(4000);
   const stayed=await p7.evaluate(id=>state.session.currentId===id&&!!document.querySelector('.fx-sheet'),id7);
   await p7.click('.fx-chip >> text=뜻');await p7.fill('.fx-memo','시험 메모');await p7.click('.fx-btn.fx-main');await p7.waitForTimeout(2500);
   const saved7=await p7.evaluate(()=>JSON.parse(localStorage.getItem('tangogoyang-fix-reports-v1')||'[]'));
@@ -138,7 +139,7 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   const home7=await p7.evaluate(()=>{const r=document.querySelector('.fx-home');return r?r.textContent:'';});
   await p7.evaluate(()=>{document.execCommand=()=>true;});await p7.click('.fx-home .fx-c');await p7.waitForTimeout(300);
   const sent7=await p7.evaluate(()=>JSON.parse(localStorage.getItem('tangogoyang-fix-reports-v1')||'[]').every(r=>r.sent)&&!document.querySelector('.fx-home'));
-  ok(!!flag7&&stayed&&saved7.length===1&&saved7[0].kind==='뜻'&&saved7[0].memo==='시험 메모'&&saved7[0].id===w7.savedCardId&&moved7&&/고칠 점 1개/.test(home7)&&sent7,'고칠 점: ⚑ 누르면 멈춤, 남기기(모아둔 카드 id), 처음 화면 줄, 복사하면 보냄');
+  ok(!!flag7&&stayed&&saved7.length===1&&saved7[0].kind==='뜻'&&saved7[0].memo==='시험 메모'&&saved7[0].id===w7.savedCardId&&moved7&&/고칠 점 1개/.test(home7)&&sent7,'고칠 점: 소리 옆 ⚑ 단추는 답 전엔 꺼짐·정답 뒤 켜짐, 누르면 멈춤, 남기기(모아둔 카드 id), 처음 화면 줄, 복사하면 보냄');
   // 치는 법(26.11.28): 따라 쓰기에 '한글 · 영어' 예시. 모든 읽기에서 예시대로 치면 정답 가나가 나와야 한다.
   const p8=await b.newPage();p8.on('pageerror',e=>errs.push(e.message));
   for(const g of ['jlpt','yomi']){await p8.goto('file://'+path.resolve(__dirname,'../../tangogoyang'+g+'.html'));await p8.waitForTimeout(300);

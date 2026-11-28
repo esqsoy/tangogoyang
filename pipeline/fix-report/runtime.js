@@ -37,9 +37,13 @@ var fixReport=(function(){
   function toast(msg){const t=document.createElement('div');t.className='fx-toast';t.textContent=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),2200);}
   function el(tag,cls,txt){const e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e;}
   let flag=null,sheet=null;
-  function offReveal(){if(flag){const c=flag.parentElement;flag.remove();flag=null;if(c)c.classList.remove('fx-has-flag');}}
+  /* 게임이 단추 자리(host.button)를 주면 그 단추를 정답이 보일 때만 켠다(답 전에 누르면 창에 정답이 보이므로). 없으면 카드 구석에 붙인다. */
+  function offReveal(){const b=H().button&&H().button();if(b){b.disabled=true;b.classList.remove('on');b.onclick=null;}
+    if(flag){const c=flag.parentElement;flag.remove();flag=null;if(c)c.classList.remove('fx-has-flag');}}
   function onReveal(){
-    offReveal();const h=H(),cur=h.current&&h.current(),card=h.card&&h.card();
+    offReveal();const h=H(),cur=h.current&&h.current(),card=h.card&&h.card(),btn=h.button&&h.button();
+    if(cur&&btn){btn.disabled=false;if(load().some(r=>r.id===cur.id&&!r.sent))btn.classList.add('on');
+      btn.onclick=e=>{e.stopPropagation();e.preventDefault();open(cur);};return;}
     if(!cur||!card)return;
     flag=el('button','fx-flag');flag.type='button';flag.setAttribute('aria-label','이 카드의 고칠 점 남기기');
     const has=load().some(r=>r.id===cur.id&&!r.sent);if(has)flag.classList.add('on');
@@ -64,7 +68,7 @@ var fixReport=(function(){
     const row=el('div','fx-row'),no=el('button','fx-btn','취소');no.type='button';row.appendChild(no);row.appendChild(go);box.appendChild(row);
     no.onclick=()=>close(true);bg.onclick=()=>close(true);
     go.onclick=()=>{if(!kind)return;const ok=save(fixReportCore.add(load(),{id:cur.id,kind,memo:memo.value,course:h.course&&h.course(),front:cur.front,answer:cur.answer,place:cur.place},Date.now()));
-      close(true);if(flag)flag.classList.add('on');toast(ok?'고칠 점을 남겼다고양 ✦':'저장 공간이 꽉 차서 못 남겼다고양');};
+      close(true);if(flag)flag.classList.add('on');{const b=H().button&&H().button();if(b)b.classList.add('on');}toast(ok?'고칠 점을 남겼다고양 ✦':'저장 공간이 꽉 차서 못 남겼다고양');};
     box.addEventListener('keydown',e=>{e.stopPropagation();if(e.key==='Escape')close(true);});
     document.body.appendChild(bg);document.body.appendChild(box);sheet={bg,box};
   }
