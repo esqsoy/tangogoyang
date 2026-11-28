@@ -59,10 +59,30 @@
   "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
   "listened": null
  },
+ "が": {
+  "file": "audio/kana/304c-d31d808f.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%8C.wav",
+  "wav_sha1": "2992d6d10554d04aade35e00b65386a060a3ea33",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
  "き": {
   "file": "audio/kana/304d-e4aee344.mp3",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%8D.wav",
   "wav_sha1": "19b408ac6d96d23ce07e77b48c877a372a130d1b",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "ぎ": {
+  "file": "audio/kana/304e-eef88a80.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%8E.wav",
+  "wav_sha1": "c27ca40fbf01d31ca9009baa6a087b7c3bb4e17a",
   "license": "CC BY 4.0",
   "author": "Fukujinzuke (Lingua Libre)",
   "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
@@ -79,10 +99,30 @@
   "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
   "listened": null
  },
+ "ぐ": {
+  "file": "audio/kana/3050-10e29291.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%90.wav",
+  "wav_sha1": "342310f21a0b0d8341b59ed9f712c7d68ea3bfa0",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
  "け": {
   "file": "audio/kana/3051-f938141e.mp3",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%91.wav",
   "wav_sha1": "783d363bb3605208258310800338bcd20b765e56",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "げ": {
+  "file": "audio/kana/3052-acb4666c.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%92.wav",
+  "wav_sha1": "1e287e8d999c022a911f86652d2fc2f5343aad16",
   "license": "CC BY 4.0",
   "author": "Fukujinzuke (Lingua Libre)",
   "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
@@ -99,10 +139,30 @@
   "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
   "listened": null
  },
+ "ご": {
+  "file": "audio/kana/3054-0adaba81.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%94.wav",
+  "wav_sha1": "9a4dca07b3425327a206d59a7cbaa40a7df3b2c6",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
  "さ": {
   "file": "audio/kana/3055-8c947c76.mp3",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%95.wav",
   "wav_sha1": "229d59a013536fdc3490d8b2afd7ecab0591f9a6",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "ざ": {
+  "file": "audio/kana/3056-5f492213.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%96.wav",
+  "wav_sha1": "b5df27d0a5c827ca602e42888076be9dbf1b1d33",
   "license": "CC BY 4.0",
   "author": "Fukujinzuke (Lingua Libre)",
   "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
@@ -119,10 +179,30 @@
   "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
   "listened": null
  },
+ "じ": {
+  "file": "audio/kana/3058-1a9d8b93.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%98.wav",
+  "wav_sha1": "51a720e397aeee9ceb226f132ca5112439ed9f66",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
  "す": {
   "file": "audio/kana/3059-bec1e918.mp3",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%99.wav",
   "wav_sha1": "315c9198d6765f2f669ea166414d3655f924eaba",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "ず": {
+  "file": "audio/kana/305a-5ca07ebe.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%9A.wav",
+  "wav_sha1": "483b1f4dca41e5018a7b9709a967c03587a98c45",
   "license": "CC BY 4.0",
   "author": "Fukujinzuke (Lingua Libre)",
   "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
@@ -139,10 +219,30 @@
   "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
   "listened": null
  },
+ "ぜ": {
+  "file": "audio/kana/305c-ce97901c.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%9C.wav",
+  "wav_sha1": "fd332191cb7d84e0a6239803d99a86c9d20320e0",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
  "そ": {
   "file": "audio/kana/305d-62a537ed.mp3",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%9D.wav",
   "wav_sha1": "f6b6e0b5f920ba85e544ccddbab3269727ed0dc6",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "ぞ": {
+  "file": "audio/kana/305e-a8e7bf41.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%9E.wav",
+  "wav_sha1": "955e6c6f3fca5a3e7b075b26a5b68fbfb4f8154e",
   "license": "CC BY 4.0",
   "author": "Fukujinzuke (Lingua Libre)",
   "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
@@ -159,10 +259,40 @@
   "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
   "listened": null
  },
+ "だ": {
+  "file": "audio/kana/3060-d720a3bc.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%A0.wav",
+  "wav_sha1": "41527266b042f36cd3fa6b44b32fb3130f6c6d92",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
  "ち": {
   "file": "audio/kana/3061-16120e06.mp3",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%A1.wav",
   "wav_sha1": "2feaf37f295f0a0acdec51e006ba6560fe158953",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "ちゃ": {
+  "file": "audio/kana/3061_3083-8924f508.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%A1%E3%82%83.wav",
+  "wav_sha1": "771e6b2a2be192e99fe9edad26cca0e3ec4a1792",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "ぢ": {
+  "file": "audio/kana/3062-36526ded.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%A2.wav",
+  "wav_sha1": "9ec3ae332bc18057ded6d1c8b56e79118e258972",
   "license": "CC BY 4.0",
   "author": "Fukujinzuke (Lingua Libre)",
   "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
@@ -179,6 +309,16 @@
   "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
   "listened": null
  },
+ "づ": {
+  "file": "audio/kana/3065-cd53b941.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%A5.wav",
+  "wav_sha1": "7cb7b646c652537be1a3c23fea76217e8e8e4df4",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
  "て": {
   "file": "audio/kana/3066-912a03fb.mp3",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%A6.wav",
@@ -189,10 +329,30 @@
   "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
   "listened": null
  },
+ "で": {
+  "file": "audio/kana/3067-64a5a79f.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%A7.wav",
+  "wav_sha1": "71b477e5be7d3a9888e9d7eea476f87afd0b576d",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
  "と": {
   "file": "audio/kana/3068-cc92d8c8.mp3",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%A8.wav",
   "wav_sha1": "92660be1f2c1d9fd0212d0e771cf20e72125d5c3",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "ど": {
+  "file": "audio/kana/3069-9e2549d4.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%A9.wav",
+  "wav_sha1": "6d8f50390e898d917b933cf5ec7351b25ee30edd",
   "license": "CC BY 4.0",
   "author": "Fukujinzuke (Lingua Libre)",
   "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
@@ -249,6 +409,26 @@
   "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
   "listened": null
  },
+ "ば": {
+  "file": "audio/kana/3070-467989d6.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%B0.wav",
+  "wav_sha1": "4779fe20a099823b2afd3cc41c2f1af8cca8ced1",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "ぱ": {
+  "file": "audio/kana/3071-3b3d87b8.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%B1.wav",
+  "wav_sha1": "c21aa891f7071347d680bb87a60fbb268570e125",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
  "ひ": {
   "file": "audio/kana/3072-be400537.mp3",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%B2.wav",
@@ -269,6 +449,16 @@
   "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
   "listened": null
  },
+ "ぶ": {
+  "file": "audio/kana/3076-6a8e78b1.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%B6.wav",
+  "wav_sha1": "084161d6db97473f235ab350460075dbeeebe686",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
  "へ": {
   "file": "audio/kana/3078-ed09abc5.mp3",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%B8.wav",
@@ -279,10 +469,50 @@
   "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
   "listened": null
  },
+ "べ": {
+  "file": "audio/kana/3079-8f1bb6fe.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%B9.wav",
+  "wav_sha1": "a8293ad922b57f4379e2fd486113ffa72a638603",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "ぺ": {
+  "file": "audio/kana/307a-5b3b882b.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%BA.wav",
+  "wav_sha1": "c90ca89427e09c5d4de6281fd7020c93883323a8",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
  "ほ": {
   "file": "audio/kana/307b-b1c1b70b.mp3",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%BB.wav",
   "wav_sha1": "408dba0bc2e4c4e4a9d8ac9937241afb3f666d6b",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "ぼ": {
+  "file": "audio/kana/307c-74269120.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%BC.wav",
+  "wav_sha1": "c980f9fd99961de9653cd3fd71b30896c2a46a70",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "ぽ": {
+  "file": "audio/kana/307d-10d45bed.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%81%BD.wav",
+  "wav_sha1": "6b6804b0e9a4872b4dd27d3c5a90ef8ecb49652e",
   "license": "CC BY 4.0",
   "author": "Fukujinzuke (Lingua Libre)",
   "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
@@ -329,6 +559,16 @@
   "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
   "listened": null
  },
+ "も": {
+  "file": "audio/kana/3082-095798c2.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%82%82.wav",
+  "wav_sha1": "09ff03c8ad885e04ca6b171808b038a60d575e83",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
  "や": {
   "file": "audio/kana/3084-92557a9f.mp3",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%82%84.wav",
@@ -343,6 +583,86 @@
   "file": "audio/kana/3088-eabdeb55.mp3",
   "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%82%88.wav",
   "wav_sha1": "1047cb8764fc5e6b820e8574a48039dd3da1d6ce",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "ら": {
+  "file": "audio/kana/3089-6275a896.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%82%89.wav",
+  "wav_sha1": "5b05681dcc0e404012fbe0ecc32718c387740105",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "り": {
+  "file": "audio/kana/308a-e64fd11b.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%82%8A.wav",
+  "wav_sha1": "028dd7476ece7471c9611fc148dcf2d7b4ae2bcc",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "る": {
+  "file": "audio/kana/308b-e08a3f80.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%82%8B.wav",
+  "wav_sha1": "c93783211cb7a614401ccec1716c902eeaeac5d6",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "れ": {
+  "file": "audio/kana/308c-f428959c.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%82%8C.wav",
+  "wav_sha1": "b40bd9ccbec7edb72b758b694975b3123482340f",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "ろ": {
+  "file": "audio/kana/308d-02165cac.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%82%8D.wav",
+  "wav_sha1": "1941001e4d9825c1dde0937c5d4ff0ec9c52419f",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "わ": {
+  "file": "audio/kana/308f-12e44a0f.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%82%8F.wav",
+  "wav_sha1": "4a9899cf27c3f278e1a4874bf23c514419ad0fec",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "を": {
+  "file": "audio/kana/3092-14f6b0cb.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%82%92.wav",
+  "wav_sha1": "c4a3145e59cb1c2d33bc7c8f6d2322d57a10210d",
+  "license": "CC BY 4.0",
+  "author": "Fukujinzuke (Lingua Libre)",
+  "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",
+  "converted": "ffmpeg mp3 24kHz 모노 48kbps, 앞뒤 무음 그대로",
+  "listened": null
+ },
+ "ん": {
+  "file": "audio/kana/3093-95ca558d.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:LL-Q5287_%28jpn%29-Fukujinzuke-%E3%82%93.wav",
+  "wav_sha1": "a2f36ecf1d23514245279ff7e8ababa358beb557",
   "license": "CC BY 4.0",
   "author": "Fukujinzuke (Lingua Libre)",
   "speaker": "성별·지역·원어민 여부 밝히지 않음(26.11.28 확인)",

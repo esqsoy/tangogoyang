@@ -20,8 +20,9 @@ for kana, url, sha in urls:
     # 24kHz 모노 48kbps. 앞뒤 무음은 자르지 않는다(아이폰에서 첫소리가 먹히지 않게, 원본에 약 0.2초씩 있음).
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', str(src), '-ac', '1', '-ar', '24000', '-b:a', '48k', '-map_metadata', '-1', str(tmp)], check=True)
     data = tmp.read_bytes(); h8 = hashlib.sha256(data).hexdigest()[:8]
-    name = f'{ord(kana):04x}-{h8}.mp3'
-    for old in OUT.glob(f'{ord(kana):04x}-*.mp3'):
+    cp = '_'.join(f'{ord(c):04x}' for c in kana)
+    name = f'{cp}-{h8}.mp3'
+    for old in OUT.glob(f'{cp}-*.mp3'):
         if old.name != name: old.unlink()
     (OUT / name).write_bytes(data); tmp.unlink()
     dur = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'default=nw=1:nk=1', str(OUT / name)], capture_output=True, text=True).stdout.strip() or 0)
