@@ -1,0 +1,142 @@
+{
+ "あ": {
+  "src": "audio/kana/3042-6bb8c220.mp3",
+  "duration": 0.74
+ },
+ "い": {
+  "src": "audio/kana/3044-fd6c11c8.mp3",
+  "duration": 0.77
+ },
+ "う": {
+  "src": "audio/kana/3046-1cd9779e.mp3",
+  "duration": 0.79
+ },
+ "え": {
+  "src": "audio/kana/3048-7aed6e15.mp3",
+  "duration": 0.74
+ },
+ "お": {
+  "src": "audio/kana/304a-5130b155.mp3",
+  "duration": 0.74
+ },
+ "か": {
+  "src": "audio/kana/304b-2c71df71.mp3",
+  "duration": 0.74
+ },
+ "き": {
+  "src": "audio/kana/304d-e4aee344.mp3",
+  "duration": 0.82
+ },
+ "く": {
+  "src": "audio/kana/304f-6839cc95.mp3",
+  "duration": 0.79
+ },
+ "け": {
+  "src": "audio/kana/3051-f938141e.mp3",
+  "duration": 0.77
+ },
+ "こ": {
+  "src": "audio/kana/3053-4f0a8baa.mp3",
+  "duration": 0.74
+ },
+ "さ": {
+  "src": "audio/kana/3055-8c947c76.mp3",
+  "duration": 0.74
+ },
+ "し": {
+  "src": "audio/kana/3057-70378181.mp3",
+  "duration": 0.74
+ },
+ "す": {
+  "src": "audio/kana/3059-bec1e918.mp3",
+  "duration": 0.77
+ },
+ "せ": {
+  "src": "audio/kana/305b-0462270c.mp3",
+  "duration": 0.72
+ },
+ "そ": {
+  "src": "audio/kana/305d-62a537ed.mp3",
+  "duration": 0.74
+ },
+ "た": {
+  "src": "audio/kana/305f-e1e99205.mp3",
+  "duration": 0.74
+ },
+ "ち": {
+  "src": "audio/kana/3061-16120e06.mp3",
+  "duration": 0.74
+ },
+ "つ": {
+  "src": "audio/kana/3064-1647aad6.mp3",
+  "duration": 0.79
+ },
+ "て": {
+  "src": "audio/kana/3066-912a03fb.mp3",
+  "duration": 0.74
+ },
+ "と": {
+  "src": "audio/kana/3068-cc92d8c8.mp3",
+  "duration": 0.74
+ },
+ "に": {
+  "src": "audio/kana/306b-353880f8.mp3",
+  "duration": 0.79
+ },
+ "ぬ": {
+  "src": "audio/kana/306c-14c706bf.mp3",
+  "duration": 0.89
+ },
+ "ね": {
+  "src": "audio/kana/306d-25b6eb3f.mp3",
+  "duration": 0.82
+ },
+ "の": {
+  "src": "audio/kana/306e-64efa9a2.mp3",
+  "duration": 0.79
+ },
+ "は": {
+  "src": "audio/kana/306f-3024b5d5.mp3",
+  "duration": 0.72
+ },
+ "ひ": {
+  "src": "audio/kana/3072-be400537.mp3",
+  "duration": 0.74
+ },
+ "ふ": {
+  "src": "audio/kana/3075-b9c3931b.mp3",
+  "duration": 0.77
+ },
+ "へ": {
+  "src": "audio/kana/3078-ed09abc5.mp3",
+  "duration": 0.74
+ },
+ "ほ": {
+  "src": "audio/kana/307b-b1c1b70b.mp3",
+  "duration": 0.79
+ },
+ "ま": {
+  "src": "audio/kana/307e-04025703.mp3",
+  "duration": 0.74
+ },
+ "み": {
+  "src": "audio/kana/307f-cd332ff4.mp3",
+  "duration": 0.79
+ },
+ "む": {
+  "src": "audio/kana/3080-24746367.mp3",
+  "duration": 0.79
+ },
+ "め": {
+  "src": "audio/kana/3081-539d7b86.mp3",
+  "duration": 0.79
+ },
+ "や": {
+  "src": "audio/kana/3084-92557a9f.mp3",
+  "duration": 0.77
+ },
+ "よ": {
+  "src": "audio/kana/3088-eabdeb55.mp3",
+  "duration": 0.79
+ }
+}

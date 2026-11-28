@@ -1706,7 +1706,10 @@ const IPA_EFFECT_MAPS = {};
 const PRONUNCIATION_AUDIO_MAP = {};
 /* Small, exact term+IPA exceptions. All other pronunciation stays browser TTS. */
 let exceptionAudioOwner=null,exceptionAudioGeneration=0,exceptionAudioWarm=null;
+/* 五十音 가나 사람 녹음(26.11.28, pipeline/jlpt/kana-audio): 글자 카드(한 글자·요음)는 이 표의 mp3를 먼저 틀고, 없거나 실패하면 TTS. 가타카나는 같은 소리. */
+const KANA_AUDIO={};
 function exceptionAudioEntry(info){
+  if(typeof JP_MODE!=='undefined'&&JP_MODE==="kana"&&info&&typeof info.term==='string'){const h=info.term.replace(/[ァ-ヶ]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60));const e=KANA_AUDIO[h];if(e&&e.src)return e;}
   if(!info||typeof info.term!=='string'||typeof info.ipa!=='string'||typeof PRONUNCIATION_AUDIO_MAP==='undefined')return null;
   const entry=PRONUNCIATION_AUDIO_MAP[info.term+'\t'+info.ipa];
   return entry&&typeof entry.src==='string'&&entry.src?entry:null;

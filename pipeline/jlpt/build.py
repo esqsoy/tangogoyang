@@ -204,7 +204,7 @@ def write(out, data, mode):
         hand = (HERE / 'fonts' / 'klee-kana-paths.json').read_text()
         for old, new in [('/*KANA_STROKES*/{}', strokes), ('/*KANA_HAND*/{}', hand),
                          ('/*KANA_FONT_FACE*/', '@font-face{font-family:"KanaHand";src:url(data:font/woff2;base64,' + font + ') format("woff2");font-display:swap;}'),
-                         ('<!--KANA_CREDIT-->', ' · 쓰는 순서: <a href="https://kanjivg.tagaini.net" target="_blank" rel="noopener">KanjiVG</a>(Ulrich Apel, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>) · 손글씨: <a href="https://github.com/fontworks-fonts/Klee" target="_blank" rel="noopener">Klee One</a>(Fontworks, OFL)')]:
+                         ('<!--KANA_CREDIT-->', ' · 글자 소리: Fukujinzuke(<a href="https://lingualibre.org" target="_blank" rel="noopener">Lingua Libre</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>, mp3로 바꿈. 요음은 기기 음성) · 쓰는 순서: <a href="https://kanjivg.tagaini.net" target="_blank" rel="noopener">KanjiVG</a>(Ulrich Apel, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>) · 손글씨: <a href="https://github.com/fontworks-fonts/Klee" target="_blank" rel="noopener">Klee One</a>(Fontworks, OFL)')]:
             assert html.count(old) == 1, old
             html = html.replace(old, new)
         html = re.sub(r'(["\'`])tangogoyang-', r'\1tangogoyang-kana-', html)
@@ -223,6 +223,9 @@ def write(out, data, mode):
                'ゃ': ['xya', '야'], 'ゅ': ['xyu', '유'], 'ょ': ['xyo', '요'], 'ゎ': ['xwa', '와']})
     kt = {k: [v[0], re.sub(r'\([fv]\)', '', v[1])] for k, v in kt.items()}
     assert html.count('/*KANA_TYPE*/{}') == 1
+    ka = json.loads((HERE / 'kana-audio' / 'manifest.json').read_text()) if mode == 'kana' else {}
+    assert html.count('/*KANA_AUDIO*/{}') == 1
+    html = html.replace('/*KANA_AUDIO*/{}', json.dumps(ka, ensure_ascii=False, separators=(',', ':')))
     html = html.replace('/*KANA_TYPE*/{}', json.dumps(kt, ensure_ascii=False, separators=(',', ':')))
     out.write_text(html)
     return sum(len(e['words']) for L in data for e in L['exercises'])

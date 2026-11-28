@@ -102,7 +102,7 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   const p5=await b.newPage();p5.on('pageerror',e=>errs.push(e.message));
   await p5.addInitScript(()=>{window.__said=[];Object.defineProperty(window,'speechSynthesis',{configurable:true,value:{speak:u=>window.__said.push(u.text),cancel(){},getVoices:()=>[{name:'Kyoko',lang:'ja-JP'}],addEventListener(){},speaking:false,pending:false}});window.SpeechSynthesisUtterance=function(t){this.text=t;};});
   await p5.goto('file://'+path.resolve(__dirname,'../../tangogoyanggojuon.html'));await p5.waitForTimeout(400);
-  await p5.evaluate(()=>{openLesson(0);startExercise(0);});await p5.waitForTimeout(2500);
+  await p5.evaluate(()=>{Object.keys(KANA_AUDIO).forEach(k=>delete KANA_AUDIO[k]);openLesson(0);startExercise(0);});await p5.waitForTimeout(2500); // 녹음 없는 경우(TTS)를 본다
   await p5.click('#meaning .kana-pair');await p5.waitForTimeout(400);const before=await p5.evaluate(()=>window.__said.length);
   const k5=await p5.evaluate(()=>state.session.words[state.session.currentId]);await p5.focus('#ainput');await p5.keyboard.type(k5.rm);await p5.waitForTimeout(800);
   const n5=await p5.evaluate(()=>window.__said.length);
@@ -122,6 +122,16 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   const copied=await p6.evaluate(()=>!state.session.copyMode);await p6.waitForTimeout(1300);
   const moved=await p6.evaluate(id=>state.session.currentId!==id||state.session.round!==1,id6);
   ok(first.ans&&!first.copy&&!first.comp&&inCopy&&copied&&moved,'五十音: 조합 중 한글도 카드 소리와 같으면 받음(첫 답·따라쓰기), 따라쓰기 뒤 1.2초에 넘어감');
+  // 五十音 사람 녹음(26.11.28): 녹음이 있는 글자는 mp3를 튼다(Audio의 src), 녹음 파일은 실제로 있다
+  const p9=await b.newPage();p9.on('pageerror',e=>errs.push(e.message));
+  await p9.addInitScript(()=>{window.__srcs=[];const A=window.Audio;window.Audio=function(){const a=new A();const d=Object.getOwnPropertyDescriptor(HTMLMediaElement.prototype,'src');Object.defineProperty(a,'src',{set(v){window.__srcs.push(v);d.set.call(a,v);},get(){return d.get.call(a);}});return a;};});
+  await p9.goto('file://'+path.resolve(__dirname,'../../tangogoyanggojuon.html'));await p9.waitForTimeout(400);
+  const ka=await p9.evaluate(()=>Object.entries(KANA_AUDIO));
+  await p9.evaluate(()=>{openLesson(0);startExercise(0);});await p9.waitForTimeout(2500);
+  const k9=await p9.evaluate(()=>state.session.words[state.session.currentId]);await p9.focus('#ainput');await p9.keyboard.type(k9.rm);await p9.waitForTimeout(800);
+  const srcs=await p9.evaluate(()=>window.__srcs);const fs=require('fs');
+  const want9=(ka.find(([k])=>k===k9.term.replace(/[ァ-ヶ]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60)))||[])[1];
+  ok(ka.length>=30&&ka.every(([k,v])=>fs.existsSync(path.resolve(__dirname,'../..',v.src)))&&(!want9||srcs.some(x=>x.includes(want9.src))),'五十音 사람 녹음: 녹음 '+ka.length+'개 파일 있음, 글자 카드는 그 mp3를 튼다');
   // 고칠 점 남기기(pipeline/fix-report, 26.11.28): 정답 뒤 ⚑ → 누르면 넘어가기 멈춤 → 종류 골라 남기기 → 처음 화면 줄 → 복사하면 보낸 것으로
   const p7=await b.newPage({viewport:{width:390,height:844}});p7.on('pageerror',e=>errs.push(e.message));
   await p7.goto('file://'+path.resolve(__dirname,'../../tangogoyangjlpt.html'));await p7.waitForTimeout(400);
