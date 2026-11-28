@@ -215,6 +215,15 @@ def write(out, data, mode):
                          ("'日本語能力試験 완주'", "'五十音 완주'")]:
             assert html.count(old) == 1, old
             html = html.replace(old, new)
+    # 치는 법 표(KANA_TYPE): 가나 한 박 → [치는 로마자, 한글]. 소리 표기가 아니라 입력 표기(は ha, を wo, づ du, ぢ di).
+    from gojuon_sound import MORA
+    kt = {k: [v[1], v[2]] for k, v in MORA.items() if k != 'ん'}
+    kt.update({'を': ['wo', '오'], 'ぢ': ['di', '지'], 'づ': ['du', '즈'], 'ゔ': ['vu', '부'],
+               'ぁ': ['xa', '아'], 'ぃ': ['xi', '이'], 'ぅ': ['xu', '우'], 'ぇ': ['xe', '에'], 'ぉ': ['xo', '오'],
+               'ゃ': ['xya', '야'], 'ゅ': ['xyu', '유'], 'ょ': ['xyo', '요'], 'ゎ': ['xwa', '와']})
+    kt = {k: [v[0], re.sub(r'\([fv]\)', '', v[1])] for k, v in kt.items()}
+    assert html.count('/*KANA_TYPE*/{}') == 1
+    html = html.replace('/*KANA_TYPE*/{}', json.dumps(kt, ensure_ascii=False, separators=(',', ':')))
     out.write_text(html)
     return sum(len(e['words']) for L in data for e in L['exercises'])
 

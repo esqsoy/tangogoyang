@@ -1512,6 +1512,7 @@ body.playing .appbar{display:flex;padding:0 5px;}
 <style id="pace-style">
 /* 진행 속도 예측 한 줄(결과 화면, 고양이 말풍선 바로 밑). 말풍선이 주인공이라 작고 흐리게 둔다. */
 .pace-note{margin:-2px 4px 2px;color:var(--muted);font-size:.76rem;font-weight:700;line-height:1.5;text-align:center;letter-spacing:-.2px;word-break:keep-all;}
+.type-hint{margin-top:8px;font-size:.92rem;opacity:.9}.type-hint b{color:#ffcf5a;font-weight:800}
 </style>
 <style id="fix-report-style">/*FIX_REPORT_STYLE_START*/
 .fx-flag{position:absolute;right:12px;bottom:10px;z-index:3;min-width:44px;height:36px;padding:0 12px;border-radius:18px;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.28);color:#fff;font:600 14px/1 system-ui,sans-serif;display:inline-flex;align-items:center;gap:6px;cursor:pointer}
@@ -2344,6 +2345,25 @@ function mtNeedsWholePronunciation(w){
 }
 // 五十音 쓰는 순서: KanjiVG(CC BY-SA 3.0) 획 경로. build.py가 kana 모드에서만 채운다.
 const KANA_STROKES=/*KANA_STROKES*/{};
+/* 치는 법 표(26.11.28 영신 "아카짱(아기) 치는데 한글로치니까 어떻게 쳐야 어떤 히라가나가 뜨는지 모르겠음 따라칠때는 아예 한글로 (또는 영어로)예시보기가 가능하게").
+   build.py가 gojuon_sound.MORA에서 만든다: 가나 한 박 → [치는 로마자, 한글]. 소리가 아니라 '치는 법'이라 は=ha, を=wo, づ=du, ぢ=di. */
+const KANA_TYPE=/*KANA_TYPE*/{};
+function jpTypeHint(term){
+  const h=jpHira(term||"");let rm="",hg=[],i=0,ok=true;
+  const batch=(t)=>{if(!hg.length){hg.push(t===19?"ㅅ":"ㄴ");return;}const last=hg[hg.length-1],c=last.charCodeAt(last.length-1)-0xAC00;
+    if(c>=0&&c<11172&&c%28===0)hg[hg.length-1]=last.slice(0,-1)+String.fromCharCode(0xAC00+c+t);else hg.push(t===19?"ㅅ":"ㄴ");};
+  while(i<h.length){
+    const two=h.slice(i,i+2),one=h[i];
+    if(one==="っ"){const nx=KANA_TYPE[h.slice(i+1,i+3)]||KANA_TYPE[h[i+1]];if(!nx){rm+="xtsu";batch(19);i++;continue;}rm+=nx[0].startsWith("ch")?"t":nx[0][0];batch(19);i++;continue;}
+    if(one==="ん"){const nx=KANA_TYPE[h.slice(i+1,i+3)]||KANA_TYPE[h[i+1]];rm+=(nx&&/^[aiueony]/.test(nx[0]))?"n'":"n";batch(4);i++;continue;}
+    if(one==="ー"){rm+="-";hg.push("-");i++;continue;}
+    const k=KANA_TYPE[two]?two:one,e=KANA_TYPE[k];if(!e){ok=false;break;}
+    rm+=e[0];hg.push(e[1]);i+=k.length;
+  }
+  return ok?{rm,hg:hg.join("")}:null;
+}
+function jpTypeHintHtml(term){if(JP_MODE==="kana")return "";const t=jpTypeHint(term);if(!t)return "";
+  return '<div class="type-hint">치는 법: 한글 <b>'+esc(t.hg)+'</b> · 영어 <b>'+esc(t.rm)+'</b></div>';}
 function kanaSmall(c){return /[ぁぃぅぇぉゃゅょっゎァィゥェォャュョッヮ]/.test(c);}
 function kanaStrokeSvg(c,off){const d=KANA_STROKES[c];if(!d)return '';off=off||0;
  return '<svg'+(kanaSmall(c)?' class="sm"':'')+' viewBox="0 0 109 109" role="img" aria-label="'+c+' 쓰는 순서">'+d.p.map(p=>'<path class="ghost" d="'+p+'"/>').join('')+d.p.map((p,i)=>'<path class="live" pathLength="1" style="--i:'+(i+off)+'" d="'+p+'"/>').join('')+d.n.map((xy,i)=>'<text x="'+xy[0]+'" y="'+xy[1]+'" style="--i:'+(i+off)+'">'+(i+1)+'</text>').join('')+'</svg>';}
@@ -3048,7 +3068,7 @@ function startCopy(term,meaning,line){
   growCard(()=>{
     $("#hoeCtx").innerHTML=mtQuestionHtml(mtCurrentWord(),true);
     mtSetCatSpeech(line);
-    openReveal("bad").innerHTML=mtRevealHtml(term,meaning);
+    openReveal("bad").innerHTML=mtRevealHtml(term,meaning)+jpTypeHintHtml(term);
     renderCopyBlank("");
   });
   $("#ainput").value="";$("#ainput").className="ainput";$("#ainput").disabled=false;

@@ -139,6 +139,12 @@ let fail=0;const ok=(c,m)=>{if(!c){fail++;console.log('FAIL',m);}else console.lo
   await p7.evaluate(()=>{document.execCommand=()=>true;});await p7.click('.fx-home .fx-c');await p7.waitForTimeout(300);
   const sent7=await p7.evaluate(()=>JSON.parse(localStorage.getItem('tangogoyang-fix-reports-v1')||'[]').every(r=>r.sent)&&!document.querySelector('.fx-home'));
   ok(!!flag7&&stayed&&saved7.length===1&&saved7[0].kind==='뜻'&&saved7[0].memo==='시험 메모'&&saved7[0].id===w7.savedCardId&&moved7&&/고칠 점 1개/.test(home7)&&sent7,'고칠 점: ⚑ 누르면 멈춤, 남기기(모아둔 카드 id), 처음 화면 줄, 복사하면 보냄');
+  // 치는 법(26.11.28): 따라 쓰기에 '한글 · 영어' 예시. 모든 읽기에서 예시대로 치면 정답 가나가 나와야 한다.
+  const p8=await b.newPage();p8.on('pageerror',e=>errs.push(e.message));
+  for(const g of ['jlpt','yomi']){await p8.goto('file://'+path.resolve(__dirname,'../../tangogoyang'+g+'.html'));await p8.waitForTimeout(300);
+    const r8=await p8.evaluate(()=>{const seen=new Set();let bad=[];for(const w of DATA.flatMap(L=>L.exercises.flatMap(e=>e.words))){const t=w.en;if(seen.has(t))continue;seen.add(t);const h=jpTypeHint(t);
+      if(!h||!isCorrect(jpTentative(h.hg,t),t)||!isCorrect(jpTentative(h.rm,t),t))bad.push(t);}return {n:seen.size,bad:bad.slice(0,5),nb:bad.length,akajjang:jpTentative('아카짱','あかちゃん')};});
+    ok(r8.nb===0&&r8.n>5000&&r8.akajjang==='あかちゃん','치는 법('+g+'): 읽기 '+r8.n+'개 모두 예시대로 한글·영어로 치면 정답'+(r8.nb?' 실패 '+r8.bad.join(','):''));}
   // 기록 옮기기(index)
   const p4=await b.newPage();p4.on('pageerror',e=>errs.push(e.message));await p4.goto('file://'+path.resolve(__dirname,'../../index.html'));
   ok(await p4.evaluate(()=>{const m=rtMerge({'tangogoyang-kana-seoul-v1':'{"a":{"x":{"completed":true}}}'},{'tangogoyang-kana-seoul-v1':'{"a":{"y":{"completed":true}}}','goyang-seoul-v1':'{}'});return !!document.getElementById('rtOpen')&&RT_PREFIX==='tangogoyang-'&&m.summary.exercises===1&&!('goyang-seoul-v1' in m.writes);}),'기록 옮기기: 탄고고양 키만, 합치기');
